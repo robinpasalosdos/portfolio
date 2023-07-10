@@ -15,6 +15,7 @@
     .container {
       margin: 0 auto;
       padding: 20px;
+      max-width: 960px;
     }
 
     ul {
@@ -22,7 +23,7 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
-     
+      background-color: #333;
       text-align: right;
     }
 
@@ -32,6 +33,7 @@
 
     li a {
       display: block;
+      color: white;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
@@ -42,61 +44,30 @@
     }
 
     .section {
-      display: none;
+      height: 100vh; /* Set section height to viewport height */
       padding: 20px;
       border: 1px solid #ccc;
       background-color: #f9f9f9;
     }
-
-    @media (max-width: 500px) {
-      .nav-toggle {
-        display: block;
-        text-align: left;
-      }
-
-      ul {
-        display: none;
-        margin-top: 10px;
-      }
-
-      ul.show {
-        display: block;
-      }
-
-      li {
-        display: block;
-        border-top: 1px solid white;
-      }
-    }
-    @media (min-width: 501px) {
-      .nav-toggle {
-        display: none;
-      }
-    }
   </style>
   <script>
-    function toggleMenu() {
-      var menu = document.getElementById("nav-menu");
-      menu.classList.toggle("show");
-    }
-
-    function showSection(sectionId) {
-      var sections = document.getElementsByClassName("section");
-      for (var i = 0; i < sections.length; i++) {
-        sections[i].style.display = "none";
-      }
-      document.getElementById(sectionId).style.display = "block";
+    function scrollToSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: "smooth"
+      });
     }
   </script>
 </head>
 <body>
   <div class="container">
-    <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
-    <ul id="nav-menu">
-      <li><a href="#" onclick="showSection('home')">Home</a></li>
-      <li><a href="#" onclick="showSection('about')">About</a></li>
-      <li><a href="#" onclick="showSection('portfolio')">Portfolio</a></li>
-      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+    <ul>
+      <li><a href="#" onclick="scrollToSection('home')">Home</a></li>
+      <li><a href="#" onclick="scrollToSection('services')">Services</a></li>
+      <li><a href="#" onclick="scrollToSection('about')">About</a></li>
+      <li><a href="#" onclick="scrollToSection('portfolio')">Portfolio</a></li>
+      <li><a href="#" onclick="scrollToSection('contact')">Contact</a></li>
       <li style="float: left;"><a href="#">Robin</a></li>
     </ul>
 
@@ -151,8 +122,8 @@
     </div>
 
     <div id="contact" class="section">
-      <h2>Contact Us</h2>
-      <p>We would love to hear from you! Feel free to get in touch with us:</p>
+      <h2>Contact Us</h>
+      We would love to hear from you! Feel free to get in touch with us:</p>
       <ul>
         <li>Email: info@example.com</li>
         <li>Phone: 123-456-7890</li>
