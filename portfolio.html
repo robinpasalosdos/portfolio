@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+     
+      text-align: right;
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    li a {
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: grey;
+    }
+
+    .section {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+
+    @media (max-width: 500px) {
+      .nav-toggle {
+        display: block;
+        text-align: left;
+      }
+
+      ul {
+        display: none;
+        margin-top: 10px;
+      }
+
+      ul.show {
+        display: block;
+      }
+
+      li {
+        display: block;
+        border-top: 1px solid white;
+      }
+    }
+    @media (min-width: 501px) {
+      .nav-toggle {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("nav-menu");
+      menu.classList.toggle("show");
+    }
+
+    function showSection(sectionId) {
+      var sections = document.getElementsByClassName("section");
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+      }
+      document.getElementById(sectionId).style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
+    <ul id="nav-menu">
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('about')">About</a></li>
+      <li><a href="#" onclick="showSection('portfolio')">Portfolio</a></li>
+      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+      <li style="float: left;"><a href="#">Robin</a></li>
+    </ul>
+
+    <div id="home" class="section">
+      <h1>Welcome to My Portfolio</h1>
+      <p>I am a web developer specializing in front-end development. With a passion for creating visually appealing and user-friendly websites, I strive to deliver high-quality solutions that meet clients' needs.</p>
+      <p>My portfolio showcases a collection of my work, including websites I have designed and developed. Each project demonstrates my skills and expertise in HTML, CSS, JavaScript, and other web technologies.</p>
+      <p>Feel free to explore my portfolio and contact me if you have any questions or if you're interested in collaborating on a project. Thank you for visiting!</p>
+    </div>
+
+    <div id="services" class="section">
+      <h2>Our Services</h2>
+      <p>We offer a range of services to help you establish a strong online presence:</p>
+      <ul>
+        <li>Website Design and Development</li>
+        <li>Responsive Web Design</li>
+        <li>UI/UX Design</li>
+        <li>Front-End Development</li>
+        <li>Content Management Systems (CMS) Integration</li>
+        <li>E-commerce Solutions</li>
+        <li>Website Maintenance and Support</li>
+      </ul>
+    </div>
+
+    <div id="about" class="section">
+      <h2>About Us</h2>
+      <p>We are a team of experienced web developers dedicated to delivering exceptional websites for our clients. With a strong focus on user experience, we strive to create innovative and visually stunning designs.</p>
+      <p>Our expertise includes front-end development, responsive design, and the use of modern web technologies. We are passionate about helping businesses establish a compelling online presence and achieve their goals.</p>
+    </div>
+
+    <div id="portfolio" class="section">
+      <h2>Our Portfolio</h2>
+      <p>Take a look at some of our featured projects:</p>
+      <ul>
+        <li>
+          <h3>Project 1</h3>
+          <p>Description of the project and the technologies used.</p>
+        </li>
+        <li>
+          <h3>Project 2</h3>
+          <p>Description of the project and the technologies used.</p>
+        </li>
+        <li>
+          <h3>Project 3</h3>
+          <p>Description of the project and the technologies used.</p>
+        </li>
+        <li>
+          <h3>Project 4</h3>
+          <p>Description of the project and the technologies used.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div id="contact" class="section">
+      <h2>Contact Us</h2>
+      <p>We would love to hear from you! Feel free to get in touch with us:</p>
+      <ul>
+        <li>Email: info@example.com</li>
+        <li>Phone: 123-456-7890</li>
+        <li>Address: 123 Street, City, Country</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
