@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>Website</title>
-  <link rel="stylesheet" href="style.css">
   <script>
 
     const navigation = document.querySelector(".primary-navigation");
@@ -14,7 +13,70 @@
       navigationHeight + "px"
     );
   </script>
+  <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: var(--scroll-padding, 3rem);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: grey;
+  height: 3rem;
+  width: 100%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: right;
+  
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: grey;
+}
+
+.section {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  height: 100vh;
+  margin-top: 22px;
+}
+
+
+  </style>
 </head>
+
 <body>
   <div class="container">
     <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
