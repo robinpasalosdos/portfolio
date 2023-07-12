@@ -68,22 +68,37 @@ li a:hover {
 }
 
 .section {
-  padding: 150px;
+  padding: 20px 130px 0 130px;
   height: 100vh;
   background-color: #192428;
 
 }
 
-.description{
+.homediv{
+  display: flex;
+}
+
+.hometxt{
   font-size: 16px;
   padding: 0;
   margin: 0;
+}
+
+.hometxtdiv{
+  margin-top: 120px;
 }
 
 .robin{
   font-size: 50px;
   padding: 0;
   margin: 0;
+}
+
+.myface{
+  height: 400px;
+  float: left;
+  margin-right: 150px;
+
 }
 
 
@@ -102,10 +117,15 @@ li a:hover {
       </ul>
     </nav>
     <section id="home" class="section">
-      <p class="description">Hi, my name is</p>
-      <p class="robin">Robin Pasalosdos</p>
-      <p class="description">Web Developer in the Philippines</p>
-      <img src="https://drive.google.com/uc?export=view&id=1wGrFywk3DCpx9cEMyKn3pSKni_tn2Pkz">
+      <div class="homediv">
+        <img class="myface" src="https://drive.google.com/uc?export=view&id=1wat2z0opi4ad7mAH3fo70i_2mbu7yy_8">
+        <div class="hometxtdiv">
+          <p class="hometxt">Hi, my name is</p>
+          <p class="robin">Robin Pasalosdos</p>
+          <p class="hometxt">Web Developer in the Philippines</p>
+        </div>
+      </div>
+      
     </section>
 
     <section id="about" class="section">
