@@ -1,152 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Website</title>
-  <script>
-
-    const navigation = document.querySelector(".primary-navigation");
-
-    const navigationHeight = navigation.offsetHeight;
-
-    document.documentElement.style.setProperty(
-      "--scroll-padding",
-      navigationHeight + "px"
-    );
-  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  
   <style>
     * {
-  box-sizing: border-box;
-}
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #192428;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #192428;
+    }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding: var(--scroll-padding, 3rem);
-}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding: var(--scroll-padding, 3rem);
+    }
 
-.container {
-  margin: 0 auto;
-  padding: 20px;
-}
+    #home{
+      width: 100%;
+      height: 100vh;
+    }
 
-nav{
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: transparent;
-  height: 3rem;
-  width: 100%;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  text-align: right;
-  
-}
+    #home .header {
+      padding: 10px 10%;
+    }
 
-li {
-  display: inline-block;
-}
+    nav{
+      display: flex;
+      top: 0;
+      left: 0;
+      width: 100%;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      background-color: transparent;
+      position: fixed;
+    }
 
-li a {
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  color: #39ace7;
-}
+    nav ul li {
+      display: inline-block;
+      list-style: none;
+      margin: 10px 20px;
+    }
 
-li a:hover {
-  color: #0784b5;
-}
+    nav ul li a {
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: #39ace7;
+      position: relative;
+    }
 
-.section {
-  padding: 20px 130px 0 130px;
-  height: 100vh;
-  background-color: #192428;
-}
+    .section {
+      padding: 20px 130px 0 130px;
+      height: 100vh;
+      background-color: #192428;
+    }
 
-.homediv{
-  display: flex;
-}
+    .home_row{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
-.hometxt{
-  font-size: 16px;
-  padding: 0;
-  margin: 0;
-}
+    .home-col-1{
+      flex-basis: 65%;
+      margin-top: 17%;
+    }
 
-.hometxtdiv{
-  margin-top: 120px;
-}
+    .home-col-2 img{
+      height: 500px;
+      border-radius: 15px;
+      border: 2px solid;
+      margin-top: 10%;
+      
+    }
+    .home-col-2{
+      flex-basis: 35%;
+    }
 
-.robin{
-  font-size: 50px;
-  padding: 0;
-  margin: 0;
-}
+    .hometxt{
+      font-size: 16px;
+      padding: 0;
+      margin: 0;
+    }
 
-.myface{
-  height: 400px;
-  float: left;
-  margin-right: 150px;
-}
 
-#about .container{
-  background-color: #39ace7;
-}
+    .robin{
+      font-size: 50px;
+      padding: 0;
+      margin: 0;
+    }
 
-.row{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+    .myface{
+      height: 400px;
+      float: left;
+      margin-right: 150px;
+    }
 
-.about-col-1{
-  flex-basis: 35%;
-}
+    #about .container{
+    
+    }
 
-.about-col-1 img{
-  height: 400px;
-  border-radius: 15px;
-  border: 2px solid;
-  
-}
-.about-col-2{
-  flex-basis: 65%;
-}
+    .row{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
-.tab-titles{
-  display: flex;
-  margin: 20px 0 40px;
-}
+    .about-col-1{
+      flex-basis: 35%;
+      
+    }
 
-.tab-link{
-  margin-right: 50px;
-  cursor: pointer;
-}
+    .about-col-1 img{
+      height: 400px;
+      border-radius: 15px;
+      border: 2px solid;
+      
+    }
+    .about-col-2{
+      flex-basis: 65%;
+    }
 
-.tab-link::after{
-  content: '';
-  width: 0;
-  height: 3px;
-  background: black;
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  transition: 0.5s;
-}
+    .tab-titles{
+      display: flex;
+      margin: 20px 0 40px;
+    }
 
-.tab-link.active::after{
-  width: 50%;
-}
+    .tab-link{
+      margin-right: 50px;
+      cursor: pointer;
+    }
+
+    .tab-content ul li{
+      list-style: none;
+      margin: 10px 0;
+    }
+
+    .tab-content{
+      display: none;
+    }
+    
+    .tab-content.active-tab{
+      display: block;
+    }
+
 
 
 
@@ -159,27 +166,34 @@ li a:hover {
 </head>
 
 <body>
-  <div class="container">
-    <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
-    <nav class="primary-navigation">
-      <ul id="nav-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#mywork">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <section id="home" class="section">
-      <div class="homediv">
-        <img class="myface" src="https://drive.google.com/uc?export=view&id=a1wat2z0opi4ad7mAH3fo70i_2mbu7yy_8">
-        <div class="hometxtdiv">
+  <div id="home" class="section">
+    <div class="header">
+      <p class="logo">RAWB</p>
+      <nav class="primary-navigation">
+        <ul id="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#mywork">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>   
+        </ul>
+      </nav>
+    </div>
+    <div class="home_container">
+      <div class="home_row">
+        <div class="home-col-1">
           <p class="hometxt">Hi, my name is</p>
           <p class="robin">Robin Pasalosdos</p>
           <p class="hometxt">Web Developer in the Philippines</p>
+      
+        </div>
+        <div class="home-col-2">
+          <img src="https://drive.google.com/uc?export=view&id=1wat2z0opi4ad7mAH3fo70i_2mbu7yy_8">
         </div>
       </div>
-      
-    </section>
+    </div>
+  </div>
+ 
+  
 
     <div id="about" class="section">
       <div class="container">
@@ -189,9 +203,24 @@ li a:hover {
           </div>
           <div class="about-col-2">
             <div class="tab-titles">
-              <p class="tab-link active">Education</a>
-              <p class="tab-link">Skills</a>
-              <p class="tab-link">Experience</a>  
+              <p class="tab-link active-link" onclick="opentab('educ')">Education</a>
+              <p class="tab-link" onclick="opentab('skl')">Skills</a>
+              <p class="tab-link" onclick="opentab('exp')">Experience</a>  
+            </div>
+            <div class="tab-content active-tab" id="educ">
+              <ul>
+                <li>educ</li>
+              </ul>
+            </div>
+            <div class="tab-content" id="skl">
+              <ul>
+                <li>skl</li>
+              </ul>
+            </div>
+            <div class="tab-content" id="exp">
+              <ul>
+                <li>exp</li>
+              </ul>
             </div>
             
           </div>
@@ -208,5 +237,26 @@ li a:hover {
       <h2>Contact Us</h2>
     </section>
   </div>
+  <script>
+
+    const navigation = document.querySelector(".primary-navigation");
+
+    const navigationHeight = navigation.offsetHeight;
+
+    document.documentElement.style.setProperty(
+      "--scroll-padding",
+      navigationHeight + "px"
+    );
+
+    var tablink = document.getElementsByClassName("tab-link");
+    var tabcontent = document.getElementsByClassName("tab-content")
+    function opentab(tabname){
+      for(content of tabcontent){
+        content.classList.remove("active-tab");
+      }
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+
+  </script>
 </body>
 </html>
