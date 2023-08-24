@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #192428;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding: var(--scroll-padding, 3rem);
+  }
+
+  #home .header {
+    padding: 10px 10%;
+  }
+
+  nav{
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    background-color: transparent;
+    position: fixed;
+  }
+
+  nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+  }
+
+  nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #39ace7;
+    position: relative;
+  }
+
+  .section {
+    padding: 20px 13%;
+    background-color: #192428;
+  }
+
+  .home_row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .home-col-1{
+    flex-basis: 60%;
+    margin-top: 20%;
+  }
+
+  .home-col-2 img{
+    width: 80%;
+    border-radius: 15px;
+    border: 2px solid;
+    margin-top: 15%;
+    margin-bottom: 23%;
+    
+  }
+  .home-col-2{
+    flex-basis: 40%;
+  }
+
+  .hometxt{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  .robin{
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .myface{
+    height: 400px;
+    float: left;
+    margin-right: 150px;
+  }
+
+  #about .container{
+  
+  }
+
+  .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .about-col-1{
+    flex-basis: 35%;
+    
+  }
+
+  .about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid;
+    
+  }
+  .about-col-2{
+    flex-basis: 65%;
+    margin-left: 20px;
+  }
+
+  .tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+  }
+
+  .tab-link{
+    margin-right: 50px;
+    cursor: pointer;
+  }
+
+  .tab-content ul li{
+    list-style: none;
+    margin: 10px 0;
+  }
+
+  .tab-content{
+    display: none;
+  }
+  
+  .tab-content.active-tab{
+    display: block;
+  }
+  
+  .socmedlinks{
+    
+  }
+
+
+
+  @media only screen and (max-width: 600px){
+    *{
+      background-color: #192428;
+    }
+  }
