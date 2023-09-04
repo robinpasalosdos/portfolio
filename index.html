@@ -6,32 +6,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="script.js"></script>
 </head>
 <body>
-  <div id="home" class="section">
-    <div class="header">
-      <nav class="primary-navigation">
-        <ul id="nav-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#mywork">My Work</a></li>
-          <li><a href="#contact">Contact</a></li>   
-        </ul>
-      </nav>
+  <nav id="desktop_nav">
+    <div class="logo">Robin</div>
+    <div>
+      <ul class="nav_links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>   
+      </ul>
     </div>
-    <div class="home_container">
-      <div class="home_row">
-        <div class="home-col-1">
-          <p class="hometxt">Hi, my name is</p>
-          <p class="robin">Robin Pasalosdos</p>
-          <p class="hometxt">Web Developer in the Philippines</p>
+  </nav>
+  <nav id="hamburger_nav">
+    <div class="logo">Robin</div>
+    <div class="hamburger_menu">
+      <div class="hamburger_icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu_links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section_pic_container">
+      <img src="./assets/profile-pic.jpg" alt="Robin profile picture" />
+    </div>
+    <div class="section_text">
+      <p class="section_text_p1">Hello, I'm</p>
+      <h1 class="title">Robin Pasalosdos</h1>
+      <p class="section_text_p2">Backend Developer</p>
+      <div class="btn_container">
+        <button
+          class="btn btn-color-2"
+          onclick="window.open('./assets/resume-example.pdf')"
+        >
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials_container">
+        <img
+          src="./assets/linkedin.png"
+          alt="My LinkedIn profile"
+          class="icon"
+          onclick="location.href='https://linkedin.com/'"
+        />
+        <img
+          src="./assets/github.png"
+          alt="My Github profile"
+          class="icon"
+          onclick="location.href='https://github.com/'"
+        />
+      </div>
+    </div>
+  </section>
+  <!-- <section id="about">
+    <p class="section_text_p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img
+          src="./assets/about-pic.png"
+          alt="Profile picture"
+          class="about-pic"
+        />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img
+              src="./assets/experience.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <h3>Experience</h3>
+            <p>2+ years <br />Frontend Development</p>
+          </div>
+          <div class="details-container">
+            <img
+              src="./assets/education.png"
+              alt="Education icon"
+              class="icon"
+            />
+            <h3>Education</h3>
+            <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+          </div>
         </div>
-        <div class="home-col-2">
-          <img src="robin.png" alt="A picture of a robin">
-          <!-- <img src="https://drive.google.com/uc?export=view&id=1wat2z0opi4ad7mAH3fo70i_2mbu7yy_8"> -->
+        <div class="text-container">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+            reprehenderit et laborum, rem, dolore eum quod voluptate
+            exercitationem nobis, nihil esse debitis maxime facere minus sint
+            delectus velit in eos quo officiis explicabo deleniti dignissimos.
+            Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+            reiciendis ea magnam? Nulla, impedit fuga!
+          </p>
         </div>
+      </div>
+    </div>
+    <img
+      src="./assets/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow"
+      onclick="location.href='./#experience'"
+    />
+  </section> -->
+
+<!--   <div class="home_container">
+    <div class="home_row">
+      <div class="home-col-1">
+        <p class="hometxt">Hi, my name is</p>
+        <p class="robin">Robin Pasalosdos</p>
+        <p class="hometxt">Web Developer in the Philippines</p>
+      </div>
+      <div class="home-col-2">
+        <img src="robin.png" alt="A picture of a robin">
       </div>
     </div>
   </div>
@@ -40,6 +142,10 @@
 
     <div id="about" class="section">
       <h2>About</h2>
+      <div>
+        <a href="https://drive.google.com/uc?export=download&id=1xAQA4UQbb-NQIHmArO2kLnpgyi2GgsHC" target="_blank" download="cv.pdf">Download CV</a>
+      </div>
+      
       <div class="container">
         <div class="row">
           <div class="about-col-2">
@@ -85,7 +191,7 @@
         <br>
         <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbtmMVxRcSFDLfvQfMfZzhsXhmhFpCNcqKkVHrtRcCZtqZPGPShzdbBhxCxpftLXpMgmZC" target="_blank" class="fa fa-envelope"><p>robinpasalosdos@gmail.com</p></a>
         <br>
-        <i class="fa fa-mobile"></i><p>09302979295</p>
+        <i class="fa fa-mobile"></i><p>+639302979295</p>
         <p>ripasalosdos@iskolarngbayan.pup.edu.ph</p>
         <p></p>
 
@@ -94,4 +200,4 @@
     </section>
   </div>
 </body>
-</html>
+</html> -->
