@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <nav id="desktop_nav">
+    <div class="logo">Robin</div>
+    <div>
+      <ul class="nav_links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>   
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger_nav">
+    <div class="logo">Robin</div>
+    <div class="hamburger_menu">
+      <div class="hamburger_icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu_links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section_pic_container">
+      <img src="./assets/profile-pic.jpg" alt="Robin profile picture" />
+    </div>
+    <div class="section_text">
+      <p class="section_text_p1">Hello, I'm</p>
+      <h1 class="title">Robin Pasalosdos</h1>
+      <p class="section_text_p2">Backend Developer</p>
+      <div class="btn_container">
+        <button
+          class="btn btn-color-2"
+          onclick="window.open('https://drive.google.com/uc?export=download&id=1xAQA4UQbb-NQIHmArO2kLnpgyi2GgsHC', '_blank')"
+        >
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials_container">
+        <img
+          src="./assets/linkedin.png"
+          alt="My LinkedIn profile"
+          class="icon"
+          onclick="window.open('https://www.linkedin.com/in/robin-pasalosdos-9a87b6286/', '_blank')"
+        />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="window.open('https://github.com/robinpasalosdos', '_blank')"
+          />
+
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section_text_p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section_container">
+      <div class="section_pic_container">
+        <img
+          src="./assets/profile-pic.jpg"
+          alt="Profile Picture"
+          class="about_pic"
+        />
+      </div>
+      <div class="about_details_container">
+        <div class="about_containers">
+          <div class="details_container">
+            <img
+              src="./assets/experience.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <h3>Experience</h3>
+            <p>2+ years <br />Backend Development</p>
+          </div>
+          <div class="details_container">
+            <img
+              src="./assets/education.png"
+              alt="Education icon"
+              class="icon"
+            />
+            <h3>Education</h3>
+            <p>Polytechnic University of the Philippines - Sta. Mesa<br />Bachelor of Science in Computer Engineering</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p style="text-indent: 3em; text-align: justify;">I'm a skilled data analyst and programmer with a talent for transforming complex data 
+            into actionable insights. My programming expertise spans various languages and technologies, allowing me to 
+            create efficient solutions and solve intricate problems. I've worked on diverse projects, from optimizing business 
+            operations to enhancing user experiences through software applications. Explore my work below, and let's connect 
+            to discuss how I can contribute to your data and programming needs.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section id="experience">
+    <p class="section_text_p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience_details_container">
+      <div class="about_containers">
+        <div class="details_container">
+          <h2 class="experience_sub_title">Web Development</h2>
+          <div class="article_container">
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>CSS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>PHP</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>JQuery</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Quasar</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details_container">
+          <h2 class="experience_sub_title">Computer Softwares</h2>
+          <div class="article_container">
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>MS Office</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>AutoCad</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Unity</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h5>Android Studio</h5>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img
+      src="./assets/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow"
+      onclick="location.href='./#projects'"
+    />
+  </section>
+  <section id="projects">
+    <p class="section_text_p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience_details_container">
+      <div class="about_containers">
+        <div class="details_container color_container">
+          <div class="article_container">
+            <img
+              src="./assets/janken_wars_pic.jpg"
+              alt="Project 1"
+              class="project_img"
+            />
+          </div>
+          <h2 class="experience_sub_title project_title">Janken Wars</h2>
+          <div class="btn_container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Github
+            </button>
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="window.open('https://drive.google.com/file/d/1Y2EptnTceVXgIf11k8Xa3UiDFUyGP00M/view?usp=sharing', '_blank')"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details_container color_container">
+          <div class="article_container">
+            <img
+              src="./assets/module_tracker_pic.jpg"
+              alt="Project 2"
+              class="project_img"
+            />
+          </div>
+          <h2 class="experience_sub_title project_title">Module Tracker</h2>
+          <div class="btn_container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Github
+            </button>
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="window.open('https://drive.google.com/file/d/15us4YVh3ZpZwlKJWbByHz0PGA6C0W1RP/view?usp=sharing', '_blank')"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details_container color_container">
+          <div class="article_container">
+            <img
+              src="./assets/salon_website_pic.jpg"
+              alt="Project 3"
+              class="project_img"
+            />
+          </div>
+          <h2 class="experience_sub_title project_title">Salon Website</h2>
+          <div class="btn_container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Github
+            </button>
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="window.open('https://robinpasalosdos.github.io/salon', '_blank')"
+            >
+              Website
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img
+      src="./assets/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow"
+      onclick="location.href='./#contact'"
+    />
+  </section>
+  <section id="contact">
+    <p class="section_text_p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact_info_upper_container">
+      <div class="contact_info_container">
+        <img
+          src="./assets/email.png"
+          alt="Email icon"
+          class="icon contact_icon email_icon"
+        />
+        <p><a href="mailto:robinpasalosdos@gmail.com" target="_blank">robinpasalosdos@gmail.com</a></p>
+      </div>
+      <div class="contact_info_container">
+        <img
+          src="./assets/linkedin.png"
+          alt="LinkedIn icon"
+          class="icon contact_icon"
+        />
+        <p><a href="https://www.linkedin.com/in/robin-pasalosdos-9a87b6286/" target="_blank">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav_links_container">
+        <ul class="nav_links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2023 Robin Pasalosdos. All Rights Reserved.</p>
+  </footer>
+
+
+<!--   <div class="home_container">
+    <div class="home_row">
+      <div class="home-col-1">
+        <p class="hometxt">Hi, my name is</p>
+        <p class="robin">Robin Pasalosdos</p>
+        <p class="hometxt">Web Developer in the Philippines</p>
+      </div>
+      <div class="home-col-2">
+        <img src="robin.png" alt="A picture of a robin">
+      </div>
+    </div>
+  </div>
+ 
+  
+
+    <div id="about" class="section">
+      <h2>About</h2>
+      <div>
+        <a href="https://drive.google.com/uc?export=download&id=1xAQA4UQbb-NQIHmArO2kLnpgyi2GgsHC" target="_blank" download="cv.pdf">Download CV</a>
+      </div>
+      
+      <div class="container">
+        <div class="row">
+          <div class="about-col-2">
+            <div class="tab-titles">
+              <p class="tab-link active-link" onclick="opentab('educ')">Education</a>
+              <p class="tab-link" onclick="opentab('skl')">Skills</a>
+              <p class="tab-link" onclick="opentab('exp')">Experience</a>  
+            </div>
+            <div class="tab-content active-tab" id="educ">
+              <ul>
+                <li>educ</li>
+              </ul>
+            </div>
+            <div class="tab-content" id="skl">
+              <ul>
+                <li>skl</li>
+              </ul>
+            </div>
+            <div class="tab-content" id="exp">
+              <ul>
+                <li>exp</li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <section id="mywork" class="section">
+      <h2>My Work</h2>
+      <div class="socmedlinks">
+        <a href="https://robinpasalosdos.github.io/salon" target="_blank" class="fa fa-salon"><p>Salon Website</p></a>
+        <a href="https://robinpasalosdos.github.io/eventbooking" target="_blank" class="fa fa-salon"><p>Event Booking</p></a>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="socmedlinks">
+        <a href="https://www.facebook.com/pasalosdos" target="_blank" class="fa fa-facebook"><p>Robin Pasalosdos</p></a>
+        <br>
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbtmMVxRcSFDLfvQfMfZzhsXhmhFpCNcqKkVHrtRcCZtqZPGPShzdbBhxCxpftLXpMgmZC" target="_blank" class="fa fa-envelope"><p>robinpasalosdos@gmail.com</p></a>
+        <br>
+        <i class="fa fa-mobile"></i><p>+639302979295</p>
+        <p>ripasalosdos@iskolarngbayan.pup.edu.ph</p>
+        <p></p>
+
+      </div>
+      
+    </section>
+  </div>
+</body>
+</html> -->
