@@ -1,13 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+@font-face {
+  font-family: 'k2d';
+  src: url('font/K2D-Regular.ttf') format('truetype');
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: lightgray;
+  font-family: 'k2d', sans-serif;
+  background-color: #DDE6ED;
 }
 
 html {
@@ -153,6 +158,7 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  min-height: fit-content;
 }
 
 .section_pic_container {
@@ -164,7 +170,7 @@ section {
 
 .section_pic_container img {
   border-radius: 50%;
-  border: 2px solid black;
+  border: 3px solid black;
 }
 
 .section_text {
@@ -213,16 +219,17 @@ section {
 }
 
 .btn {
-  font-weight: 600;
   transition: all 300ms ease;
-  padding: 1rem;
-  width: 8rem;
+  width: 7rem;
   border-radius: 2rem;
+  height: 2.5rem;
+  align-items: center;
+  font-family: 'k2d', sans-serif;
 }
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: #27374D 0.1rem solid;
 }
 
 .btn-color-1:hover,
@@ -232,20 +239,20 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+  background: #526D82;
+  color: #DDE6ED;
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: #27374D;
 }
 
 .btn-color-2 {
-  background: none;
+  background: #DDE6ED;
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+  border: #27374D 0.1rem solid;
 }
 
 .btn-container {
@@ -287,11 +294,12 @@ section {
 .details_container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: #9db2bf;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: black 0.1rem solid;
+  border-color: black;
   text-align: center;
+  color: black;
 }
 
 .section_container {
@@ -312,7 +320,7 @@ section {
 }
 
 .experience_sub_title {
-  color: rgb(85, 85, 85);
+  color: black;
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -351,8 +359,8 @@ article .icon {
 }
 
 .color_container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color: black;
+  background: #9db2bf;
 }
 
 .project_img {

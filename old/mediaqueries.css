@@ -101,3 +101,14 @@
     text-align: justify;
   }
 }
+
+@media screen and (max-height: 500px) {
+    section{
+      height: fit-content;
+    }
+
+    #profile{
+      height: fit-content;
+      margin-bottom: 2rem;
+    }
+}

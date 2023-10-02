@@ -26,7 +26,6 @@ divElement2.classList.add("scale-2nd");
 divElement4.classList.add("scale-2nd");
 
 
-
 divElement1.addEventListener("click", function() {
     forTab2();
     forTab2();
