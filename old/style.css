@@ -301,7 +301,7 @@ section {
 .details_container {
   padding: 1.5rem;
   flex: 1;
-  background: #9db2bf;
+  background: #DDE6ED;
   border-radius: 2rem;
   border: #526D82 0.1rem solid;
   border-color: #526D82;
@@ -348,6 +348,10 @@ section {
   justify-content: space-around;
 }
 
+.article_container img{
+  border: #526D82 0.1rem solid;
+}
+
 article {
   display: flex;
   width: 10rem;
@@ -367,7 +371,7 @@ article .icon {
 
 .color_container {
   border-color: #526D82;
-  background: #9db2bf;
+  background: #DDE6ED;
 }
 
 .project_img {
@@ -426,6 +430,7 @@ article .icon {
 footer {
   height: 26vh;
   margin: 0 1rem;
+  color: #27374D;
 }
 
 footer p {
