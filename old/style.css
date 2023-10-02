@@ -44,14 +44,15 @@ a {
 }
 
 a:hover {
-  color: grey;
+  color: #9db2bf;
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: #9db2bf;
 }
 
 .logo {
   font-size: 2rem;
+  color: #27374D;
 }
 
 .logo:hover {
@@ -186,6 +187,7 @@ section {
 
 .section_text_p1 {
   text-align: center;
+  color: #27374D;
 }
 
 .section_text_p2 {
@@ -196,6 +198,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  color: #27374D;
 }
 
 #socials_container {
@@ -247,10 +250,12 @@ section {
 
 .btn-color-1:hover {
   background: #27374D;
+  color: #DDE6ED;
 }
 
 .btn-color-2 {
   background: #DDE6ED;
+  color: #27374D;
 }
 
 .btn-color-2:hover {
@@ -373,12 +378,7 @@ article .icon {
 
 .project_title {
   margin: 1rem;
-  color: black;
-}
-
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+  color: #27374D;
 }
 
 /* CONTACT */
