@@ -303,8 +303,8 @@ section {
   flex: 1;
   background: #DDE6ED;
   border-radius: 2rem;
-  border: #526D82 0.1rem solid;
-  border-color: #526D82;
+  border: #27374D 0.1rem solid;
+  border-color: #27374D;
   text-align: center;
   color: #27374D;
 }
@@ -348,10 +348,6 @@ section {
   justify-content: space-around;
 }
 
-.article_container img{
-  border: #526D82 0.1rem solid;
-}
-
 article {
   display: flex;
   width: 10rem;
@@ -370,7 +366,7 @@ article .icon {
 }
 
 .color_container {
-  border-color: #526D82;
+  border-color: #27374D;
   background: #DDE6ED;
 }
 
@@ -398,8 +394,8 @@ article .icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: #27374D 0.1rem solid;
+  border-color: #27374D;
   background: (250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
