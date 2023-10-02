@@ -38,7 +38,7 @@ nav {
 }
 
 a {
-  color: black;
+  color: #27374D;
   text-decoration: none;
   text-decoration-color: white;
 }
@@ -298,10 +298,10 @@ section {
   flex: 1;
   background: #9db2bf;
   border-radius: 2rem;
-  border: black 0.1rem solid;
-  border-color: black;
+  border: #27374D 0.1rem solid;
+  border-color: #27374D;
   text-align: center;
-  color: black;
+  color: #27374D;
 }
 
 .section_container {
@@ -322,7 +322,7 @@ section {
 }
 
 .experience_sub_title {
-  color: black;
+  color: #27374D;
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -361,7 +361,7 @@ article .icon {
 }
 
 .color_container {
-  border-color: black;
+  border-color: #27374D;
   background: #9db2bf;
 }
 
