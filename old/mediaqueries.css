@@ -64,13 +64,16 @@
     height: fit-content;
     margin-bottom: 2rem;
   }
+  .about_containers{
+    gap: 1rem;
+  }
   .about_containers,
   .contact_info_upper_container,
   .btn_container {
     flex-wrap: wrap;
   }
   .contact_info_container {
-    margin: 0;
+    margin: .2rem;
   }
   .contact_info_container p,
   .nav_links li a {
