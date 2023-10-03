@@ -59,10 +59,7 @@
   article {
     font-size: 1rem;
   }
-  .article_container{
-    gap: 1.5rem;
-    background-color: aqua;
-  }
+
   footer nav {
     height: fit-content;
     margin-bottom: 2rem;
