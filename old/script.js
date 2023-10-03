@@ -28,3 +28,42 @@ function updateText() {
 }
 
 setInterval(updateText,100);
+
+var tabContainer = document.getElementById("desktop_nav");
+var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+var navlinkA = document.getElementById("a");
+var navlinkB = document.getElementById("b");
+var navlinkC = document.getElementById("c");
+var navlinkD = document.getElementById("d");
+function handleScroll() {
+  var currentScrollTop = document.documentElement.scrollTop;
+  if (currentScrollTop >= lastScrollTop) {
+    tabContainer.classList.add("slide-up");
+    setTimeout(function() {
+        tabContainer.classList.remove("slide-down");
+        },100);
+
+  }else{
+    navlinkA.style.color = "#DDE6ED";
+    navlinkB.style.color = "#DDE6ED";
+    navlinkC.style.color = "#DDE6ED";
+    navlinkD.style.color = "#DDE6ED";
+    tabContainer.style.backgroundColor = "#526D82";
+    tabContainer.classList.add("slide-down");
+    setTimeout(function() {
+    tabContainer.classList.remove("slide-up");
+    },100);
+  }
+  lastScrollTop = currentScrollTop;
+}
+
+window.addEventListener("scroll", function() {
+    handleScroll();
+    if (window.pageYOffset == 0){
+      tabContainer.style.backgroundColor = "#DDE6ED";
+      navlinkA.style.color = "#27374D";
+      navlinkB.style.color = "#27374D";
+      navlinkC.style.color = "#27374D";
+      navlinkD.style.color = "#27374D";
+    }
+});

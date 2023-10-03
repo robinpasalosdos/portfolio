@@ -1,8 +1,25 @@
-@keyframes firstline {
-    0%{
-      opacity: 1;
-    }
+@keyframes slide-up{
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-6rem);
+  }
+}
 
-    
+@keyframes slide-down{
+  0% {
+      transform: translateY(-6rem);
+  }
+  100% {
+      transform: translateY(0rem);
+  }
+}
 
+.slide-up{
+  animation: slide-up .1s ease-in forwards;
+}
+
+.slide-down{
+  animation: slide-down .1s ease-out forwards;
 }

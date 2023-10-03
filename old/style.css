@@ -22,7 +22,7 @@ html {
 /* DESKTOP NAV */
 
 nav {
-  height: 12vh;
+  height: 10vh;
   width: 100%;
   position: fixed;
   z-index: 1000;
@@ -63,6 +63,10 @@ a:hover {
   cursor: default;
 }
 
+.ham_logo{
+  left: 7% !important;
+}
+
 /* HAMBURGER MENU */
 
 #hamburger_nav {
@@ -71,10 +75,17 @@ a:hover {
 
 
 .hamburger_menu {
-  padding-top: .8rem;
-  right: 25%;
+  right: 7%;
   position: absolute;
   top: 25%;
+  border: 2px solid #27374D;
+  border-radius: 50%;
+  height: 2.6rem;
+  width: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #DDE6ED;
 }
 
 .hamburger_icon {
@@ -153,8 +164,9 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
+  height: 100vh;
   min-height: fit-content;
+  padding-top: 18vh;
 }
 
 .section_pic_container {
