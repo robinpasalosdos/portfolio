@@ -21,26 +21,21 @@ html {
 
 /* DESKTOP NAV */
 
-nav, .nav_links {
-  display: flex;
-}
-
 nav {
   height: 12vh;
-  padding-top: 1.5rem;
   width: 100%;
   position: fixed;
   z-index: 1000;
-
 }
 
 .nav_links {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
-  padding-top: .4rem;
   right: 20%;
   position: absolute;
+  display: flex;
+  top: 30%;
 }
 
 a {
@@ -61,6 +56,7 @@ a:hover {
   color: #27374D;
   left: 25%;
   position: absolute;
+  top: 25%;
 }
 
 .logo:hover {
@@ -78,6 +74,7 @@ a:hover {
   padding-top: .8rem;
   right: 25%;
   position: absolute;
+  top: 25%;
 }
 
 .hamburger_icon {
@@ -141,7 +138,7 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 16vh;
+  padding-top: 4vh;
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
