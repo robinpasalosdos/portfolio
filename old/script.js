@@ -60,10 +60,31 @@ function handleScroll() {
 window.addEventListener("scroll", function() {
     handleScroll();
     if (window.pageYOffset == 0){
-      tabContainer.style.backgroundColor = "#DDE6ED";
+      tabContainer.style.backgroundColor = "transparent";
       navlinkA.style.color = "#27374D";
       navlinkB.style.color = "#27374D";
       navlinkC.style.color = "#27374D";
       navlinkD.style.color = "#27374D";
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const seeMoreBtn = document.getElementById("project_btn_1");
+  const hiddenContent = document.querySelector("#project_hidden_details");
+  const img = document.querySelector(".project_img");
+
+  seeMoreBtn.addEventListener("click", function () {
+      if (hiddenContent.style.display === "none" || hiddenContent.style.display === "") {
+          seeMoreBtn.textContent = "See Less";
+          hiddenContent.style.display = "block";
+          img.classList.add("project_img_vanish");
+          hiddenContent.classList.add("project_detail_restore");
+      } else {
+          hiddenContent.style.display = "none";
+          seeMoreBtn.textContent = "See More";
+          img.classList.remove("project_img_vanish");
+          img.classList.add("project_img_restore");
+      }
+  });
+});
+

@@ -19,6 +19,9 @@
   #hamburger_nav {
     display: flex;
   }
+  .hamburger_menu{
+    transform: scale(.8);
+  }
   #experience,
   .experience_details_container {
     margin-top: 2rem;
@@ -26,9 +29,6 @@
   #profile,
   .section_container {
     display: block;
-  }
-  .arrow {
-    display: none;
   }
   section,
   .section_container {
@@ -48,7 +48,7 @@
   #profile {
     height: 100vh;
     margin-bottom: 0;
-    padding-top: 12vh;
+    padding-top: 10vh;
   }
 }
 
@@ -57,13 +57,27 @@
   footer {
     height: 40vh;
   }
+
+  section{
+    height: fit-content;
+    padding-top: 0;
+  }
+
   #profile {
     height: 100vh;
     margin-bottom: 0;
-    padding-top: 12vh;
+    padding-top: 18vh;
   }
   article {
     font-size: 1rem;
+  }
+
+  .hamburger_menu{
+    transform: scale(.7);
+  }
+
+  .ham_logo{
+    transform: scale(.75);
   }
 
   footer nav {
