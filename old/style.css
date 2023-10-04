@@ -10,6 +10,10 @@
   padding: 0;
 }
 
+h1, h2, h3, p{
+  cursor: default;
+}
+
 body {
   font-family: 'k2d', sans-serif;
   background-color: #DDE6ED;
@@ -21,8 +25,8 @@ html {
 
 /* DESKTOP NAV */
 
-#desktop_nav, #hamburger_nav, #footer_nav {
-  height: 10vh;
+#desktop_nav, #hamburger_nav, #nav_footer {
+  height: 9vh;
   width: 100%;
   z-index: 1000;
 }
@@ -31,14 +35,22 @@ html {
   position: fixed;
 }
 
-.nav_links {
+.nav_links, .nav_footer_links{
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
-  right: 20%;
-  position: absolute;
   display: flex;
+}
+
+.nav_links{
+  position: absolute;
+  right: 20%;
   top: 30%;
+}
+
+.nav_footer_links{
+  display: flex;
+  justify-content: center;
 }
 
 a {
@@ -442,3 +454,5 @@ footer {
 footer p {
   text-align: center;
 }
+
+

@@ -29,21 +29,48 @@ function updateText() {
 
 setInterval(updateText,100);
 
+
 var tabContainer = document.getElementById("desktop_nav");
 var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 var navlinkA = document.getElementById("a");
 var navlinkB = document.getElementById("b");
 var navlinkC = document.getElementById("c");
 var navlinkD = document.getElementById("d");
-function handleScroll() {
-  var currentScrollTop = document.documentElement.scrollTop;
-  if (currentScrollTop >= lastScrollTop) {
-    tabContainer.classList.add("slide-up");
+
+function slideDown(){
+  navlinkA.style.color = "#DDE6ED";
+  navlinkB.style.color = "#DDE6ED";
+  navlinkC.style.color = "#DDE6ED";
+  navlinkD.style.color = "#DDE6ED";
+  tabContainer.style.backgroundColor = "#526D82";
+  tabContainer.classList.add("slide-down");
+  setTimeout(function() {
+  tabContainer.classList.remove("slide-up");
+  },100);
+}
+
+function slideUp(){
+  tabContainer.classList.add("slide-up");
     setTimeout(function() {
         tabContainer.classList.remove("slide-down");
         },100);
+}
+
+function handleScroll() {
+  var currentScrollTop = document.documentElement.scrollTop;
+  if (currentScrollTop > lastScrollTop) {
+    slideUp();
 
   }else{
+    slideDown();
+  }
+  lastScrollTop = currentScrollTop;
+}
+  
+
+
+setTimeout(function() {
+  if (currentScrollTop == lastScrollTop){
     navlinkA.style.color = "#DDE6ED";
     navlinkB.style.color = "#DDE6ED";
     navlinkC.style.color = "#DDE6ED";
@@ -54,9 +81,7 @@ function handleScroll() {
     tabContainer.classList.remove("slide-up");
     },100);
   }
-  lastScrollTop = currentScrollTop;
-}
-
+  },3000);
 window.addEventListener("scroll", function() {
     handleScroll();
     if (window.pageYOffset == 0){
@@ -87,4 +112,25 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 });
+
+const element = document.getElementById('socials_container');
+const icons = element.querySelectorAll("img");
+icons.forEach((icon) => {
+  icon.addEventListener('mouseenter', () => {
+    icon.classList.add('scaleup');
+    setTimeout(function() {
+      icon.classList.remove('scaledown');
+      },100);
+  });
+
+  icon.addEventListener('mouseout', () => {
+    icon.classList.add('scaledown');
+    setTimeout(function() {
+      icon.classList.remove('scaleup');
+      },100);
+  });
+  
+});
+
+
 
