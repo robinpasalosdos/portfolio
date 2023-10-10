@@ -30,7 +30,8 @@ function updateText() {
 setInterval(updateText,100);
 
 
-var tabContainer = document.getElementById("desktop_nav");
+var tabContainer = document.getElementById("desktop_nav");ham_logo
+var logo = document.getElementById("ham_logo");
 var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 var navlinkA = document.getElementById("a");
 var navlinkB = document.getElementById("b");
@@ -44,15 +45,19 @@ function slideDown(){
   navlinkD.style.color = "#DDE6ED";
   tabContainer.style.backgroundColor = "#526D82";
   tabContainer.classList.add("slide-down");
+  logo.classList.add("slide-down");
   setTimeout(function() {
   tabContainer.classList.remove("slide-up");
+  logo.classList.remove("slide-up");
   },100);
 }
 
 function slideUp(){
   tabContainer.classList.add("slide-up");
+  logo.classList.add("slide-up");
     setTimeout(function() {
         tabContainer.classList.remove("slide-down");
+        logo.classList.remove("slide-down");
         },100);
 }
 
