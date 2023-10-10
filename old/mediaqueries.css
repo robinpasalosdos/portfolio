@@ -128,7 +128,7 @@
   footer p {
     padding-top: 5rem;
   }
-  #socials_container:hover {
+  #socials_container img:hover {
     animation: scaleup .1s ease-in forwards;
   }
 }
