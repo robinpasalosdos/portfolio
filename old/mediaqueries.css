@@ -80,6 +80,10 @@
     transform: scale(.75);
   }
 
+  .article_container {
+    gap: 2rem;
+  }
+
   footer nav {
     height: fit-content;
     margin-bottom: 2rem;
