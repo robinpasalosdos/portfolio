@@ -12,7 +12,7 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-  <nav id="desktop_nav" class="desktop_nav">
+  <nav id="desktop_nav">
     <div class="logo">Robin</div>
     <div>
       <ul class="nav_links">
@@ -24,7 +24,7 @@
     </div>
   </nav>
   <nav id="hamburger_nav">
-    <div id="ham_logo" class="logo ham_logo">Robin</div>
+    <div id="ham_logo" class="logo">Robin</div>
     <div class="hamburger_menu">
       <div class="hamburger_icon" onclick="toggleMenu()">
         <span></span>
@@ -88,7 +88,7 @@
     </div>
   </section>
   <section id="about">
-    <p class="section_text_p1">Get txo Know More</p>
+    <p class="section_text_p1">Get to Know More</p>
     <h1 class="title">About me</h1>
     <div class="section_container">
       <div class="section_pic_container">
@@ -273,7 +273,7 @@
           <div class="btn_container">
             <button
               class="btn btn-color-1 project-btn"
-              onclick="location.href='https://github.com/'"
+              onclick='showDialog("dialog-box-1")'
             >
               Read More
             </button>
@@ -297,7 +297,7 @@
           <div class="btn_container">
             <button
               class="btn btn-color-1 project-btn"
-              onclick="location.href='https://github.com/'"
+              onclick='showDialog("dialog-box-2")'
             >
               Read More
             </button>
@@ -321,7 +321,7 @@
           <div class="btn_container">
             <button
               class="btn btn-color-1 project-btn"
-              onclick="location.href='https://github.com/'"
+              onclick='showDialog("dialog-box-3")'
             >
               Read More
             </button>
@@ -336,6 +336,40 @@
       </div>
     </div>
   </section>
+  <div class="overlay" id="overlay"></div>
+  <div class="dialog-box" id="dialog-box-1">
+        <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-1")'>
+        <div class="dialog_container">
+          <div class="project_img_container">
+          </div>
+          <div class="project_details_container">
+            <h2 class="experience_sub_title project_title">Janken Wars</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cumque eligendi totam quidem delectus! Sint deleniti beatae ab incidunt numquam!</p>
+          </div>
+        </div>
+  </div>
+  <div class="dialog-box" id="dialog-box-2">
+    <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-2")'>
+    <div class="dialog_container">
+      <div class="project_img_container">
+      </div>
+      <div class="project_details_container">
+        <h2 class="experience_sub_title project_title">Module Tracker</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cumque eligendi totam quidem delectus! Sint deleniti beatae ab incidunt numquam!</p>
+      </div>
+    </div>
+</div>
+<div class="dialog-box" id="dialog-box-3">
+  <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-3")'>
+  <div class="dialog_container">
+    <div class="project_img_container">
+    </div>
+    <div class="project_details_container">
+      <h2 class="experience_sub_title project_title">Salon Website</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cumque eligendi totam quidem delectus! Sint deleniti beatae ab incidunt numquam!</p>
+    </div>
+  </div>
+</div>
   <section id="contact">
     <p class="section_text_p1">Get in Touch</p>
     <h1 class="title">Contact me</h1>

@@ -136,6 +136,28 @@ icons.forEach((icon) => {
   });
   
 });
+const htmlElement = document.documentElement;
+const bodyElement = document.body;
+function showDialog(dialogBox) {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById(dialogBox).style.display = "block";
+  htmlElement.style.overflow = "hidden";
+  bodyElement.style.overflow = "hidden";
+}
 
+function hideDialog(dialogBox) {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById(dialogBox).style.display = "none";
+  htmlElement.style.overflow = "auto";
+  bodyElement.style.overflow = "auto";
+}
+
+document.addEventListener('click', function (event) {
+  if (event.target === document.getElementById("overlay")) {
+    hideDialog("dialog-box-1");
+    hideDialog("dialog-box-2");
+    hideDialog("dialog-box-3");
+  }
+});
 
 

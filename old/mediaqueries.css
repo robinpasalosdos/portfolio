@@ -131,6 +131,10 @@
   #socials_container img:hover {
     animation: scaleup .1s ease-in forwards;
   }
+  #project_img{
+    height: 90%;
+    width: 90%;
+  }
 }
 
 @media screen and (max-height: 500px) {
