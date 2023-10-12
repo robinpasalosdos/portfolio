@@ -26,14 +26,19 @@ html {
 /* DESKTOP NAV */
 
 #desktop_nav, #hamburger_nav, #nav_footer {
-  height: 9vh;
   width: 100%;
   z-index: 1000;
 }
 
+#desktop_nav, #nav_footer {
+  height: 9vh;
+}
+
 #desktop_nav, #hamburger_nav{
   position: fixed;
+  background-color: #DDE6ED;
 }
+
 
 .nav_links, .nav_footer_links{
   gap: 2rem;
@@ -86,6 +91,7 @@ a:hover {
 
 #hamburger_nav {
   display: none;
+  height: 12vh;
 }
 
 
@@ -93,14 +99,11 @@ a:hover {
   right: 7%;
   position: absolute;
   top: 25%;
-  border: 2px solid #27374D;
-  border-radius: 50%;
   height: 2.6rem;
   width: 2.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #DDE6ED;
 }
 
 .hamburger_icon {
@@ -425,10 +428,12 @@ article .icon {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ccc;
+  border-radius: .3rem;
+  background-color: #9db2bf;
+  padding: 1.3rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  height: fit-content;
 }
 
 .dialog_container{
@@ -436,13 +441,12 @@ article .icon {
   background: #DDE6ED;
   border-radius: 2rem;
   border: #27374D 0.1rem solid;
-  border-color: #27374D;
   text-align: center;
   color: #27374D;
-  border-color: #27374D;
   background: #DDE6ED;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  display: none;
 }
 
 .project_img_container{
@@ -456,9 +460,9 @@ article .icon {
 
 .dialog_x{
   position: absolute;
-  top: 0%;
-  right: 0%;
-  width: 2.5rem;
+  top: 1%;
+  right: 1%;
+  width: 2rem;
 }
 
 /* CONTACT */

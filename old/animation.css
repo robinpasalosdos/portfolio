@@ -87,6 +87,16 @@
   }
 }
 
+@keyframes openDialog{
+  100% {
+    height: 0%;
+  }
+
+  0%{
+    height: fit-content;
+  }
+}
+
 .slide-up{
   animation: slide-up .05s ease-in forwards;
 }

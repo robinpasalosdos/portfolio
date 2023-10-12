@@ -29,35 +29,29 @@ function updateText() {
 
 setInterval(updateText,100);
 
-
-var tabContainer = document.getElementById("desktop_nav");ham_logo
-var logo = document.getElementById("ham_logo");
+var tabContainer = document.getElementById("desktop_nav");
+var hamContainer = document.getElementById("hamburger_nav");
 var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-var navlinkA = document.getElementById("a");
-var navlinkB = document.getElementById("b");
-var navlinkC = document.getElementById("c");
-var navlinkD = document.getElementById("d");
 
 function slideDown(){
-  navlinkA.style.color = "#DDE6ED";
-  navlinkB.style.color = "#DDE6ED";
-  navlinkC.style.color = "#DDE6ED";
-  navlinkD.style.color = "#DDE6ED";
-  tabContainer.style.backgroundColor = "#526D82";
   tabContainer.classList.add("slide-down");
-  logo.classList.add("slide-down");
+  hamContainer.classList.add("slide-down");
+  tabContainer.style.boxShadow = '0 1px 6px rgba(0, 0, 0, 0.2)';
+  hamContainer.style.boxShadow = '0 1px 6px rgba(0, 0, 0, 0.2)';
   setTimeout(function() {
   tabContainer.classList.remove("slide-up");
-  logo.classList.remove("slide-up");
+  hamContainer.classList.remove("slide-up");
   },100);
 }
 
 function slideUp(){
   tabContainer.classList.add("slide-up");
-  logo.classList.add("slide-up");
+  hamContainer.classList.add("slide-up");
+  tabContainer.style.boxShadow = '0 1px 6px rgba(0, 0, 0, 0.2)';
+  hamContainer.style.boxShadow = '0 1px 6px rgba(0, 0, 0, 0.2)';
     setTimeout(function() {
         tabContainer.classList.remove("slide-down");
-        logo.classList.remove("slide-down");
+        hamContainer.classList.remove("slide-down");
         },100);
 }
 
@@ -72,51 +66,14 @@ function handleScroll() {
   lastScrollTop = currentScrollTop;
 }
   
-
-
-setTimeout(function() {
-  if (currentScrollTop == lastScrollTop){
-    navlinkA.style.color = "#DDE6ED";
-    navlinkB.style.color = "#DDE6ED";
-    navlinkC.style.color = "#DDE6ED";
-    navlinkD.style.color = "#DDE6ED";
-    tabContainer.style.backgroundColor = "#526D82";
-    tabContainer.classList.add("slide-down");
-    setTimeout(function() {
-    tabContainer.classList.remove("slide-up");
-    },100);
-  }
-  },3000);
 window.addEventListener("scroll", function() {
     handleScroll();
     if (window.pageYOffset == 0){
-      tabContainer.style.backgroundColor = "transparent";
-      navlinkA.style.color = "#27374D";
-      navlinkB.style.color = "#27374D";
-      navlinkC.style.color = "#27374D";
-      navlinkD.style.color = "#27374D";
+      tabContainer.style.boxShadow = 'none';
+      hamContainer.style.boxShadow = 'none';
     }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const seeMoreBtn = document.getElementById("project_btn_1");
-  const hiddenContent = document.querySelector("#project_hidden_details");
-  const img = document.querySelector(".project_img");
-
-  seeMoreBtn.addEventListener("click", function () {
-      if (hiddenContent.style.display === "none" || hiddenContent.style.display === "") {
-          seeMoreBtn.textContent = "See Less";
-          hiddenContent.style.display = "block";
-          img.classList.add("project_img_vanish");
-          hiddenContent.classList.add("project_detail_restore");
-      } else {
-          hiddenContent.style.display = "none";
-          seeMoreBtn.textContent = "See More";
-          img.classList.remove("project_img_vanish");
-          img.classList.add("project_img_restore");
-      }
-  });
-});
 
 const element = document.getElementById('socials_container');
 const icons = element.querySelectorAll("img");
