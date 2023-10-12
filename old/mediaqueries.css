@@ -1,14 +1,9 @@
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
-    margin-bottom: 6rem;
   }
   .about_containers {
     flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
   }
 }
 
@@ -49,7 +44,7 @@
   #profile {
     height: 100vh;
     margin-bottom: 0;
-    padding-top: 10vh;
+    padding-top: 13vh;
   }
   .dialog-box {
     width: 70%;

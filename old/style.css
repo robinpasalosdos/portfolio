@@ -172,7 +172,7 @@ a:hover {
 
 section {
   padding-top: 6vh;
-  height: 96vh;
+  height: fit-content;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -189,6 +189,7 @@ section {
   height: 100vh;
   min-height: fit-content;
   padding-top: 18vh;
+  margin-bottom: 10vh;
 }
 
 .section_pic_container {
@@ -441,12 +442,11 @@ article .icon {
   background: #DDE6ED;
   border-radius: 2rem;
   border: #27374D 0.1rem solid;
-  text-align: center;
   color: #27374D;
   background: #DDE6ED;
   display: flex;
   flex-direction: column;
-  display: none;
+  justify-content: center;
 }
 
 .project_img_container{
@@ -463,6 +463,11 @@ article .icon {
   top: 1%;
   right: 1%;
   width: 2rem;
+}
+
+.dialog_title_container{
+  display: flex;
+  justify-content: center;
 }
 
 /* CONTACT */
@@ -530,4 +535,15 @@ footer p {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #27374D;
+}
+
+.animated-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.animated-section.animated {
+  opacity: 1;
+  transform: translateY(0);
 }

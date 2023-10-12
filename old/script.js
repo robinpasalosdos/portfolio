@@ -55,7 +55,7 @@ function slideUp(){
         },100);
 }
 
-function handleScroll() {
+function navHandleScroll() {
   var currentScrollTop = document.documentElement.scrollTop;
   if (currentScrollTop > lastScrollTop) {
     slideUp();
@@ -67,7 +67,7 @@ function handleScroll() {
 }
   
 window.addEventListener("scroll", function() {
-    handleScroll();
+  navHandleScroll();
     if (window.pageYOffset == 0){
       tabContainer.style.boxShadow = 'none';
       hamContainer.style.boxShadow = 'none';
@@ -117,4 +117,24 @@ document.addEventListener('click', function (event) {
   }
 });
 
+const sections = document.querySelectorAll('.animated-section');
+
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight)*3/4
+    );
+}
+
+function handleScroll() {
+    sections.forEach((section) => {
+        if (isElementInViewport(section)) {
+            section.classList.add('animated');
+        }
+    });
+}
+
+window.addEventListener('scroll', handleScroll);
+
+handleScroll();
 
