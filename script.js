@@ -1,6 +1,7 @@
+const menu = document.querySelector(".menu_links");
+const icon = document.querySelector(".hamburger_icon");
+
 function toggleMenu() {
-    const menu = document.querySelector(".menu_links");
-    const icon = document.querySelector(".hamburger_icon");
     menu.classList.toggle("open");
     icon.classList.toggle("open");
   }
@@ -45,6 +46,9 @@ function slideDown(){
 }
 
 function slideUp(){
+  icon.classList.remove("open");
+  menu.classList.remove("open");
+
   tabContainer.classList.add("slide-up");
   hamContainer.classList.add("slide-up");
   tabContainer.style.boxShadow = '0 1px 6px rgba(0, 0, 0, 0.2)';

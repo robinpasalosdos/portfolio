@@ -436,6 +436,7 @@ article .icon {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 50%;
   height: fit-content;
+  z-index: 2000;
 }
 
 .dialog_container{
@@ -497,6 +498,10 @@ article .icon {
 
 .contact_info_container p {
   font-size: larger;
+}
+
+.contact_info_container img{
+  height: 2rem;
 }
 
 .contact_icon {
