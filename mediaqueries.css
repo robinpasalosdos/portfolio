@@ -18,6 +18,9 @@
   .hamburger_menu{
     transform: scale(.8);
   }
+  #ham_logo{
+    transform: scale(.8);
+  }
   #experience,
   .experience_details_container {
     margin-top: 2rem;

@@ -85,20 +85,21 @@ a:hover {
 
 #ham_logo{
   left: 7% !important;
+  top: 20% !important;
 }
 
 /* HAMBURGER MENU */
 
 #hamburger_nav {
   display: none;
-  height: 12vh;
+  height: 10vh;
 }
 
 
 .hamburger_menu {
   right: 7%;
   position: absolute;
-  top: 25%;
+  top: 20%;
   height: 2.6rem;
   width: 2.8rem;
   display: flex;
