@@ -1,0 +1,151 @@
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+  }
+  .about_containers {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop_nav {
+    display: none;
+  }
+  #hamburger_nav {
+    display: flex;
+    
+  }
+  .hamburger_menu{
+    transform: scale(.8);
+  }
+  #experience,
+  .experience_details_container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .section_container {
+    display: block;
+  }
+  section,
+  .section_container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section_pic_container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about_containers {
+    margin-top: 0;
+  }
+  #profile {
+    height: 100vh;
+    margin-bottom: 0;
+    padding-top: 13vh;
+  }
+  .dialog-box {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+
+  section{
+    height: fit-content;
+    padding-top: 0;
+  }
+
+  #profile {
+    height: 100vh;
+    margin-bottom: 0;
+    padding-top: 18vh;
+  }
+  article {
+    font-size: 1rem;
+  }
+
+  .hamburger_menu{
+    transform: scale(.7);
+  }
+
+  .ham_logo{
+    transform: scale(.75);
+  }
+
+  .article_container {
+    gap: 2rem;
+  }
+
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about_containers{
+    gap: 1rem;
+  }
+  .about_containers,
+  .contact_info_upper_container,
+  .btn_container {
+    flex-wrap: wrap;
+  }
+  .contact_info_container {
+    margin: .2rem;
+  }
+  .contact_info_container p,
+  .nav_links li a, .nav_footer_links li a {
+    font-size: 1rem;
+  }
+  .experience_sub_title {
+    font-size: 1.25rem;
+  }
+  .nav_links, .nav_footer_links{
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section_pic_container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section_text_p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text_container {
+    text-align: justify;
+  }
+  footer p {
+    padding-top: 5rem;
+  }
+  #socials_container img:hover {
+    animation: scaleup .1s ease-in forwards;
+  }
+  #project_img{
+    height: 90%;
+    width: 90%;
+  }
+  .dialog-box {
+    width: 80%;
+  }
+}
+
+@media screen and (max-height: 500px) {
+    section{
+      height: fit-content;
+    }
+
+    #profile{
+      height: fit-content;
+      margin-bottom: 2rem;
+    }
+}

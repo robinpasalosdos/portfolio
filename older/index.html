@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="animation.css">
+    <link rel="stylesheet" type="text/css" href="mediaqueries.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="nav-con">
+        <nav id="tab-container" class="tab-container">
+            <div id="tab-1st"><a href="#skills">Skills</a></div>
+            <div id="tab-2nd"><a href="#projects">Projects</a></div>
+            <div id="tab-3rd"><a href="#home">Home</a></div>
+            <div id="tab-4th"><a href="#about">About</a></div>
+            <div id="tab-5th"><a href="#contact">Contact</a></div>
+        </nav>
+        <div class="menu">
+            <div class="circle">
+                <div class="span-container" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <section id="home">
+        <div class="section_pic_container">
+          <img src="./assets/profile-pic.jpg" alt="Robin profile picture" />
+        </div>
+        <div class="section_text">
+          <p class="section_text_p1">Hello, I'm</p>
+          <h1 class="title">Robin Pasalosdos</h1>
+          <p class="section_text_p2">Backend Developer</p>
+          <div class="btn_container">
+            <button
+              class="btn btn-color-2"
+              onclick="window.open('https://drive.google.com/uc?export=download&id=1xAQA4UQbb-NQIHmArO2kLnpgyi2GgsHC', '_blank')"
+            >
+              Download CV
+            </button>
+            <button class="btn btn-color-1" onclick="location.href='./#contact'">
+              Contact Info
+            </button>
+          </div>
+          <div id="socials_container">
+            <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              class="icon"
+              onclick="window.open('https://www.linkedin.com/in/robin-pasalosdos-9a87b6286/', '_blank')"
+            />
+              <img
+                src="./assets/github.png"
+                alt="My Github profile"
+                class="icon"
+                onclick="window.open('https://github.com/robinpasalosdos', '_blank')"
+              />
+    
+          </div>
+        </div>
+      </section>
+    <section id="projects">
+        <div class="project-container">
+          <div id="project-2nd-container"  class="project-2nd-container">
+            <div id="first-work" class="work-container">
+                <img
+                src="./assets/janken_wars_pic.jpg"
+                alt="Project 1"
+                class="project_img"
+                />
+                <div id="first-work-details" class="work-details-container">
+                    <h2 class="experience_sub_title project_title">Janken Wars</h2>
+                    <div class="work-details">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing 
+                        elit. Minima, tenetur sit. Suscipit odit nobis atque 
+                        eos quod earum eius assumenda incidunt aliquam, eligendi 
+                        autem omnis accusamus inventore dolore, rerum consequuntur?</p>
+                    </div>
+                    <div class="btn-container">
+                        <button
+                        class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/'"
+                        >
+                        Github
+                        </button>
+                        <button
+                        class="btn btn-color-2 project-btn"
+                        onclick="window.open('https://drive.google.com/file/d/1Y2EptnTceVXgIf11k8Xa3UiDFUyGP00M/view?usp=sharing', '_blank')"
+                        >
+                        Live Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="second-work" class="work-container">
+                <img
+                src="./assets/module_tracker_pic.jpg"
+                alt="Project 2"
+                class="project_img"
+                />
+                <div id="second-work-details" class="work-details-container">
+                    <h2 class="experience_sub_title project_title">Module Tracker</h2>
+                    <div class="work-details">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing 
+                        elit. Minima, tenetur sit. Suscipit odit nobis atque 
+                        eos quod earum eius assumenda incidunt aliquam, eligendi 
+                        autem omnis accusamus inventore dolore, rerum consequuntur?</p>
+                    </div>
+                    <div class="btn-container">
+                        <button
+                        class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/'"
+                        >
+                        Github
+                        </button>
+                        <button
+                        class="btn btn-color-2 project-btn"
+                        onclick="window.open('https://drive.google.com/file/d/15us4YVh3ZpZwlKJWbByHz0PGA6C0W1RP/view?usp=sharing', '_blank')"
+                        >
+                        Live Demo
+                        </button>
+                    </div>
+                </div>
+                
+              
+            </div>
+            <div id="third-work" class="work-container">
+                <img
+                src="./assets/salon_website_pic.jpg"
+                alt="Project 3"
+                class="project_img"
+                />
+                <div id="third-work-details" class="work-details-container">
+                    <h2 class="experience_sub_title project_title">Salon Website</h2>
+                    <div class="work-details">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing 
+                        elit. Minima, tenetur sit. Suscipit odit nobis atque 
+                        eos quod earum eius assumenda incidunt aliquam, eligendi 
+                        autem omnis accusamus inventore dolore, rerum consequuntur?</p>
+                    </div>
+                    <div class="btn-container">
+                        <button
+                        class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/'"
+                        >
+                        Github
+                        </button>
+                        <button
+                        class="btn btn-color-2 project-btn"
+                        onclick="window.open('https://robinpasalosdos.github.io/salon', '_blank')"
+                        >
+                        Website
+                        </button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>
