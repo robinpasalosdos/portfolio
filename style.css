@@ -472,6 +472,11 @@ article .icon {
   justify-content: center;
 }
 
+.mt{
+  width: 100%;
+  height: 100%;
+}
+
 /* CONTACT */
 
 #contact {

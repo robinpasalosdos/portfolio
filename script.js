@@ -106,6 +106,10 @@ function showDialog(dialogBox) {
   bodyElement.style.overflow = "hidden";
 }
 
+var jankenVideo = document.getElementById("janken");
+jankenVideo.pause();
+jankenVideo.currentTime = 0;
+
 function hideDialog(dialogBox) {
   document.getElementById("overlay").style.display = "none";
   document.getElementById(dialogBox).style.display = "none";
@@ -113,9 +117,21 @@ function hideDialog(dialogBox) {
   bodyElement.style.overflow = "auto";
 }
 
+function showDialogJanken(){
+  showDialog("dialog-box-1");
+  jankenVideo.currentTime = 0;
+  jankenVideo.play();
+}
+
+function hideDialogJanken(){
+  hideDialog("dialog-box-1");
+  jankenVideo.pause();
+  jankenVideo.currentTime = 0;
+}
+
 document.addEventListener('click', function (event) {
   if (event.target === document.getElementById("overlay")) {
-    hideDialog("dialog-box-1");
+    hideDialogJanken();
     hideDialog("dialog-box-2");
     hideDialog("dialog-box-3");
   }

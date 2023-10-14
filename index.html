@@ -99,16 +99,16 @@
           <div class="btn_container">
             <button
               class="btn btn-color-1 project-btn"
-              onclick='showDialog("dialog-box-1")'
+              onclick='showDialogJanken()'
             >
-              Read More
-            </button>
+              See More
+            <!--</button>
             <button
               class="btn btn-color-1 project-btn"
               onclick="window.open('https://drive.google.com/file/d/1Y2EptnTceVXgIf11k8Xa3UiDFUyGP00M/view?usp=sharing', '_blank')"
             >
               View Gameplay
-            </button>
+            </button>-->
           </div>
         </div>
         <div class="details_container color_container">
@@ -125,14 +125,14 @@
               class="btn btn-color-1 project-btn"
               onclick='showDialog("dialog-box-2")'
             >
-              Read More
+              See More
             </button>
-            <button
+            <!--<button
               class="btn btn-color-1 project-btn"
               onclick="window.open('https://drive.google.com/file/d/15us4YVh3ZpZwlKJWbByHz0PGA6C0W1RP/view?usp=sharing', '_blank')"
             >
               App Preview
-            </button>
+            </button>-->
           </div>
         </div>
         <div class="details_container color_container">
@@ -149,7 +149,7 @@
               class="btn btn-color-1 project-btn"
               onclick='showDialog("dialog-box-3")'
             >
-              Read More
+              See More
             </button>
             <button
               class="btn btn-color-1 project-btn"
@@ -164,16 +164,15 @@
   </section>
   <div class="overlay" id="overlay"></div>
   <div class="dialog-box" id="dialog-box-1">
-        <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-1")'>
+        <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken()'>
         <div class="dialog_container">
           <div>
             <h2 class="experience_sub_title project_title dialog_title_container">Janken Wars</h2>
           </div>
-          <video loop autoplay muted>
+          <video loop autoplay id="janken">
             <source src="assets\janken.mp4">
-            <source src="assets\janken.mp3" type="mp3">
 
-          </video> 
+          </video>
             <p style="text-align: justify; text-indent: 3em;">This Unity-based 3D game is inspired by the classic rock, paper, and scissors game. 
               In this 2 player game, each player engages in battles in janken battlefields, adding a strategic twist to this classic showdown.
             </p>
@@ -186,6 +185,7 @@
       </div>
       <div class="project_details_container">
         <h2 class="experience_sub_title project_title dialog_title_container">Module Tracker</h2>
+        <img src="assets/mt.png" alt="" class="mt">
         <p style="text-align: justify; text-indent: 3em;">It is a mobile application designed for a school to assist teachers in efficiently managing and tracking printed modules for students. 
           This user-friendly app streamlines the module distribution process, making it easier for educators to ensure that students receive the 
           materials they need for their studies.</p>
