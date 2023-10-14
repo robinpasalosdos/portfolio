@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="SDK.css">
+    <title>Transaction Queuing System</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="header-blur"></div>
+    <div class="header">
+      <header class="landing-header">
+        <a href="#" class="logo landing-header">
+            <img src="assets/PUP-Logo.png" id="logo" alt="puplogo">
+            <h1>PUP<b>QS</b></h1>
+        </a>
+        <div class="toggleMenu" onclick="toggleMenu();"></div>
+        <nav class="navigation landing-header">
+            <ul class="landing-header">
+            <li><a href="#">Home</a></li>
+            <li><a href="login.html">Admin</a></li>
+            <li><button onclick="register()" class="btn btn-outline">Register</button></li>
+            </ul>
+        </nav>
+      </header>
+    </div>
+    <main>
+      <div class="feature-container">
+
+        <div class="backdrop"></div>
+
+        <video loop autoplay muted>
+            <source src="assets\The Polytechnic University of the Philippines-BG.mp4">
+        </video> 
+
+        <div class="center-text">
+            <h3>PUPQS</h3>
+            <h1>PUP QUEUING SYSTEM</h1>
+            <h4>Mula sa Iyo, para sa Bayan</h4>
+        </div>
+          
+      </div>
+
+      <div class="landing-grid">
+
+        <h2>Select Transaction Queue</h2>
+        <h4>Select a transaction queue serving display.</h4>
+
+
+        <a href="display.html?transaction=Registration">
+          <div>
+              <img src="assets/PUP-Star.png">
+              <img src="assets/PUP-Star-0.png">
+          </div>
+          <span>Registration</span>
+        </a>
+        <a href="display.html?transaction=Enrollment">
+          <div>
+              <img src="assets/PUP-Star.png">
+              <img src="assets/PUP-Star-0.png">
+          </div>
+          <span>Enrollment</span>
+        </a>
+        <a href="display.html?transaction=Cashier">
+          <div>
+              <img src="assets/PUP-Star.png">
+              <img src="assets/PUP-Star-0.png">
+          </div>
+          <span>Cashier</span>
+        </a>
+
+
+          
+      </div>
+    </main>
+    <div class="display-background">
+      <img src="assets/banner3.jpg" alt="bg">
+    </div>
+
+
+    <!--<div class="login-container">
+      <div>    
+          <h1> Admin </h1>
+      </div>
+      <div class="login-form">
+          <form id="login-form">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password">
+              <button>Login</button>
+          </form>
+      </div>
+    </div>
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+    <div class="display-background">
+      <img src="assets/banner3.jpg" alt="bg">
+    </div>
+
+    <div class="registration-container">
+        <div>    
+            <h1> Register </h1>
+        </div>
+        <div class="registration-form-container">
+            <form action="" id="new_queue">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label for="transaction_id">Transaction</label>
+                    <select name="transaction_id" id="transaction_id" require>
+                            
+                            <option value="value">name</option>
+
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button>Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>-->
+
+  </body>
+  <script>
+    function register(){
+        window.location = "queue_registration.html";
+    }
+  </script>
+</html>
+  

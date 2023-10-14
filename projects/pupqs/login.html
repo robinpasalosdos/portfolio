@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Admin | Transaction Queuing System</title>
+
+        <link rel="stylesheet" href="SDK.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="login-body">
+        <div class="header-blur"></div>
+        <div class="header">
+        <header class="landing-header">
+            <a href="#" class="logo landing-header">
+                <img src="assets/PUP-Logo.png" id="logo" alt="puplogo">
+                <h1>PUP<b>QS</b></h1>
+            </a>
+            <div class="toggleMenu" onclick="toggleMenu();"></div>
+            <nav class="navigation landing-header">
+                <ul class="landing-header">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Admin</a></li>
+                <li><button onclick="register()" class="btn btn-outline">Register</button></li>
+                </ul>
+            </nav>
+        </header>
+        </div>
+
+        <div class="display-background">
+            <img src="assets/banner3.jpg" alt="bg">
+        </div>
+
+            <!-- <a href="index.php?page=home">← Back to Homepage</a> -->
+
+        <div class="login-container">
+            <div>    
+                <h1> Admin </h1>
+            </div>
+            <div class="login-form">
+                <form id="login-form">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                    <button>Login</button>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script>
+        $('#login-form').submit(function(e){
+            $(window).attr("location", "/admin/index.html");
+        })
+        function register(){
+            window.location = "queue_registration.html";
+        }
+    </script>	
+</html>
