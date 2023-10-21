@@ -6,7 +6,7 @@
         display: none;
     }
     #head_nav{
-        grid-template-columns: 2fr 4fr 2fr;
+        grid-template-columns: 2fr 3.5fr 2.5fr;
     }
     .mobile_nav_sections.open {
         display: grid;
@@ -18,16 +18,16 @@
         padding-top: 4rem;
     }
     .home_pic_card {
-        width: 275px;
-        height: 275px;
+        width: 240px;
+        height: 240px;
         margin: 0 auto 2rem;
         padding-top: 2rem;
     }
     .title{
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
     #home_text_p2 {
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        margin-bottom: .75rem;
     }
 }
