@@ -73,12 +73,13 @@ a{
     display: none;
     border: 1px solid black;
     background: cyan;
-    height: 70svh;
+    min-height: 140px;
+    height: 40svh;
 }
 .mobile_nav_sections ul{
     display: flex;
     flex-direction: column;
-    gap: 7svh;
+    gap: 4svh;
 }
 .mobile_nav_sections li{
     list-style: none;
@@ -108,10 +109,10 @@ a{
     justify-content: center;
     align-items: center;
     background-color: beige;
-    padding-top: 10svh;
     gap: 4rem;
-    height: 90svh;
+    height: 100svh;
     min-height: 600px;
+    min-width: 300px;
 }
 .home_pic_card {
     display: flex;
