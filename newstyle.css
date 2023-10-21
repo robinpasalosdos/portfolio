@@ -111,7 +111,7 @@ a{
     background-color: beige;
     gap: 4rem;
     min-width: 300px;
-    height: clamp(440px, 100svh, 1000px);
+    height: clamp(440px, 100svh, 600px);
 }
 .home_pic_card {
     display: flex;

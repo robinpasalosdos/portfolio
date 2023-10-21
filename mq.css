@@ -31,3 +31,25 @@
         margin-bottom: .75rem;
     }
 }
+@media screen and (max-width: 800px) {
+    .card-list{
+        flex-direction: column;
+    }
+    .card:focus-within~.card, .card:hover~.card {
+        transform: translateY(130px);
+    }
+    
+    .card:hover {
+        transform: translateX(-1rem);
+    }
+
+    .card:first-child {
+        margin-left: 0;
+        
+    }
+    .card:not(:first-child) {
+        margin-left: 0;
+        margin-top: -180px;
+    }
+
+}
