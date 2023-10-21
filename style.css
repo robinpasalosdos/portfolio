@@ -531,6 +531,7 @@ footer p {
 
 ::-webkit-scrollbar {
   width: 2px;
+  z-index: 5000;
 }
 
 /* Track of the vertical scrollbar */
@@ -543,10 +544,6 @@ footer p {
   background: #526D82;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #27374D;
-}
 
 .animated-section {
   opacity: 0;

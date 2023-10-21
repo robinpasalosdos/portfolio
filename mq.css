@@ -1,0 +1,25 @@
+@media screen and (max-width: 1200px) {
+    .hamburger_menu{
+        display: grid;
+    }
+    .head_nav_sections{
+        display: none;
+    }
+    #head_nav{
+        grid-template-columns: 2fr 4fr 2fr;
+    }
+    .mobile_nav_sections.open {
+        display: grid;
+    }
+}
+@media screen and (max-width: 1200px) {
+    #home {
+        display: block;
+    }
+    .home_pic_card {
+        width: 275px;
+        height: 275px;
+        margin: 0 auto 2rem;
+        padding-top: 2rem;
+    }
+}
