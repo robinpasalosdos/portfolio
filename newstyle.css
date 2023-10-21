@@ -8,7 +8,7 @@
 }
 body {
     font-family: 'k2d', sans-serif;
-    background-color: #DDE6ED;
+    background-color: #17141d;
 }
 html {
     scroll-behavior: smooth;
@@ -22,7 +22,7 @@ html {
     grid-template-columns: 2fr 2fr 4fr;
     grid-template-rows: 1fr 1fr;
     place-items: center;
-    background-color: aquamarine;
+    background: #17141d;
 }
 .logo_con{
     height: 4rem;
@@ -39,7 +39,6 @@ html {
     height: 100%;
     display: grid;
     place-items: center;
-    background-color: aqua;
 }
 .head_nav_sections ul{
     gap: 2.5rem;
@@ -48,7 +47,8 @@ html {
     display: flex;
 }
 a{
-    color: #27374D;
+    color: #01fff4;
+    text-shadow: 0 0 10px #01fff4;
     text-decoration: none;
     text-decoration-color: white;
 }
@@ -108,22 +108,16 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: beige;
     gap: 4rem;
     min-width: 300px;
     height: clamp(440px, 100svh, 600px);
 }
-.home_pic_card {
-    display: flex;
-    margin: auto 0;
-    height: 350px;
-}
-  
-.home_pic_card img {
+.home_pic{
     border-radius: 50%;
     border: 2px solid #27374D;
+    height: 350px;
+    width: 350px;
 }
-
 .home_details_card {
     align-self: center;
     text-align: center;
@@ -131,7 +125,9 @@ a{
 }
 
 .home_details_card p {
-    font-weight: 600;  
+    font-weight: 600;
+    color: #01fff4;
+    text-shadow: 0 0 10px #01fff4;  
 }
 .home_text_p1 {
     text-align: center;
@@ -145,6 +141,8 @@ a{
     font-size: 3rem;
     text-align: center;
     color: #27374D;
+    color: #01fff4;
+    text-shadow: 0 0 10px #01fff4;
 }
 
 #socmed_card {
@@ -160,6 +158,7 @@ a{
     display: flex;
     padding: 3rem;
     overflow-x: scroll;
+    justify-content: center;
 }
 
 .card-list::-webkit-scrollbar {
@@ -184,7 +183,7 @@ a{
     padding: 1.5rem;
     border-radius: 16px;
     background: #17141d;
-    box-shadow: -1rem 0 3rem #000;
+    box-shadow: -1rem 1rem 3rem #01fff4;
     display: flex;
     flex-direction: column;
     transition: .2s;
@@ -313,5 +312,30 @@ a{
     background-clip: text;
     border-color: white;
 }
+
+@keyframes slide-up{
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-6rem);
+    }
+  }
+  
+  @keyframes slide-down{
+    0% {
+        transform: translateY(-6rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
+.slide-up{
+    animation: slide-up .05s ease-in forwards;
+  }
+  
+  .slide-down{
+    animation: slide-down .1s ease-out forwards;
+  }
 
 

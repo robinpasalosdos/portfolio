@@ -29,3 +29,44 @@ function updateText() {
 }
 
 setInterval(updateText,100);
+
+var tabContainer = document.getElementById("head_nav");
+var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+function slideDown(){
+  tabContainer.classList.add("slide-down");
+  tabContainer.style.boxShadow = '0 1px 6px #01fff4';
+  setTimeout(function() {
+  tabContainer.classList.remove("slide-up");
+  },100);
+}
+
+function slideUp(){
+  icon.classList.remove("open");
+  menu.classList.remove("open");
+
+  tabContainer.classList.add("slide-up");
+  tabContainer.style.boxShadow = '0 1px 6px #01fff4';
+    setTimeout(function() {
+        tabContainer.classList.remove("slide-down");
+        },100);
+}
+
+function navHandleScroll() {
+  var currentScrollTop = document.documentElement.scrollTop;
+  if (currentScrollTop > lastScrollTop) {
+    slideUp();
+
+  }else{
+    slideDown();
+  }
+  lastScrollTop = currentScrollTop;
+}
+  
+window.addEventListener("scroll", function() {
+  navHandleScroll();
+    if (window.pageYOffset == 0){
+      tabContainer.style.boxShadow = 'none';
+      hamContainer.style.boxShadow = 'none';
+    }
+});

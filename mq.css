@@ -12,16 +12,14 @@
         display: grid;
     }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
     #home {
-        display: block;
-        padding-top: 4rem;
+        flex-direction: column;
+        gap: 2rem;
     }
-    .home_pic_card {
-        width: 240px;
+    .home_pic {
         height: 240px;
-        margin: 0 auto 2rem;
-        padding-top: 2rem;
+        width: 240px;
     }
     .title{
         font-size: 2.25rem;
@@ -34,9 +32,12 @@
 @media screen and (max-width: 800px) {
     .card-list{
         flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+
     }
     .card:focus-within~.card, .card:hover~.card {
-        transform: translateY(130px);
+        transform: translateY(180px);
     }
     
     .card:hover {
