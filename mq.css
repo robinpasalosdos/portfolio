@@ -33,7 +33,6 @@
     .card_list{
         flex-direction: column;
         align-items: center;
-        overflow-x: hidden;
 
     }
     .card{
@@ -43,10 +42,6 @@
     .card:focus-within~.card, .card:hover~.card {
         transform: translateY(180px);
     }
-    
-    .card:hover {
-        transform: translateX(-1rem);
-    }
 
     .card:first-child {
         margin-left: 0;
@@ -55,6 +50,20 @@
     .card:not(:first-child) {
         margin-left: 0;
         margin-top: -180px;
+    }
+    .card::before {
+        width: clamp(360px, 55vw, 1000px);
+        height: 360px;
+        content: "";
+        display: block;
+        position: absolute;
+    }
+    
+    .card:hover::before {
+        transform: translateX(-1rem);
+    }
+    .card:hover {
+        transform: translateX(1rem);
     }
 
 }

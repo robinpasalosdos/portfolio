@@ -173,14 +173,15 @@ a{
     box-sizing: border-box;
     min-height: fit-content;
     background-color: #ff8a00;
+    width: 100%;
 }
 .card_list {
     display: flex;
     justify-content: center;
     background-color: #7a7a8c;
     padding: 3rem;
-    width: 100%;
     margin: 1rem;
+    overflow: hidden;
 }
 
 .card_list::-webkit-scrollbar {
@@ -217,6 +218,17 @@ a{
     transform: translateX(130px);
 }
 
+.card::before {
+    width: clamp(350px, 35vw, 450px);
+    height: 350px;
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.card:hover::before {
+    transform: translateY(1rem);
+}
 .card:hover {
     transform: translateY(-1rem);
 }
