@@ -4,10 +4,15 @@
 }
 :root{
     --title_font_size: 3rem;
+    --bg_color: #17141d;
+    --bg_color_2: rgba(0,0,0,.25);
+
+
 }
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body {
     font-family: 'k2d', sans-serif;
@@ -98,11 +103,9 @@ a{
 .hamburger_icon.open span:first-child {
     opacity: 0;
 }
-  
 .hamburger_icon.open span:nth-child(2) {
     transform: rotate(45deg);
 }
-  
 .hamburger_icon.open span:last-child {
     opacity: 1;
     transform: rotate(-45deg) translate(6px,-6px);
@@ -117,12 +120,12 @@ a{
     justify-content: center;
     align-items: center;
     min-width: 450px;
-    height: clamp(440px, 100svh, 600px);
 }
 /*                                   HOME                                            */
 #home {
     gap: 4rem;
-    background-color: beige;
+    background-color: var(--bg_color);
+    height: clamp(440px, 100svh, 600px);
 }
 .home_pic{
     border-radius: 50%;
@@ -166,13 +169,12 @@ a{
 #socmed_card img{
     width: 2rem;
 }
-.projects{
+/*                                   PROJECTS                                            */
+#projects, #experience, #about{
     flex-direction: column;
-    padding-top: 6vh;
     height: fit-content;
-    box-sizing: border-box;
     min-height: fit-content;
-    background-color: #ff8a00;
+    background-color: var(--bg_color_2);
     width: 100%;
 }
 .card_list {
@@ -184,7 +186,6 @@ a{
     overflow: hidden;
     width: fit-content;
 }
-
 .card_list::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -194,12 +195,9 @@ a{
     border-radius: 10px;
     box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
 }
-
 .card_list::-webkit-scrollbar-track {
     background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
 }
-
-
 .card {
     width: clamp(350px, 35vw, 450px);
     height: 350px;
@@ -214,11 +212,9 @@ a{
     position: relative;
     grid-template-rows: 5fr 1fr 3fr 1fr;
 }
-
 .card:focus-within~.card, .card:hover~.card {
     transform: translateX(130px);
 }
-
 .card::before {
     width: clamp(350px, 35vw, 450px);
     height: 350px;
@@ -226,30 +222,24 @@ a{
     display: block;
     position: absolute;
 }
-
 .card:hover::before {
     transform: translateY(1rem);
 }
 .card:hover {
     transform: translateY(-1rem);
 }
-
 .card:not(:first-child) {
     margin-left: -130px;
 }
-
-
 .card-header {
     text-align: center;
 
 }
-
 .card-header h2 {
     font-size: 20px;
     text-decoration: none;
     cursor: pointer;
 }
-
 .card-header h2:hover {
     background: linear-gradient(90deg,#ff8a00,#e52e71);
     text-shadow: none;
@@ -257,7 +247,6 @@ a{
     -webkit-background-clip: text;
     background-clip: text;
 }
-
 .card p{
     text-align: justify;
     font-size: 12px;
@@ -270,12 +259,10 @@ a{
     border-top-left-radius: 10px; 
     border-top-right-radius: 10px;
 }
-
 .tags {
     line-height: 2;
     margin: 0 0 1rem 1rem;
 }
-
 .tags a {
     font-style: normal;
     font-weight: 700;
@@ -288,7 +275,6 @@ a{
     padding: .2rem .85rem .25rem;
     position: relative;
 }
-
 .tags a:hover {
     background: linear-gradient(90deg,#ff8a00,#e52e71);
     text-shadow: none;
@@ -297,6 +283,31 @@ a{
     -webkit-box-decoration-break: clone;
     background-clip: text;
     border-color: white;
+}
+/*                                   EXPERIENCE                                            */
+#experience{
+    background-color: var(--bg_color);
+}
+.exp_con{
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(3,1fr);
+    place-items: start;
+    background-color: #7a7a8c;
+    gap: 2rem;
+    max-width: 1200px;
+}
+.exp_company{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+.exp_position{
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.exp_details{
+    font-size: 1.1rem;
+    text-align: justify;
 }
 
 @keyframes slide-up{

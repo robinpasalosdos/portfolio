@@ -66,4 +66,13 @@
         transform: translateX(1rem);
     }
 
+    .exp_con{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .exp_con{
+        grid-template-columns: 1fr;
+    }
 }
