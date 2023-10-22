@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="var.css">
     <link rel="stylesheet" type="text/css" href="newstyle.css">
     <script defer src="newscript.js"></script>
     <link rel="stylesheet" type="text/css" href="mq.css">
@@ -40,10 +41,8 @@
       </div>
     </div>
   </nav>
-  <section id="home">
-
+  <section id="home" class="section">
     <img src="./assets/profile-pic.jpg" class="home_pic" alt="Robin profile picture" />
-
     <div class="home_details_card">
       <p class="home_text_p1">Hello, I'm</p>
         <h1 class="title">Robin Pasalosdos</h1>
@@ -70,87 +69,73 @@
       </div>
     </div>
   </section>
-  <section class="card-list">
-    <article class="card">
-      <header class="card-header">
-        <p>Sep 11th 2020</p>
-        <h2>Never forget</h2>
-      </header>
-
-      <div class="card-author">
-        <a class="author-avatar" href="#">
-          <img src="avatar.png" />
-        </a>
-        <svg class="half-circle" viewBox="0 0 106 57">
-          <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-        </svg>
-
-        <div class="author-name">
-          <div class="author-name-prefix">Author</div>
-          Jeff Delaney
+  <section class="section projects">
+    <h1 class="section_title">Projects</h1>
+    <div class="card_list">
+      <article class="card">
+        <div class="project_img_card">
+          <img
+              src="./assets/janken1.png"
+              alt="Project 1"
+              class="project_img"
+            />
         </div>
-      </div>
-      <div class="tags">
-        <a href="#">html</a>
-        <a href="#">css</a>
-        <a href="#">web-dev</a>
-      </div>
-    </article>
-
-
-
-    <article class="card">
-      <header class="card-header">
-        <p>Sep 11th 2020</p>
-        <h2>Card Tricks are fun!</h2>
-      </header>
-
-      <div class="card-author">
-        <a class="author-avatar" href="#">
-          <img src="https://api.adorable.io/avatars/172/a.png" />
-        </a>
-        <svg class="half-circle" viewBox="0 0 106 57">
-          <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-        </svg>
-
-        <div class="author-name">
-          <div class="author-name-prefix">Pirate</div>
-          Zheng Zhilong
+        <header class="card-header">
+          <h2>Janken Wars</h2>
+        </header>
+        <p>This Unity-based 3D game is inspired by the classic rock, paper, and scissors game. 
+          In this 2 player game, each player engages in battles in janken battlefields, adding a strategic twist to this classic showdown.
+        </p>
+        <div class="tags">
+          <a href="#">Unity</a>
+          <a href="#">game-dev</a>
         </div>
-      </div>
-      <div class="tags">
-        <a href="#">html</a>
-        <a href="#">css</a>
-      </div>
-    </article>
-
-
-
-
-    <article class="card">
-      <header class="card-header">
-        <p>Sep 11th 2020</p>
-        <h2>Card Tricks are fun!</h2>
-      </header>
-
-      <div class="card-author">
-        <a class="author-avatar" href="#">
-          <img src="https://api.adorable.io/avatars/172/b.png" />
-        </a>
-        <svg class="half-circle" viewBox="0 0 106 57">
-          <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-        </svg>
-
-        <div class="author-name">
-          <div class="author-name-prefix">Pirate</div>
-          Francis Drake
+      </article><article class="card">
+        <div class="project_img_card">
+          <img
+              src="./assets/module_tracker_pic1.jpg"
+              alt="Project 2"
+              class="project_img"
+          />
         </div>
-      </div>
-      <div class="tags">
-        <a href="#">html</a>
-        <a href="#">css</a>
-      </div>
-    </article>
+        <header class="card-header">
+          <h2>Module Traker</h2>
+        </header>
+        <p>This app streamlines the module distribution process, making it easier for educators to ensure that students receive the 
+          materials they need for their studies.
+        </p>
+        <div class="tags">
+          <a href="#">Android Studio</a>
+          <a href="#">Firebase</a>
+          <a href="#">app-dev</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="project_img_card">
+          <img
+            src="./assets/pupqs1.png"
+            alt="Project 3"
+            class="project_img"
+          />
+        </div>
+        <header class="card-header">
+          <h2>PUP QS</h2>
+        </header>
+        <p>PUP QS is a website for Polytechnic University of the Philippines, simplifying queues for various services, such as enrollment and library access, to save time and enhance efficiency for students and staff.
+        </p>
+        <div class="tags">
+          <a href="#">PHP</a>
+          <a href="#">JQuery</a>
+          <a href="#">web-dev</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  
+
+
+
+   
 </section>
 </body>
 </html>

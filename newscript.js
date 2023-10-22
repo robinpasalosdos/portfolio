@@ -67,6 +67,5 @@ window.addEventListener("scroll", function() {
   navHandleScroll();
     if (window.pageYOffset == 0){
       tabContainer.style.boxShadow = 'none';
-      hamContainer.style.boxShadow = 'none';
     }
 });
