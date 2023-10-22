@@ -5,7 +5,7 @@
 :root{
     --title_font_size: 3rem;
     --bg_color: #17141d;
-    --bg_color_2: #17141d;
+    --bg_color_2: #222;
 
 
 }
@@ -216,7 +216,7 @@ a{
     position: relative;
     grid-template-rows: 5fr 1fr 3fr 1fr;
 }
-.card:focus-within~.card, .card:hover~.card {
+.card:hover~.card {
     transform: translateY(180px);
 }
 .card::before {
@@ -231,6 +231,12 @@ a{
 }
 .card:hover {
     transform: translateX(2.5rem);
+}
+.animateX{
+    transform: translateX(2.5rem);
+}
+.animateY{
+    transform: translateY(180px);
 }
 .card:not(:first-child) {
     margin-top: -180px;

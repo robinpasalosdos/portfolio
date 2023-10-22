@@ -69,3 +69,34 @@ window.addEventListener("scroll", function() {
       tabContainer.style.boxShadow = 'none';
     }
 });
+
+const cards = document.querySelectorAll('.card');
+
+
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <  (window.innerHeight || document.documentElement.clientHeight)/2 &&
+      rect.bottom > (window.innerHeight || document.documentElement.clientHeight)/2
+    );
+}
+
+function handleScroll() {
+  cards.forEach((card, index) => {
+        if (isElementInViewport(card)) {
+          card.classList.add('animateX');
+          if(index < cards.length-1){
+            cards[index+1].classList.add('animateY');
+          }
+        }
+        else{
+          card.classList.remove('animateX');
+          if(index < cards.length-1){
+            cards[index+1].classList.remove('animateY');
+          }
+        }
+        
+    });
+}
+
+window.addEventListener('scroll', handleScroll);
