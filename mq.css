@@ -31,8 +31,8 @@
 }
 @media screen and (max-width: 900px) {
     .card{
-        width: 100%;
-        height: 65vw;
+        width: clamp(330px, 92vw, 900px);
+        height: clamp(330px, 92vw, 530px);
     }
     .exp_con{
         grid-template-columns: 1fr 1fr;
