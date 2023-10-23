@@ -72,15 +72,6 @@ window.addEventListener("scroll", function() {
 
 const cards = document.querySelectorAll('.card');
 
-
-function isCardInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top <  (window.innerHeight || document.documentElement.clientHeight)/2 &&
-      rect.bottom > (window.innerHeight || document.documentElement.clientHeight)/2
-    );
-}
-
 function handleScroll() {
   cards.forEach((card, index) => {
         if (card.getBoundingClientRect().top < (window.innerHeight || document.documentElement.clientHeight)*.45) {
@@ -97,5 +88,8 @@ function handleScroll() {
         }  
     });
 }
- 
+
 window.addEventListener('scroll', handleScroll);
+
+const screenWidth = window.innerWidth;
+console.log(`Screen width: ${screenWidth}px`);

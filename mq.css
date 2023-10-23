@@ -31,17 +31,9 @@
 }
 @media screen and (max-width: 900px) {
     .card{
-        width: clamp(360px, 55vw, 1000px);
-        height: 360px;
+        width: 100%;
+        height: 65vw;
     }
-    .card::before {
-        width: clamp(360px, 55vw, 1000px);
-        height: 360px;
-        content: "";
-        display: block;
-        position: absolute;
-    }
-
     .exp_con{
         grid-template-columns: 1fr 1fr;
     }
