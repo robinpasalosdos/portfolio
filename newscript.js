@@ -71,25 +71,46 @@ window.addEventListener("scroll", function() {
 });
 
 const cards = document.querySelectorAll('.card');
+let scrollTimeout;
 
 function handleScroll() {
-  cards.forEach((card, index) => {
-        if (card.getBoundingClientRect().bottom / 2 < (window.innerHeight || document.documentElement.clientHeight)*.5) {
-          card.classList.add('animateX');
-          card.classList.remove('animateY');
-          if(index > 0){
-            cards[index-1].classList.remove('animateX');
-          }
-          for (let i = index; i < cards.length - 1; i++){
-            cards[i+1].classList.add('animateY');
-          }
-        }else{
-          card.classList.remove('animateX');
-        }  
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    cards.forEach((card, index) => {
+      if (card.getBoundingClientRect().bottom / 2 < (window.innerHeight || document.documentElement.clientHeight) * 0.70) {
+        card.classList.add('animateX');
+        card.classList.remove('animateY');
+        if (index > 0) {
+          cards[index - 1].classList.remove('animateX');
+        }
+        for (let i = index; i < cards.length - 1; i++) {
+          cards[i + 1].classList.add('animateY');
+        }
+      } else {
+        card.classList.remove('animateX');
+      }
     });
+  }, 50); // Adjust the debounce time (in milliseconds) to your preference
 }
 
 window.addEventListener('scroll', handleScroll);
 
+
 const screenWidth = window.innerWidth;
 console.log(`Screen width: ${screenWidth}px`);
+
+const pixelsPerScroll = 300;
+
+    document.getElementById('projects').addEventListener('wheel', (event) => {
+      // Prevent the default scroll behavior
+      event.preventDefault();
+
+      // Calculate the new scroll position
+      const delta = event.deltaY;
+      const currentScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const newScrollTop = currentScrollTop + (delta > 0 ? pixelsPerScroll : -pixelsPerScroll);
+
+      // Set the new scroll position
+      document.documentElement.scrollTop = newScrollTop;
+      document.body.scrollTop = newScrollTop;
+    });

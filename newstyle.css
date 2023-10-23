@@ -210,12 +210,13 @@ a{
     box-shadow: -1rem 1rem 3rem #01fff4;
     display: grid;
     align-items: center;
-    transition: .4s;
+    transition: .2s;
     scroll-snap-align: start;
     clear: both;
     position: relative;
     grid-template-rows: 5fr 1fr 3fr 1fr;
 }
+
 .animateX{
     transform: translateX(2.5rem);
 }
