@@ -74,7 +74,7 @@ const cards = document.querySelectorAll('.card');
 
 function handleScroll() {
   cards.forEach((card, index) => {
-        if (card.getBoundingClientRect().top < (window.innerHeight || document.documentElement.clientHeight)*.45) {
+        if (card.getBoundingClientRect().bottom < (window.innerHeight || document.documentElement.clientHeight)*.85) {
           card.classList.add('animateX');
           card.classList.remove('animateY');
           if(index > 0){
