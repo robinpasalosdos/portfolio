@@ -77,7 +77,7 @@ function handleScroll() {
   clearTimeout(scrollTimeout);
   scrollTimeout = setTimeout(() => {
     cards.forEach((card, index) => {
-      if (card.getBoundingClientRect().bottom / 2 < (window.innerHeight || document.documentElement.clientHeight) * 0.70) {
+      if (card.getBoundingClientRect().top < (window.innerHeight || document.documentElement.clientHeight) * 0.45) {
         card.classList.add('animateX');
         card.classList.remove('animateY');
         if (index > 0) {
