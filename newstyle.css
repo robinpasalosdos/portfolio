@@ -15,8 +15,8 @@
     box-sizing: border-box;
 }
 body {
+    overflow-x: hidden;
     font-family: 'k2d', sans-serif;
-
 }
 html {
     scroll-behavior: smooth;
