@@ -210,7 +210,7 @@ a{
     box-shadow: -1rem 1rem 3rem #01fff4;
     display: grid;
     align-items: center;
-    transition: .2s;
+    transition: .4s;
     scroll-snap-align: start;
     clear: both;
     position: relative;

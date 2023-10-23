@@ -73,7 +73,7 @@ window.addEventListener("scroll", function() {
 const cards = document.querySelectorAll('.card');
 
 
-function isElementInViewport(el) {
+function isCardInViewport(el) {
     const rect = el.getBoundingClientRect();
     return (
       rect.top <  (window.innerHeight || document.documentElement.clientHeight)/2 &&
@@ -83,20 +83,19 @@ function isElementInViewport(el) {
 
 function handleScroll() {
   cards.forEach((card, index) => {
-        if (isElementInViewport(card)) {
+        if (card.getBoundingClientRect().top < (window.innerHeight || document.documentElement.clientHeight)*.45) {
           card.classList.add('animateX');
-          if(index < cards.length-1){
-            cards[index+1].classList.add('animateY');
+          card.classList.remove('animateY');
+          if(index > 0){
+            cards[index-1].classList.remove('animateX');
           }
-        }
-        else{
+          for (let i = index; i < cards.length - 1; i++){
+            cards[i+1].classList.add('animateY');
+          }
+        }else{
           card.classList.remove('animateX');
-          if(index < cards.length-1){
-            cards[index+1].classList.remove('animateY');
-          }
-        }
-        
+        }  
     });
 }
-
+ 
 window.addEventListener('scroll', handleScroll);
