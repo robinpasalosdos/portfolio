@@ -34,11 +34,8 @@ var tabContainer = document.getElementById("head_nav");
 var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
 function slideDown(){
-  tabContainer.classList.add("slide-down");
-  tabContainer.style.boxShadow = '0 1px 6px #01fff4';
-  setTimeout(function() {
   tabContainer.classList.remove("slide-up");
-  },100);
+  tabContainer.style.boxShadow = '0 1px 6px #01fff4';
 }
 
 function slideUp(){
@@ -47,9 +44,6 @@ function slideUp(){
 
   tabContainer.classList.add("slide-up");
   tabContainer.style.boxShadow = '0 1px 6px #01fff4';
-    setTimeout(function() {
-        tabContainer.classList.remove("slide-down");
-        },100);
 }
 
 function navHandleScroll() {
@@ -72,10 +66,13 @@ window.addEventListener("scroll", function() {
 
 const cards = document.querySelectorAll('.card');
 let scrollTimeout;
+let animationFrameId;
 
 function handleScroll() {
   clearTimeout(scrollTimeout);
-  scrollTimeout = setTimeout(() => {
+  cancelAnimationFrame(animationFrameId);
+
+  animationFrameId = requestAnimationFrame(() => {
     cards.forEach((card, index) => {
       if (card.getBoundingClientRect().top < (window.innerHeight || document.documentElement.clientHeight) * 0.45) {
         card.classList.add('animateX');
@@ -90,27 +87,41 @@ function handleScroll() {
         card.classList.remove('animateX');
       }
     });
-  }, 50); // Adjust the debounce time (in milliseconds) to your preference
+  });
 }
 
-window.addEventListener('scroll', handleScroll);
+
+        // Function to smoothly scroll the page
+        function smoothScroll(targetY, duration) {
+            const startingY = window.scrollY;
+            const startTime = performance.now();
+
+            function step(currentTime) {
+                const currentTimeMs = currentTime - startTime;
+                const progress = Math.min(currentTimeMs / duration, 1);
+
+                window.scrollTo(0, startingY + (targetY - startingY) * progress);
+
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+
+            window.requestAnimationFrame(step);
+        }
+
+        // Function to initiate the smooth scroll with a delay
+        function startSmoothScroll() {
+            const delay = 1000; // 1000ms = 1 second
+            const targetY = 1000; // Adjust this to your target position
+            const duration = 1000; // 1000ms = 1 second
+
+            setTimeout(() => {
+                smoothScroll(targetY, duration);
+            }, delay);
+        }
+
+        // Automatically start smooth scrolling when the page loads
+        window.onload = startSmoothScroll;
 
 
-const screenWidth = window.innerWidth;
-console.log(`Screen width: ${screenWidth}px`);
-
-const pixelsPerScroll = 300;
-
-    document.getElementById('projects').addEventListener('wheel', (event) => {
-      // Prevent the default scroll behavior
-      event.preventDefault();
-
-      // Calculate the new scroll position
-      const delta = event.deltaY;
-      const currentScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const newScrollTop = currentScrollTop + (delta > 0 ? pixelsPerScroll : -pixelsPerScroll);
-
-      // Set the new scroll position
-      document.documentElement.scrollTop = newScrollTop;
-      document.body.scrollTop = newScrollTop;
-    });

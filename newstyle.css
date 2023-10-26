@@ -4,8 +4,8 @@
 }
 :root{
     --title_font_size: 3rem;
-    --bg_color: #17141d;
-    --bg_color_2: #222;
+    --bg_color: #000000;
+    --bg_color_2: #000000;
 
 
 }
@@ -30,8 +30,9 @@ html {
     grid-template-columns: 2fr 2fr 4fr;
     grid-template-rows: 1fr 1fr;
     place-items: center;
-    background: #17141d;
+    background: var(--bg_color);
     z-index: 2000;
+    transition: all 0.3s ease-in;
 }
 .logo_con{
     height: 4rem;
@@ -40,8 +41,8 @@ html {
     place-items: center;
 }
 .logo{
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2rem;
+    width: 2rem;
 }
 .head_nav_sections, .hamburger_menu{
     width: 100%;
@@ -75,13 +76,13 @@ a{
 .hamburger_icon span {
     width: 100%;
     height: 2px;
-    background-color: #27374D;
-    transition: all 0.3 ease-in-out;
+    background-color: #ffffff;
+    transition: transform 0.3 ease-in-out;
 }
 .mobile_nav_sections{
     display: none;
     border: 1px solid black;
-    background: cyan;
+    background: black;
     min-height: 140px;
     height: 40svh;
 }
@@ -128,10 +129,8 @@ a{
     height: clamp(440px, 100svh, 600px);
 }
 .home_pic{
-    border-radius: 50%;
-    border: 2px solid #27374D;
-    height: 350px;
-    width: 350px;
+    height: 450px;
+    width: 450px;
 }
 .home_details_card {
     align-self: center;
@@ -168,6 +167,10 @@ a{
 }
 #socmed_card img{
     width: 2rem;
+    transition: transform .3s ease-out;
+}
+#socmed_card img:hover{
+    transform: scale(1.2);
 }
 /*                                   PROJECTS                                            */
 #projects, #experience, #about{
@@ -207,10 +210,10 @@ a{
     height: clamp(350px,45vw,550px);
     border-radius: 10px;
     background: #17141d;
-    box-shadow: -1rem 1rem 3rem #01fff4;
+    /*box-shadow: -1rem 1rem 3rem #01fff4;*/
     display: grid;
     align-items: center;
-    transition: .4s;
+    transition: transform 0.3s ease;
     scroll-snap-align: start;
     clear: both;
     position: relative;
@@ -305,29 +308,58 @@ a{
     text-align: justify;
 }
 
-@keyframes slide-up{
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-6rem);
-    }
-  }
-  
-  @keyframes slide-down{
-    0% {
-        transform: translateY(-6rem);
-    }
-    100% {
-        transform: translateY(0rem);
-    }
-}
 .slide-up{
-    animation: slide-up .05s ease-in forwards;
-  }
+    transform: translateY(-6rem);
+}
+/*                                   ABOUT                                         */
+#about{
+    background-color: #7a7a8c;
+}
+.about_con{
+    display: flex;
+    background-color: #01fff4;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    padding: 0 10vw 0 10vw;
+}
+.about_details_con{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #201c29;
+    
+
+}
+.about_bg_con{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.about_pic img{
+    width: 300px;
+    height: 400px;
+    border: #000000 2px solid;
+    border-radius: 2rem;
+}
+.about_bg{
+    border: #000000 2px solid;
+    border-radius: 2rem;
+    padding: 2rem;
+    flex: 1;
+}
+.icon{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.about_text{
+}
+.about_text p{
+    text-align: justify;
+    text-indent: 3em;
+}
+
   
-  .slide-down{
-    animation: slide-down .1s ease-out forwards;
-  }
 
 

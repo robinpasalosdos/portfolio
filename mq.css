@@ -11,6 +11,16 @@
     .mobile_nav_sections.open {
         display: grid;
     }
+    .about_con{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .about_pic img{
+        width: calc(30vw * .75);
+        height: calc(40vw * .75);
+        min-width: 12rem;
+        min-height: 16rem;
+    }
 }
 @media screen and (max-width: 900px) {
     #home {
@@ -27,6 +37,9 @@
     #home_text_p2 {
         font-size: 1.5rem;
         margin-bottom: .75rem;
+    }
+    .about_bg_con{
+        flex-direction: column;
     }
 }
 @media screen and (max-width: 900px) {
