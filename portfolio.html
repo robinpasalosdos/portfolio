@@ -10,6 +10,8 @@
     <script defer src="newscript.js"></script>
     <link rel="stylesheet" type="text/css" href="mq.css">
     <link rel="icon" href="./assets/logo_white1.png" type="png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 </head>
 <body>
   <nav id="head_nav">
@@ -42,6 +44,7 @@
       </div>
     </div>
   </nav>
+  <div data-scroll-container>
   <section id="home" class="section">
     <img src="./assets/neon.png" class="home_pic" alt="Robin profile picture" />
     <div class="home_details_card">
@@ -162,12 +165,12 @@
       <div class="about_details_con">
         <div class="about_bg_con">
           <div class="about_bg">
-            <img src="./assets/experience.png" alt="Experience icon" class="icon"/>
+            <img src="./assets/experience.png" alt="Experience icon" class="about_icon"/>
             <h3>Experience</h3>
             <p>2+ years <br />Backend Development</p>
           </div>
           <div class="about_bg">
-            <img src="./assets/education.png" alt="Education icon" class="icon"/>
+            <img src="./assets/education.png" alt="Education icon" class="about_icon"/>
             <h3>Education</h3>
             <p>Polytechnic University of the Philippines - Sta. Mesa<br />Bachelor of Science in Computer Engineering</p>
           </div>
@@ -180,5 +183,19 @@
       </div>
     </div>
   </section>
+  <section id="tools" class="section">
+    <div class="container">
+      <div class="circular-div" id="socmed_card">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="window.open('https://www.linkedin.com/in/robin-pasalosdos-9a87b6286/', '_blank')"
+          />
+      </div>
+    </div>
+  </section>
+  </div>
+  
 </body>
 </html>

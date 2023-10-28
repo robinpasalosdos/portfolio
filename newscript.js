@@ -36,6 +36,7 @@ var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 function slideDown(){
   tabContainer.classList.remove("slide-up");
   tabContainer.style.boxShadow = '0 1px 6px #01fff4';
+  tabContainer.style.background = '#000000';
 }
 
 function slideUp(){
@@ -44,6 +45,8 @@ function slideUp(){
 
   tabContainer.classList.add("slide-up");
   tabContainer.style.boxShadow = '0 1px 6px #01fff4';
+  tabContainer.style.background = '#000000';
+  
 }
 
 function navHandleScroll() {
@@ -60,6 +63,7 @@ function navHandleScroll() {
 window.addEventListener("scroll", function() {
   navHandleScroll();
     if (window.pageYOffset == 0){
+      tabContainer.style.background = 'transparent';
       tabContainer.style.boxShadow = 'none';
     }
 });
@@ -89,39 +93,11 @@ function handleScroll() {
     });
   });
 }
+window.addEventListener('scroll', handleScroll);
 
-
-        // Function to smoothly scroll the page
-        function smoothScroll(targetY, duration) {
-            const startingY = window.scrollY;
-            const startTime = performance.now();
-
-            function step(currentTime) {
-                const currentTimeMs = currentTime - startTime;
-                const progress = Math.min(currentTimeMs / duration, 1);
-
-                window.scrollTo(0, startingY + (targetY - startingY) * progress);
-
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
-            }
-
-            window.requestAnimationFrame(step);
-        }
-
-        // Function to initiate the smooth scroll with a delay
-        function startSmoothScroll() {
-            const delay = 1000; // 1000ms = 1 second
-            const targetY = 1000; // Adjust this to your target position
-            const duration = 1000; // 1000ms = 1 second
-
-            setTimeout(() => {
-                smoothScroll(targetY, duration);
-            }, delay);
-        }
-
-        // Automatically start smooth scrolling when the page loads
-        window.onload = startSmoothScroll;
-
-
+const scroll = new LocomotiveScroll({
+  el: document.querySelector("[data-scroll-container]"),
+  smooth: true,
+  tablet: { smooth: true },
+  smartphone: { smooth: true }
+});
