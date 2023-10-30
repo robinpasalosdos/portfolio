@@ -2,8 +2,14 @@
     font-family: 'k2d';
     src: url('font/K2D-Regular.ttf') format('truetype');
 }
-body{
-    --title_font_size: 2.5rem;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'k2d', sans-serif;
+}
+
+body.open{
     --bg_color: #212121;
     --card_color: #303030;
     --navbar_color: #000000;
@@ -11,13 +17,8 @@ body{
     --secondary_color: rgba(255, 255, 255, .7);
     --hint_color: rgba(255, 255, 255, .5);
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: 'k2d', sans-serif;
+body{
+    --title_font_size: 2.5rem;
     --_primary_color: var(--primary_color, rgba(0, 0, 0, .87));
     --_secondary_color: var(--secondary_color, rgba(0, 0, 0, .54));
     --_hint_color: var(--hint_color, rgba(0, 0, 0, .38));
@@ -206,8 +207,8 @@ a{
     background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
 }
 .card {
-    width: clamp(350px, 60vw, 1200px);
-    height: clamp(350px,45vw,550px);
+    width: clamp(350px, 60vw, 75.75rem);
+    height: clamp(350px,60vw, 650px);
     border-radius: 10px;
     background: var(--_card_color);
     /*box-shadow: -1rem 1rem 3rem #01fff4;*/
@@ -221,10 +222,10 @@ a{
 }
 
 .animateY{
-    transform: translateY(180px);
+    transform: translateY(320px);
 }
 .card:not(:first-child) {
-    margin-top: -180px;
+    margin-top: -320px;
 }
 .card-header {
     text-align: center;

@@ -5,6 +5,27 @@ function toggleMenu() {
     menu.classList.toggle("open");
     icon.classList.toggle("open");
 }
+const themeToggle = document.getElementById("theme-toggle");
+const theme = document.querySelector("body");
+
+themeToggle.addEventListener("click", function () {
+  theme.classList.toggle("open");
+
+  // Save the theme preference in localStorage
+  if (theme.classList.contains("open")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+});
+
+// Check for a previously set theme in localStorage
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  if (savedTheme === "dark") {
+    theme.classList.add("open");
+  }
+}
 
 const textElement = document.getElementById("home_text_p2");
 const careers = ["Web Developer        ",
@@ -92,3 +113,5 @@ const scroll = new LocomotiveScroll({
   tablet: { smooth: true },
   smartphone: { smooth: true }
 }); */
+
+
