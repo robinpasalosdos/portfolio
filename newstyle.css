@@ -168,6 +168,7 @@ a{
 }
 #socmed_card img{
     width: 2rem;
+    height: 2rem;
     transition: transform .3s ease-out;
     opacity: 50%;
 }

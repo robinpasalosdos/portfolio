@@ -7,14 +7,31 @@ function toggleMenu() {
 }
 const themeToggle = document.getElementById("theme-toggle");
 const theme = document.querySelector("body");
+var logo = document.getElementById('logo');
+var home_profile = document.getElementById('home_profile');
+function changeImages(image_1,image_2,image_3) {
+  var images = document.getElementById('socmed_card').getElementsByTagName('img');
+  var newImagePaths = [image_1, image_2, image_3];
+  for (var i = 0; i < images.length; i++) {
+      images[i].src = newImagePaths[i];
+  }
+}
+
 
 themeToggle.addEventListener("click", function () {
   theme.classList.toggle("open");
 
   // Save the theme preference in localStorage
   if (theme.classList.contains("open")) {
+    
+    logo.src = 'assets/logo_white.png';
+    home_profile.src = 'assets/neon.png';
     localStorage.setItem("theme", "dark");
+    changeImages('assets/linkedin.png','assets/github.png','assets/gmail.png');
   } else {
+    logo.src = 'assets/logo_dark.png';
+    home_profile.src = 'assets/neon_black.png';
+    changeImages('assets/linkedin_dark.png','assets/github_dark.png','assets/gmail_dark.png');
     localStorage.setItem("theme", "light");
   }
 });
