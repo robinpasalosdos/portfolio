@@ -35,7 +35,6 @@ var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
 function slideDown(){
   tabContainer.classList.remove("slide-up");
-  tabContainer.style.boxShadow = '0 1px 6px #01fff4';
   tabContainer.style.background = '#000000';
 }
 
@@ -44,7 +43,6 @@ function slideUp(){
   menu.classList.remove("open");
 
   tabContainer.classList.add("slide-up");
-  tabContainer.style.boxShadow = '0 1px 6px #01fff4';
   tabContainer.style.background = '#000000';
   
 }
@@ -64,7 +62,6 @@ window.addEventListener("scroll", function() {
   navHandleScroll();
     if (window.pageYOffset == 0){
       tabContainer.style.background = 'transparent';
-      tabContainer.style.boxShadow = 'none';
     }
 });
 
@@ -79,25 +76,19 @@ function handleScroll() {
   animationFrameId = requestAnimationFrame(() => {
     cards.forEach((card, index) => {
       if (card.getBoundingClientRect().top < (window.innerHeight || document.documentElement.clientHeight) * 0.45) {
-        card.classList.add('animateX');
         card.classList.remove('animateY');
-        if (index > 0) {
-          cards[index - 1].classList.remove('animateX');
-        }
         for (let i = index; i < cards.length - 1; i++) {
           cards[i + 1].classList.add('animateY');
         }
-      } else {
-        card.classList.remove('animateX');
       }
     });
   });
 }
 window.addEventListener('scroll', handleScroll);
-
+/* 
 const scroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
   tablet: { smooth: true },
   smartphone: { smooth: true }
-});
+}); */
