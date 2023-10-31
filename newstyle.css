@@ -18,6 +18,7 @@ body.open{
     --hint_color: rgba(255, 255, 255, .5);
     --active_icon: 1;
     --inactive_icon: .5;
+    --toggle_position: translateX(37px)
 }
 body{
     --title_font_size: 2.5rem;
@@ -29,6 +30,7 @@ body{
     --_card_color: var(--card_color, #FAFAFA);
     --_active_icon: var(--active_icon, .54);
     --_inactive_icon: var(--inactive_icon, .38);
+    --_toggle_position: var(--toggle_position, translateX(0));    
 }
 html {
     scroll-behavior: smooth;
@@ -72,6 +74,27 @@ a{
     color: var(--_primary_color);
     text-decoration: none;
     text-decoration-color: var(--_primary_color);
+}
+.theme-switch {
+    color: #333;
+    width: 70px;
+    height: 30px;
+    background: var(--_bg_color);
+    border-radius: 50px;
+    position: relative;
+    justify-self: end;
+}
+.theme-switch .switch {
+    background: var(--_primary_color);
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: 0.5s all ease;
+    z-index: 100;
+    transform: var(--_toggle_position);
 }
 .hamburger_menu{
     display: none;
