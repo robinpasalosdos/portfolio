@@ -116,12 +116,12 @@ function navHandleScroll() {
   lastScrollTop = currentScrollTop;
 }
   
-window.addEventListener("scroll", function() {
+ window.addEventListener("scroll", function() {
   navHandleScroll();
-    if (window.pageYOffset == 0){
+    /* if (window.pageYOffset == 0){
       tabContainer.style.background = 'transparent';
-    }
-});
+    }*/
+}); 
 
 const cards = document.querySelectorAll('.card');
 let scrollTimeout;
