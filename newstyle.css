@@ -16,6 +16,8 @@ body.open{
     --primary_color: rgba(255, 255, 255, 1);
     --secondary_color: rgba(255, 255, 255, .7);
     --hint_color: rgba(255, 255, 255, .5);
+    --active_icon: 1;
+    --inactive_icon: .5;
 }
 body{
     --title_font_size: 2.5rem;
@@ -25,6 +27,8 @@ body{
     --_bg_color: var(--bg_color, #F5F5F5);
     --_navbar_color: var(--navbar_color, #E0E0E0);
     --_card_color: var(--card_color, #FAFAFA);
+    --_active_icon: var(--active_icon, .54);
+    --_inactive_icon: var(--inactive_icon, .38);
 }
 html {
     scroll-behavior: smooth;
@@ -36,10 +40,11 @@ html {
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 2fr 4fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
     place-items: center;
     z-index: 2000;
     transition: transform 0.3s ease-in;
+    background: var(--_navbar_color);
 }
 .logo_con{
     height: 4rem;
@@ -86,10 +91,13 @@ a{
 }
 .mobile_nav_sections{
     display: none;
-    border: 1px solid black;
-    background: black;
+    background: var(--_navbar_color);
     min-height: 140px;
-    height: 40vh;
+    height: fit-content;
+    margin: 2rem;
+    padding: 1rem 0 2rem;
+
+    
 }
 .mobile_nav_sections ul{
     display: flex;
@@ -103,8 +111,9 @@ a{
 .mobile_nav_sections.open {
     display: none;
     width: 100%;
-    grid-column: 3;
     place-items: center;
+    grid-column: span 3;
+    grid-row: span 1; 
 }
 .hamburger_icon.open span:first-child {
     opacity: 0;
@@ -170,11 +179,11 @@ a{
     width: 2rem;
     height: 2rem;
     transition: transform .3s ease-out;
-    opacity: 50%;
+    opacity: var(--_inactive_icon);
 }
 #socmed_card img:hover{
     transform: scale(1.2);
-    opacity: 100%;
+    opacity: var(--_active_icon);
 }
 /*                                   PROJECTS                                            */
 #projects, #experience, #about{

@@ -16,7 +16,7 @@
 <body>
   <nav id="head_nav">
       <div class="logo_con">
-          <img src="./assets/logo_dark.png" class="logo" alt="logo" id="logo"/>
+          <img src="./assets/logo_dark.png" class="logo" alt="logo" id="logo" onclick="goToHome()"/>
       </div>
       <div></div>
       <div class="head_nav_sections">
@@ -28,7 +28,7 @@
         </ul>
       </div>
       <div class="hamburger_menu">
-        <div class="hamburger_icon" onclick="toggleMenu()" id="theme-toggle">
+        <div class="hamburger_icon" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -48,23 +48,23 @@
     <img src="./assets/neon_black.png" class="home_pic" alt="Robin profile picture" id="home_profile"/>
     <div class="home_details_card">
       <p class="home_text_p1">Hello, I'm</p>
-        <h1 class="title">Robin Pasalosdos</h1>
+        <h1 class="title" id="theme-toggle">Robin Pasalosdos</h1>
       <p id="home_text_p2">Web Developer</p>
       <div id="socmed_card">
         <img
-          src="./assets/linkedin.png"
+          src="./assets/linkedin_dark.png"
           alt="My LinkedIn profile"
           class="icon"
           onclick="window.open('https://www.linkedin.com/in/robin-pasalosdos-9a87b6286/', '_blank')"
         />
           <img
-            src="./assets/github.png"
+            src="./assets/github_dark.png"
             alt="My Github profile"
             class="icon"
             onclick="window.open('https://github.com/robinpasalosdos', '_blank')"
           />
           <img
-            src="./assets/gmail.png"
+            src="./assets/gmail_dark.png"
             alt="My Gmail"
             class="icon"
             onclick="window.open('https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBnpzLrSSWkRBGbWwwVVrxvgcVGjhWvTHqmxdFmDLbqglGsrGjfZJsXXWwwfrRsrtsrhnWT', '_blank')"

@@ -1,37 +1,48 @@
 const menu = document.querySelector(".mobile_nav_sections");
 const icon = document.querySelector(".hamburger_icon");
 
+
 function toggleMenu() {
     menu.classList.toggle("open");
     icon.classList.toggle("open");
 }
+
+function goToHome() {
+  var homeSection = document.getElementById('home');
+  if (homeSection) {
+      homeSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
 const themeToggle = document.getElementById("theme-toggle");
 const theme = document.querySelector("body");
-var logo = document.getElementById('logo');
+var navlogo = document.getElementById('logo');
+var navbar = document.getElementById('head_nav');
 var home_profile = document.getElementById('home_profile');
-function changeImages(image_1,image_2,image_3) {
+function changeThemeLogo(image_1,image_2,image_3) {
   var images = document.getElementById('socmed_card').getElementsByTagName('img');
   var newImagePaths = [image_1, image_2, image_3];
   for (var i = 0; i < images.length; i++) {
       images[i].src = newImagePaths[i];
   }
 }
-
+function changeImages(logo,home,nav){
+  navlogo.src = logo;
+  home_profile.src = home;
+  navbar.style.background = nav;
+}
 
 themeToggle.addEventListener("click", function () {
   theme.classList.toggle("open");
 
   // Save the theme preference in localStorage
   if (theme.classList.contains("open")) {
-    
-    logo.src = 'assets/logo_white.png';
-    home_profile.src = 'assets/neon.png';
+    changeImages('assets/logo_white.png','assets/neon.png','#000000');
+    changeThemeLogo('assets/linkedin.png','assets/github.png','assets/gmail.png');
     localStorage.setItem("theme", "dark");
-    changeImages('assets/linkedin.png','assets/github.png','assets/gmail.png');
   } else {
-    logo.src = 'assets/logo_dark.png';
-    home_profile.src = 'assets/neon_black.png';
-    changeImages('assets/linkedin_dark.png','assets/github_dark.png','assets/gmail_dark.png');
+    changeImages('assets/logo_dark.png','assets/neon_black.png','#E0E0E0');
+    changeThemeLogo('assets/linkedin_dark.png','assets/github_dark.png','assets/gmail_dark.png');
     localStorage.setItem("theme", "light");
   }
 });
@@ -40,7 +51,9 @@ themeToggle.addEventListener("click", function () {
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
   if (savedTheme === "dark") {
+    changeImages('assets/logo_white.png','assets/neon.png');
     theme.classList.add("open");
+    changeThemeLogo('assets/linkedin.png','assets/github.png','assets/gmail.png');
   }
 }
 
@@ -73,7 +86,11 @@ var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
 function slideDown(){
   tabContainer.classList.remove("slide-up");
-  tabContainer.style.background = '#000000';
+  if (theme.classList.contains("open")) {
+    tabContainer.style.background = '#000000';
+  }else{
+    tabContainer.style.background = '#E0E0E0';
+  }
 }
 
 function slideUp(){
@@ -81,8 +98,11 @@ function slideUp(){
   menu.classList.remove("open");
 
   tabContainer.classList.add("slide-up");
-  tabContainer.style.background = '#000000';
-  
+  if (theme.classList.contains("open")) {
+    tabContainer.style.background = '#000000';
+  }else{
+    tabContainer.style.background = '#E0E0E0';
+  }
 }
 
 function navHandleScroll() {
