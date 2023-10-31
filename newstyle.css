@@ -30,10 +30,13 @@ body{
     --_card_color: var(--card_color, #FAFAFA);
     --_active_icon: var(--active_icon, .54);
     --_inactive_icon: var(--inactive_icon, .38);
-    --_toggle_position: var(--toggle_position, translateX(0));    
+    --_toggle_position: var(--toggle_position, translateX(0));
+    background: var(--_bg_color);
+
 }
 html {
     scroll-behavior: smooth;
+    scroll-padding: var(--scroll_padding, 4rem);
 }
 /* WEB NAV */
 #head_nav{
@@ -76,7 +79,6 @@ a{
     text-decoration-color: var(--_primary_color);
 }
 .theme-switch {
-    color: #333;
     width: 70px;
     height: 30px;
     background: var(--_bg_color);
@@ -392,14 +394,16 @@ a{
 .about_pic img{
     width: 18.75rem;
     height: 25rem;
-    border: var(--_primary_color) 2px solid;
+    border: var(--_hint_color) 2px solid;
     border-radius: 2rem;
 }
 .about_bg{
-    border: var(--_primary_color) 2px solid;
+    border: var(--_hint_color) 2px solid;
     border-radius: 2rem;
     padding: 2rem;
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 .about_bg h1{
     color: var(--_primary_color);
@@ -418,6 +422,70 @@ a{
     text-indent: 3em;
     color: var(--_secondary_color);
     font-size: 1.1rem;
+}
+/*                      SKILLS                        */
+.skills_con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
+    flex-direction: column;
+    max-width: 1200px;
+}
+.skills_con h1{
+    color: var(--_primary_color);
+    font-size: 2rem;
+    margin: 2rem;
+}
+.skill_all{
+    display: flex;
+    gap: 2rem;
+    max-width: 75.75rem;
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    gap: 2rem;
+    border: var(--_hint_color) 2px solid;
+    border-radius: 2rem;
+    padding: 2rem;
+    max-width: 55rem;
+    width: 100%;
+
+}
+.skills h2{
+    color: var(--_primary_color);
+    font-size: 1.7rem;
+}
+.skill{
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+.skill article {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+.skill article h3, .skill article h5{
+    color: var(--_secondary_color);
+    font-size: 1.4rem;
+}
+.skill article p{
+    color: var(--_hint_color);
+    font-size: 1.1rem;
+}
+.icon{
+    width: 3rem;
+    height: 3rem;
 }
   
   

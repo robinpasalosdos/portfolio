@@ -14,6 +14,10 @@ function goToHome() {
   }
 }
 
+const navigation = document.querySelector("#head_nav");
+const navigationHeight = navigation.offsetHeight;
+document.documentElement.style.setProperty("--scroll-padding",navigationHeight + "px")
+
 const themeToggle = document.getElementById("theme-toggle");
 const theme = document.querySelector("body");
 var navlogo = document.getElementById('logo');
