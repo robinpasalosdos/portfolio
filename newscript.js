@@ -150,7 +150,7 @@ function handleScroll() {
   cancelAnimationFrame(animationFrameId);
   function handleMobileView() {
     if (window.matchMedia("(max-width: 900px)").matches) {
-      trigger = .90;
+      trigger = 1;
     } else {
       trigger = .55
     }
