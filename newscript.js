@@ -14,9 +14,6 @@ function goToHome() {
   }
 }
 
-const navigation = document.querySelector("#head_nav");
-const navigationHeight = navigation.offsetHeight;
-
 const themeToggle = document.getElementById("theme-toggle");
 const theme = document.querySelector("body");
 var navlogo = document.getElementById('logo');
@@ -154,10 +151,6 @@ function handleScroll() {
   animationFrameId = requestAnimationFrame(() => {
     cards.forEach((card, index) => {
       if (card.getBoundingClientRect().top < (window.innerHeight || document.documentElement.clientHeight) * 0.45) {
-        if(index == 0){
-          cards[index].classList.add('animateX');
-          cards[index].classList.add('animateY');
-        }
         card.classList.add('animateX');
         card.classList.remove('animateY');
         if (index > 0) {

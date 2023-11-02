@@ -36,7 +36,6 @@ body{
 }
 html {
     scroll-behavior: smooth;
-    scroll-padding: var(--scroll_padding, 0);
 }
 /* WEB NAV */
 #head_nav{
@@ -327,9 +326,6 @@ a{
 
 .card:hover::before {
     transform: translateX(-1rem);
-}
-.card:hover {
-    transform: translateX(1rem);
 }
 .card-header {
     text-align: center;
