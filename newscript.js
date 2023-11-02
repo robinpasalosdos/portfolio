@@ -23,67 +23,84 @@ const theme = document.querySelector("body");
 var navlogo = document.getElementById('logo');
 var navbar = document.getElementById('head_nav');
 var home_profile = document.getElementById('home_profile');
-function changeThemeLogo(image_1,image_2,image_3) {
-  var images = document.getElementById('socmed_card').getElementsByTagName('img');
-  var newImagePaths = [image_1, image_2, image_3];
+var switchLogo = document.getElementById('sun_n_moon')
+
+function changeImageLogo(containerId, imagePaths) {
+  var images = document.getElementById(containerId).getElementsByTagName('img');
   for (var i = 0; i < images.length; i++) {
-      images[i].src = newImagePaths[i];
+    if (imagePaths[i]) {
+      images[i].src = imagePaths[i];
+    }
   }
 }
-function changeImages(logo,home,nav){
+
+function changeImages(logo,home,nav,slogo){
   navlogo.src = logo;
   home_profile.src = home;
   navbar.style.background = nav;
+  switchLogo.src = slogo;
+
 }
 
 themeToggle.addEventListener("click", function () {
   theme.classList.toggle("open");
 
-  // Save the theme preference in localStorage
   if (theme.classList.contains("open")) {
-    changeImages('assets/logo_white.png','assets/neon.png','#000000');
-    changeThemeLogo('assets/linkedin.png','assets/github.png','assets/gmail.png');
+    changeImages('assets/logo_white.png','assets/neon.png','#000000','assets/moon.png');
+    changeImageLogo('socmed_card',['assets/linkedin.png','assets/github.png','assets/gmail.png']);
+    changeImageLogo('contact_strip',['assets/gmail.png','assets/phone_white.png','assets/linkedin.png','assets/facebook.png']);
     localStorage.setItem("theme", "dark");
   } else {
-    changeImages('assets/logo_dark.png','assets/neon_black.png','#E0E0E0');
-    changeThemeLogo('assets/linkedin_dark.png','assets/github_dark.png','assets/gmail_dark.png');
+    changeImages('assets/logo_dark.png','assets/neon_black.png','#E0E0E0','assets/sun.png');
+    changeImageLogo('socmed_card',['assets/linkedin_dark.png','assets/github_dark.png','assets/gmail_dark.png']);
+    changeImageLogo('contact_strip',['assets/gmail_dark.png','assets/phone_dark.png','assets/linkedin_dark.png','assets/facebook_dark.png']);
     localStorage.setItem("theme", "light");
   }
 });
 
-// Check for a previously set theme in localStorage
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
   if (savedTheme === "dark") {
-    changeImages('assets/logo_white.png','assets/neon.png');
+    changeImages('assets/logo_white.png','assets/neon.png','#000000','assets/moon.png');
     theme.classList.add("open");
-    changeThemeLogo('assets/linkedin.png','assets/github.png','assets/gmail.png');
+    changeImageLogo('socmed_card',['assets/linkedin.png','assets/github.png','assets/gmail.png']);
+    changeImageLogo('contact_strip',['assets/gmail.png','assets/phone_white.png','assets/linkedin.png','assets/facebook.png']);
   }
 }
 
 const textElement = document.getElementById("home_text_p2");
-const careers = ["Web Developer        ",
-                  "Game Developer        ",
-                  "Mobile App Developer        ",
-                  "Data Analyst        "];
+const careers = [
+  "Web Developer        ",
+  "Game Developer        ",
+  "Mobile App Developer        ",
+  "Data Analyst        "
+];
 
 let currentWordIndex = 0;
 let currentletterIndex = 1;
+let incrementing = true;
 
 function updateText() {
-  textElement.textContent = careers[currentWordIndex].slice(0,currentletterIndex);
-  currentletterIndex = currentletterIndex + 1;
-  if(currentWordIndex == 3 && currentletterIndex == 21){
-    currentWordIndex = 0;
-    currentletterIndex = 1;
+  textElement.textContent = careers[currentWordIndex].slice(0, currentletterIndex);
+
+  if (incrementing) {
+    currentletterIndex++;
+  } else {
+    currentletterIndex--;
   }
-  if(currentletterIndex == careers[currentWordIndex].length + 1){
-    currentWordIndex = currentWordIndex + 1;
-    currentletterIndex = 1;
+
+  if (currentletterIndex === careers[currentWordIndex].length + 1) {
+    incrementing = false;
+  }
+
+  if (currentletterIndex === 0) {
+    incrementing = true;
+    currentWordIndex = (currentWordIndex + 1) % careers.length;
   }
 }
 
-setInterval(updateText,100);
+setInterval(updateText, 50);
+
 
 var tabContainer = document.getElementById("head_nav");
 var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
