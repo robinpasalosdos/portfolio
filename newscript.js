@@ -173,7 +173,7 @@ function handleScroll() {
         card.classList.remove('animateX');
       }
     });
-  }, 50); // Adjust the debounce time (in milliseconds) to your preference
+  }, 10); // Adjust the debounce time (in milliseconds) to your preference
   });
 }
 

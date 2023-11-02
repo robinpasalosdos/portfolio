@@ -269,6 +269,7 @@ a{
     width: 100%;
     flex-direction: column;
     align-items: center;
+    padding-top: 280px;
 
 }
 .card_list::-webkit-scrollbar {
@@ -298,15 +299,15 @@ a{
     grid-template-rows: 5fr 1fr 3fr 1fr;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     margin-left: -.5rem;
+    margin-top: -280px;
+    
+
 }
 .animateX{
     transform: translateX(-1rem);
 }
 .animateY{
     transform: translateY(280px);
-}
-.card:not(:first-child) {
-    margin-top: -280px;
 }
 .card-header {
     text-align: center;
