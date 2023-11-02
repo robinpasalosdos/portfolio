@@ -305,27 +305,8 @@ a{
 .animateY{
     transform: translateY(280px);
 }
-.card:focus-within~.card, .card:hover~.card {
-    transform: translateY(280px);
-}
-
-.card:hover {
-    transform: translateX(-1rem);
-}
-
 .card:not(:first-child) {
     margin-top: -280px;
-}
-.card::before {
-    width: clamp(200px, 55vw, 75.75rem);
-    height: 360px;
-    content: "";
-    display: block;
-    position: absolute;
-}
-
-.card:hover::before {
-    transform: translateX(-1rem);
 }
 .card-header {
     text-align: center;

@@ -56,9 +56,6 @@
     .card:not(:first-child) {
         margin-top: -240px;
     }
-    .card:focus-within~.card, .card:hover~.card {
-        transform: translateY(240px);
-    }
     .exp_con{
         grid-template-columns: 1fr 1fr;
     }
@@ -69,9 +66,6 @@
     }
     .card:not(:first-child) {
         margin-top: -210px;
-    }
-    .card:focus-within~.card, .card:hover~.card {
-        transform: translateY(210px);
     }
 }
 @media screen and (max-width: 600px) {

@@ -142,15 +142,25 @@ function navHandleScroll() {
 const cards = document.querySelectorAll('.card');
 let scrollTimeout;
 let animationFrameId;
+let trigger;
 
 function handleScroll() {
   clearTimeout(scrollTimeout);
   scrollTimeout = setTimeout(() => {
   cancelAnimationFrame(animationFrameId);
+  function handleMobileView() {
+    if (window.matchMedia("(max-width: 900px)").matches) {
+      trigger = .90;
+    } else {
+      trigger = .55
+    }
+  }
+  handleMobileView();
+  window.addEventListener('resize', handleMobileView);
 
   animationFrameId = requestAnimationFrame(() => {
     cards.forEach((card, index) => {
-      if (card.getBoundingClientRect().top < (window.innerHeight || document.documentElement.clientHeight) * 0.45) {
+      if (card.getBoundingClientRect().top < (window.innerHeight || document.documentElement.clientHeight) * trigger) {
         card.classList.add('animateX');
         card.classList.remove('animateY');
         if (index > 0) {
