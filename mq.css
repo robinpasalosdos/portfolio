@@ -50,6 +50,9 @@
         width: clamp(300px, 92vw, 700px);
         height: clamp(300px, 92vw, 530px);
     }
+    .animateY{
+        transform: translateY(240px);
+    }
     .card:not(:first-child) {
         margin-top: -240px;
     }

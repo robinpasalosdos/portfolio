@@ -132,8 +132,6 @@ a{
     height: fit-content;
     margin: 2rem;
     padding: 1rem 0 2rem;
-
-    
 }
 .mobile_nav_sections ul{
     display: flex;
@@ -301,6 +299,12 @@ a{
     grid-template-rows: 5fr 1fr 3fr 1fr;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     margin-left: -.5rem;
+}
+.animateX{
+    transform: translateX(-1rem);
+}
+.animateY{
+    transform: translateY(280px);
 }
 .card:focus-within~.card, .card:hover~.card {
     transform: translateY(280px);

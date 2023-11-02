@@ -148,19 +148,33 @@ let animationFrameId;
 
 function handleScroll() {
   clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
   cancelAnimationFrame(animationFrameId);
 
   animationFrameId = requestAnimationFrame(() => {
     cards.forEach((card, index) => {
-      if (card.getBoundingClientRect().top < (window.innerHeight || document.documentElement.clientHeight) * 0.45) {
+      if(index == 0){
+        card.classList.add('animateX');
         card.classList.remove('animateY');
+      }
+      if (card.getBoundingClientRect().top < (window.innerHeight || document.documentElement.clientHeight) * 0.45) {
+        card.classList.add('animateX');
+        card.classList.remove('animateY');
+        if (index > 0) {
+          cards[index - 1].classList.remove('animateX');
+        }
         for (let i = index; i < cards.length - 1; i++) {
           cards[i + 1].classList.add('animateY');
         }
+      } else {
+        card.classList.remove('animateX');
       }
     });
+  }, 50); // Adjust the debounce time (in milliseconds) to your preference
   });
 }
+
+window.addEventListener('scroll', handleScroll);
 document.addEventListener('DOMContentLoaded', function() {
   const elementsToHandle = ['.head_nav_sections', '.mobile_nav_sections'];
 
