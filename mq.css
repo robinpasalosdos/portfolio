@@ -62,8 +62,17 @@
     .exp_con{
         grid-template-columns: 1fr 1fr;
     }
-
-
+}
+@media screen and (max-width: 450px) {
+    .animateY{
+        transform: translateY(210px);
+    }
+    .card:not(:first-child) {
+        margin-top: -210px;
+    }
+    .card:focus-within~.card, .card:hover~.card {
+        transform: translateY(210px);
+    }
 }
 @media screen and (max-width: 600px) {
     .exp_con{

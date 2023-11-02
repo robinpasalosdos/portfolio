@@ -153,11 +153,11 @@ function handleScroll() {
 
   animationFrameId = requestAnimationFrame(() => {
     cards.forEach((card, index) => {
-      if(index == 0){
-        card.classList.add('animateX');
-        card.classList.remove('animateY');
-      }
       if (card.getBoundingClientRect().top < (window.innerHeight || document.documentElement.clientHeight) * 0.45) {
+        if(index == 0){
+          cards[index].classList.add('animateX');
+          cards[index].classList.add('animateY');
+        }
         card.classList.add('animateX');
         card.classList.remove('animateY');
         if (index > 0) {
