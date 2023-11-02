@@ -150,7 +150,7 @@ function handleScroll() {
   cancelAnimationFrame(animationFrameId);
   function handleMobileView() {
     if (window.matchMedia("(max-width: 900px)").matches) {
-      trigger = 1;
+      trigger = .8;
     } else {
       trigger = .55
     }
@@ -173,7 +173,7 @@ function handleScroll() {
         card.classList.remove('animateX');
       }
     });
-  }, 10); // Adjust the debounce time (in milliseconds) to your preference
+  }, 50); // Adjust the debounce time (in milliseconds) to your preference
   });
 }
 

@@ -46,6 +46,9 @@
     }
 }
 @media screen and (max-width: 900px) {
+    .card_list{
+        padding-top: 240px;
+    }
     .card{
         width: clamp(300px, 92vw, 700px);
         height: clamp(300px, 92vw, 530px);
@@ -58,12 +61,18 @@
         grid-template-columns: 1fr 1fr;
     }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
     .animateY{
-        transform: translateY(210px);
+        transform: translateY(0);
+    }
+    .animateX{
+        transform: translateX(0);
     }
     .card{
-        margin-top: -210px;
+        margin-top: .5rem;
+    }
+    .card_list{
+        padding-top: 0;
     }
 }
 @media screen and (max-width: 600px) {
