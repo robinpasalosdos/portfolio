@@ -16,7 +16,6 @@ function goToHome() {
 
 const navigation = document.querySelector("#head_nav");
 const navigationHeight = navigation.offsetHeight;
-document.documentElement.style.setProperty("--scroll-padding",navigationHeight + "px")
 
 const themeToggle = document.getElementById("theme-toggle");
 const theme = document.querySelector("body");
@@ -130,7 +129,6 @@ function navHandleScroll() {
   var currentScrollTop = document.documentElement.scrollTop;
   if (currentScrollTop > lastScrollTop) {
     slideUp();
-
   }else{
     slideDown();
   }
@@ -163,13 +161,22 @@ function handleScroll() {
     });
   });
 }
-window.addEventListener('scroll', handleScroll);
-/* 
-const scroll = new LocomotiveScroll({
-  el: document.querySelector("[data-scroll-container]"),
-  smooth: true,
-  tablet: { smooth: true },
-  smartphone: { smooth: true }
-}); */
+document.addEventListener('DOMContentLoaded', function() {
+  const elementsToHandle = ['.head_nav_sections', '.mobile_nav_sections'];
+
+  // Common function to attach the event listener with a delay for slideUp
+  const attachEventListener = (element) => {
+    const el = document.querySelector(element);
+    el.addEventListener('click', function() {
+      setTimeout(slideUp, 800);
+    });
+  };
+
+  // Attach event listeners to all specified elements
+  elementsToHandle.forEach(attachEventListener);
+});
+
+
+
 
 

@@ -36,7 +36,7 @@ body{
 }
 html {
     scroll-behavior: smooth;
-    scroll-padding: var(--scroll_padding, 4rem);
+    scroll-padding: var(--scroll_padding, 0);
 }
 /* WEB NAV */
 #head_nav{
@@ -113,7 +113,7 @@ a{
     box-sizing: border-box;
     color: #ecf0f1;
     text-align: center;
-    transform: scale(.6);
+    transform: scale(.5);
 }
 .hamburger_icon span {
     height: 6px;
@@ -148,13 +148,13 @@ a{
     display: none;
     width: 100%;
     place-items: center;
-    grid-column: span 3;
+    grid-column: span 4;
     grid-row: span 1; 
 }
 .hamburger_icon.open span{
 }
 .hamburger_icon.open{
-    transform: scale(.6);
+    transform: scale(.5);
     -webkit-transition: all 0.15s ease-in-out;
     -o-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
@@ -179,6 +179,7 @@ a{
     -ms-transform: translateY(13px);
     -o-transform: translateY(13px);
     transform: translateY(13px);
+    
 }
 .hamburger_icon.open span:nth-child(2) {
     width: 0px;
@@ -500,6 +501,7 @@ a{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    gap: 2rem;
 }
 .contact_details_con{
     display: flex;
@@ -517,17 +519,22 @@ a{
     color: var(--_secondary_color);
 }
 footer {
-    height: fit-content;
     background-color: var(--_bg_color);
+    color: var(--_primary_color);
+    
+}
+.footer_con{
+    padding: 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    color: var(--_primary_color);
-    padding: 2rem;
-  }
+    gap: 2rem;
+}
   
 footer p {
     text-align: center;
+    font-size: .8rem;
+
 }
 .nav_footer_links{
     gap: 2rem;
@@ -537,4 +544,7 @@ footer p {
     justify-content: center;
     margin: 1rem;
     color: var(--_primary_color);
+}
+.nav_footer_links li{
+    font-size: 1.4rem;
 }
