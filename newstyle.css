@@ -21,7 +21,8 @@ body.open{
     --toggle_position: translateX(31px);
     --l: 21px;
     --m: 17px;
-    --s: .9rem;
+    --s: 14px;
+    --ss: 13px
 }
 body{
     --title_font_size: clamp(26px,3vw,34px);
@@ -318,7 +319,7 @@ a{
     margin: .5vw;
 }
 .card p{
-    font-size: clamp(12px,1.25vw,13px);
+    font-size: var(--ss);
     margin: 0 1rem 0 1rem;
     align-self: flex-start;
     text-indent: 2em;
@@ -459,7 +460,7 @@ a{
     width: 100%;
 
 }
-.skills h2{
+.skills h4{
     color: var(--_primary_color);
     font-size: var(--l);
 }
@@ -515,7 +516,7 @@ a{
     color: var(--_primary_color);
 }
 .contact_sub_details{
-    font-size: var(--s);
+    font-size: var(--ss);
     color: var(--_secondary_color);
 }
 footer {
