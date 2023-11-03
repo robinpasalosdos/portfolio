@@ -19,9 +19,9 @@ body.open{
     --active_icon: 1;
     --inactive_icon: .5;
     --toggle_position: translateX(31px);
-    --l: clamp(19px,1.75vw,20px);
-    --m: clamp(16px,1.5vw,17px);
-    --s: clamp(13px,1.25vw,14px);
+    --l: 20px;
+    --m: 16px;
+    --s: 13px;
 }
 body{
     --title_font_size: clamp(26px,3vw,34px);
