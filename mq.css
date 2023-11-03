@@ -62,8 +62,13 @@
 }
 @media screen and (max-width: 380px) {
     .card{
-        width: clamp(21rem,23vw,24.583rem);
-        height: clamp(21rem,23vw,24.583rem);
+        min-width: 21rem;
+        min-height: 21rem;
         margin: .5rem 1rem .5rem 1rem;   
+    }
+}
+@media screen and (max-width: 320px) {
+    .card p{
+        font-size: 12px;
     }
 }

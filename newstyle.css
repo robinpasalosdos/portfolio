@@ -10,10 +10,10 @@
 }
 :root{
     --title_font_size: clamp(26px,3vw,34px);
-    --l: 21px;
+    --l: 20px;
     --m: 17px;
     --s: 14px;
-    --ss: 12px;
+    --ss: 13px;
 
 }
 
@@ -297,8 +297,8 @@ a{
     background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
 }
 .card {
-    width: 24.583rem;
-    height: 24.583rem;
+    width: 24.2rem;
+    height: 24.2rem;
     border-radius: 10px;
     background: var(--_card_color);
     /*box-shadow: -1rem 1rem 3rem #01fff4;*/
