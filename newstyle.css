@@ -544,5 +544,5 @@ footer p {
     color: var(--_primary_color);
 }
 .nav_footer_links li{
-    font-size: var(--m);
+    font-size: var(--l);
 }
