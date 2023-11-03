@@ -19,9 +19,9 @@ body.open{
     --active_icon: 1;
     --inactive_icon: .5;
     --toggle_position: translateX(31px);
-    --l: clamp(18px,1.75vw,19px);
+    --l: clamp(19px,1.75vw,20px);
     --m: clamp(15px,1.5vw,16px);
-    --s: clamp(13px,1.3vw,14px);
+    --s: clamp(12px,1.3vw,13px);
 }
 body{
     --title_font_size: clamp(26px,3vw,34px);
@@ -488,7 +488,7 @@ a{
 }
 .skill article p{
     color: var(--_hint_color);
-    font-size: .8rem;
+    font-size: var(--s);
 }
 .icon, .contact_icon{
     width: 2.5rem;
@@ -544,5 +544,5 @@ footer p {
     color: var(--_primary_color);
 }
 .nav_footer_links li{
-    font-size: var(--l);
+    font-size: var(--m);
 }
