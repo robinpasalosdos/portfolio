@@ -18,7 +18,10 @@ body.open{
     --hint_color: rgba(255, 255, 255, .5);
     --active_icon: 1;
     --inactive_icon: .5;
-    --toggle_position: translateX(31px)
+    --toggle_position: translateX(31px);
+    --l: clamp(18px,1.75vw,19px);
+    --m: clamp(15px,1.5vw,16px);
+    --s: clamp(13px,1.3vw,14px);
 }
 body{
     --title_font_size: clamp(26px,3vw,34px);
@@ -308,7 +311,7 @@ a{
 
 }
 .card-header h2 {
-    font-size: clamp(16px,1.75vw,18px);
+    font-size: var(--l);
     text-decoration: none;
     cursor: pointer;
     color: var(--_primary_color);
@@ -357,17 +360,17 @@ a{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 .exp_details h1{
-    font-size: clamp(16px,1.75vw,18px);
+    font-size: var(--l);
     margin-bottom: 1rem;
     color: var(--_primary_color);
 }
 .exp_details h2{
-    font-size: clamp(14px,1.5vw,16px);
+    font-size: var(--m);
     margin-bottom: 1rem;
     color: var(--_primary_color);
 }
 .exp_details p{
-    font-size: clamp(12px,1.3vw,13px);
+    font-size: var(--s);
     text-indent: 2em;
     color: var(--_secondary_color);
 }
@@ -411,12 +414,12 @@ a{
 }
 .about_bg h1{
     color: var(--_primary_color);
-    font-size: clamp(16px,1.75vw,18px);
+    font-size: var(--l);
     
 }
 .about_bg p{
     color: var(--_secondary_color);
-    font-size: clamp(12px,1.3vw,13px);
+    font-size: var(--s);
 }
 .about_icon{
     width: 2.5rem;
@@ -426,7 +429,7 @@ a{
 .about_text p{
     text-indent: 3em;
     color: var(--_secondary_color);
-    font-size: clamp(12px,1.3vw,13px);
+    font-size: var(--s);
 }
 /*                      SKILLS                        */
 .skills_con{
@@ -458,7 +461,7 @@ a{
 }
 .skills h2{
     color: var(--_primary_color);
-    font-size: clamp(16px,1.75vw,18px);
+    font-size: var(--l);
 }
 .skill{
     display: flex;
@@ -477,11 +480,11 @@ a{
 }
 .skill article h3{
     color: var(--_secondary_color);
-    font-size: clamp(14px,1.5vw,16px);
+    font-size: var(--m);
 }
 .skill article h5{
     color: var(--_secondary_color);
-    font-size: clamp(12px,1.3vw,13px);
+    font-size: var(--s);
 }
 .skill article p{
     color: var(--_hint_color);
@@ -508,11 +511,11 @@ a{
     gap: .3rem;
 }
 .contact_details{
-    font-size: 1.1rem;
+    font-size: var(--m);
     color: var(--_primary_color);
 }
 .contact_sub_details{
-    font-size: .8rem;
+    font-size: var(--s);
     color: var(--_secondary_color);
 }
 footer {
@@ -529,7 +532,7 @@ footer {
   
 footer p {
     text-align: center;
-    font-size: .8rem;
+    font-size: var(--s);
 }
 .nav_footer_links{
     gap: 2rem;
@@ -541,5 +544,5 @@ footer p {
     color: var(--_primary_color);
 }
 .nav_footer_links li{
-    font-size: 1.4rem;
+    font-size: var(--m);
 }
