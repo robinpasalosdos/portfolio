@@ -41,35 +41,8 @@
     .about_bg_con, .skill_all{
         flex-direction: column;
     }
-}
-@media screen and (max-width: 900px) {
-    .card_list{
-        padding-top: 240px;
-    }
-    .card{
-        width: clamp(300px, 92vw, 700px);
-        height: clamp(300px, 92vw, 530px);
-        margin-top: -240px;
-    }
-    .animateY{
-        transform: translateY(240px);
-    }
     .exp_con{
         grid-template-columns: 1fr 1fr;
-    }
-}
-@media screen and (max-width: 600px) {
-    .animateY{
-        transform: translateY(0);
-    }
-    .animateX{
-        transform: translateX(0);
-    }
-    .card{
-        margin-top: .5rem;
-    }
-    .card_list{
-        padding-top: 0;
     }
 }
 @media screen and (max-width: 600px) {
@@ -88,8 +61,11 @@
         gap: 1.2rem;
     }
 }
-@media screen and (max-width: 500px) {
-    .card p{
-        font-size: .8rem;
+@media screen and (max-width: 380px) {
+    .card{
+        width: clamp(21rem,23vw,24.583rem);
+        height: clamp(21rem,23vw,24.583rem);
+
+        
     }
 }
