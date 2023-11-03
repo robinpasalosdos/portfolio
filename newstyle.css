@@ -19,10 +19,7 @@ body.open{
     --active_icon: 1;
     --inactive_icon: .5;
     --toggle_position: translateX(31px);
-    --l: 21px;
-    --m: 17px;
-    --s: 14px;
-    --ss: 13px
+  
 }
 body{
     --title_font_size: clamp(26px,3vw,34px);
@@ -36,6 +33,9 @@ body{
     --_inactive_icon: var(--inactive_icon, .38);
     --_toggle_position: var(--toggle_position, translateX(0));
     background: var(--_bg_color);
+    --l: 21px;
+    --m: 17px;
+    --s: 14px;
 
 }
 html {
