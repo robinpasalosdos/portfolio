@@ -205,7 +205,7 @@ a{
 #home {
     background-color: var(--_bg_color);
     height: clamp(440px, 100vh, 600px);
-    height: clamp(440px, 100dvh, 700px);
+    height: clamp(440px, 100svh, 700px);
 
 }
 .home_pic{
@@ -233,7 +233,7 @@ a{
     font-size: clamp(23px,2.5vw,27px);
 }
 .title {
-    font-size: clamp(35px,5vw,45px);
+    font-size: clamp(39px,5vw,45px);
     text-align: center;
     color: var(--_primary_color);
 }
@@ -357,17 +357,17 @@ a{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 .exp_details h1{
-    font-size: 1.4rem;
+    font-size: clamp(16px,1.75vw,18px);
     margin-bottom: 1rem;
     color: var(--_primary_color);
 }
 .exp_details h2{
-    font-size: 1.1rem;
+    font-size: clamp(14px,1.5vw,16px);
     margin-bottom: 1rem;
     color: var(--_primary_color);
 }
 .exp_details p{
-    font-size: 1.1rem;
+    font-size: clamp(12px,1.3vw,13px);
     text-indent: 2em;
     color: var(--_secondary_color);
 }
@@ -411,11 +411,12 @@ a{
 }
 .about_bg h1{
     color: var(--_primary_color);
-    font-size: 1.4rem;
+    font-size: clamp(16px,1.75vw,18px);
+    
 }
 .about_bg p{
     color: var(--_secondary_color);
-    font-size: 1.1rem;
+    font-size: clamp(12px,1.3vw,13px);
 }
 .about_icon{
     width: 2.5rem;
@@ -425,7 +426,7 @@ a{
 .about_text p{
     text-indent: 3em;
     color: var(--_secondary_color);
-    font-size: 1.1rem;
+    font-size: clamp(12px,1.3vw,13px);
 }
 /*                      SKILLS                        */
 .skills_con{
@@ -457,7 +458,7 @@ a{
 }
 .skills h2{
     color: var(--_primary_color);
-    font-size: 1.4rem;
+    font-size: clamp(16px,1.75vw,18px);
 }
 .skill{
     display: flex;
@@ -476,11 +477,11 @@ a{
 }
 .skill article h3{
     color: var(--_secondary_color);
-    font-size: 1.1rem;
+    font-size: clamp(14px,1.5vw,16px);
 }
 .skill article h5{
     color: var(--_secondary_color);
-    font-size: .8rem;
+    font-size: clamp(12px,1.3vw,13px);
 }
 .skill article p{
     color: var(--_hint_color);
