@@ -65,7 +65,6 @@
     .card{
         width: clamp(21rem,23vw,24.583rem);
         height: clamp(21rem,23vw,24.583rem);
-
-        
+        margin: .5rem 1rem .5rem 1rem;   
     }
 }

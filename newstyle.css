@@ -205,6 +205,7 @@ a{
 #home {
     background-color: var(--_bg_color);
     height: clamp(440px, 100vh, 600px);
+    height: clamp(440px, 100dvh, 600px);
 }
 .home_pic{
     height: 450px;
@@ -313,7 +314,7 @@ a{
     margin: .5vw;
 }
 .card p{
-    font-size: clamp(10px,1.3vw,12px);
+    font-size: clamp(11px,1.3vw,12px);
     margin: 0 1rem 0 1rem;
     align-self: flex-start;
     text-indent: 2em;
