@@ -205,7 +205,8 @@ a{
 #home {
     background-color: var(--_bg_color);
     height: clamp(440px, 100vh, 600px);
-    height: clamp(440px, 100dvh, 600px);
+    height: clamp(440px, 100dvh, 700px);
+
 }
 .home_pic{
     height: 450px;
