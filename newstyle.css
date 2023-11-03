@@ -21,7 +21,7 @@ body.open{
     --toggle_position: translateX(31px);
     --l: 21px;
     --m: 17px;
-    --s: .8rem;
+    --s: .9rem;
 }
 body{
     --title_font_size: clamp(26px,3vw,34px);
