@@ -20,8 +20,8 @@ body.open{
     --inactive_icon: .5;
     --toggle_position: translateX(31px);
     --l: clamp(19px,1.75vw,20px);
-    --m: clamp(15px,1.5vw,16px);
-    --s: clamp(12px,1.3vw,13px);
+    --m: clamp(16px,1.5vw,17px);
+    --s: clamp(13px,1.25vw,14px);
 }
 body{
     --title_font_size: clamp(26px,3vw,34px);
@@ -318,7 +318,7 @@ a{
     margin: .5vw;
 }
 .card p{
-    font-size: clamp(11px,1.3vw,12px);
+    font-size: clamp(12px,1.25vw,13px);
     margin: 0 1rem 0 1rem;
     align-self: flex-start;
     text-indent: 2em;
