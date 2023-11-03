@@ -21,7 +21,7 @@ body.open{
     --toggle_position: translateX(31px)
 }
 body{
-    --title_font_size: 2.5rem;
+    --title_font_size: clamp(26px,3vw,34px);
     --_primary_color: var(--primary_color, rgba(0, 0, 0, .87));
     --_secondary_color: var(--secondary_color, rgba(0, 0, 0, .54));
     --_hint_color: var(--hint_color, rgba(0, 0, 0, .38));
@@ -222,15 +222,16 @@ a{
 .home_text_p1 {
     text-align: center;
     color: var(--_secondary_color);
+    font-size: clamp(14px,1.25vw,18px);
 }
 #home_text_p2 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: var(--_secondary_color);
     height: 1.75rem;
+    font-size: clamp(23px,2.5vw,27px);
 }
 .title {
-    font-size: 3rem;
+    font-size: clamp(35px,5vw,45px);
     text-align: center;
     color: var(--_primary_color);
 }
@@ -468,13 +469,13 @@ a{
     text-align: initial;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 2.5rem;
+    gap: 2rem;
     justify-content: space-around;
 }
 
 .skill article {
     display: flex;
-    width: 8rem;
+    width: 7.5rem;
     justify-content: space-around;
     gap: 0.5rem;
 }
