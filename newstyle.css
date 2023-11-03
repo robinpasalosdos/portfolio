@@ -13,6 +13,8 @@
     --l: 21px;
     --m: 17px;
     --s: 14px;
+    --ss: 12px;
+
 }
 
 body.open{
@@ -315,7 +317,7 @@ a{
 
 }
 .card-header h2 {
-    font-size: var(--l);
+    font-size: var(--m);
     text-decoration: none;
     cursor: pointer;
     color: var(--_primary_color);
@@ -536,7 +538,7 @@ footer {
   
 footer p {
     text-align: center;
-    font-size: var(--s);
+    font-size: var(--ss);
 }
 .nav_footer_links{
     gap: 2rem;
