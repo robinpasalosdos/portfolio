@@ -40,6 +40,10 @@
     .about_bg_con, .skill_all{
         flex-direction: column;
     }
+    .skill_all{
+        gap: 1rem;
+        margin-top: 0;
+    }
     .exp_con{
         grid-template-columns: 1fr 1fr;
     }
@@ -64,6 +68,7 @@
     .card{
         min-width: 21rem;
         min-height: 21rem;
+        height: 90vw;
         margin: .5rem 1rem .5rem 1rem;   
     }
 }
