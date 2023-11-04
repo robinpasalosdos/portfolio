@@ -99,8 +99,8 @@
             <a href="#">Unity3d</a>
           </div>
           <div class="proj_links">
-            <img src="./assets/github.png" alt="">
-            <img src="./assets/eye_white.png" alt="">
+            <img class="github_icon" src="./assets/github_dark.png" alt="">
+            <img class="eye_icon" src="./assets/eye_dark.png" alt="" onclick='showDialogJanken()'>
           </div>
         </div>
       </article>
@@ -124,8 +124,8 @@
             <a href="#">Firebase</a>
           </div>
           <div class="proj_links">
-            <img src="./assets/github.png" alt="">
-            <img src="./assets/eye_white.png" alt="">
+            <img class="github_icon" src="./assets/github_dark.png" alt="">
+            <img class="eye_icon" src="./assets/eye_dark.png" alt="" onclick='showDialog("dialog-box-2")'>
           </div>
         </div>
       </article>
@@ -148,13 +148,24 @@
             <a href="#">JQuery</a>
           </div>
           <div class="proj_links">
-            <img src="./assets/github.png" alt="">
-            <img src="./assets/eye_white.png" alt="">
+            <img class="github_icon" src="./assets/github_dark.png" alt="">
+            <img class="eye_icon" src="./assets/eye_dark.png" alt="" onclick="window.open('https://robinpasalosdos.github.io/portfolio/projects/pupqs', '_blank')">
           </div>
         </div>
       </article>
     </div>
   </section>
+  <div class="overlay" id="overlay"></div>
+  <div class="dialog-box" id="dialog-box-1">
+        <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken()'>
+          <video loop autoplay id="janken">
+            <source src="assets\janken.mp4">
+          </video>
+  </div>
+  <div class="dialog-box" id="dialog-box-2">
+    <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-2")'>
+    <img src="assets/mt.png" alt="" class="mt">
+  </div>
   <section id="experience" class="section">
     <h1 class="section_title">Experience</h1>
     <div class="exp_con">

@@ -14,55 +14,67 @@ function goToHome() {
   }
 }
 
-const themeToggle = document.getElementById("theme-toggle");
-const theme = document.querySelector("body");
-var navlogo = document.getElementById('logo');
-var navbar = document.getElementById('head_nav');
-var home_profile = document.getElementById('home_profile');
-var switchLogo = document.getElementById('sun_n_moon')
+const elements = {
+  themeToggle: document.getElementById("theme-toggle"),
+  theme: document.querySelector("body"),
+  navLogo: document.getElementById('logo'),
+  navBar: document.getElementById('head_nav'),
+  ghIcons: document.getElementsByClassName('github_icon'),
+  eyeIcons: document.getElementsByClassName('eye_icon'),
+  homeProfile: document.getElementById('home_profile'),
+  profileIcons: document.getElementById('socmed_card').getElementsByTagName('img'),
+  contactIcons: document.getElementById('contact_strip').getElementsByTagName('img'),
+  switchLogo: document.getElementById('sun_n_moon')
+};
 
-function changeImageLogo(containerId, imagePaths) {
-  var images = document.getElementById(containerId).getElementsByTagName('img');
-  for (var i = 0; i < images.length; i++) {
+function changeImages(logo, home, nav, slogo) {
+  elements.navLogo.src = logo;
+  elements.homeProfile.src = home;
+  elements.navBar.style.background = nav;
+  elements.switchLogo.src = slogo;
+}
+
+function changeImagesArray(images, imagePaths) {
+  for (let i = 0; i < images.length; i++) {
     if (imagePaths[i]) {
       images[i].src = imagePaths[i];
     }
   }
 }
 
-function changeImages(logo,home,nav,slogo){
-  navlogo.src = logo;
-  home_profile.src = home;
-  navbar.style.background = nav;
-  switchLogo.src = slogo;
+function applyTheme(logo, neon, backgroundColor, switchIcon, themeName) {
+  changeImages(logo, neon, backgroundColor, switchIcon);
+  changeImagesArray(elements.profileIcons, ['assets/linkedin.png', 'assets/github.png', 'assets/gmail.png']);
+  changeImagesArray(elements.contactIcons, ['assets/gmail_dark.png', 'assets/phone_dark.png', 'assets/linkedin_dark.png', 'assets/facebook_dark.png']);
+  changeImagesArray(elements.ghIcons, Array(3).fill('assets/github_dark.png'));
+  changeImagesArray(elements.eyeIcons, Array(3).fill('assets/eye_dark.png'));
 
+  if (themeName === 'dark') {
+    elements.theme.classList.add("open");
+    changeImagesArray(elements.profileIcons, ['assets/linkedin.png', 'assets/github.png', 'assets/gmail.png']);
+    changeImagesArray(elements.contactIcons, ['assets/gmail.png', 'assets/phone_white.png', 'assets/linkedin.png', 'assets/facebook.png']);
+    changeImagesArray(elements.ghIcons, Array(3).fill('assets/github.png'));
+    changeImagesArray(elements.eyeIcons, Array(3).fill('assets/eye_white.png'));
+  }
 }
 
-themeToggle.addEventListener("click", function () {
-  theme.classList.toggle("open");
+elements.themeToggle.addEventListener("click", function () {
+  elements.theme.classList.toggle("open");
 
-  if (theme.classList.contains("open")) {
-    changeImages('assets/logo_white.png','assets/neon.png','#000000','assets/moon.png');
-    changeImageLogo('socmed_card',['assets/linkedin.png','assets/github.png','assets/gmail.png']);
-    changeImageLogo('contact_strip',['assets/gmail.png','assets/phone_white.png','assets/linkedin.png','assets/facebook.png']);
+  if (elements.theme.classList.contains("open")) {
+    applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', 'dark');
     localStorage.setItem("theme", "dark");
   } else {
-    changeImages('assets/logo_dark.png','assets/neon_black.png','#E0E0E0','assets/sun.png');
-    changeImageLogo('socmed_card',['assets/linkedin_dark.png','assets/github_dark.png','assets/gmail_dark.png']);
-    changeImageLogo('contact_strip',['assets/gmail_dark.png','assets/phone_dark.png','assets/linkedin_dark.png','assets/facebook_dark.png']);
+    applyTheme('assets/logo_dark.png', 'assets/neon_black.png', '#E0E0E0', 'assets/sun.png', 'light');
     localStorage.setItem("theme", "light");
   }
 });
 
 const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-  if (savedTheme === "dark") {
-    changeImages('assets/logo_white.png','assets/neon.png','#000000','assets/moon.png');
-    theme.classList.add("open");
-    changeImageLogo('socmed_card',['assets/linkedin.png','assets/github.png','assets/gmail.png']);
-    changeImageLogo('contact_strip',['assets/gmail.png','assets/phone_white.png','assets/linkedin.png','assets/facebook.png']);
-  }
+if ('dark') {
+  applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', 'dark');
 }
+
 
 const textElement = document.getElementById("home_text_p2");
 const careers = [
@@ -71,6 +83,45 @@ const careers = [
   "Mobile App Developer        ",
   "Data Analyst        "
 ];
+
+const htmlElement = document.documentElement;
+const bodyElement = document.body;
+function showDialog(dialogBox) {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById(dialogBox).style.display = "block";
+  htmlElement.style.overflow = "hidden";
+  bodyElement.style.overflow = "hidden";
+}
+
+var jankenVideo = document.getElementById("janken");
+jankenVideo.pause();
+jankenVideo.currentTime = 0;
+
+function hideDialog(dialogBox) {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById(dialogBox).style.display = "none";
+  htmlElement.style.overflow = "auto";
+  bodyElement.style.overflow = "auto";
+}
+
+function showDialogJanken(){
+  showDialog("dialog-box-1");
+  jankenVideo.currentTime = 0;
+  jankenVideo.play();
+}
+
+function hideDialogJanken(){
+  hideDialog("dialog-box-1");
+  jankenVideo.pause();
+  jankenVideo.currentTime = 0;
+}
+
+document.addEventListener('click', function (event) {
+  if (event.target === document.getElementById("overlay")) {
+    hideDialogJanken();
+    hideDialog("dialog-box-2");
+  }
+});
 
 let currentWordIndex = 0;
 let currentletterIndex = 1;
@@ -98,7 +149,8 @@ function updateText() {
 setInterval(updateText, 50);
 
 
-var tabContainer = document.getElementById("head_nav");
+var tabContainer = elements.navBar;
+var theme = elements.theme;
 var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
 function slideDown(){
@@ -176,8 +228,6 @@ function handleScroll() {
   }, 50); // Adjust the debounce time (in milliseconds) to your preference
   });
 }
-
-window.addEventListener('scroll', handleScroll);
 document.addEventListener('DOMContentLoaded', function() {
   const elementsToHandle = ['.head_nav_sections', '.mobile_nav_sections', '.nav_footer_links'];
 
