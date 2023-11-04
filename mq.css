@@ -6,7 +6,7 @@
         display: none;
     }
     #head_nav{
-        grid-template-columns: 2fr 3fr 1fr 2fr;
+        grid-template-columns: 1fr 5fr 1fr 1fr;
     }
     .mobile_nav_sections.open {
         display: grid;

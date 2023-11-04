@@ -44,7 +44,7 @@ function changeImagesArray(images, imagePaths) {
 
 function applyTheme(logo, neon, backgroundColor, switchIcon, themeName) {
   changeImages(logo, neon, backgroundColor, switchIcon);
-  changeImagesArray(elements.profileIcons, ['assets/linkedin.png', 'assets/github.png', 'assets/gmail.png']);
+  changeImagesArray(elements.profileIcons, ['assets/linkedin_dark.png', 'assets/github_dark.png', 'assets/gmail_dark.png']);
   changeImagesArray(elements.contactIcons, ['assets/gmail_dark.png', 'assets/phone_dark.png', 'assets/linkedin_dark.png', 'assets/facebook_dark.png']);
   changeImagesArray(elements.ghIcons, Array(3).fill('assets/github_dark.png'));
   changeImagesArray(elements.eyeIcons, Array(3).fill('assets/eye_dark.png'));
@@ -71,8 +71,8 @@ elements.themeToggle.addEventListener("click", function () {
 });
 
 const savedTheme = localStorage.getItem("theme");
-if ('dark') {
-  applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', 'dark');
+if (savedTheme == 'dark') {
+  applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', savedTheme);
 }
 
 

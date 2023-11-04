@@ -49,18 +49,18 @@ html {
 /* WEB NAV */
 #head_nav{
     position: fixed;
-    max-height: 4rem;
+    height: clamp(3.5rem,10vw,4rem);
     width: 100%;
     display: grid;
-    grid-template-columns: 2fr 3fr .5fr 5.5fr;
-    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-rows: auto auto;
     place-items: center;
     z-index: 2000;
     transition: transform 0.3s ease-in;
     background: var(--_navbar_color);
 }
 .logo_con{
-    height: 4rem;
+    height: clamp(3.5rem,10vw,4rem);
     display: grid;
     width: 100%;
     place-items: center;
@@ -71,7 +71,7 @@ html {
 }
 .head_nav_sections, .hamburger_menu{
     width: 100%;
-    height: 100%;
+    height: clamp(3.5rem,10vw,4rem);
     display: grid;
     place-items: center;
 }
@@ -85,6 +85,12 @@ a{
     color: var(--_primary_color);
     text-decoration: none;
     text-decoration-color: var(--_primary_color);
+}
+.theme-switch-con{
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: clamp(3.5rem,10vw,4rem);
 }
 .theme-switch {
     width: 56px;
@@ -239,10 +245,10 @@ a{
     margin-bottom: 1.5rem;
     color: var(--_secondary_color);
     height: 1.75rem;
-    font-size: clamp(23px,2.5vw,27px);
+    font-size: clamp(21px,2.5vw,27px);
 }
 .title {
-    font-size: clamp(39px,5vw,45px);
+    font-size: clamp(35px,5vw,45px);
     text-align: center;
     color: var(--_primary_color);
 }
@@ -394,7 +400,7 @@ a{
     background-color: var(--_card_color);
     padding: 1.3rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 50%;
+    width: clamp(320px, 90vw, 800px);
     height: fit-content;
     z-index: 3000;
 }
@@ -404,7 +410,10 @@ a{
     right: 1%;
     width: 2rem;
 }
-
+#janken{
+    width: 100%;
+    margin-top: 1rem;
+}
 .mt{
     width: 100%;
     height: 100%;
