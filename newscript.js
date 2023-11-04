@@ -179,7 +179,7 @@ function handleScroll() {
 
 window.addEventListener('scroll', handleScroll);
 document.addEventListener('DOMContentLoaded', function() {
-  const elementsToHandle = ['.head_nav_sections', '.mobile_nav_sections'];
+  const elementsToHandle = ['.head_nav_sections', '.mobile_nav_sections', '.nav_footer_links'];
 
   // Common function to attach the event listener with a delay for slideUp
   const attachEventListener = (element) => {
