@@ -32,7 +32,7 @@ AOS.init({
   startEvent: 'load',
   delay: 0,
   duration: 600,
-  once: false, 
+  once: true
 });
 
 elements.theme.style.overflowY = 'hidden';
@@ -40,6 +40,7 @@ elements.theme.style.overflowX = 'hidden';
 window.onload = function() {
   elements.loading_screen.style.display = 'none';
   elements.theme.style.overflowY = 'auto';
+
 };
 
 function changeImages(logo, home, nav, slogo) {
