@@ -25,7 +25,9 @@ const elements = {
   profileIcons: document.getElementById('socmed_card').getElementsByTagName('img'),
   contactIcons: document.getElementById('contact_strip').getElementsByTagName('img'),
   switchLogo: document.getElementById('sun_n_moon'),
-  loading_screen: document.getElementById('loading_screen')
+  loading_screen: document.getElementById('loading_screen'),
+  loading: document.getElementById('loading'),
+  loaded: document.getElementById('loaded')
 };
 AOS.init({
   disable: false,
@@ -37,11 +39,20 @@ AOS.init({
 
 elements.theme.style.overflowY = 'hidden';
 elements.theme.style.overflowX = 'hidden';
-window.onload = function() {
-  elements.loading_screen.style.display = 'none';
-  elements.theme.style.overflowY = 'auto';
 
+window.onload = function() {
+  elements.loading.style.display = 'none';
+  elements.loaded.style.display = 'block';
+  setTimeout(function() {
+    elements.loading_screen.style.display = 'none';
+    elements.loaded.style.display = 'none';
+    elements.theme.style.overflowY = 'auto';
+  }, 500);
 };
+
+function makeCall() {
+  window.location.href = 'tel:+639302979295';
+}
 
 function changeImages(logo, home, nav, slogo) {
   elements.navLogo.src = logo;

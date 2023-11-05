@@ -17,13 +17,19 @@
 
 }
 #loading_screen{
-    background-color: #000000;
+    background-color: #ffffff;
     width: 100%;
     height: 100vh;
     height: 100svh;
     position: fixed;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 4000;
+}
+#loaded{
+    display: none;
 }
 body.open{
     --bg_color: #212121;
