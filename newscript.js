@@ -35,10 +35,11 @@ AOS.init({
   once: false, 
 });
 
-elements.theme.style.overflow = 'hidden';
+elements.theme.style.overflowY = 'hidden';
+elements.theme.style.overflowX = 'hidden';
 window.onload = function() {
   elements.loading_screen.style.display = 'none';
-  elements.theme.style.overflow = 'auto';
+  elements.theme.style.overflowY = 'auto';
 };
 
 function changeImages(logo, home, nav, slogo) {
