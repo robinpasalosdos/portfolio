@@ -388,14 +388,12 @@ a{
     position: relative;
 }
 .tags img{
-    height: 1.4rem;
-    width: 1.4rem;
+    height: 1.6rem;
+    width: 1.6rem;
     opacity: var(--_inactive_icon);
     transition: transform .2s ease-out;
 }
 .tags img:hover {
-    height: 1.4rem;
-    width: 1.4rem;
     opacity: var(--_active_icon);
     transform: scale(1.1);
 }
