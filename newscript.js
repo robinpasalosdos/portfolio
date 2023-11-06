@@ -22,8 +22,6 @@ const elements = {
   ghIcons: document.getElementsByClassName('github_icon'),
   eyeIcons: document.getElementsByClassName('eye_icon'),
   homeProfile: document.getElementById('home_profile'),
-  profileIcons: document.getElementById('socmed_card').getElementsByTagName('img'),
-  contactIcons: document.getElementById('contact_strip').getElementsByTagName('img'),
   switchLogo: document.getElementById('sun_n_moon'),
   loading_screen: document.getElementById('loading_screen'),
   loading: document.getElementById('loading'),
@@ -34,7 +32,7 @@ AOS.init({
   disable: false,
   startEvent: 'load',
   delay: 0,
-  duration: 600,
+  duration: 400,
   once: true
 });
 
@@ -55,35 +53,20 @@ function makeCall() {
   window.location.href = 'tel:+639302979295';
 }
 
-function changeImages(logo, home, nav, slogo, prof) {
+function changeImages(logo, home, nav, slogo, prof, load) {
   elements.navLogo.src = logo;
   elements.homeProfile.src = home;
   elements.navBar.style.background = nav;
   elements.switchLogo.src = slogo;
   elements.profile.src = prof;
+  elements.loading.src = load;
 }
 
-function changeImagesArray(images, imagePaths) {
-  for (let i = 0; i < images.length; i++) {
-    if (imagePaths[i]) {
-      images[i].src = imagePaths[i];
-    }
-  }
-}
-
-function applyTheme(logo, neon, backgroundColor, switchIcon, prof, themeName) {
-  changeImages(logo, neon, backgroundColor, switchIcon, prof);
-  changeImagesArray(elements.profileIcons, ['assets/linkedin_dark.png', 'assets/github_dark.png', 'assets/gmail_dark.png']);
-  changeImagesArray(elements.contactIcons, ['assets/gmail_dark.png', 'assets/phone_dark.png', 'assets/linkedin_dark.png', 'assets/facebook_dark.png']);
-  changeImagesArray(elements.ghIcons, Array(3).fill('assets/github_dark.png'));
-  changeImagesArray(elements.eyeIcons, Array(3).fill('assets/eye_dark.png'));
+function applyTheme(logo, neon, backgroundColor, switchIcon, prof, load, themeName) {
+  changeImages(logo, neon, backgroundColor, switchIcon, prof, load);
 
   if (themeName === 'dark') {
     elements.theme.classList.add("open");
-    changeImagesArray(elements.profileIcons, ['assets/linkedin.png', 'assets/github.png', 'assets/gmail.png']);
-    changeImagesArray(elements.contactIcons, ['assets/gmail.png', 'assets/phone_white.png', 'assets/linkedin.png', 'assets/facebook.png']);
-    changeImagesArray(elements.ghIcons, Array(3).fill('assets/github.png'));
-    changeImagesArray(elements.eyeIcons, Array(3).fill('assets/eye_white.png'));
   }
 }
 
@@ -91,17 +74,17 @@ elements.themeToggle.addEventListener("click", function () {
   elements.theme.classList.toggle("open");
 
   if (elements.theme.classList.contains("open")) {
-    applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', 'assets/profile_dark.png','dark');
+    applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', 'assets/profile_dark.png','assets/loading_dark.gif','dark');
     localStorage.setItem("theme", "dark");
   } else {
-    applyTheme('assets/logo_dark.png', 'assets/neon_black.png', '#E0E0E0', 'assets/sun.png', 'assets/profile.png', 'light');
+    applyTheme('assets/logo_dark.png', 'assets/neon_black.png', '#E0E0E0', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'light');
     localStorage.setItem("theme", "light");
   }
 });
 
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme == 'dark') {
-  applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', 'assets/profile_dark.png', savedTheme);
+  applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', 'assets/profile_dark.png', 'assets/loading_dark.gif', savedTheme);
 }
 
 
