@@ -27,7 +27,8 @@ const elements = {
   switchLogo: document.getElementById('sun_n_moon'),
   loading_screen: document.getElementById('loading_screen'),
   loading: document.getElementById('loading'),
-  loaded: document.getElementById('loaded')
+  loaded: document.getElementById('loaded'),
+  profile: document.getElementById('about_profile')
 };
 AOS.init({
   disable: false,
@@ -54,11 +55,12 @@ function makeCall() {
   window.location.href = 'tel:+639302979295';
 }
 
-function changeImages(logo, home, nav, slogo) {
+function changeImages(logo, home, nav, slogo, prof) {
   elements.navLogo.src = logo;
   elements.homeProfile.src = home;
   elements.navBar.style.background = nav;
   elements.switchLogo.src = slogo;
+  elements.profile.src = prof;
 }
 
 function changeImagesArray(images, imagePaths) {
@@ -69,8 +71,8 @@ function changeImagesArray(images, imagePaths) {
   }
 }
 
-function applyTheme(logo, neon, backgroundColor, switchIcon, themeName) {
-  changeImages(logo, neon, backgroundColor, switchIcon);
+function applyTheme(logo, neon, backgroundColor, switchIcon, prof, themeName) {
+  changeImages(logo, neon, backgroundColor, switchIcon, prof);
   changeImagesArray(elements.profileIcons, ['assets/linkedin_dark.png', 'assets/github_dark.png', 'assets/gmail_dark.png']);
   changeImagesArray(elements.contactIcons, ['assets/gmail_dark.png', 'assets/phone_dark.png', 'assets/linkedin_dark.png', 'assets/facebook_dark.png']);
   changeImagesArray(elements.ghIcons, Array(3).fill('assets/github_dark.png'));
@@ -89,17 +91,17 @@ elements.themeToggle.addEventListener("click", function () {
   elements.theme.classList.toggle("open");
 
   if (elements.theme.classList.contains("open")) {
-    applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', 'dark');
+    applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', 'assets/profile_dark.png','dark');
     localStorage.setItem("theme", "dark");
   } else {
-    applyTheme('assets/logo_dark.png', 'assets/neon_black.png', '#E0E0E0', 'assets/sun.png', 'light');
+    applyTheme('assets/logo_dark.png', 'assets/neon_black.png', '#E0E0E0', 'assets/sun.png', 'assets/profile.png', 'light');
     localStorage.setItem("theme", "light");
   }
 });
 
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme == 'dark') {
-  applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', savedTheme);
+  applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', 'assets/profile_dark.png', savedTheme);
 }
 
 

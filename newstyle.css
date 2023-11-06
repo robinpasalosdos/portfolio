@@ -32,8 +32,8 @@
     display: none;
 }
 body.open{
-    --bg_color: #212121;
-    --card_color: #303030;
+    --bg_color: #27374D;
+    --card_color: #526D82;
     --navbar_color: #000000;
     --primary_color: rgba(255, 255, 255, 1);
     --secondary_color: rgba(255, 255, 255, .7);
@@ -45,11 +45,11 @@ body.open{
 }
 body{
     --_primary_color: var(--primary_color, rgba(0, 0, 0, .87));
-    --_secondary_color: var(--secondary_color, rgba(0, 0, 0, .54));
+    --_secondary_color: var(--secondary_color, rgba(0, 0, 0, 1));
     --_hint_color: var(--hint_color, rgba(0, 0, 0, .38));
-    --_bg_color: var(--bg_color, #F5F5F5);
+    --_bg_color: var(--bg_color, #DDE6ED);
     --_navbar_color: var(--navbar_color, #E0E0E0);
-    --_card_color: var(--card_color, #FAFAFA);
+    --_card_color: var(--card_color, #9db2bf);
     --_active_icon: var(--active_icon, .54);
     --_inactive_icon: var(--inactive_icon, .38);
     --_toggle_position: var(--toggle_position, translateX(0));
