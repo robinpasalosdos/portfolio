@@ -650,6 +650,7 @@ a:hover{
 footer {
     background-color: var(--_bg_color);
     color: var(--_p_color);
+    padding-bottom: 3rem;
 }
 .footer_con{
     padding: 1rem;
