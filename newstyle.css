@@ -22,14 +22,18 @@
     color: var(--_primary_color);
 }
 body.open{
-    --bg_color: #212121;
-    --card_color: #303030;
+    --bg_color: #0f0e17;
     --navbar_color: #000000;
-    --primary_color: rgba(255, 255, 255, 1);
+    --primary_color: #fffffe;
     --secondary_color: #3867d6;
-    --text_color: rgba(255, 255, 255, .7);
+    --text_color: #a7a9be;
     --toggle_position: translateX(31px);
     --load_color: #000000;
+    --title_color: #fffffe;
+    --p_color: #a7a9be;
+    --tag_color: #ff8906;
+    --card_shadow: rgba(0, 0, 0, 0.6);
+
   
 }
 body{
@@ -37,10 +41,14 @@ body{
     --_secondary_color: var(--secondary_color, #3867d6);
     --_text_color: var(--text_color, rgba(0, 0, 0, .54));
     --_bg_color: var(--bg_color, #F5F5F5);
-    --_navbar_color: var(--navbar_color, #E0E0E0);
-    --_card_color: var(--card_color, #FAFAFA);
+    --_navbar_color: var(--navbar_color, #eff0f3);
     --_toggle_position: var(--toggle_position, translateX(0));
     --_load_color: var(--load_color,#ffffff);
+    --_title_color: var(--title_color, #0d0d0d);
+    --_p_color: var(--p_color, #2a2a2a);
+    --_tag_color: var(--tag_color,#ff8e3c);
+    --_card_shadow: var(--card_shadow, rgba(0, 0, 0, 0.3));
+
     background: var(--_bg_color);
 }
 #loading_screen{
@@ -98,9 +106,15 @@ html {
     display: flex;
 }
 a{
-    color: var(--_primary_color);
+    color: var(--_title_color);
     text-decoration: none;
-    text-decoration-color: var(--_primary_color);
+}
+a:hover{
+    text-decoration: underline;
+    text-underline-offset: .5rem;
+    text-decoration-color: var(--_tag_color);
+
+    
 }
 .theme-switch-con{
     display: grid;
@@ -227,7 +241,7 @@ a{
 }
 .section_title,.section_title_me{
     font-size: var(--title_font_size);
-    color: var(--_secondary_color);
+    color: var(--_title_color);
     padding-bottom: clamp(1rem,2vw,2rem);
 }
 .section_title_me{
@@ -250,11 +264,12 @@ a{
     background-color: var(--_bg_color);
     height: clamp(440px, 100vh, 600px);
     height: clamp(440px, 100svh, 700px);
+    gap: 4rem;
 
 }
 .home_pic{
-    height: 450px;
-    width: 450px;
+    height: 350px;
+    width: 350px;
 }
 .home_details_card {
     align-self: center;
@@ -267,19 +282,19 @@ a{
 }
 .home_text_p1 {
     text-align: center;
-    color: var(--_text_color);
+    color: var(--_p_color);
     font-size: clamp(14px,1.25vw,18px);
 }
 #home_text_p2 {
     margin-bottom: 1.5rem;
-    color: var(--_secondary_color);
+    color: var(--_p_color);
     height: 1.75rem;
     font-size: clamp(21px,2.5vw,27px);
 }
 .title {
     font-size: clamp(35px,5vw,45px);
     text-align: center;
-    color: var(--_primary_color);
+    color: var(--_title_color);
 }
 
 #socmed_card {
@@ -333,7 +348,7 @@ a{
     width: 24.2rem;
     height: 24.2rem;
     border-radius: 10px;
-    background: var(--_card_color);
+    background: var(--_bg_color);
     /*box-shadow: -1rem 1rem 3rem #01fff4;*/
     display: grid;
     align-items: center;
@@ -342,7 +357,7 @@ a{
     clear: both;
     position: relative;
     grid-template-rows: 5fr 1fr 3fr 1fr;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 10px var(--_card_shadow);
     margin: .5rem;
 }
 .card-header {
@@ -353,7 +368,7 @@ a{
     font-size: var(--m);
     text-decoration: none;
     cursor: pointer;
-    color: var(--_primary_color);
+    color: var(--_title_color);
     margin: .5vw;
 }
 .card p{
@@ -361,7 +376,7 @@ a{
     margin: 0 1rem 0 1rem;
     align-self: flex-start;
     text-indent: 2em;
-    color: var(--_text_color);
+    color: var(--_p_color);
 }
 .project_img{
     width: 100%;
@@ -388,13 +403,13 @@ a{
 }
 .tags a {
     font-size: .3rem;
-    color: var(--_primary_color);
+    color: #fffffe;
     text-transform: uppercase;
     font-size: .66rem;
-    border: 2px solid var(--_secondary_color);
     border-radius: 2rem;
     padding: .2rem .85rem .25rem;
     position: relative;
+    background-color: var(--_tag_color);
 }
 .tags img{
     height: 1.6rem;
@@ -449,26 +464,26 @@ a{
     place-items: start;
     gap: 2rem;
     max-width: 75.75rem;
-    background-color: var(--_card_color);
+    background-color: var(--_bg_color);
     padding: 1.5rem;
     border-radius: .8rem;
     margin: 1rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 10px var(--_card_shadow);
 }
 .exp_details h1{
     font-size: var(--l);
     margin-bottom: 1rem;
-    color: var(--_primary_color);
+    color: var(--_title_color);
 }
 .exp_details h2{
     font-size: var(--m);
     margin-bottom: 1rem;
-    color: var(--_primary_color);
+    color: var(--_title_color);
 }
 .exp_details p{
     font-size: var(--s);
     text-indent: 2em;
-    color: var(--_text_color);
+    color: var(--_p_color);
 }
 .slide-up{
     transform: translateY(-6rem);
@@ -498,11 +513,11 @@ a{
 .about_pic img{
     width: 18.75rem;
     height: 25rem;
-    border: var(--_text_color) 2px solid;
+    border: var(--_p_color) 2px solid;
     border-radius: 2rem;
 }
 .about_bg{
-    border: var(--_text_color) 2px solid;
+    border: var(--_p_color) 2px solid;
     border-radius: 2rem;
     padding: 2rem;
     flex: 1;
@@ -510,12 +525,12 @@ a{
     flex-direction: column;
 }
 .about_bg h1{
-    color: var(--_primary_color);
+    color: var(--_title_color);
     font-size: var(--l);
     
 }
 .about_bg p{
-    color: var(--_text_color);
+    color: var(--_p_color);
     font-size: var(--s);
 }
 .about_icon{
@@ -525,7 +540,7 @@ a{
 
 .about_text p{
     text-indent: 3em;
-    color: var(--_text_color);
+    color: var(--_p_color);
     font-size: var(--s);
 }
 /*                      SKILLS                        */
@@ -549,7 +564,7 @@ a{
     align-items: center;
     width: 30vw;
     gap: 2rem;
-    border: var(--_text_color) 2px solid;
+    border: var(--_p_color) 2px solid;
     border-radius: 2rem;
     padding: 2rem;
     max-width: 55rem;
@@ -557,7 +572,7 @@ a{
 
 }
 .skills h4{
-    color: var(--_primary_color);
+    color: var(--_title_color);
     font-size: var(--l);
 }
 .skill{
@@ -576,15 +591,15 @@ a{
     gap: 0.5rem;
 }
 .skill article h3{
-    color: var(--_primary_color);
+    color: var(--_title_color);
     font-size: var(--m);
 }
 .skill article h5{
-    color: var(--_text_color);
+    color: var(--_title_color);
     font-size: var(--s);
 }
 .skill article p{
-    color: var(--_text_color);
+    color: var(--_p_color);
     font-size: var(--s);
 }
 .icon, .contact_icon{
@@ -609,15 +624,15 @@ a{
 }
 .contact_details{
     font-size: var(--m);
-    color: var(--_primary_color);
+    color: var(--_title_color);
 }
 .contact_sub_details{
     font-size: var(--ss);
-    color: var(--_text_color);
+    color: var(--_p_color);
 }
 footer {
     background-color: var(--_bg_color);
-    color: var(--_primary_color);
+    color: var(--_p_color);
 }
 .footer_con{
     padding: 1rem;
@@ -638,7 +653,7 @@ footer p {
     display: flex;
     justify-content: center;
     margin: 1rem;
-    color: var(--_primary_color);
+    color: var(--_p_color);
 }
 .nav_footer_links li{
     font-size: var(--m);

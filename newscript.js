@@ -26,7 +26,11 @@ const elements = {
   loading_screen: document.getElementById('loading_screen'),
   loading: document.getElementById('loading'),
   loaded: document.getElementById('loaded'),
-  profile: document.getElementById('about_profile')
+  profile: document.getElementById('about_profile'),
+  ghIcons: document.getElementsByClassName('github_icon'),
+  eyeIcons: document.getElementsByClassName('eye_icon'),
+  profileIcons: document.getElementById('socmed_card').getElementsByTagName('img'),
+  contactIcons: document.getElementById('contact_strip').getElementsByTagName('img')
 };
 AOS.init({
   disable: false,
@@ -62,11 +66,28 @@ function changeImages(logo, home, nav, slogo, prof, load) {
   elements.loading.src = load;
 }
 
+function changeImagesArray(images, imagePaths) {
+  for (let i = 0; i < images.length; i++) {
+    if (imagePaths[i]) {
+      images[i].src = imagePaths[i];
+    }
+  }
+}
+
 function applyTheme(logo, neon, backgroundColor, switchIcon, prof, load, themeName) {
   changeImages(logo, neon, backgroundColor, switchIcon, prof, load);
+  changeImagesArray(elements.profileIcons, ['assets/linkedin.png', 'assets/github.png', 'assets/gmail.png']);
+  changeImagesArray(elements.contactIcons, ['assets/gmail.png', 'assets/phone.png', 'assets/linkedin.png', 'assets/facebook.png']);
+  changeImagesArray(elements.ghIcons, Array(3).fill('assets/github.png'));
+  changeImagesArray(elements.eyeIcons, Array(3).fill('assets/eye.png'));
 
   if (themeName === 'dark') {
     elements.theme.classList.add("open");
+    changeImagesArray(elements.profileIcons, ['assets/linkedin_dark.png', 'assets/github_dark.png', 'assets/gmail_dark.png']);
+    changeImagesArray(elements.contactIcons, ['assets/gmail_dark.png', 'assets/phone_dark.png', 'assets/linkedin_dark.png', 'assets/facebook_dark.png']);
+    changeImagesArray(elements.ghIcons, Array(3).fill('assets/github_dark.png'));
+    changeImagesArray(elements.eyeIcons, Array(3).fill('assets/eye_dark.png'));
+
   }
 }
 
@@ -170,7 +191,7 @@ function slideDown(){
   if (theme.classList.contains("open")) {
     tabContainer.style.background = '#000000';
   }else{
-    tabContainer.style.background = '#E0E0E0';
+    tabContainer.style.background = '##eff0f3';
   }
 }
 
@@ -182,7 +203,7 @@ function slideUp(){
   if (theme.classList.contains("open")) {
     tabContainer.style.background = '#000000';
   }else{
-    tabContainer.style.background = '#E0E0E0';
+    tabContainer.style.background = '##eff0f3';
   }
 }
 
