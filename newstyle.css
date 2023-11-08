@@ -51,8 +51,9 @@ body{
 }
 
 ::-webkit-scrollbar {
-    width: 2px;
+    width: 6px;
     z-index: 5000;
+    border-radius: 2px;
   }
   
   ::-webkit-scrollbar-track {
