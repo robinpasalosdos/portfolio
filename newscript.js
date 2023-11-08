@@ -1,3 +1,5 @@
+
+
 const menu = document.querySelector(".mobile_nav_sections");
 const icon = document.querySelector(".hamburger_icon");
 
@@ -11,7 +13,7 @@ function goToHome() {
   var homeSection = document.getElementById('home');
   if (homeSection) {
       homeSection.scrollIntoView({ behavior: 'smooth' });
-      AOS.refreshHard();
+
   }
 }
 const elements = {
@@ -32,12 +34,14 @@ const elements = {
   profileIcons: document.getElementById('socmed_card').getElementsByTagName('img'),
   contactIcons: document.getElementById('contact_strip').getElementsByTagName('img')
 };
+
+
 AOS.init({
   disable: false,
   startEvent: 'load',
   delay: 0,
   duration: 400,
-  once: true
+  once: false,
 });
 
 elements.theme.style.overflowY = 'hidden';
@@ -76,17 +80,18 @@ function changeImagesArray(images, imagePaths) {
 
 function applyTheme(logo, neon, backgroundColor, switchIcon, prof, load, themeName) {
   changeImages(logo, neon, backgroundColor, switchIcon, prof, load);
-  changeImagesArray(elements.profileIcons, ['assets/linkedin.png', 'assets/github.png', 'assets/gmail.png']);
-  changeImagesArray(elements.contactIcons, ['assets/gmail.png', 'assets/phone.png', 'assets/linkedin.png', 'assets/facebook.png']);
-  changeImagesArray(elements.ghIcons, Array(3).fill('assets/github.png'));
-  changeImagesArray(elements.eyeIcons, Array(3).fill('assets/eye.png'));
+  changeImagesArray(elements.profileIcons, ['assets/linkedin_dark.png', 'assets/github_dark.png', 'assets/gmail_dark.png']);
+  changeImagesArray(elements.contactIcons, ['assets/gmail_dark.png', 'assets/phone_dark.png', 'assets/linkedin_dark.png', 'assets/facebook_dark.png']);
+  changeImagesArray(elements.ghIcons, Array(3).fill('assets/github_dark.png'));
+  changeImagesArray(elements.eyeIcons, Array(3).fill('assets/eye_dark.png'));
+  
 
-  if (themeName === 'dark') {
+  if (themeName === 'light') {
     elements.theme.classList.add("open");
-    changeImagesArray(elements.profileIcons, ['assets/linkedin_dark.png', 'assets/github_dark.png', 'assets/gmail_dark.png']);
-    changeImagesArray(elements.contactIcons, ['assets/gmail_dark.png', 'assets/phone_dark.png', 'assets/linkedin_dark.png', 'assets/facebook_dark.png']);
-    changeImagesArray(elements.ghIcons, Array(3).fill('assets/github_dark.png'));
-    changeImagesArray(elements.eyeIcons, Array(3).fill('assets/eye_dark.png'));
+    changeImagesArray(elements.profileIcons, ['assets/linkedin.png', 'assets/github.png', 'assets/gmail.png']);
+    changeImagesArray(elements.contactIcons, ['assets/gmail.png', 'assets/phone.png', 'assets/linkedin.png', 'assets/facebook.png']);
+    changeImagesArray(elements.ghIcons, Array(3).fill('assets/github.png'));
+    changeImagesArray(elements.eyeIcons, Array(3).fill('assets/eye.png'));
 
   }
 }
@@ -95,17 +100,20 @@ elements.themeToggle.addEventListener("click", function () {
   elements.theme.classList.toggle("open");
 
   if (elements.theme.classList.contains("open")) {
-    applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', 'assets/profile_dark.png','assets/loading_dark.gif','dark');
-    localStorage.setItem("theme", "dark");
-  } else {
     applyTheme('assets/logo_dark.png', 'assets/neon_black.png', '#E0E0E0', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'light');
     localStorage.setItem("theme", "light");
+    
+  } else {
+    applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', 'assets/profile_dark.png','assets/loading_dark.gif','dark');
+    localStorage.setItem("theme", "dark");
+    
   }
 });
 
 const savedTheme = localStorage.getItem("theme");
-if (savedTheme == 'dark') {
-  applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', 'assets/profile_dark.png', 'assets/loading_dark.gif', savedTheme);
+if (savedTheme == 'light') {
+  applyTheme('assets/logo_dark.png', 'assets/neon_black.png', '#E0E0E0', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', savedTheme);
+
 }
 
 
@@ -189,9 +197,9 @@ var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 function slideDown(){
   tabContainer.classList.remove("slide-up");
   if (theme.classList.contains("open")) {
-    tabContainer.style.background = '#000000';
+    tabContainer.style.background = '#eff0f3';
   }else{
-    tabContainer.style.background = '##eff0f3';
+    tabContainer.style.background = '#000000';
   }
 }
 
@@ -201,9 +209,9 @@ function slideUp(){
 
   tabContainer.classList.add("slide-up");
   if (theme.classList.contains("open")) {
-    tabContainer.style.background = '#000000';
+    tabContainer.style.background = '#eff0f3';
   }else{
-    tabContainer.style.background = '##eff0f3';
+    tabContainer.style.background = '#000000';
   }
 }
 

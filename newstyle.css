@@ -22,35 +22,46 @@
     color: var(--_primary_color);
 }
 body.open{
-    --bg_color: #0f0e17;
-    --navbar_color: #000000;
-    --primary_color: #fffffe;
-    --secondary_color: #3867d6;
-    --text_color: #a7a9be;
+    --bg_color: #fffffe;
+    --navbar_color: #eff0f3;
+    --primary_color: #0d0d0d;
+    --secondary_color: #d9376e;
     --toggle_position: translateX(31px);
-    --load_color: #000000;
-    --title_color: #fffffe;
-    --p_color: #a7a9be;
-    --tag_color: #ff8906;
-    --card_shadow: rgba(0, 0, 0, 0.6);
+    --load_color: #ffffff;
+    --title_color: #0d0d0d;
+    --p_color: #2a2a2a;
+    --tag_color: #ff8e3c;
+    --card_shadow: rgba(0, 0, 0, 0.3);
 
   
 }
 body{
-    --_primary_color: var(--primary_color, rgba(0, 0, 0, .87));
-    --_secondary_color: var(--secondary_color, #3867d6);
-    --_text_color: var(--text_color, rgba(0, 0, 0, .54));
-    --_bg_color: var(--bg_color, #F5F5F5);
-    --_navbar_color: var(--navbar_color, #eff0f3);
+    --_primary_color: var(--primary_color, #fffffe);
+    --_secondary_color: var(--secondary_color, #e53170);
+    --_bg_color: var(--bg_color, #0f0e17);
+    --_navbar_color: var(--navbar_color, #000000);
     --_toggle_position: var(--toggle_position, translateX(0));
-    --_load_color: var(--load_color,#ffffff);
-    --_title_color: var(--title_color, #0d0d0d);
-    --_p_color: var(--p_color, #2a2a2a);
-    --_tag_color: var(--tag_color,#ff8e3c);
-    --_card_shadow: var(--card_shadow, rgba(0, 0, 0, 0.3));
+    --_load_color: var(--load_color,#000000);
+    --_title_color: var(--title_color, #fffffe);
+    --_p_color: var(--p_color, #a7a9be);
+    --_tag_color: var(--tag_color,#ff8906);
+    --_card_shadow: var(--card_shadow, rgba(0, 0, 0, 0.6));
 
     background: var(--_bg_color);
 }
+
+::-webkit-scrollbar {
+    width: 2px;
+    z-index: 5000;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--_bg_color);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--_tag_color);
+  }
 #loading_screen{
     background-color: var(--_load_color);
     width: 100%;
@@ -131,7 +142,7 @@ a:hover{
     justify-self: end;
 }
 .theme-switch .switch {
-    background: var(--_primary_color);
+    background: var(--_secondary_color);
     width: 19px;
     height: 19px;
     border-radius: 100%;
@@ -234,7 +245,7 @@ a:hover{
 }
 .section_text_p1{
     text-align: center;
-    color: var(--_primary_color);
+    color: var(--_p_color);
     font-weight: 600;
     padding-top: clamp(1rem,2vw,2rem);
     font-size: 16px;
@@ -245,7 +256,7 @@ a:hover{
     padding-bottom: clamp(1rem,2vw,2rem);
 }
 .section_title_me{
-    color: var(--_primary_color);
+    color: var(--_secondary_color);
 }
 .section_title_2{
     display: flex;
@@ -287,7 +298,7 @@ a:hover{
 }
 #home_text_p2 {
     margin-bottom: 1.5rem;
-    color: var(--_p_color);
+    color: var(--_secondary_color);
     height: 1.75rem;
     font-size: clamp(21px,2.5vw,27px);
 }
@@ -308,6 +319,9 @@ a:hover{
     height: 2rem;
     transition: transform .2s ease-out;
     cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+
 }
 #socmed_card img:hover, #contact_strip img:hover{
     transform: scale(1.2);
@@ -415,6 +429,8 @@ a:hover{
     height: 1.6rem;
     width: 1.6rem;
     transition: transform .2s ease-out;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 .tags img:hover {
     transform: scale(1.2);
@@ -435,10 +451,10 @@ a:hover{
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: .3rem;
-    background-color: var(--_card_color);
+    background-color: var(--_bg_color);
     padding: 1.3rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: clamp(320px, 90vw, 800px);
+    box-shadow: 0 4px 8px var(--_card_shadow);
+    width: clamp(320px, 100vw, 800px);
     height: fit-content;
     z-index: 3000;
 }
