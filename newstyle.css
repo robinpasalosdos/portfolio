@@ -334,13 +334,14 @@ a:hover{
     min-height: fit-content;
     background-color: var(--_bg_color);
     width: 100%;
+    padding-bottom: 3rem;
 }
 .card_list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin: 1rem;
+    margin: 1.5rem;
     overflow: hidden;
     width: 100%;
     align-items: center;
@@ -394,10 +395,18 @@ a:hover{
     color: var(--_p_color);
 }
 .project_img{
-    width: 100%;
     border-top-left-radius: 10px; 
     border-top-right-radius: 10px;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
 }
+
+.project_img:hover{
+    filter: brightness(70%);
+}
+
 .tags {
     display: flex;
     width: 100%;

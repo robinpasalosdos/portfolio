@@ -88,12 +88,13 @@
     <p class="section_text_p1" data-aos="fade-up">Browse my</p>
     <h1 class="section_title" data-aos="fade-up">Projects</h1>
     <div class="card_list">
-      <article class="card" data-aos="slide-up" data-aos-offset="200" data-aos-duration="700" data-aos-easing="ease-in-sine">
+      <article class="card" data-aos="slide-up" data-aos-offset="150" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
           <img
               src="./assets/janken1.png"
               alt="Project 1"
               class="project_img"
+              onclick="showDialogJanken()"
             />
         </div>
         <header class="card-header">
@@ -109,16 +110,16 @@
           </div>
           <div class="proj_links">
             <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars', '_blank')">
-            <img class="eye_icon" src="./assets/eye_dark.png" alt="" onclick='showDialogJanken()'>
           </div>
         </div>
       </article>
-      <article class="card" class="card" data-aos="slide-up" data-aos-delay="100" data-aos-offset="200" data-aos-duration="700" data-aos-easing="ease-in-sine">
+      <article class="card" class="card" data-aos="slide-up" data-aos-delay="100" data-aos-offset="150" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
           <img
               src="./assets/module_tracker_pic1.jpg"
               alt="Project 2"
               class="project_img"
+              onclick='showDialog("dialog-box-2")'
           />
         </div>
         <header class="card-header">
@@ -134,16 +135,16 @@
           </div>
           <div class="proj_links">
             <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Module%20Tracker', '_blank')">
-            <img class="eye_icon" src="./assets/eye_dark.png" alt="" onclick='showDialog("dialog-box-2")'>
           </div>
         </div>
       </article>
-      <article class="card" data-aos="slide-up"  data-aos-delay="200" data-aos-offset="200" data-aos-duration="700" data-aos-easing="ease-in-sine">
+      <article class="card" data-aos="slide-up"  data-aos-delay="200" data-aos-offset="150" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
           <img
             src="./assets/pupqs1.png"
             alt="Project 3"
             class="project_img"
+            onclick="window.open('https://robinpasalosdos.github.io/portfolio/projects/pupqs', '_blank')"
           />
         </div>
         <header class="card-header">
@@ -158,7 +159,6 @@
           </div>
           <div class="proj_links">
             <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Queueing%20System', '_blank')">
-            <img class="eye_icon" src="./assets/eye_dark.png" alt="" onclick="window.open('https://robinpasalosdos.github.io/portfolio/projects/pupqs', '_blank')">
           </div>
         </div>
       </article>
@@ -178,7 +178,7 @@
   <section id="experience" class="section">
     <p class="section_text_p1" data-aos="fade-up">Explore my</p>
     <h1 class="section_title" data-aos="fade-up">Experience</h1>
-    <div class="exp_con" data-aos="slide-up" data-aos-offset="200" data-aos-duration="700" data-aos-easing="ease-in-sine">
+    <div class="exp_con" data-aos="slide-up" data-aos-offset="135"  data-aos-easing="ease-in-sine">
       <article class="exp_details">
         <h1>Melham Construction Corporation</h1>
         <h2>Backend Developer Intern</h2>
