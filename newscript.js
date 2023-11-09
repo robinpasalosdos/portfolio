@@ -284,6 +284,32 @@ document.addEventListener('DOMContentLoaded', function() {
   elementsToHandle.forEach(attachEventListener);
 });
 
+document.addEventListener("DOMContentLoaded", function(){
+  const certificates = document.querySelectorAll('.certificates img');
+  const certCon = document.getElementById('cert_con');
+  let currentIndex = 0;
+
+ 
+
+
+  function showNextCertificate(){
+    if(currentIndex < certificates.length - 1){
+      currentIndex = currentIndex + 1;
+      certCon.style.transform = `translateX(-${certCon.offsetWidth * currentIndex}px)`;
+    }
+  }
+
+  function showPrevCertificate(){
+    if(currentIndex > 0){
+      currentIndex = currentIndex - 1;
+      certCon.style.transform = `translateX(-${certCon.offsetWidth * currentIndex}px)`;
+    }
+  }
+
+  document.getElementById('next').addEventListener('click',showNextCertificate);
+  document.getElementById('prev').addEventListener('click',showPrevCertificate)
+})
+
 
 
 

@@ -90,12 +90,9 @@
     <div class="card_list">
       <article class="card" data-aos="slide-up" data-aos-offset="150" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-          <img
-              src="./assets/janken1.png"
-              alt="Project 1"
-              class="project_img"
-              onclick="showDialogJanken()"
-            />
+          <video loop autoplay muted class="project_img" onclick="showDialogJanken()">
+            <source src="assets\janken.mp4">
+          </video>
         </div>
         <header class="card-header">
           <h2>Janken Wars</h2>
@@ -140,12 +137,9 @@
       </article>
       <article class="card" data-aos="slide-up"  data-aos-delay="200" data-aos-offset="150" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-          <img
-            src="./assets/pupqs1.png"
-            alt="Project 3"
-            class="project_img"
-            onclick="window.open('https://robinpasalosdos.github.io/portfolio/projects/pupqs', '_blank')"
-          />
+            <video loop autoplay muted class="project_img" onclick="window.open('https://robinpasalosdos.github.io/portfolio/projects/pupqs', '_blank')">
+              <source src="./assets/pupqs.mp4">
+            </video>
         </div>
         <header class="card-header">
           <h2>PUP QS</h2>
@@ -176,24 +170,64 @@
     <img src="assets/mt.png" alt="" class="mt">
   </div>
   <section id="experience" class="section">
-    <p class="section_text_p1" data-aos="fade-up">Explore my</p>
-    <h1 class="section_title" data-aos="fade-up">Experience</h1>
-    <div class="exp_con" data-aos="slide-up" data-aos-offset="135"  data-aos-easing="ease-in-sine">
-      <article class="exp_details">
-        <h1>Melham Construction Corporation</h1>
-        <h2>Backend Developer Intern</h2>
-        <p>I play a key role as a co-leader in the team that is developing an event booking website, where I oversee tasks, guide the team, and ensure the project progresses efficiently.</p>
-      </article>
-      <article class="exp_details">
-        <h1>Pixel8 Web Solutions Inc.</h1>
-        <h2>Web Developer Intern</h2>
-        <p>I independently built a login and user management website using Quasar framework and Vue.js, covering authentication workflows, user profiles, and access control for both front-end and back-end operations.</p>
-      </article>
-      <article class="exp_details">
-        <h1>Betonbau Phil. Inc.</h1>
-        <h2>AutoCAD Operator</h2>
-        <p>I create prefab plans using AutoCAD, drafting detailed and accurate designs for construction projects to streamline the building process.</p>
-      </article>
+    <div class="qualification">
+      <div class="exp">
+        <p class="section_text_p1" data-aos="fade-up">Explore my</p>
+        <h1 class="section_title" data-aos="fade-up">Experience</h1>
+        <div class="exp_con" data-aos="fade-up" data-aos-offset="135"  data-aos-easing="ease-in-sine">
+          <article class="exp_details">
+            <h1>2022</h1>
+            <h2>Backend Developer Intern</h2>
+            <h2>Melham Construction Corporation</h2>
+            <p>I play a key role as a co-leader in the team that is developing an event booking website, where I oversee tasks, guide the team, and ensure the project progresses efficiently.</p>
+          </article>
+          <article class="exp_details">
+            <h1>2021</h1>
+            <h2>Web Developer Intern</h2>
+            <h2>Pixel8 Web Solutions Inc.</h2>
+            <p>I independently built a login and user management website using Quasar framework and Vue.js, covering authentication workflows, user profiles, and access control for both front-end and back-end operations.</p>
+          </article>
+          <article class="exp_details">
+            <h1>2019</h1>
+            <h2 class="position">AutoCAD Operator</h2>
+            <h2>Betonbau Phil. Inc.</h2>
+            <p>I create prefab plans using AutoCAD, drafting detailed and accurate designs for construction projects to streamline the building process.</p>
+          </article>
+        </div>
+      </div>
+      <div class="educ">
+        <p class="section_text_p1" data-aos="fade-up">Explore my</p>
+        <h1 class="section_title" data-aos="fade-up">Education</h1>
+        <div class="exp_con" data-aos="fade-up" data-aos-offset="135"  data-aos-easing="ease-in-sine">
+          <article class="exp_details">
+            <h1>2023</h1>
+            <h2>Bachelor of Science in Computer Engineering</h2>
+            <h2>Polytechnic University of the Philippines</h2>
+            <p>President Lister</p>
+          </article>
+          <article class="exp_details">
+            <h1>2019</h1>
+            <h2>Senior High School</h2>
+            <h2>Victorious Christian Montessori College</h2>
+            <p>Salutatorian</p>
+          </article>
+          <article class="exp_details">
+            <h1>2017</h1>
+            <h2>Junior High School</h2>
+            <h2>Eastern Bacoor National High School</h2>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="cert">
+      <img src="./assets/eye.png" alt="" id="prev">
+      <img src="./assets/eye.png" alt="" id="next">
+      <div class="certificates" id="cert_con">
+        <img src="./assets/janken1.png" alt="" class="cert1">
+        <img src="./assets/pupqs1.png" alt="" class="cert2">
+        <img src="./assets/pupqs1.png" alt="" class="cert2">
+        <img src="./assets/pupqs1.png" alt="" class="cert2">
+      </div>
     </div>
   </section>
   <section id="about" class="section">

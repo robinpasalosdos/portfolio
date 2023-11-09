@@ -37,6 +37,9 @@
     #home_text_p2 {
         margin-bottom: .75rem;
     }
+    .qualification{
+        flex-direction: column;
+    }
     .about_bg_con, .skill_all{
         flex-direction: column;
     }
@@ -44,14 +47,9 @@
         gap: 1rem;
         margin-top: 0;
     }
-    .exp_con{
-        grid-template-columns: 1fr 1fr;
-    }
+
 }
 @media screen and (max-width: 600px) {
-    .exp_con{
-        grid-template-columns: 1fr;
-    }
     .nav_footer_links{
         flex-direction: column;
         align-items: center;
