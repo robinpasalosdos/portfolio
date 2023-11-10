@@ -130,8 +130,8 @@ const bodyElement = document.body;
 function showDialog(dialogBox) {
   document.getElementById("overlay").style.display = "block";
   document.getElementById(dialogBox).style.display = "block";
-  htmlElement.style.overflow = "hidden";
-  bodyElement.style.overflow = "hidden";
+  htmlElement.style.overflowY = "hidden";
+  bodyElement.style.overflowY = "hidden";
 }
 
 var jankenVideo = document.getElementById("janken");
@@ -141,8 +141,8 @@ jankenVideo.currentTime = 0;
 function hideDialog(dialogBox) {
   document.getElementById("overlay").style.display = "none";
   document.getElementById(dialogBox).style.display = "none";
-  htmlElement.style.overflow = "auto";
-  bodyElement.style.overflow = "auto";
+  htmlElement.style.overflowY = "auto";
+  bodyElement.style.overflowY = "auto";
 }
 
 function showDialogJanken(){
@@ -287,28 +287,34 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener("DOMContentLoaded", function(){
   const certificates = document.querySelectorAll('.certificates img');
   const certCon = document.getElementById('cert_con');
+  const next = document.getElementById('next');
+  const prev = document.getElementById('prev');
   let currentIndex = 0;
 
  
 
 
-  function showNextCertificate(){
-    if(currentIndex < certificates.length - 1){
-      currentIndex = currentIndex + 1;
-      certCon.style.transform = `translateX(-${certCon.offsetWidth * currentIndex}px)`;
-    }
+  function showNextCertificate() {
+    currentIndex++;
+    certCon.style.transform = `translateX(-${certCon.offsetWidth * currentIndex}px)`;
+    toggleNavigation();
   }
-
-  function showPrevCertificate(){
-    if(currentIndex > 0){
-      currentIndex = currentIndex - 1;
-      certCon.style.transform = `translateX(-${certCon.offsetWidth * currentIndex}px)`;
-    }
+  
+  function showPrevCertificate() {
+    currentIndex--;
+    certCon.style.transform = `translateX(-${certCon.offsetWidth * currentIndex}px)`;
+    toggleNavigation();
   }
-
-  document.getElementById('next').addEventListener('click',showNextCertificate);
-  document.getElementById('prev').addEventListener('click',showPrevCertificate)
+  
+  function toggleNavigation() {
+    next.style.display = currentIndex < certificates.length - 1 ? 'block' : 'none';
+    prev.style.display = currentIndex > 0 ? 'block' : 'none';
+  }
+  
+  next.addEventListener('click', showNextCertificate);
+  prev.addEventListener('click', showPrevCertificate);
 })
+  
 
 
 
