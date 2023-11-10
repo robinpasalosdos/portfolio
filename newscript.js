@@ -32,7 +32,9 @@ const elements = {
   ghIcons: document.getElementsByClassName('github_icon'),
   eyeIcons: document.getElementsByClassName('eye_icon'),
   profileIcons: document.getElementById('socmed_card').getElementsByTagName('img'),
-  contactIcons: document.getElementById('contact_strip').getElementsByTagName('img')
+  contactIcons: document.getElementById('contact_strip').getElementsByTagName('img'),
+  next: document.getElementById('next'),
+  prev: document.getElementById('prev')
 };
 
 
@@ -61,13 +63,15 @@ function makeCall() {
   window.location.href = 'tel:+639302979295';
 }
 
-function changeImages(logo, home, nav, slogo, prof, load) {
+function changeImages(logo, home, slogo, prof, load, next, prev, nav) {
   elements.navLogo.src = logo;
   elements.homeProfile.src = home;
-  elements.navBar.style.background = nav;
   elements.switchLogo.src = slogo;
   elements.profile.src = prof;
   elements.loading.src = load;
+  elements.next.src = next;
+  elements.prev.src = prev;
+  elements.navBar.style.backgroundColor = nav;
 }
 
 function changeImagesArray(images, imagePaths) {
@@ -78,8 +82,8 @@ function changeImagesArray(images, imagePaths) {
   }
 }
 
-function applyTheme(logo, neon, backgroundColor, switchIcon, prof, load, themeName) {
-  changeImages(logo, neon, backgroundColor, switchIcon, prof, load);
+function applyTheme(logo, neon, switchIcon, prof, load, next, prev, nav, themeName) {
+  changeImages(logo, neon, switchIcon, prof, load, next, prev, nav);
   changeImagesArray(elements.profileIcons, ['assets/linkedin_dark.png', 'assets/github_dark.png', 'assets/gmail_dark.png']);
   changeImagesArray(elements.contactIcons, ['assets/gmail_dark.png', 'assets/phone_dark.png', 'assets/linkedin_dark.png', 'assets/facebook_dark.png']);
   changeImagesArray(elements.ghIcons, Array(3).fill('assets/github_dark.png'));
@@ -100,11 +104,11 @@ elements.themeToggle.addEventListener("click", function () {
   elements.theme.classList.toggle("open");
 
   if (elements.theme.classList.contains("open")) {
-    applyTheme('assets/logo_dark.png', 'assets/neon_black.png', '#E0E0E0', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'light');
+    applyTheme('assets/logo_dark.png', 'assets/neon_black.png', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'assets/right_arrow.png','assets/left_arrow.png', '#eff0f3', 'light');
     localStorage.setItem("theme", "light");
     
   } else {
-    applyTheme('assets/logo_white.png', 'assets/neon.png', '#000000', 'assets/moon.png', 'assets/profile_dark.png','assets/loading_dark.gif','dark');
+    applyTheme('assets/logo_white.png', 'assets/neon.png', 'assets/moon.png', 'assets/profile_dark.png','assets/loading_dark.gif','assets/right_arrow_dark.png','assets/left_arrow_dark.png', '#000000','dark');
     localStorage.setItem("theme", "dark");
     
   }
@@ -112,7 +116,7 @@ elements.themeToggle.addEventListener("click", function () {
 
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme == 'light') {
-  applyTheme('assets/logo_dark.png', 'assets/neon_black.png', '#E0E0E0', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', savedTheme);
+  applyTheme('assets/logo_dark.png', 'assets/neon_black.png', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'assets/right_arrow.png','assets/left_arrow.png', '#eff0f3',  savedTheme);
 
 }
 
@@ -227,9 +231,7 @@ function navHandleScroll() {
   
  window.addEventListener("scroll", function() {
   navHandleScroll();
-    /* if (window.pageYOffset == 0){
-      tabContainer.style.background = 'transparent';
-    }*/
+
 }); 
 
 const cards = document.querySelectorAll('.card');
@@ -295,20 +297,24 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   function showNextCertificate() {
-    currentIndex++;
-    certCon.style.transform = `translateX(-${certCon.offsetWidth * currentIndex}px)`;
-    toggleNavigation();
+    if (currentIndex < certificates.length - 1 ){
+      currentIndex++;
+      certCon.style.transform = `translateX(-${certCon.offsetWidth * currentIndex}px)`;
+      toggleNavigation();
+    }
   }
   
   function showPrevCertificate() {
-    currentIndex--;
-    certCon.style.transform = `translateX(-${certCon.offsetWidth * currentIndex}px)`;
-    toggleNavigation();
+    if (currentIndex > 0){
+      currentIndex--;
+      certCon.style.transform = `translateX(-${certCon.offsetWidth * currentIndex}px)`;
+      toggleNavigation();
+    }
   }
   
   function toggleNavigation() {
-    next.style.display = currentIndex < certificates.length - 1 ? 'block' : 'none';
-    prev.style.display = currentIndex > 0 ? 'block' : 'none';
+    next.style.opacity = currentIndex < certificates.length - 1 ? '1' : '.3';
+    prev.style.opacity = currentIndex > 0 ? '1' : '.3';
   }
   
   next.addEventListener('click', showNextCertificate);

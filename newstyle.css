@@ -2,6 +2,10 @@
     font-family: 'k2d';
     src: url('font/K2D-Regular.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'notoSans';
+    src: url('font/NotoSans-Regular.ttf') format('truetype');
+}
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +14,10 @@
 }
 :root{
     --title_font_size: clamp(26px,3vw,34px);
-    --l: 20px;
-    --m: 17px;
-    --s: 14px;
+    --sub_title_font_size: clamp(18px,3vw,34px);
+    --l: clamp(18px,3vw,20px);
+    --m: clamp(15px,3vw,17px);
+    --s: clamp(12px,3vw,14px);
     --ss: 13px;
 
 }
@@ -32,9 +37,12 @@ body.open{
     --p_color: #2a2a2a;
     --tag_color: #ff8e3c;
     --card_shadow: rgba(0, 0, 0, 0.3);
-
-  
 }
+
+p{
+    font-family: 'notoSans', 'san-serif';
+}
+
 body{
     --_primary_color: var(--primary_color, #fffffe);
     --_secondary_color: var(--secondary_color, #e53170);
@@ -143,7 +151,7 @@ a:hover{
     justify-self: end;
 }
 .theme-switch .switch {
-    background: var(--_secondary_color);
+    background: var(--_title_color);
     width: 19px;
     height: 19px;
     border-radius: 100%;
@@ -249,7 +257,7 @@ a:hover{
     color: var(--_p_color);
     font-weight: 600;
     padding-top: clamp(1rem,2vw,2rem);
-    font-size: 16px;
+    font-size: clamp(13px,3vw,16px);
 }
 .section_title,.section_title_me{
     font-size: var(--title_font_size);
@@ -295,16 +303,16 @@ a:hover{
 .home_text_p1 {
     text-align: center;
     color: var(--_p_color);
-    font-size: clamp(14px,1.25vw,18px);
+    font-size: clamp(13px,1.25vw,18px);
 }
 #home_text_p2 {
     margin-bottom: 1.5rem;
     color: var(--_secondary_color);
     height: 1.75rem;
-    font-size: clamp(21px,2.5vw,27px);
+    font-size: clamp(19px,2.5vw,27px);
 }
 .title {
-    font-size: clamp(35px,5vw,45px);
+    font-size: clamp(30px,5vw,45px);
     text-align: center;
     color: var(--_title_color);
 }
@@ -316,8 +324,8 @@ a:hover{
     gap: 1rem;
 }
 #socmed_card img, #contact_strip img{
-    width: 2rem;
-    height: 2rem;
+    width: clamp(1.8rem,8vw,2rem);
+    height: clamp(1.8rem,8vw,2rem);
     transition: transform .2s ease-out;
     cursor: pointer;
     user-select: none;
@@ -384,14 +392,14 @@ a:hover{
 
 }
 .card-header h2 {
-    font-size: var(--m);
+    font-size: clamp(16px,3vw,17px);
     text-decoration: none;
     cursor: pointer;
     color: var(--_title_color);
     margin: .5vw;
 }
 .card p{
-    font-size: var(--ss);
+    font-size: clamp(10px,3vw,13px);
     margin: 0 1rem 0 1rem;
     align-self: flex-start;
     text-indent: 2em;
@@ -523,6 +531,7 @@ a:hover{
     border-radius: .8rem;
     box-shadow: 0 5px 10px var(--_card_shadow);
     height: 100%;
+    margin-bottom: 2rem;
 }
 .exp_details{
     position: relative;
@@ -537,7 +546,7 @@ a:hover{
     height: 40px;
     top: 20px;
     left: 8px;
-    height: 110%; 
+    height: 100%; 
 }
 .exp_details h1::before{
     width: 21px;
@@ -582,8 +591,8 @@ a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 2rem;
-    overflow: hidden;
+    border-radius: .5rem;
+    padding-bottom: 4rem;
 }
 .cert::before {
     content: "";
@@ -611,6 +620,7 @@ a:hover{
     display: flex;
     width: 100%;
     transition: transform .5s ease;
+    align-items: center;
 }
 .certificates img{
     width: 100%;
@@ -622,21 +632,20 @@ a:hover{
 }
 #next, #prev{
     position: absolute;
-    width: 3rem;
-    height: 3rem;
+    width: clamp(1.8rem,5vw,3rem);
+    height: clamp(1.8rem,5vw,3rem);
     top: 50%;
-    z-index: 1000;
-    transform: translateY(50%);
+    z-index: 3000;
+    transform: translateY(-50%);
+    transition: transform 0.1s ease-in
 }
-.cert:hover #prev, .cert:hover #next{
-    opacity: 30%;
-}
+
 #next{
-    right: 3%;
+    right: -12%;
 }
 #prev{
-    left: 3%;
-    display: none;
+    left: -12%;
+    opacity: .3;
 }
 .slide-up{
     transform: translateY(-6rem);
@@ -647,23 +656,42 @@ a:hover{
     display: flex;
     gap: 2rem;
     justify-content: center;
-    align-items: center; 
+    align-items: flex-start; 
     width: 100%;
     padding: 0 1rem 0 1rem;
-    margin: 1rem 0 1rem;
+    margin: 1rem 0 3rem;
+    max-width: 70rem;
 }
 .about_details_con{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     max-width: 55rem;
-    justify-content: flex-start;
+    gap: 1rem;
+    align-items: flex-start;
+}
+.about_cover{
+    width: 100%;
+    overflow: hidden;
+    max-height: 15rem;
+    border: var(--_p_color) 2px solid;
+    border-radius: 2rem;
+}
+.about_cover img{
+    width: 100%;
+    overflow: hidden;
 }
 .about_bg_con{
     display: flex;
-    gap: 2rem;
-    justify-content: space-between;
+    gap: 1rem;
 }
+.about_bg_con h1{
+    font-size: var(--sub_title_font_size);
+    color: var(--_title_color);
+}
+.about_bg_con :first-child{
+    color: var(--_secondary_color);
+}
+
 .about_pic img{
     width: 18.75rem;
     height: 25rem;
@@ -711,7 +739,15 @@ a:hover{
     gap: 2rem;
     max-width: 75.75rem;
     margin: 1rem 0 1rem;
+    flex-wrap: wrap;
 }
+.skills{
+    flex: 1;
+}
+.skills:nth-child(2){
+    flex: .5;
+}
+
 .skills{
     display: flex;
     flex-direction: column;
@@ -740,7 +776,7 @@ a:hover{
 
 .skill article {
     display: flex;
-    width: 7.5rem;
+    width: 7rem;
     justify-content: space-around;
     gap: 0.5rem;
 }

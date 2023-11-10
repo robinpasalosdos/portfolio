@@ -88,7 +88,7 @@
     <p class="section_text_p1" data-aos="fade-up">Browse my</p>
     <h1 class="section_title" data-aos="fade-up">Projects</h1>
     <div class="card_list">
-      <article class="card" data-aos="slide-up" data-aos-offset="150" data-aos-easing="ease-in-sine">
+      <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
           <video loop autoplay muted class="project_img" onclick="showDialogJanken()">
             <source src="assets\janken.mp4">
@@ -110,7 +110,7 @@
           </div>
         </div>
       </article>
-      <article class="card" class="card" data-aos="slide-up" data-aos-delay="100" data-aos-offset="150" data-aos-easing="ease-in-sine">
+      <article class="card" class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
           <img
               src="./assets/module_tracker_pic1.jpg"
@@ -135,7 +135,7 @@
           </div>
         </div>
       </article>
-      <article class="card" data-aos="slide-up"  data-aos-delay="200" data-aos-offset="150" data-aos-easing="ease-in-sine">
+      <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
             <video loop autoplay muted class="project_img" onclick="window.open('https://robinpasalosdos.github.io/portfolio/projects/pupqs', '_blank')">
               <source src="./assets/pupqs.mp4">
@@ -219,9 +219,9 @@
     </div>
     <div class="cert">
       <h1 class="section_title" data-aos="fade-up">Certification</h1>
-      <img src="./assets/left_arrow.png" alt="" id="prev">
-      <img src="./assets/right_arrow.png" alt="" id="next">
-      <div class="certificates" id="cert_con">
+      <img src="./assets/left_arrow_dark.png" alt="" id="prev" data-aos="fade-left" data-aos-delay="200">
+      <img src="./assets/right_arrow_dark.png" alt="" id="next" data-aos="fade-right" data-aos-delay="200">
+      <div class="certificates" id="cert_con" data-aos="slide-left">
         <img src="./assets/janken1.png" alt="" class="cert1">
         <img src="./assets/pupqs1.png" alt="" class="cert2">
         <img src="./assets/pupqs1.png" alt="" class="cert2">
@@ -240,28 +240,24 @@
         <img src="./assets/profile_dark.png" alt="Profile Picture" id="about_profile"/>
       </div>
       <div class="about_details_con">
-        <div class="about_bg_con">
-          <div class="about_bg" data-aos="zoom-in-up" data-aos-delay="200" data-aos-offset="150" data-aos-easing="ease-out">
-            <img src="./assets/experience.png" alt="Experience icon" class="about_icon"/>
-            <h1>Experience</h1>
-            <p>1+ years <br />Backend Development</p>
-          </div>
-          <div class="about_bg" data-aos="zoom-in-up" data-aos-delay="200" data-aos-offset="150" data-aos-easing="ease-out">
-            <img src="./assets/puplogo.png" alt="pup logo" class="about_icon"/>
-            <h1>Education</h1>
-            <p>Polytechnic University of the Philippines - Sta. Mesa<br />Bachelor of Science in Computer Engineering</p>
-          </div>
+        <div class="about_cover" data-aos="fade-left">
+          <img src="./assets/cover.jpg" alt="">
+        </div>
+        <div class="about_bg_con" data-aos="fade-down">
+          <h1>Meet Robin:</h1><h1>Computer Engineer</h1>
         </div>
         <div class="about_text" data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-out-sine">
           <p>
-            I am a developer skilled in web, game, and mobile app development, along with data analysis. My portfolio reflects a diverse range of practical projects that demonstrate my expertise. I am committed to staying current with technology trends to deliver effective, user-focused solutions.
-          </p>
+            Crafting digital wonders in web, games, and mobile realms. My portfolio is 
+            a vivid canvas of user-centric magic. Constantly surfing tech's cutting edge 
+            to weave futuristic solutions. Ready for an adventure in innovation? Let's create the extraordinary! 🌌✨</p>
         </div>
       </div>
     </div>
     <div class="skills_con">
+      <h1 class="section_title" data-aos="fade-up">Skills</h1>
       <div class="skill_all">
-        <div class="skills" data-aos="zoom-in-up" data-aos-delay="100">
+        <div class="skills" data-aos="zoom-in-down" data-aos-delay="100">
           <h4>Web Development</h4>
           <div class="skill">
             <article>
@@ -283,17 +279,6 @@
               />
               <div>
                 <h3>CSS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/php.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>PHP</h3>
                 <p>Experienced</p>
               </div>
             </article>
@@ -305,6 +290,17 @@
               />
               <div>
                 <h3>JavaScript</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/php.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>PHP</h3>
                 <p>Experienced</p>
               </div>
             </article>
@@ -330,10 +326,70 @@
                 <p>Intermediate</p>
               </div>
             </article>
+            <article>
+              <img
+                src="./assets/quasar.svg"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Quasar</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/bootstrap.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Bootstrap</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
           </div>
         </div>
-        <div class="skills" data-aos="zoom-in-up" data-aos-delay="100">
-          <h4>Computer Softwares</h4>
+        <div class="skills" data-aos="zoom-in-down" data-aos-delay="100">
+          <h4>Data Analytics</h4>
+          <div class="skill">
+            <article>
+              <img
+                src="./assets/ms.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>SQL</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/mysql.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>MySQL</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/excel.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Excel</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="skills" data-aos="zoom-in-down" data-aos-delay="100">
+          <h4>Other Tools</h4>
           <div class="skill">
             <article>
               <img
@@ -376,6 +432,50 @@
               />
               <div>
                 <h5>Android Stu.</h5>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/firebase.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Firebase</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/visualStudio.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h5>Visual Studio</h5>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/sketchup.webp"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Sketchup</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/pygame.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Pygame</h3>
                 <p>Intermediate</p>
               </div>
             </article>
