@@ -141,7 +141,19 @@ h1, p {
     justify-content: space-around;
     font-family: 'DM Sans', sans-serif;
 }
-
+.hamburger-navigation{
+    display: none;
+}
+.toggleMenu{
+    display: none;
+}
+.toggleMenu span{
+    height: 6px;
+    width: 50px;
+    display: block;
+    margin: 8px auto;
+    background-color: #000000;
+}
 nav ul{
     gap: 2em;
     align-items: center;
@@ -230,12 +242,14 @@ ul {
     display: flex;
     justify-content: center;
     height: 100vh;
+    height: 100svh;
     align-items: center;
     overflow: hidden;
 }
 
 .feature-container video {
     height: 100vh;
+    height: 100svh;
     min-height: 1000px;
     min-width: 1500px;
     pointer-events: none;

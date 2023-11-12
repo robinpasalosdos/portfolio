@@ -1,499 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="animation.css">
-  <link rel="stylesheet" href="mediaqueries.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script defer src="script.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W84K5EVN51"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-W84K5EVN51');
-  </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="var.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="mq.css">
+    <link rel="icon" href="./assets/logo_white1.png" type="png">
+    <link href="aos.css" rel="stylesheet">
+    <script src="aos.js"></script>
 </head>
 <body>
-  <nav id="desktop_nav">
-    <p class="logo">Robin</p>
-    <div>
-      <ul class="nav_links">
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Skills</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>   
-      </ul>
-    </div>
+  <div id="loading_screen">
+    <p id="loaded">Redirecting...</p>
+    <img src="./assets/loading_dark.gif" alt="" id="loading">
+  </div>
+  <nav id="head_nav">
+      <div class="logo_con">
+          <img src="./assets/logo_white.png" class="logo" alt="logo" id="logo" onclick="goToHome()" data-aos="flip-left" data-aos-duration="2000"/>
+      </div>
+      <div></div>
+      <div class="head_nav_sections">
+        <ul>
+          <li data-aos="fade-down-right" data-aos-delay="600"><a href="#projects">Projects</a></li>
+          <li data-aos="fade-down" data-aos-delay="700"><a href="#experience">Experience</a></li>
+          <li data-aos="fade-down" data-aos-delay="800"><a href="#about">About</a></li>
+          <li data-aos="fade-down-left" data-aos-delay="900"><a href="#contacts">Contact</a></li>   
+        </ul>
+      </div>
+      <div class="theme-switch-con">
+        <div class="theme-switch" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">
+          <div class="switch" id="theme-toggle">
+            <img src="./assets/moon.png" alt="" id="sun_n_moon">
+          </div>
+        </div>
+      </div>
+      <div class="hamburger_menu" data-aos="flip-up" data-aos-delay="1250" data-aos-duration="800">
+        <div class="hamburger_icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+      </div>
+      <div class="mobile_nav_sections">
+        <ul>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#contacts" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
   </nav>
-  <nav id="hamburger_nav">
-    <div id="ham_logo" class="logo">Robin</div>
-    <div class="hamburger_menu">
-      <div class="hamburger_icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu_links">
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
-    </div>
-  </nav>
-  <section id="profile">
-    <div class="section_pic_container" id="text">
-      <img src="./assets/profile-pic.jpg" alt="Robin profile picture" />
-    </div>
-    <div class="section_text">
-      <p class="section_text_p1">Hello, I'm</p>
-      <h1 class="title">Robin Pasalosdos</h1>
-      <p class="section_text_p2" id="section_text_p2">Web Developer</p>
-      <div class="btn_container">
-        <button
-          class="btn btn-color-2"
-          onclick="window.open('https://drive.google.com/uc?export=download&id=1xAQA4UQbb-NQIHmArO2kLnpgyi2GgsHC', '_blank')"
-        >
-          Download CV
-        </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
-          Contact Info
-        </button>
-      </div>
-      <div id="socials_container">
+  <section id="home" class="section">
+    <img src="./assets/neon.png" class="home_pic" alt="Robin profile picture" id="home_profile" 
+    data-aos="fade-right" data-aos-delay="1500" data-aos-offset="0"/>
+    <div class="home_details_card">
+      <p class="home_text_p1" data-aos="zoom-out-down" data-aos-delay="1000" data-aos-offset="0">Hello, I'm</p>
+        <h1 class="title" data-aos="zoom-in" data-aos-delay="1100" data-aos-offset="0">Robin Pasalosdos</h1>
+      <p id="home_text_p2" data-aos="flip-up" data-aos-delay="1200" data-aos-offset="0">Web Developer</p>
+      <div id="socmed_card" data-aos="zoom-in" data-aos-delay="1300" data-aos-offset="0">
         <img
-          src="./assets/linkedin.png"
+          src="./assets/linkedin_dark.png"
           alt="My LinkedIn profile"
           class="icon"
           onclick="window.open('https://www.linkedin.com/in/robin-pasalosdos-9a87b6286/', '_blank')"
+          
         />
           <img
-            src="./assets/github.png"
+            src="./assets/github_dark.png"
             alt="My Github profile"
             class="icon"
             onclick="window.open('https://github.com/robinpasalosdos', '_blank')"
           />
           <img
-            src="./assets/gmail.png"
+            src="./assets/gmail_dark.png"
             alt="My Gmail"
             class="icon"
             onclick="window.open('https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBnpzLrSSWkRBGbWwwVVrxvgcVGjhWvTHqmxdFmDLbqglGsrGjfZJsXXWwwfrRsrtsrhnWT', '_blank')"
           />
-
       </div>
     </div>
   </section>
-  
-  <section id="projects" class="animated-section">
-    <p class="section_text_p1">Browse my Recent</p>
-    <h1 class="title">Projects</h1>
-    <div class="experience_details_container">
-      <div class="about_containers">
-        <div class="details_container color_container">
-          <div class="article_container">
-            <img
-              src="./assets/janken.png"
-              alt="Project 1"
-              class="project_img"
-            />
+  <section id="projects" class="section">
+    <p class="section_text_p1" data-aos="fade-up">Browse my</p>
+    <h1 class="section_title" data-aos="fade-up">Projects</h1>
+    <div class="card_list">
+      <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
+        <div class="project_img_card">
+          <video loop autoplay muted class="project_img" onclick="showDialogJanken()">
+            <source src="assets\janken.mp4">
+          </video>
+        </div>
+        <header class="card-header">
+          <h2>Janken Wars</h2>
+        </header>
+        <p>This Unity-based 3D game is inspired by the classic rock, paper, and scissors game. 
+          In this 2 player game, each player engages in battles in janken battlefields, adding a strategic twist to this classic showdown.
+        </p>
+        <div class="tags">
+          <div class="tools">
+            <a>Unity</a>
+            <a>Unity3d</a>
           </div>
-          <h2 class="experience_sub_title project_title">Janken Wars</h2>
-          <div class="btn_container">
-            <button
-              class="btn btn-color-1 project-btn"
-              onclick='showDialogJanken()'
-            >
-              See More
-            <!--</button>
-            <button
-              class="btn btn-color-1 project-btn"
-              onclick="window.open('https://drive.google.com/file/d/1Y2EptnTceVXgIf11k8Xa3UiDFUyGP00M/view?usp=sharing', '_blank')"
-            >
-              View Gameplay
-            </button>-->
+          <div class="proj_links">
+            <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars', '_blank')">
           </div>
         </div>
-        <div class="details_container color_container">
-          <div class="article_container">
-            <img
-              src="./assets/module_tracker_pic.jpg"
+      </article>
+      <article class="card" class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
+        <div class="project_img_card">
+          <img
+              src="./assets/module_tracker_pic1.jpg"
               alt="Project 2"
               class="project_img"
-            />
-          </div>
-          <h2 class="experience_sub_title project_title">Module Tracker</h2>
-          <div class="btn_container">
-            <button
-              class="btn btn-color-1 project-btn"
               onclick='showDialog("dialog-box-2")'
-            >
-              See More
-            </button>
-            <!--<button
-              class="btn btn-color-1 project-btn"
-              onclick="window.open('https://drive.google.com/file/d/15us4YVh3ZpZwlKJWbByHz0PGA6C0W1RP/view?usp=sharing', '_blank')"
-            >
-              App Preview
-            </button>-->
+          />
+        </div>
+        <header class="card-header">
+          <h2>Module Tracker</h2>
+        </header>
+        <p>This app streamlines the module distribution process, making it easier for educators to ensure that students receive the 
+          materials they need for their studies.
+        </p>
+        <div class="tags">
+          <div class="tools">
+            <a>Android Stu.</a>
+            <a>Firebase</a>
+          </div>
+          <div class="proj_links">
+            <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Module%20Tracker', '_blank')">
           </div>
         </div>
-        <div class="details_container color_container">
-          <div class="article_container">
-            <img
-              src="./assets/pupqs.png"
-              alt="Project 3"
-              class="project_img"
-            />
+      </article>
+      <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
+        <div class="project_img_card">
+            <video loop autoplay muted class="project_img" onclick="window.open('https://robinpasalosdos.github.io/portfolio/projects/pupqs', '_blank')">
+              <source src="./assets/pupqs.mp4">
+            </video>
+        </div>
+        <header class="card-header">
+          <h2>PUP QS</h2>
+        </header>
+        <p>PUP QS is a website for Polytechnic University of the Philippines, simplifying queues for various services, such as enrollment and library access, to save time and enhance efficiency for students and staff.
+        </p>
+        <div class="tags">
+          <div class="tools">
+            <a>PHP</a>
+            <a>JQuery</a>
           </div>
-          <h2 class="experience_sub_title project_title">PUP QS</h2>
-          <div class="btn_container">
-            <button
-              class="btn btn-color-1 project-btn"
-              onclick='showDialog("dialog-box-3")'
-            >
-              See More
-            </button>
-            <button
-              class="btn btn-color-1 project-btn"
-              onclick="window.open('https://robinpasalosdos.github.io/portfolio/projects/pupqs', '_blank')"
-            >
-              Visit Website
-            </button>
+          <div class="proj_links">
+            <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Queueing%20System', '_blank')">
           </div>
         </div>
-      </div>
+      </article>
     </div>
   </section>
   <div class="overlay" id="overlay"></div>
   <div class="dialog-box" id="dialog-box-1">
-        <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken()'>
-        <div class="dialog_container">
-          <div>
-            <h2 class="experience_sub_title project_title dialog_title_container">Janken Wars</h2>
-          </div>
-          <video loop autoplay id="janken">
-            <source src="assets\janken.mp4">
-
-          </video>
-            <p style="text-align: justify; text-indent: 3em;">This Unity-based 3D game is inspired by the classic rock, paper, and scissors game. 
-              In this 2 player game, each player engages in battles in janken battlefields, adding a strategic twist to this classic showdown.
-            </p>
-        </div>
+    <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken()'>
+    <video loop autoplay id="janken">
+      <source src="assets\janken.mp4">
+    </video>
   </div>
   <div class="dialog-box" id="dialog-box-2">
     <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-2")'>
-    <div class="dialog_container">
-      <div class="project_img_container">
-      </div>
-      <div class="project_details_container">
-        <h2 class="experience_sub_title project_title dialog_title_container">Module Tracker</h2>
-        <img src="assets/mt.png" alt="" class="mt">
-        <p style="text-align: justify; text-indent: 3em;">It is a mobile application designed for a school to assist teachers in efficiently managing and tracking printed modules for students. 
-          This user-friendly app streamlines the module distribution process, making it easier for educators to ensure that students receive the 
-          materials they need for their studies.</p>
-      </div>
-    </div>
-</div>
-<div class="dialog-box" id="dialog-box-3">
-  <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-3")'>
-  <div class="dialog_container">
-    <div class="project_img_container">
-    </div>
-    <div class="project_details_container">
-      <h2 class="experience_sub_title project_title dialog_title_container">PUP QS</h2>
-      <p style="text-align: justify; text-indent: 3em;">PUP Queueing System is a website designed for Polytechnic University of the Philippines
-         to streamline and manage queues efficiently. It helps students and staff save time by providing a user-friendly platform to join
-          queues for various university services, such as enrollment, library access, and more.
-      </p>
-    </div>
+    <img src="assets/mt.png" alt="" class="mt">
   </div>
-</div>
-<section id="experience" class="animated-section">
-  <p class="section_text_p1">Explore my</p>
-  <h1 class="title">Skills</h1>
-  <div class="experience_details_container">
-    <div class="about_containers">
-      <div class="details_container">
-        <h2 class="experience_sub_title">Web Development</h2>
-        <div class="article_container">
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>HTML</h3>
-              <p>Experienced</p>
-            </div>
+  <section id="experience" class="section">
+    <div class="qualification">
+      <div class="exp">
+        <h1 class="section_title" data-aos="fade-up">Experience</h1>
+        <div class="exp_con" data-aos="fade-up" data-aos-offset="135"  data-aos-easing="ease-in-sine">
+          <article class="exp_details">
+            <h1>2022</h1>
+            <h2>Backend Developer Intern</h2>
+            <h2>Melham Construction Corporation</h2>
+            <p>I play a key role as a co-leader in the team that is developing an event booking website, where I oversee tasks, guide the team, and ensure the project progresses efficiently.</p>
           </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>CSS</h3>
-              <p>Intermediate</p>
-            </div>
+          <article class="exp_details">
+            <h1>2021</h1>
+            <h2>Web Developer Intern</h2>
+            <h2>Pixel8 Web Solutions Inc.</h2>
+            <p>I independently built a login and user management website using Quasar framework and Vue.js, covering authentication workflows, user profiles, and access control for both front-end and back-end operations.</p>
           </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>PHP</h3>
-              <p>Experienced</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>JavaScript</h3>
-              <p>Experienced</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>JQuery</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>MySQL</h3>
-              <p>Intermediate</p>
-            </div>
+          <article class="exp_details">
+            <h1>2019</h1>
+            <h2 class="position">AutoCAD Operator</h2>
+            <h2>Betonbau Phil. Inc.</h2>
+            <p>I create prefab plans using AutoCAD, drafting detailed and accurate designs for construction projects to streamline the building process.</p>
           </article>
         </div>
       </div>
-      <div class="details_container">
-        <h2 class="experience_sub_title">Computer Softwares</h2>
-        <div class="article_container">
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>MS Office</h3>
-              <p>Experienced</p>
-            </div>
+      <div class="educ">
+        <h1 class="section_title" data-aos="fade-up">Education</h1>
+        <div class="exp_con" data-aos="fade-up" data-aos-offset="135"  data-aos-easing="ease-in-sine">
+          <article class="exp_details">
+            <h1>2023</h1>
+            <h2>Bachelor of Science in Computer Engineering</h2>
+            <h2>Polytechnic University of the Philippines</h2>
+            <p>President Lister</p>
           </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>AutoCad</h3>
-              <p>Intermediate</p>
-            </div>
+          <article class="exp_details">
+            <h1>2019</h1>
+            <h2>Senior High School</h2>
+            <h2>Victorious Christian Montessori College</h2>
+            <p>Salutatorian</p>
           </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>Unity</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h5>Android Studio</h5>
-              <p>Intermediate</p>
-            </div>
+          <article class="exp_details">
+            <h1>2017</h1>
+            <h2>Junior High School</h2>
+            <h2>Eastern Bacoor National High School</h2>
           </article>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section id="about" class="animated-section">
-  <p class="section_text_p1">Get to Know More</p>
-  <h1 class="title">About me</h1>
-  <div class="section_container">
-    <div class="section_pic_container">
-      <img
-        src="./assets/profile-pic.jpg"
-        alt="Profile Picture"
-        class="about_pic"
-      />
-    </div>
-    <div class="about_details_container">
-      <div class="about_containers">
-        <div class="details_container">
-          <img
-            src="./assets/experience.png"
-            alt="Experience icon"
-            class="icon"
-          />
-          <h3>Experience</h3>
-          <p>2+ years <br />Backend Development</p>
-        </div>
-        <div class="details_container">
-          <img
-            src="./assets/education.png"
-            alt="Education icon"
-            class="icon"
-          />
-          <h3>Education</h3>
-          <p>Polytechnic University of the Philippines - Sta. Mesa<br />Bachelor of Science in Computer Engineering</p>
-        </div>
-      </div>
-      <div class="text-container">
-        <p style="text-indent: 3em; text-align: justify; color: #27374D; margin-bottom: 2rem;">
-          I am a developer skilled in web, game, and mobile app development, along with data analysis. My portfolio reflects a diverse range of practical projects that demonstrate my expertise. I am committed to staying current with technology trends to deliver effective, user-focused solutions.
-        </p>
+    <div class="cert">
+      <h1 class="section_title" data-aos="fade-up">Certification</h1>
+      <img src="./assets/left_arrow_dark.png" alt="" id="prev" data-aos="fade-left" data-aos-delay="200">
+      <img src="./assets/right_arrow_dark.png" alt="" id="next" data-aos="fade-right" data-aos-delay="200">
+      <div class="certificates" id="cert_con" data-aos="slide-left">
+        <img src="./assets/UC-8b0c1224-de0e-4302-9066-98183497ca28.jpg" alt="" class="cert1">
+        <img src="./assets/UC-7d5a52cf-9c58-48c6-9d60-1b0d0f1a2387.jpg" alt="" class="cert2">
+        <img src="./assets/Melham.jpg" alt="" class="cert2">
+        <img src="./assets/pixel8.jpg" alt="" class="cert2">
       </div>
     </div>
-
-  </div>
-</section>
-  <section id="contact" class="animated-section">
-    <p class="section_text_p1">Get in Touch</p>
-    <h1 class="title">Contact me</h1>
-    <div class="contact_info_upper_container">
-      <div class="contact_info_container">
-        <img
-          src="./assets/gmail.png"
-          alt="Email icon"
-          class="icon contact_icon email_icon"
-        />
-        <p><a href="mailto:robinpasalosdos@gmail.com" target="_blank">robinpasalosdos@gmail.com</a></p>
+  </section>
+  <section id="about" class="section">
+    <p class="section_text_p1" data-aos="fade-up">Get to Know More</p>
+    <div class="section_title_2">
+      <h1 class="section_title" data-aos="fade-up">About</h1>&nbsp;&nbsp;
+      <h1 class="section_title_me" data-aos="fade-up"> me</h1>
+    </div>
+    <div class="about_con">
+      <div class="about_pic" data-aos="zoom-out" data-aos-easing="ease-out">
+        <img src="./assets/profile_dark.png" alt="Profile Picture" id="about_profile"/>
       </div>
-      <div class="contact_info_container">
-        <img
-          src="./assets/linkedin.png"
-          alt="LinkedIn icon"
-          class="icon contact_icon"
-        />
-        <p><a href="https://www.linkedin.com/in/robin-pasalosdos-9a87b6286/" target="_blank">Robin Pasalosdos</a></p>
+      <div class="about_details_con">
+        <div class="about_cover" data-aos="fade-left">
+          <img src="./assets/cover.jpg" alt="">
+        </div>
+        <div class="about_bg_con" data-aos="fade-down">
+          <h1>Meet Robin:</h1><h1>Computer Engineer</h1>
+        </div>
+        <div class="about_text" data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-out-sine">
+          <p>
+            Crafting digital wonders in web, games, and mobile realms. My portfolio is 
+            a vivid canvas of user-centric magic. Constantly surfing tech's cutting edge 
+            to weave futuristic solutions. Ready for an adventure in innovation? Let's create the extraordinary! 🌌✨</p>
+        </div>
+      </div>
+    </div>
+    <div class="skills_con">
+      <h1 class="section_title" data-aos="fade-up">Skills</h1>
+      <div class="skill_all">
+        <div class="skills" data-aos="zoom-in-down" data-aos-delay="100">
+          <h4>Web Development</h4>
+          <div class="skill">
+            <article>
+              <img
+                src="./assets/html.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/css.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/js.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/php.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>PHP</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/jquery.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>JQuery</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/mysql.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>MySQL</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/quasar.svg"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Quasar</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/bootstrap.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Bootstrap</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="skills" data-aos="zoom-in-down" data-aos-delay="100">
+          <h4>Data Analytics</h4>
+          <div class="skill">
+            <article>
+              <img
+                src="./assets/sql.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>SQL</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/mysql.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>MySQL</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/excel.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Excel</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="skills" data-aos="zoom-in-down" data-aos-delay="100">
+          <h4>Other Tools</h4>
+          <div class="skill">
+            <article>
+              <img
+                src="./assets/ms.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>MS Office</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/autocad.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>AutoCad</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/unity.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Unity</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/as.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h5>Android Stu.</h5>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/firebase.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Firebase</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/visualStudio.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h5>Visual Studio</h5>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/sketchup.webp"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Sketchup</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/pygame.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Pygame</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contacts" class="section">
+    <p class="section_text_p1" data-aos="fade-up">Get in Touch</p>
+    <div class="section_title_2">
+      <h1 class="section_title" data-aos="fade-up">Contact</h1>&nbsp;&nbsp;
+      <h1 class="section_title_me" data-aos="fade-up">me</h1>
+    </div>
+    <div class="contact_con">
+      <div id="contact_strip">
+        <div class="contact_details_con"  data-aos="fade-down-left">
+          <img src="./assets/gmail_dark.png" alt="gmail-icon" class="contact_icon"
+          onclick="window.open('https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBnpzLrSSWkRBGbWwwVVrxvgcVGjhWvTHqmxdFmDLbqglGsrGjfZJsXXWwwfrRsrtsrhnWT', '_blank')"
+          >
+          <p class="contact_details">Gmail</p>
+          <p class="contact_sub_details">robinpasalosdos@gmail.com</p>
+        </div>
+        <div class="contact_details_con" data-aos="fade-down-left" data-aos-delay="50">
+          <img src="./assets/phone_dark.png" alt="phone" class="contact_icon" onclick="makeCall()">
+          <p class="contact_details">Phone</p>
+          <p class="contact_sub_details">+639302979295</p>
+        </div>
+        <div class="contact_details_con" data-aos="fade-down-left" data-aos-delay="100">
+          <img src="./assets/linkedin_dark.png" alt="linkedin" class="contact_icon"
+          onclick="window.open('https://www.linkedin.com/in/robin-pasalosdos-9a87b6286/', '_blank')"
+          >
+          <p class="contact_details">LinkedIn</p>
+          <p class="contact_sub_details">Robin Pasalosdos</p>
+        </div>
+        <div class="contact_details_con" data-aos="fade-down-left" data-aos-delay="150">
+          <img src="./assets/facebook_dark.png" alt="facebook" class="contact_icon"
+          onclick="window.open('https://www.facebook.com/pasalosdos', '_blank')"
+          >
+          <p class="contact_details">Facebook</p>
+          <p class="contact_sub_details">Robin Pasalosdos</p>
+        </div>
       </div>
     </div>
   </section>
   <footer>
-    <nav id="nav_footer">
-      <div class="nav_links_container">
-        <ul class="nav_footer_links">          
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
-      </div>
-   
-    </nav>
-    <p>Copyright &#169; 2023 Robin Pasalosdos. All Rights Reserved.</p>
-  </footer>
-
-
-<!--   <div class="home_container">
-    <div class="home_row">
-      <div class="home-col-1">
-        <p class="hometxt">Hi, my name is</p>
-        <p class="robin">Robin Pasalosdos</p>
-        <p class="hometxt">Web Developer in the Philippines</p>
-      </div>
-      <div class="home-col-2">
-        <img src="robin.png" alt="A picture of a robin">
-      </div>
-    </div>
-  </div>
- 
-  
-
-    <div id="about" class="section">
-      <h2>About</h2>
-      <div>
-        <a href="https://drive.google.com/uc?export=download&id=1xAQA4UQbb-NQIHmArO2kLnpgyi2GgsHC" target="_blank" download="cv.pdf">Download CV</a>
-      </div>
-      
-      <div class="container">
-        <div class="row">
-          <div class="about-col-2">
-            <div class="tab-titles">
-              <p class="tab-link active-link" onclick="opentab('educ')">Education</a>
-              <p class="tab-link" onclick="opentab('skl')">Skills</a>
-              <p class="tab-link" onclick="opentab('exp')">Experience</a>  
-            </div>
-            <div class="tab-content active-tab" id="educ">
-              <ul>
-                <li>educ</li>
-              </ul>
-            </div>
-            <div class="tab-content" id="skl">
-              <ul>
-                <li>skl</li>
-              </ul>
-            </div>
-            <div class="tab-content" id="exp">
-              <ul>
-                <li>exp</li>
-              </ul>
-            </div>
-            
-          </div>
+    <div class="footer_con section">
+      <nav id="nav_footer">
+        <div class="nav_links_container">
+            <ul class="nav_footer_links">          
+              <li data-aos="fade-up-right" data-aos-offset="0"><a href="#projects">Projects</a></li>
+              <li data-aos="fade-up-right" data-aos-delay="50" data-aos-offset="0"><a href="#experience">Experience</a></li>
+              <li data-aos="fade-up-right" data-aos-delay="100" data-aos-offset="0"><a href="#about">About</a></li>
+              <li data-aos="fade-up-right" data-aos-delay="150" data-aos-offset="0"><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-      </div>
-
+      </nav>
+      <p data-aos="zoom-in" data-aos-delay="500" data-aos-offset="0">Copyright &#169; 2023 Robin Pasalosdos. All Rights Reserved.</p>
     </div>
-
-    <section id="mywork" class="section">
-      <h2>My Work</h2>
-      <div class="socmedlinks">
-        <a href="https://robinpasalosdos.github.io/salon" target="_blank" class="fa fa-salon"><p>Salon Website</p></a>
-        <a href="https://robinpasalosdos.github.io/eventbooking" target="_blank" class="fa fa-salon"><p>Event Booking</p></a>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <div class="socmedlinks">
-        <a href="https://www.facebook.com/pasalosdos" target="_blank" class="fa fa-facebook"><p>Robin Pasalosdos</p></a>
-        <br>
-        <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbtmMVxRcSFDLfvQfMfZzhsXhmhFpCNcqKkVHrtRcCZtqZPGPShzdbBhxCxpftLXpMgmZC" target="_blank" class="fa fa-envelope"><p>robinpasalosdos@gmail.com</p></a>
-        <br>
-        <i class="fa fa-mobile"></i><p>+639302979295</p>
-        <p>ripasalosdos@iskolarngbayan.pup.edu.ph</p>
-        <p></p>
-
-      </div>
-      
-    </section>
-  </div>
+  </footer>
+  
+  
 </body>
 </html>

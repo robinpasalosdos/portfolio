@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="stylesheet" href="SDK.css">
+    <link rel="stylesheet" href="SDK700.css">
     <title>PUP Queuing System</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="icon" href="assets/PUP-Logo.png" type="png">
@@ -18,13 +19,24 @@
             <img src="assets/PUP-Logo.png" id="logo" alt="puplogo">
             <h1>PUP<b>QS</b></h1>
         </a>
-        <div class="toggleMenu" onclick="toggleMenu();"></div>
+        <div class="toggleMenu" onclick="toggleMenu();">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <nav class="navigation landing-header">
             <ul class="landing-header">
             <li><a href="#">Home</a></li>
             <li><a href="login.html">Admin</a></li>
             <li><button onclick="register()" class="btn btn-outline">Register</button></li>
             </ul>
+        </nav>
+        <nav class="navigation landing-header hamburger-navigation">
+          <ul class="landing-header">
+            <li><a href="#">Home</a></li>
+            <li><a href="login.html">Admin</a></li>
+            <li><button onclick="register()" class="btn btn-outline">Register</button></li>
+          </ul>
         </nav>
       </header>
     </div>
