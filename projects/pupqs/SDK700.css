@@ -31,14 +31,17 @@
     .center-text h1{
         font-size: clamp(24px,6vw,40px);
     }
-}
-@media screen and (max-width: 700px){
     .display-background > img {
         width: 200%;
     }
 }
+@media screen and (max-width: 500px){
+    .display-transaction-type h1, .display-transaction-serving h1{
+        font-size: 20px;
+    }
+}
 @media screen and (max-width: 400px){
     .display-background > img {
-        width: 250%;
+        width: 300%;
     }
 }
