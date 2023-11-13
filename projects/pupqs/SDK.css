@@ -648,7 +648,6 @@ ul {
     left: 0%;
     height: 100vh;
     height: 100svh;
-    min-height: 1300px;
     background: linear-gradient(66deg,#ffffff 0%, #fafafa 80%);
     overflow: hidden;
     z-index: -1;
