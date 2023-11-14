@@ -316,7 +316,7 @@ a:hover::before, a:hover::after {
     transition: all .6s ease-out;
 }
 .home_pic svg:hover{
-    filter: drop-shadow(1px 1px 10px #d9376e);
+    filter: drop-shadow(1px 1px 7px #d9376e);
 }
 #nose_and_mouth{
     transition: all .3s ease-out;
