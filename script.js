@@ -23,7 +23,6 @@ const elements = {
   navBar: document.getElementById('head_nav'),
   ghIcons: document.getElementsByClassName('github_icon'),
   eyeIcons: document.getElementsByClassName('eye_icon'),
-  homeProfile: document.getElementById('home_profile'),
   switchLogo: document.getElementById('sun_n_moon'),
   loading_screen: document.getElementById('loading_screen'),
   loading: document.getElementById('loading'),
@@ -63,9 +62,8 @@ function makeCall() {
   window.location.href = 'tel:+639302979295';
 }
 
-function changeImages(logo, home, slogo, prof, load, next, prev, nav) {
+function changeImages(logo, slogo, prof, load, next, prev, nav) {
   elements.navLogo.src = logo;
-  elements.homeProfile.src = home;
   elements.switchLogo.src = slogo;
   elements.profile.src = prof;
   elements.loading.src = load;
@@ -82,7 +80,7 @@ function changeImagesArray(images, imagePaths) {
   }
 }
 
-function applyTheme(logo, neon, switchIcon, prof, load, next, prev, nav, themeName) {
+function applyTheme(logo, switchIcon, prof, load, next, prev, nav, themeName) {
   changeImages(logo, neon, switchIcon, prof, load, next, prev, nav);
   changeImagesArray(elements.profileIcons, ['assets/linkedin_dark.png', 'assets/github_dark.png', 'assets/gmail_dark.png']);
   changeImagesArray(elements.contactIcons, ['assets/gmail_dark.png', 'assets/phone_dark.png', 'assets/linkedin_dark.png', 'assets/facebook_dark.png']);
@@ -104,11 +102,11 @@ elements.themeToggle.addEventListener("click", function () {
   elements.theme.classList.toggle("open");
 
   if (elements.theme.classList.contains("open")) {
-    applyTheme('assets/logo_dark.png', 'assets/neon_black.png', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'assets/right_arrow.png','assets/left_arrow.png', '#eff0f3', 'light');
+    applyTheme('assets/logo_dark.png', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'assets/right_arrow.png','assets/left_arrow.png', '#eff0f3', 'light');
     localStorage.setItem("theme", "light");
     
   } else {
-    applyTheme('assets/logo_white.png', 'assets/neon.png', 'assets/moon.png', 'assets/profile_dark.png','assets/loading_dark.gif','assets/right_arrow_dark.png','assets/left_arrow_dark.png', '#000000','dark');
+    applyTheme('assets/logo_white.png', 'assets/moon.png', 'assets/profile_dark.png','assets/loading_dark.gif','assets/right_arrow_dark.png','assets/left_arrow_dark.png', '#000000','dark');
     localStorage.setItem("theme", "dark");
     
   }
@@ -116,7 +114,7 @@ elements.themeToggle.addEventListener("click", function () {
 
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme == 'light') {
-  applyTheme('assets/logo_dark.png', 'assets/neon_black.png', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'assets/right_arrow.png','assets/left_arrow.png', '#eff0f3',  savedTheme);
+  applyTheme('assets/logo_dark.png', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'assets/right_arrow.png','assets/left_arrow.png', '#eff0f3',  savedTheme);
 
 }
 
@@ -291,6 +289,8 @@ document.addEventListener("DOMContentLoaded", function(){
   const certCon = document.getElementById('cert_con');
   const next = document.getElementById('next');
   const prev = document.getElementById('prev');
+  const certNav = document.getElementById('cert_frac');
+  certNav.textContent = `1 / ${certificates.length}`;
   let currentIndex = 0;
 
  
@@ -315,6 +315,7 @@ document.addEventListener("DOMContentLoaded", function(){
   function toggleNavigation() {
     next.style.opacity = currentIndex < certificates.length - 1 ? '1' : '.3';
     prev.style.opacity = currentIndex > 0 ? '1' : '.3';
+    certNav.textContent = `${currentIndex + 1} / ${certificates.length}`;
   }
   
   next.addEventListener('click', showNextCertificate);

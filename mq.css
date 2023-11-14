@@ -40,7 +40,7 @@
         flex-direction: column;
         gap: 2rem;
     }
-    .home_pic {
+    .home_pic, .home_pic img{
         height: clamp(200px,60vw,240px);
         width: clamp(200px,60vw,240px);
     }
@@ -57,24 +57,20 @@
         gap: 1rem;
         margin-top: 0;
     }
-    #next{
-        right: -8%;
+    #next, #prev{
+        position: static;
+        width: 1.8rem;
+        height: 1.8rem;
+        transform: translateY(0%);
     }
-    #prev{
-        left: -8%;
+    .cert_nav{
+        display: flex;
+        align-items: center;
+        gap: 6rem;
     }
 
 }
 @media screen and (max-width: 750px) {
-    #next, #prev{
-        top: 96%
-    }
-    #next{
-        right: 20%;
-    }
-    #prev{
-        left: 20%;
-    }
 
 }
 @media screen and (max-width: 600px) {
@@ -88,9 +84,6 @@
     }
     #contact_strip{
         gap: 1.2rem;
-    }
-    #next, #prev{
-        top: 92%
     }
 
 }
