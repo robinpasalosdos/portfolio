@@ -40,9 +40,13 @@
         flex-direction: column;
         gap: 2rem;
     }
-    .home_pic, .home_pic svg{
+    .home_pic svg{
         height: clamp(200px,60vw,240px);
         width: clamp(200px,60vw,240px);
+    }
+    .home_pic{
+        height: clamp(240px,60vw,280px);
+        width: clamp(240px,60vw,280px);
     }
     #home_text_p2 {
         margin-bottom: .75rem;

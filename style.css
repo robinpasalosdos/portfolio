@@ -307,23 +307,24 @@ a:hover::before, a:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: drop-shadow(1px 1px 4px #d9376e);
+    filter: drop-shadow(1px 1px 7px var(--_navbar_color));
 }
 .home_pic svg{
     height: 400px;
     width: 400px;
-    filter: drop-shadow(1px 1px 4px #d9376e);
+    filter: drop-shadow(1px 1px 7px var(--_navbar_color));
     transition: all .6s ease-out;
 }
 .home_pic svg:hover{
-    filter: drop-shadow(1px 1px 7px #d9376e);
+    filter: drop-shadow(1px 1px 7px var(--_secondary_color));
+}
+.home_pic svg{
+    fill: var(--_primary_color);
 }
 #nose_and_mouth{
     transition: all .3s ease-out;
 }
-.home_pic svg:hover #nose_and_mouth{
-    opacity: 1;
-}
+
 .home_details_card {
     align-self: center;
     text-align: center;
