@@ -129,43 +129,65 @@ const careers = [
 
 const htmlElement = document.documentElement;
 const bodyElement = document.body;
-function showDialog(dialogBox) {
-  document.getElementById("overlay").style.display = "block";
-  document.getElementById(dialogBox).style.display = "block";
-  htmlElement.style.overflowY = "hidden";
-  bodyElement.style.overflowY = "hidden";
-  slideUp();
+
+const dialogVideos = document.querySelectorAll('.dialog_video');
+const overlay = document.getElementById('overlay');
+
+dialogVideos.forEach(video => {
+  video.pause();
+  video.currentTime = 0;
+});
+
+function getIndexFromDialogBox(dialogBox) {
+    return parseInt(dialogBox.charAt(dialogBox.length - 1)) - 1;
 }
 
-var jankenVideo = document.getElementById("janken");
-jankenVideo.pause();
-jankenVideo.currentTime = 0;
+function playDialogVideo(dialogBox) {
+    const index = getIndexFromDialogBox(dialogBox);
+    dialogVideos[index].currentTime = 0;
+    dialogVideos[index].play();
+}
+
+function pauseDialogVideo(dialogBox) {
+    const index = getIndexFromDialogBox(dialogBox);
+    dialogVideos[index].pause();
+    dialogVideos[index].currentTime = 0;
+}
+
+function showDialog(dialogBox) {
+    overlay.style.display = "block";
+    document.getElementById(dialogBox).style.display = "block";
+    document.documentElement.style.overflowY = "hidden";
+    document.body.style.overflowY = "hidden";
+    slideUp();
+}
 
 function hideDialog(dialogBox) {
-  document.getElementById("overlay").style.display = "none";
-  document.getElementById(dialogBox).style.display = "none";
-  htmlElement.style.overflowY = "auto";
-  bodyElement.style.overflowY = "auto";
-}
-
-function showDialogJanken(){
-  showDialog("dialog-box-1");
-  jankenVideo.currentTime = 0;
-  jankenVideo.play();
-}
-
-function hideDialogJanken(){
-  hideDialog("dialog-box-1");
-  jankenVideo.pause();
-  jankenVideo.currentTime = 0;
+    overlay.style.display = "none";
+    document.getElementById(dialogBox).style.display = "none";
+    document.documentElement.style.overflowY = "auto";
+    document.body.style.overflowY = "auto";
 }
 
 document.addEventListener('click', function (event) {
-  if (event.target === document.getElementById("overlay")) {
-    hideDialogJanken();
-    hideDialog("dialog-box-2");
-  }
+    if (event.target === overlay) {
+        hideDialogJanken("dialog-box-1");
+        hideDialogJanken("dialog-box-2");
+        hideDialogJanken("dialog-box-3");
+        hideDialog("dialog-box-4");
+    }
 });
+
+function showDialogJanken(dialogBox) {
+    showDialog(dialogBox);
+    playDialogVideo(dialogBox);
+}
+
+function hideDialogJanken(dialogBox) {
+    hideDialog(dialogBox);
+    pauseDialogVideo(dialogBox);
+}
+
 
 let currentWordIndex = 0;
 let currentletterIndex = 1;
@@ -321,7 +343,7 @@ document.addEventListener("DOMContentLoaded", function(){
   
   next.addEventListener('click', showNextCertificate);
   prev.addEventListener('click', showPrevCertificate);
-})
+});
   
 
 

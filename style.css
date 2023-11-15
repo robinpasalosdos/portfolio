@@ -523,7 +523,7 @@ a:hover::before, a:hover::after {
     right: 1%;
     width: 2rem;
 }
-#janken{
+.dialog_video{
     width: 100%;
     margin-top: 1rem;
 }

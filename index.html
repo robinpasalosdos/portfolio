@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="var.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script defer src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="mq.css">
-    <link rel="icon" href="./assets/logo_white1.png" type="png">
+    <link rel="icon" href="./assets/logo_white.png" type="png">
     <link href="aos.css" rel="stylesheet">
     <script src="aos.js"></script>
 </head>
@@ -213,7 +212,7 @@
     <div class="card_list">
       <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-          <video loop autoplay muted class="project_img" onclick="showDialogJanken()">
+          <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-1')">
             <source src="assets\janken.mp4">
           </video>
         </div>
@@ -235,15 +234,9 @@
       </article>
       <article class="card" class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-          <video loop autoplay muted class="project_img" onclick='showDialog("dialog-box-2")'>
+          <video loop autoplay muted class="project_img" onclick='showDialog("dialog-box-4")'>
             <source src="./assets/ModuleTracker.mp4">
           </video>
-          <img
-              
-              alt="Project 2"
-              class="project_img"
-              
-          />
         </div>
         <header class="card-header">
           <h2>Module Tracker</h2>
@@ -286,7 +279,7 @@
       </article>
       <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-            <video loop autoplay muted class="project_img" onclick="window.open('https://robinpasalosdos.github.io/portfolio/projects/pupqs', '_blank')">
+            <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-2')">
               <source src="./assets/user_management.mp4">
             </video>
         </div>
@@ -307,7 +300,7 @@
       </article>
       <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-            <video loop autoplay muted class="project_img" onclick="window.open('https://robinpasalosdos.github.io/portfolio/projects/pupqs', '_blank')">
+            <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-3')">
               <source src="./assets/Eflood.mp4">
             </video>
         </div>
@@ -331,13 +324,25 @@
   </section>
   <div class="overlay" id="overlay"></div>
   <div class="dialog-box" id="dialog-box-1">
-    <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken()'>
-    <video loop autoplay id="janken">
-      <source src="assets\janken.mp4">
+    <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-1")'>
+    <video loop autoplay class="dialog_video">
+      <source src="assets\janken.mp4" >
     </video>
   </div>
-  <div class="dialog-box" id="dialog-box-2">
-    <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-2")'>
+  <div class="dialog-box dialog_videos" id="dialog-box-2">
+    <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-2")'>
+    <video loop autoplay class="dialog_video">
+      <source src="assets\user_management.mp4">
+    </video>
+  </div>
+  <div class="dialog-box dialog_videos" id="dialog-box-3">
+    <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-3")'>
+    <video loop autoplay class="dialog_video">
+      <source src="assets\Eflood.mp4">
+    </video>
+  </div>
+  <div class="dialog-box" id="dialog-box-4">
+    <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-4")'>
     <img src="assets/mt.png" alt="" class="mt">
   </div>
   <section id="experience" class="section">
