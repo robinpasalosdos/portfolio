@@ -134,6 +134,7 @@ function showDialog(dialogBox) {
   document.getElementById(dialogBox).style.display = "block";
   htmlElement.style.overflowY = "hidden";
   bodyElement.style.overflowY = "hidden";
+  slideUp();
 }
 
 var jankenVideo = document.getElementById("janken");
