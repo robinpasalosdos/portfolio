@@ -19,6 +19,7 @@ function goToHome() {
 const elements = {
   themeToggle: document.getElementById("theme-toggle"),
   theme: document.querySelector("body"),
+  html: document.querySelector("html"),
   navLogo: document.getElementById('logo'),
   navBar: document.getElementById('head_nav'),
   ghIcons: document.getElementsByClassName('github_icon'),
@@ -45,8 +46,7 @@ AOS.init({
   once: false,
 });
 
-elements.theme.style.overflowY = 'hidden';
-elements.theme.style.overflowX = 'hidden';
+elements.html.style.overflowY = 'hidden';
 
 window.onload = function() {
   elements.loading.style.display = 'none';
@@ -54,7 +54,7 @@ window.onload = function() {
   setTimeout(function() {
     elements.loading_screen.style.display = 'none';
     elements.loaded.style.display = 'none';
-    elements.theme.style.overflowY = 'auto';
+    elements.html.style.overflowY = 'auto';
   }, 500);
 };
 

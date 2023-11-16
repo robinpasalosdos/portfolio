@@ -89,6 +89,9 @@
     #contact_strip{
         gap: 1.2rem;
     }
+    .dialog_x{
+        top: -17%;
+    }
 
 }
 @media screen and (max-width: 380px) {

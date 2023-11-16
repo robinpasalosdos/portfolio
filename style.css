@@ -31,7 +31,6 @@ body.open{
     --primary_color: #0d0d0d;
     --secondary_color: #d9376e;
     --toggle_position: translateX(31px);
-    --load_color: #ffffff;
     --title_color: #0d0d0d;
     --p_color: #2a2a2a;
     --tag_color: #ff8e3c;
@@ -48,7 +47,6 @@ body{
     --_bg_color: var(--bg_color, #0f0e17);
     --_navbar_color: var(--navbar_color, #000000);
     --_toggle_position: var(--toggle_position, translateX(0));
-    --_load_color: var(--load_color,#000000);
     --_title_color: var(--title_color, #fffffe);
     --_p_color: var(--p_color, #a7a9be);
     --_tag_color: var(--tag_color,#ff8906);
@@ -70,7 +68,7 @@ body{
     background: var(--_tag_color);
   }
 #loading_screen{
-    background-color: var(--_load_color);
+    background-color: var(--_bg_color);
     width: 100%;
     height: 100vh;
     height: 100svh;
@@ -80,6 +78,9 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 4000;
+}
+#loading{
+    width: 3rem;
 }
 html {
     scroll-behavior: smooth;
@@ -509,9 +510,8 @@ a:hover::before, a:hover::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: .3rem;
     background-color: var(--_bg_color);
-    padding: 1.3rem;
+    border-radius: .3rem;
     box-shadow: 0 4px 8px var(--_card_shadow);
     width: clamp(320px, 100vw, 800px);
     height: fit-content;
@@ -519,13 +519,12 @@ a:hover::before, a:hover::after {
 }
 .dialog_x{
     position: absolute;
-    top: 1%;
-    right: 1%;
+    right: 0%;
     width: 2rem;
+    z-index: 6000;
 }
 .dialog_video{
     width: 100%;
-    margin-top: 1rem;
 }
 .mt{
     width: 100%;
@@ -656,10 +655,12 @@ a:hover::before, a:hover::after {
     width: 100%;
     transition: transform .5s ease;
     align-items: center;
+
 }
 .certificates img{
     width: 100%;
     height: 100%;
+    box-shadow: 0 4px 8px var(--_card_shadow);
 }
 
 .certificates img.active{
