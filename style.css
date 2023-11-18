@@ -52,6 +52,7 @@ body{
     --_tag_color: var(--tag_color,#ff8906);
     --_card_shadow: var(--card_shadow, rgba(0, 0, 0, 0.6));
     background: var(--_bg_color);
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
