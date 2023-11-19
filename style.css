@@ -309,22 +309,30 @@ a:hover::before, a:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: drop-shadow(1px 1px 7px var(--_navbar_color));
 }
 .home_pic svg{
     height: 400px;
     width: 400px;
-    filter: drop-shadow(1px 1px 7px var(--_navbar_color));
     transition: all .6s ease-out;
 }
-.home_pic svg:hover{
-    filter: drop-shadow(1px 1px 7px var(--_secondary_color));
-}
+
 .home_pic svg{
     fill: var(--_primary_color);
+    animation: glow 3s ease-in infinite forwards;
 }
-#nose_and_mouth{
-    transition: all .3s ease-out;
+@keyframes glow {
+    0%{
+        filter: drop-shadow(1px 1px 7px var(--_navbar_color));
+    }
+    40%{
+        filter: drop-shadow(1px 1px 7px var(--_secondary_color));
+    }
+    60%{
+        filter: drop-shadow(1px 1px 7px var(--_secondary_color));
+    }
+    100%{
+        filter: drop-shadow(1px 1px 7px var(--_navbar_color));
+    }
 }
 
 .home_details_card {

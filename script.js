@@ -42,7 +42,7 @@ AOS.init({
   disable: false,
   startEvent: 'load',
   delay: 0,
-  duration: 400,
+  duration: 250,
   once: false,
 });
 
