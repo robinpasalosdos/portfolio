@@ -43,7 +43,7 @@ AOS.init({
   startEvent: 'load',
   delay: 0,
   duration: 250,
-  once: false,
+  once: True,
 });
 
 elements.html.style.overflowY = 'hidden';
