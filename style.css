@@ -736,7 +736,7 @@ a:hover::before, a:hover::after {
     gap: 1rem;
 }
 .about_bg_con h1{
-    font-size: clamp(20px,3vw,34px);
+    font-size: clamp(15px,3vw,34px);
     color: var(--_title_color);
 }
 .about_bg_con :first-child{
