@@ -52,7 +52,7 @@ body{
     --_tag_color: var(--tag_color,#ff8906);
     --_card_shadow: var(--card_shadow, rgba(0, 0, 0, 0.6));
     background: var(--_bg_color);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -400,6 +400,7 @@ a:hover::before, a:hover::after {
     align-items: center;
     padding-bottom: 1rem;
     max-width: 75.75rem;
+    gap: 4rem;
 }
 .card_list::-webkit-scrollbar {
     width: 10px;
@@ -427,7 +428,6 @@ a:hover::before, a:hover::after {
     position: relative;
     grid-template-rows: 5fr 1fr 3fr 1fr;
     box-shadow: 0 5px 10px var(--_card_shadow);
-    margin: .5rem;
 }
 .card-header {
     text-align: center;
@@ -443,7 +443,7 @@ a:hover::before, a:hover::after {
     margin: .5vw;
 }
 .card p{
-    font-size: clamp(10px,3vw,13px);
+    font-size: clamp(9px,3vw,11px);
     margin: 0 1rem 0 1rem;
     align-self: flex-start;
     text-indent: 2em;
@@ -549,7 +549,7 @@ a:hover::before, a:hover::after {
 .qualification{
     width: 100%;
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     justify-content: flex-start;
 }
 .exp, .educ{
@@ -705,7 +705,7 @@ a:hover::before, a:hover::after {
 /*                                   ABOUT                                         */
 .about_con{
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     justify-content: center;
     align-items: flex-start; 
     width: 100%;
@@ -717,7 +717,7 @@ a:hover::before, a:hover::after {
     display: flex;
     flex-direction: column;
     max-width: 55rem;
-    gap: 1rem;
+    gap: 2rem;
     align-items: flex-start;
 }
 .about_cover{
@@ -787,7 +787,7 @@ a:hover::before, a:hover::after {
 }
 .skill_all{
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     max-width: 75.75rem;
     margin: 1rem 0 1rem;
     flex-wrap: wrap;
@@ -814,7 +814,7 @@ a:hover::before, a:hover::after {
 }
 .skills h4{
     color: var(--_title_color);
-    font-size: var(--l);
+    font-size: var(--m);
 }
 .skill{
     display: flex;
@@ -823,6 +823,7 @@ a:hover::before, a:hover::after {
     flex-direction: row;
     gap: 2rem;
     justify-content: space-around;
+    margin-right: 2rem;
 }
 
 .skill article {
@@ -833,15 +834,15 @@ a:hover::before, a:hover::after {
 }
 .skill article h3{
     color: var(--_title_color);
-    font-size: var(--m);
+    font-size: var(--s);
 }
 .skill article h5{
     color: var(--_title_color);
-    font-size: var(--s);
+    font-size: var(--ss);
 }
 .skill article p{
     color: var(--_p_color);
-    font-size: var(--s);
+    font-size: var(--ss);
 }
 .icon, .contact_icon{
     width: 2.5rem;
