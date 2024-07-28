@@ -174,7 +174,8 @@ document.addEventListener('click', function (event) {
         hideDialogJanken("dialog-box-1");
         hideDialogJanken("dialog-box-2");
         hideDialogJanken("dialog-box-3");
-        hideDialog("dialog-box-4");
+        hideDialogJanken("dialog-box-4");
+        hideDialog("dialog-box-5");
     }
 });
 

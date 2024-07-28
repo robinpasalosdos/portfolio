@@ -213,8 +213,8 @@
     <div class="card_list">
       <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-          <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-1')">
-            <source src="assets\janken.mp4">
+          <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-1')" >
+            <source src="./assets/pupclinic.mp4">
           </video>
         </div>
         <header class="card-header">
@@ -224,16 +224,17 @@
         <div class="tags">
           <div class="tools">
             <a>PHP</a>
+            <a>JQuery</a>
             <a>Raspberry Pi</a>
           </div>
           <div class="proj_links">
-            <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars', '_blank')">
+            <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/pupclinic', '_blank')">
           </div>
         </div>
       </article>
       <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-          <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-1')">
+          <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-2')">
             <source src="assets\janken.mp4">
           </video>
         </div>
@@ -255,7 +256,7 @@
       </article>
       <article class="card" class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-          <video loop autoplay muted class="project_img" onclick='showDialog("dialog-box-4")'>
+          <video loop autoplay muted class="project_img" onclick='showDialog("dialog-box-5")'>
             <source src="./assets/ModuleTracker.mp4">
           </video>
         </div>
@@ -300,7 +301,7 @@
       </article>
       <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-            <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-2')">
+            <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-3')">
               <source src="./assets/user_management.mp4">
             </video>
         </div>
@@ -321,7 +322,7 @@
       </article>
       <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-            <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-3')">
+            <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-4')">
               <source src="./assets/Eflood.mp4">
             </video>
         </div>
@@ -343,27 +344,33 @@
       </article>
     </div>
   </section>
-  <div class="overlay" id="overlay"></div>
   <div class="dialog-box" id="dialog-box-1">
     <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-1")'>
-    <video loop autoplay class="dialog_video">
-      <source src="assets\janken.mp4" >
+    <video loop autoplay class="dialog_video" controls>
+      <source src="assets/pupclinic.mp4">
     </video>
   </div>
-  <div class="dialog-box dialog_videos" id="dialog-box-2">
+  <div class="overlay" id="overlay"></div>
+  <div class="dialog-box" id="dialog-box-2">
     <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-2")'>
-    <video loop autoplay class="dialog_video">
-      <source src="assets\user_management.mp4">
+    <video loop autoplay class="dialog_video" controls>
+      <source src="assets\janken.mp4" >
     </video>
   </div>
   <div class="dialog-box dialog_videos" id="dialog-box-3">
     <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-3")'>
-    <video loop autoplay class="dialog_video">
+    <video loop autoplay class="dialog_video" controls muted>
+      <source src="assets\user_management.mp4">
+    </video>
+  </div>
+  <div class="dialog-box dialog_videos" id="dialog-box-4">
+    <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-4")'>
+    <video loop autoplay class="dialog_video" controls muted>
       <source src="assets\Eflood.mp4">
     </video>
   </div>
-  <div class="dialog-box" id="dialog-box-4">
-    <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-4")'>
+  <div class="dialog-box" id="dialog-box-5">
+    <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-5")'>
     <img src="assets/mt.png" alt="" class="mt">
   </div>
   <section id="experience" class="section">
@@ -417,8 +424,10 @@
     <div class="cert">
       <h1 class="section_title" data-aos="fade-up">Certificates</h1>
       <div class="certificates" id="cert_con" data-aos="slide-left">
-        <img src="./assets/UC-8b0c1224-de0e-4302-9066-98183497ca28.jpg" alt="" class="cert1">
+        <img src="./assets/phpmasterclass.JPG" alt="" class="cert1">
+        <img src="./assets/Introduction_to_Cybersecurity_Badge20240629-6-wxvtqh_page-0001.jpg" alt="" class="cert2">
         <img src="./assets/UC-7d5a52cf-9c58-48c6-9d60-1b0d0f1a2387.jpg" alt="" class="cert2">
+        <img src="./assets/UC-8b0c1224-de0e-4302-9066-98183497ca28.jpg" alt="" class="cert2">
         <img src="./assets/Melham.jpg" alt="" class="cert2">
         <img src="./assets/pixel8.jpg" alt="" class="cert2">
       </div>
@@ -557,6 +566,17 @@
               />
               <div>
                 <h3>Laravel</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/react.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>React</h3>
                 <p>Intermediate</p>
               </div>
             </article>
