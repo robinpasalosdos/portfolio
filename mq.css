@@ -58,7 +58,7 @@
         flex-direction: column;
     }
     .skill_all{
-        gap: 1rem;
+        gap: 2rem;
         margin-top: 0;
     }
     #next, #prev{
