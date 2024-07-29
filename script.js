@@ -225,7 +225,7 @@ function slideDown(){
   if (theme.classList.contains("open")) {
     tabContainer.style.background = '#eff0f3';
   }else{
-    tabContainer.style.background = '#000000';
+    tabContainer.style.background = '#414141';
   }
 }
 
@@ -237,7 +237,7 @@ function slideUp(){
   if (theme.classList.contains("open")) {
     tabContainer.style.background = '#eff0f3';
   }else{
-    tabContainer.style.background = '#000000';
+    tabContainer.style.background = '#414141';
   }
 }
 
