@@ -26,15 +26,15 @@
     color: var(--_primary_color);
 }
 body.open{
-    --bg_color: #F8EDED;
-    --card_bg: #B43F3F;
-    --navbar_color: #eff0f3;
+    --bg_color: #FBF7F7;
+    --card_bg: #F1E9E3;
+    --navbar_color: #F1E9E3;
     --primary_color: #0d0d0d;
-    --secondary_color: #d9376e;
+    --secondary_color: #DC4712;
     --toggle_position: translateX(31px);
     --title_color: #0d0d0d;
     --p_color: #2a2a2a;
-    --tag_color: #ff8e3c;
+    --tag_color: #EE712B;
 }
 
 p{
@@ -314,25 +314,7 @@ a:hover::before, a:hover::after {
     height: 400px;
     width: 400px;
     transition: all .6s ease-out;
-}
-
-.home_pic svg{
-    fill: var(--_primary_color);
-    animation: glow 3s ease-in infinite forwards;
-}
-@keyframes glow {
-    0%{
-        filter: drop-shadow(1px 1px 7px var(--_navbar_color));
-    }
-    40%{
-        filter: drop-shadow(1px 1px 7px var(--_secondary_color));
-    }
-    60%{
-        filter: drop-shadow(1px 1px 7px var(--_secondary_color));
-    }
-    100%{
-        filter: drop-shadow(1px 1px 7px var(--_navbar_color));
-    }
+    fill: var(--_secondary_color);
 }
 
 .home_details_card {
@@ -394,7 +376,7 @@ a:hover::before, a:hover::after {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin: 1.5rem;
+    margin: 1rem;
     overflow: hidden;
     width: 100%;
     align-items: center;
@@ -709,7 +691,6 @@ a:hover::before, a:hover::after {
     width: 100%;
     overflow: hidden;
     max-height: 12rem;
-    border: var(--_p_color) 2px solid;
     border-radius: 2rem;
 }
 .about_cover img{
@@ -731,11 +712,11 @@ a:hover::before, a:hover::after {
 .about_pic img{
     width: 18.75rem;
     height: 25rem;
-    border: var(--_p_color) 2px solid;
     border-radius: 2rem;
+    background: var(--_card_bg);
 }
+
 .about_bg{
-    border: var(--_p_color) 2px solid;
     border-radius: 2rem;
     padding: 2rem;
     flex: 1;
@@ -790,11 +771,11 @@ a:hover::before, a:hover::after {
     align-items: center;
     width: 30vw;
     gap: 2rem;
-    border: var(--_p_color) 2px solid;
     border-radius: 2rem;
     padding: 2rem;
     max-width: 55rem;
     width: 100%;
+    background: var(--_card_bg);
 
 }
 .skills h4{

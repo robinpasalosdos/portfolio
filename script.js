@@ -92,8 +92,8 @@ function applyTheme(logo, switchIcon, prof, load, next, prev, nav, themeName) {
     elements.theme.classList.add("open");
     changeImagesArray(elements.profileIcons, ['assets/linkedin.png', 'assets/github.png', 'assets/gmail.png']);
     changeImagesArray(elements.contactIcons, ['assets/gmail.png', 'assets/phone.png', 'assets/linkedin.png', 'assets/facebook.png']);
-    changeImagesArray(elements.ghIcons, Array(3).fill('assets/github.png'));
-    changeImagesArray(elements.eyeIcons, Array(3).fill('assets/eye.png'));
+    changeImagesArray(elements.ghIcons, Array(8).fill('assets/github.png'));
+    changeImagesArray(elements.eyeIcons, Array(8).fill('assets/eye.png'));
 
   }
 }
@@ -102,11 +102,11 @@ elements.themeToggle.addEventListener("click", function () {
   elements.theme.classList.toggle("open");
 
   if (elements.theme.classList.contains("open")) {
-    applyTheme('assets/logo_dark.png', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'assets/right_arrow.png','assets/left_arrow.png', '#eff0f3', 'light');
+    applyTheme('assets/logo_dark.png', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'assets/right_arrow.png','assets/left_arrow.png', '#F1E9E3', 'light');
     localStorage.setItem("theme", "light");
     
   } else {
-    applyTheme('assets/logo_white.png', 'assets/moon.png', 'assets/profile_dark.png','assets/loading_dark.gif','assets/right_arrow_dark.png','assets/left_arrow_dark.png', '#000000','dark');
+    applyTheme('assets/logo_white.png', 'assets/moon.png', 'assets/profile_dark.png','assets/loading_dark.gif','assets/right_arrow_dark.png','assets/left_arrow_dark.png', '#414141','dark');
     localStorage.setItem("theme", "dark");
     
   }
@@ -114,7 +114,7 @@ elements.themeToggle.addEventListener("click", function () {
 
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme == 'light') {
-  applyTheme('assets/logo_dark.png', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'assets/right_arrow.png','assets/left_arrow.png', '#eff0f3',  savedTheme);
+  applyTheme('assets/logo_dark.png', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'assets/right_arrow.png','assets/left_arrow.png', '#F1E9E3',  savedTheme);
 
 }
 
@@ -223,7 +223,7 @@ var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 function slideDown(){
   tabContainer.classList.remove("slide-up");
   if (theme.classList.contains("open")) {
-    tabContainer.style.background = '#eff0f3';
+    tabContainer.style.background = '#F1E9E3';
   }else{
     tabContainer.style.background = '#414141';
   }
@@ -235,7 +235,7 @@ function slideUp(){
 
   tabContainer.classList.add("slide-up");
   if (theme.classList.contains("open")) {
-    tabContainer.style.background = '#eff0f3';
+    tabContainer.style.background = '#F1E9E3';
   }else{
     tabContainer.style.background = '#414141';
   }
