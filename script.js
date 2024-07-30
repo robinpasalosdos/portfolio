@@ -83,15 +83,15 @@ function changeImagesArray(images, imagePaths) {
 function applyTheme(logo, switchIcon, prof, load, next, prev, nav, themeName) {
   changeImages(logo, switchIcon, prof, load, next, prev, nav);
   changeImagesArray(elements.profileIcons, ['assets/linkedin_dark.png', 'assets/github_dark.png', 'assets/gmail_dark.png']);
-  changeImagesArray(elements.contactIcons, ['assets/gmail_dark.png', 'assets/phone_dark.png', 'assets/linkedin_dark.png', 'assets/facebook_dark.png']);
-  changeImagesArray(elements.ghIcons, Array(3).fill('assets/github_dark.png'));
-  changeImagesArray(elements.eyeIcons, Array(3).fill('assets/eye_dark.png'));
+  changeImagesArray(elements.contactIcons, ['assets/gmail_dark.png', 'assets/linkedin_dark.png', 'assets/facebook_dark.png']);
+  changeImagesArray(elements.ghIcons, Array(8).fill('assets/github_dark.png'));
+  changeImagesArray(elements.eyeIcons, Array(8).fill('assets/eye_dark.png'));
   
 
   if (themeName === 'light') {
     elements.theme.classList.add("open");
     changeImagesArray(elements.profileIcons, ['assets/linkedin.png', 'assets/github.png', 'assets/gmail.png']);
-    changeImagesArray(elements.contactIcons, ['assets/gmail.png', 'assets/phone.png', 'assets/linkedin.png', 'assets/facebook.png']);
+    changeImagesArray(elements.contactIcons, ['assets/gmail.png', 'assets/linkedin.png', 'assets/facebook.png']);
     changeImagesArray(elements.ghIcons, Array(8).fill('assets/github.png'));
     changeImagesArray(elements.eyeIcons, Array(8).fill('assets/eye.png'));
 

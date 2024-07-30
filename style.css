@@ -21,10 +21,6 @@
 
 }
 
-#loaded{
-    display: none;
-    color: var(--_primary_color);
-}
 body.open{
     --bg_color: #FBF7F7;
     --card_bg: #F1E9E3;
@@ -80,8 +76,14 @@ body{
     align-items: center;
     z-index: 4000;
 }
-#loading{
+
+#loading_screen img{
     width: 3rem;
+}
+
+#loading_screen p{
+    display: none;
+    color: var(--_primary_color);
 }
 html {
     scroll-behavior: smooth;
@@ -107,7 +109,7 @@ html {
     width: 100%;
     place-items: center;
 }
-.logo{
+.logo_con img{
     height: 2rem;
     width: 2rem;
 }
