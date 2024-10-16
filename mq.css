@@ -30,9 +30,7 @@
     }
     .about_pic img{
         width: calc(30vw * .75);
-        height: calc(40vw * .75);
         min-width: 12rem;
-        min-height: 16rem;
     }
 }
 @media screen and (max-width: 900px) {
