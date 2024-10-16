@@ -62,10 +62,9 @@ function makeCall() {
   window.location.href = 'tel:+639302979295';
 }
 
-function changeImages(logo, slogo, prof, load, next, prev, nav) {
+function changeImages(logo, slogo, load, next, prev, nav) {
   elements.navLogo.src = logo;
   elements.switchLogo.src = slogo;
-  elements.profile.src = prof;
   elements.loading.src = load;
   elements.next.src = next;
   elements.prev.src = prev;
@@ -80,8 +79,8 @@ function changeImagesArray(images, imagePaths) {
   }
 }
 
-function applyTheme(logo, switchIcon, prof, load, next, prev, nav, themeName) {
-  changeImages(logo, switchIcon, prof, load, next, prev, nav);
+function applyTheme(logo, switchIcon, load, next, prev, nav, themeName) {
+  changeImages(logo, switchIcon, load, next, prev, nav);
   changeImagesArray(elements.profileIcons, ['assets/linkedin_dark.png', 'assets/github_dark.png', 'assets/gmail_dark.png']);
   changeImagesArray(elements.contactIcons, ['assets/gmail_dark.png', 'assets/linkedin_dark.png', 'assets/facebook_dark.png']);
   changeImagesArray(elements.ghIcons, Array(8).fill('assets/github_dark.png'));
@@ -102,11 +101,11 @@ elements.themeToggle.addEventListener("click", function () {
   elements.theme.classList.toggle("open");
 
   if (elements.theme.classList.contains("open")) {
-    applyTheme('assets/logo_dark.png', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'assets/right_arrow.png','assets/left_arrow.png', '#F1E9E3', 'light');
+    applyTheme('assets/logo_dark.png', 'assets/sun.png','assets/loading.gif', 'assets/right_arrow.png','assets/left_arrow.png', '#F1E9E3', 'light');
     localStorage.setItem("theme", "light");
     
   } else {
-    applyTheme('assets/logo_white.png', 'assets/moon.png', 'assets/profile_dark.png','assets/loading_dark.gif','assets/right_arrow_dark.png','assets/left_arrow_dark.png', '#414141','dark');
+    applyTheme('assets/logo_white.png', 'assets/moon.png', 'assets/loading_dark.gif','assets/right_arrow_dark.png','assets/left_arrow_dark.png', '#414141','dark');
     localStorage.setItem("theme", "dark");
     
   }
@@ -114,7 +113,7 @@ elements.themeToggle.addEventListener("click", function () {
 
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme == 'light') {
-  applyTheme('assets/logo_dark.png', 'assets/sun.png', 'assets/profile.png','assets/loading.gif', 'assets/right_arrow.png','assets/left_arrow.png', '#F1E9E3',  savedTheme);
+  applyTheme('assets/logo_dark.png', 'assets/sun.png', 'assets/loading.gif', 'assets/right_arrow.png','assets/left_arrow.png', '#F1E9E3',  savedTheme);
 
 }
 

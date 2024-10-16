@@ -412,7 +412,7 @@ a:hover::before, a:hover::after {
     text-decoration: none;
     cursor: pointer;
     color: var(--_title_color);
-    margin: 1rem 0 .5rem;
+    margin: 0 0 .5rem;
 }
 .card p{
     font-size: clamp(9px,3vw,11px);
@@ -422,17 +422,34 @@ a:hover::before, a:hover::after {
     color: var(--_p_color);
 }
 .project_img{
-    border-top-left-radius: 10px; 
-    border-top-right-radius: 10px;
-    display: block;
-    width: 100%;
+    width: 75%;
     transition: filter 0.3s ease;
-    overflow: hidden;
+    margin-top: 1rem;
+    border-radius: 15px;
 }
 
 .project_img_card{
     width: 100%;
     height: 12.1rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.project_img_card .hover-text {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 2rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project_img_card:hover .hover-text {
+    opacity: 1;
 }
 
 .project_img:hover{
@@ -692,7 +709,7 @@ a:hover::before, a:hover::after {
     width: 100%;
     overflow: hidden;
     max-height: 12rem;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
 }
 .about_cover img{
     width: 100%;
@@ -712,8 +729,7 @@ a:hover::before, a:hover::after {
 
 .about_pic img{
     width: 18.75rem;
-    height: 25rem;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     background: var(--_card_bg);
 }
 
