@@ -14,10 +14,10 @@
 }
 :root{
     --title_font_size: clamp(26px,3vw,34px);
-    --l: clamp(18px,3vw,20px);
-    --m: clamp(15px,3vw,17px);
-    --s: clamp(12px,3vw,14px);
-    --ss: 13px;
+    --l: clamp(21px,3vw,23px);
+    --m: clamp(18px,3vw,20px);
+    --s: clamp(15px,3vw,17px);
+    --ss: 16px;
 
 }
 
@@ -383,15 +383,14 @@ a:hover::before, a:hover::after {
     width: 100%;
     align-items: center;
     padding-bottom: 1rem;
-    max-width: 75.75rem;
+    max-width: 100rem;
     gap: 2rem;
 }
 
 .card {
     width: 24.2rem;
-    height: 24.2rem;
+    height: 23rem;
     border-radius: 10px;
-    background: var(--_card_bg);
     /*box-shadow: -1rem 1rem 3rem #01fff4;*/
     display: grid;
     align-items: center;
@@ -400,10 +399,12 @@ a:hover::before, a:hover::after {
     clear: both;
     position: relative;
     grid-template-rows: 5fr 1fr 3fr 1fr;
+    background-color: var(--_card_bg);
+    padding: 1.5rem;
+    
 }
 .card-header {
     text-align: center;
-    background: var(--_card_bg);
     z-index: 1000;
 
 }
@@ -412,7 +413,7 @@ a:hover::before, a:hover::after {
     text-decoration: none;
     cursor: pointer;
     color: var(--_title_color);
-    margin: 0 0 .5rem;
+    margin: .5rem 0 2rem;
 }
 .card p{
     font-size: clamp(9px,3vw,11px);
@@ -422,18 +423,20 @@ a:hover::before, a:hover::after {
     color: var(--_p_color);
 }
 .project_img{
-    width: 75%;
     transition: filter 0.3s ease;
-    margin-top: 1rem;
-    border-radius: 15px;
+
 }
 
 .project_img_card{
     width: 100%;
-    height: 12.1rem;
+    height: 13.7rem;
     display: flex;
     justify-content: center;
     position: relative;
+    background-color: var(--_card_bg);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 7px;
 }
 
 .project_img_card .hover-text {
@@ -458,7 +461,7 @@ a:hover::before, a:hover::after {
 .tags {
     display: flex;
     width: 100%;
-    padding: 0 1rem .5rem 1rem;
+    padding: 0 0 .5rem;
     
 }
 .tags .tools, .tags .proj_links{
@@ -539,6 +542,7 @@ a:hover::before, a:hover::after {
     width: 100%;
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
     gap: 2rem;
 }
 .exp, .educ{
@@ -558,7 +562,6 @@ a:hover::before, a:hover::after {
     border-radius: .8rem;
     height: 100%;
     margin-bottom: 2rem;
-    background: var(--_card_bg);
 }
 .exp_details{
     position: relative;
@@ -583,7 +586,7 @@ a:hover::before, a:hover::after {
     left: 0px;
     top:5px;
 }
-.exp_details h1, .exp_details h2, .exp_details p {
+.exp_details h1, .exp_details h2, .exp_details ul {
       margin-left: 40px;
     }
 .exp_details h1{
@@ -597,20 +600,22 @@ a:hover::before, a:hover::after {
     margin-bottom: .4rem;
     color: var(--_title_color);
 }
-.exp_details :first-child{
+.exp_details h1{
     color: var(--_secondary_color);
 }
-.exp_details :nth-child(3){
+.exp_details h2.company{
     font-size: var(--s);
     margin-bottom: .1rem;
     padding-left: .75rem;
 
 }
-.exp_details p{
+.exp_details ul{
     font-size: var(--s);
-    text-indent: 1.5rem;
+    padding-left: 2.5rem;
+}
+
+.exp_details ul li{
     color: var(--_p_color);
-    padding-left: 1rem;
 }
 .cert{
     max-width: 45rem;
@@ -764,56 +769,51 @@ a:hover::before, a:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     padding: 0 1rem 0 1rem;
     flex-direction: column;
+    
 }
 .skill_all{
     display: flex;
     gap: 2rem;
-    max-width: 75.75rem;
-    margin: 1rem 0 1rem;
     flex-wrap: wrap;
-}
-.skills{
-    flex: 1;
-}
-.skills:nth-child(2){
-    flex: .5;
+    flex-direction: column;
+    max-width: 80rem;
+    align-items: center;
+    
 }
 
 .skills{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30vw;
     gap: 2rem;
     border-radius: 2rem;
     padding: 2rem;
-    max-width: 55rem;
     width: 100%;
-    background: var(--_card_bg);
-
+    
 }
 .skills h4{
     color: var(--_title_color);
-    font-size: var(--m);
+    font-size: var(--l);
 }
 .skill{
     display: flex;
-    text-align: initial;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 2rem;
-    justify-content: space-around;
-    margin-right: 2rem;
+    justify-content: center;
+    
 }
 
 .skill article {
     display: flex;
-    width: 7rem;
-    justify-content: space-around;
-    gap: 0.5rem;
+    width: 12.4rem;
+    justify-content: center;
+    gap: 1rem;
+    padding: .5rem;
+    border-radius: 7px;
+    background-color: var(--_card_bg);
 }
 .skill article h3{
     color: var(--_title_color);
