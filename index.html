@@ -618,9 +618,7 @@
     <div class="card_list">
       <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-          <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-1')" >
-            <source src="./assets/pupclinic.mp4">
-          </video>
+          <img class="project_img" src="./assets/pupclinic.jpg" onclick="showDialogJanken('dialog-box-1')" >
           <img class="hover-text" src="./assets/eye_dark.png" onclick="showDialogJanken('dialog-box-1')">
         </div>
         <header class="card-header">
@@ -632,7 +630,7 @@
           <div class="tools">
             <a>PHP</a>
             <a>JQuery</a>
-            <a>Raspberry Pi</a>
+            <a>Raspi</a>
           </div>
           <div class="proj_links">
             <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/pupclinic', '_blank')">
@@ -641,9 +639,7 @@
       </article>
       <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-          <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-2')">
-            <source src="assets\janken.mp4">
-          </video>
+          <img class="project_img" src="./assets/janken.png" onclick="showDialogJanken('dialog-box-2')" >
           <img class="hover-text" src="./assets/eye_dark.png" onclick="showDialogJanken('dialog-box-2')">
         </div>
         <header class="card-header">
@@ -664,9 +660,7 @@
       </article>
       <article class="card" class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-          <video loop autoplay muted class="project_img" onclick='showDialog("dialog-box-5")'>
-            <source src="./assets/ModuleTracker.mp4">
-          </video>
+          <img class="project_img" src="./assets/module_tracker_pic.jpg" onclick="showDialogJanken('dialog-box-5')" >
           <img class="hover-text" src="./assets/eye_dark.png" onclick='showDialog("dialog-box-5")'>
         </div>
         <header class="card-header">
@@ -687,9 +681,7 @@
       </article>
       <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-            <video loop autoplay muted class="project_img" onclick="window.open('https://robinpasalosdos.github.io/portfolio/projects/pupqs', '_blank')">
-              <source src="./assets/pupqs.mp4">
-            </video>
+            <img class="project_img" src="./assets/pupqs.png" onclick="showDialogJanken('dialog-box-1')" >
             <img class="hover-text" src="./assets/eye_dark.png" onclick="window.open('https://robinpasalosdos.github.io/portfolio/projects/pupqs', '_blank')">
         </div>
         <header class="card-header">
@@ -711,9 +703,7 @@
       </article>
       <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-            <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-3')">
-              <source src="./assets/user_management.mp4">
-            </video>
+          <img class="project_img" src="./assets/login.png" onclick="showDialogJanken('dialog-box-3')" >
             <img class="hover-text" src="./assets/eye_dark.png" onclick="showDialogJanken('dialog-box-3')">
         </div>
         <header class="card-header">
@@ -733,9 +723,7 @@
       </article>
       <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-            <video loop autoplay muted class="project_img" onclick="showDialogJanken('dialog-box-4')">
-              <source src="./assets/Eflood.mp4">
-            </video>
+          <img class="project_img" src="./assets/eflood.png" onclick="showDialogJanken('dialog-box-4')" >
             <img class="hover-text" src="./assets/eye_dark.png" onclick="showDialogJanken('dialog-box-4')">
         </div>
         <header class="card-header">
@@ -758,9 +746,25 @@
   </section>
   <div class="dialog-box" id="dialog-box-1">
     <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-1")'>
-    <video loop autoplay class="dialog_video" controls>
-      <source src="assets/pupclinic.mp4">
-    </video>
+      <video loop autoplay class="dialog_video" >
+        <source src="./assets/pupclinic.mp4">
+      </video>
+      <img class="hover-text" src="./assets/eye_dark.png" onclick="showDialogJanken('dialog-box-1')">
+    <header class="card-header">
+      <h2>PUP Clinic</h2>
+    </header>
+    <!-- <p>A thesis project that integrates electronic health records to streamline recording and assessing vital signs, improving the efficiency of measuring blood pressure, heart rate, temperature, oxygen, height, and weight.
+    </p> -->
+    <div class="tags">
+      <div class="tools">
+        <a>PHP</a>
+        <a>JQuery</a>
+        <a>Raspberry Pi</a>
+      </div>
+      <div class="proj_links">
+        <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/pupclinic', '_blank')">
+      </div>
+    </div>
   </div>
   <div class="overlay" id="overlay"></div>
   <div class="dialog-box" id="dialog-box-2">
@@ -798,25 +802,45 @@
               <li>Contributed to a company project, developing a website using WordPress with Elementor plugin.</li>
               <li>Assisted in creating a privacy policy page for the Ploom Heat project using ASP.NET.</li>
             </ul>
+            <div class="tags exp_tags">
+              <div class="exp_tools">
+                <a>WordPress</a>
+                <a>ASP.NET</a>
+              </div>
+            </div>
           </article>
           <article class="exp_details">
             <h1>2022</h1>
-            <h2>Backend Developer Intern</h2>
+            <h2>Full Stack Developer Intern</h2>
             <h2 class="company">Melham Construction Corporation</h2>
             <ul>
               <li>Designed and developed an event booking website with fullstack functionalities.</li>
               <li>Ensured mobile responsiveness and cross-browser compatibility.</li>
             </ul>
+            <div class="tags exp_tags">
+              <div class="exp_tools">
+                <a>PHP</a>
+                <a>MySQL</a>
+              </div>
+            </div>
           </article>
           <article class="exp_details">
             <h1>2021</h1>
-            <h2>Web Developer Intern</h2>
+            <h2>Full Stack Developer Intern</h2>
             <h2 class="company">Pixel8 Web Solutions Inc.</h2>
             <ul>
               <li>Developed a secure login and user management system using Vue.js and Quasar Framework.</li>
               <li>Completed my first full website project, delivering a major task during the internship.</li>
               <li>Demonstrated strong problem-solving skills and web development potential.</li>
             </ul>
+            <div class="tags exp_tags">
+              <div class="exp_tools">
+                <a>PHP</a>
+                <a>VueJS</a>
+                <a>Quasar</a>
+                <a>MySQL</a>
+              </div>
+            </div>
           </article>
           <article class="exp_details">
             <h1>2019</h1>
@@ -826,6 +850,11 @@
               <li>Drafted structural designs for prefabricated buildings.</li>
               <li>Managed project files and hardcopy documents for the team.</li>
             </ul>
+            <div class="tags exp_tags">
+              <div class="exp_tools">
+                <a>AutoCAD</a>
+              </div>
+            </div>
           </article>
         </div>
       </div>

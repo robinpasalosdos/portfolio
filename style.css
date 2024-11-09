@@ -477,10 +477,9 @@ a:hover::before, a:hover::after {
     width: 80%;
 }
 .tags a {
-    font-size: .3rem;
+    font-size: 12px;
     color: #fffffe;
     text-transform: uppercase;
-    font-size: .66rem;
     border-radius: 2rem;
     padding: .2rem .85rem .25rem;
     position: relative;
@@ -563,6 +562,7 @@ a:hover::before, a:hover::after {
 }
 .exp_details{
     position: relative;
+    padding-left: 3rem;
     
 }
 .exp_details::before, .exp_details h1::before {
@@ -584,9 +584,7 @@ a:hover::before, a:hover::after {
     left: 0px;
     top:5px;
 }
-.exp_details h1, .exp_details h2, .exp_details ul {
-      margin-left: 40px;
-    }
+
 .exp_details h1{
     font-size: var(--l);
     margin-bottom: .4rem;
@@ -614,6 +612,15 @@ a:hover::before, a:hover::after {
 
 .exp_details ul li{
     color: var(--_p_color);
+}
+
+.exp_tags{
+    padding-top: 1.5rem;
+    padding-left: .5rem;
+}
+.exp_tools{
+    display: flex;
+    gap: .5rem;
 }
 .cert{
     max-width: 45rem;
