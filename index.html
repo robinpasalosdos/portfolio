@@ -615,8 +615,16 @@
   <section id="projects" class="section">
     <p class="section_text_p1" data-aos="fade-up">Browse my</p>
     <h1 class="section_title" data-aos="fade-up">Projects</h1>
+    <div class="project_sections">
+      <ul id="project_links">
+        <li class="project_link" data-aos="fade-down-right" data-aos-delay="600"><a class="active" onclick="filterSelection('all')">Show All</a></li>
+        <li class="project_link" data-aos="fade-down" data-aos-delay="700"><a onclick="filterSelection('web')">Web</a></li>
+        <li class="project_link" data-aos="fade-down" data-aos-delay="800"><a onclick="filterSelection('games')">Games</a></li>
+        <li class="project_link" data-aos="fade-down-left" data-aos-delay="900"><a onclick="filterSelection('mobile')">Mobile</a></li>
+      </ul>
+    </div>
     <div class="card_list">
-      <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
+      <article class="card web" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
           <img class="project_img" src="./assets/pupclinic.jpg" onclick="showDialogJanken('dialog-box-1')" >
           <img class="hover-text" src="./assets/eye_dark.png" onclick="showDialogJanken('dialog-box-1')">
@@ -629,7 +637,7 @@
         <div class="tags">
           <div class="tools">
             <a>PHP</a>
-            <a>JQuery</a>
+            <a>Python</a>
             <a>Raspi</a>
           </div>
           <div class="proj_links">
@@ -637,7 +645,7 @@
           </div>
         </div>
       </article>
-      <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
+      <article class="card games" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
           <img class="project_img" src="./assets/janken.png" onclick="showDialogJanken('dialog-box-2')" >
           <img class="hover-text" src="./assets/eye_dark.png" onclick="showDialogJanken('dialog-box-2')">
@@ -658,7 +666,7 @@
           </div>
         </div>
       </article>
-      <article class="card" class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
+      <article class="card mobile" class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
           <img class="project_img" src="./assets/module_tracker_pic.jpg" onclick="showDialogJanken('dialog-box-5')" >
           <img class="hover-text" src="./assets/eye_dark.png" onclick='showDialog("dialog-box-5")'>
@@ -679,7 +687,7 @@
           </div>
         </div>
       </article>
-      <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
+      <article class="card web" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
             <img class="project_img" src="./assets/pupqs.png" onclick="showDialogJanken('dialog-box-1')" >
             <img class="hover-text" src="./assets/eye_dark.png" onclick="window.open('https://robinpasalosdos.github.io/portfolio/projects/pupqs', '_blank')">
@@ -701,7 +709,7 @@
           </div>
         </div>
       </article>
-      <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
+      <article class="card web" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
           <img class="project_img" src="./assets/login.png" onclick="showDialogJanken('dialog-box-3')" >
             <img class="hover-text" src="./assets/eye_dark.png" onclick="showDialogJanken('dialog-box-3')">
@@ -721,7 +729,7 @@
           </div>
         </div>
       </article>
-      <article class="card" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
+      <article class="card web" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
           <img class="project_img" src="./assets/eflood.png" onclick="showDialogJanken('dialog-box-4')" >
             <img class="hover-text" src="./assets/eye_dark.png" onclick="showDialogJanken('dialog-box-4')">
@@ -749,12 +757,11 @@
       <video loop autoplay class="dialog_video" >
         <source src="./assets/pupclinic.mp4">
       </video>
-      <img class="hover-text" src="./assets/eye_dark.png" onclick="showDialogJanken('dialog-box-1')">
     <header class="card-header">
       <h2>PUP Clinic</h2>
     </header>
-    <!-- <p>A thesis project that integrates electronic health records to streamline recording and assessing vital signs, improving the efficiency of measuring blood pressure, heart rate, temperature, oxygen, height, and weight.
-    </p> -->
+    <p>A thesis project that integrates electronic health records to streamline recording and assessing vital signs, improving the efficiency of measuring blood pressure, heart rate, temperature, oxygen, height, and weight.
+    </p>
     <div class="tags">
       <div class="tools">
         <a>PHP</a>
