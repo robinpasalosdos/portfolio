@@ -93,6 +93,10 @@
         display: none;
     }
 
+    .dialog_video{
+        border-radius: 1rem;
+    }
+
 }
 @media screen and (max-width: 380px) {
     .card{

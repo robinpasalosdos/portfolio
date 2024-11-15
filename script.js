@@ -3,7 +3,7 @@
 const menu = document.querySelector(".mobile_nav_sections");
 const icon = document.querySelector(".hamburger_icon");
 const projectMenu = document.querySelector(".mobile_project_sections");
-const projectIcon = document.querySelector(".project_hamburger_icon");
+const projectIcon = document.querySelector(".project_hamburger_menu");
 
 function toggleMenu() {
     menu.classList.toggle("open");
@@ -46,7 +46,7 @@ const elements = {
 
 AOS.init({
   disable: false,
-  startEvent: 'load',
+  startEvent: 'scroll',
   delay: 0,
   duration: 250,
   once: true,
@@ -299,7 +299,7 @@ function handleScroll() {
   });
 }
 document.addEventListener('DOMContentLoaded', function() {
-  const elementsToHandle = ['.head_nav_sections', '.mobile_nav_sections', '.nav_footer_links'];
+  const elementsToHandle = ['.head_nav_sections', '.mobile_nav_sections', '.nav_footer_links', '.mobile_project_sections'];
 
   // Common function to attach the event listener with a delay for slideUp
   const attachEventListener = (element) => {
@@ -343,7 +343,10 @@ document.addEventListener("DOMContentLoaded", function(){
   
   function toggleNavigation() {
     next.style.opacity = currentIndex < certificates.length - 1 ? '1' : '.3';
-    prev.style.opacity = currentIndex > 0 ? '1' : '.3';
+  next.style.cursor = currentIndex < certificates.length - 1 ? 'pointer' : 'default';
+
+  prev.style.opacity = currentIndex > 0 ? '1' : '.3';
+  prev.style.cursor = currentIndex > 0 ? 'pointer' : 'default';
     certNav.textContent = `${currentIndex + 1} / ${certificates.length}`;
   }
   

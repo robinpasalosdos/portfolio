@@ -112,9 +112,6 @@ html {
     height: 2rem;
     width: 2rem;
 }
-.project_sections{
-    background-color: #a7a9be
-}
 .head_nav_sections, .hamburger_menu, .project_sections{
     width: 100%;
     height: clamp(3.5rem,10vw,4rem);
@@ -129,6 +126,7 @@ html {
     list-style: none;
     font-size: 1.5rem;
     display: flex;
+    cursor: pointer;
 }
 a{
     color: var(--_title_color);
@@ -184,6 +182,7 @@ a.active::before, a.active::after{
     transition: 0.5s all ease;
     z-index: 100;
     transform: var(--_toggle_position);
+    cursor: pointer;
 }
 #sun_n_moon{
     height: 19px;
@@ -224,11 +223,13 @@ a.active::before, a.active::after{
     top: 100px;
     left: 0;
     width: 10rem;
-    background: lightblue;
     padding: 2rem;
     display: none;
     z-index: 5000;
     margin-left: 16px;
+    background: var(--_navbar_color);
+    border: solid 2px #0d0d0d;
+    
 
 }
 
@@ -400,8 +401,8 @@ a.active::before, a.active::after{
     width: 100%;
     padding-bottom: 3rem;
     flex-direction: column;
-
 }
+
 .card_list {
     display: flex;
     flex-wrap: wrap;
@@ -430,7 +431,6 @@ a.active::before, a.active::after{
     background-color: var(--_card_bg);
     padding: 1.5rem;
     display: none;
-    
 }
 
 .show_card{
@@ -440,7 +440,6 @@ a.active::before, a.active::after{
 .card-header {
     text-align: center;
     z-index: 1000;
-
 }
 .card-header h2 {
     font-size: clamp(16px,3vw,17px);
@@ -461,7 +460,6 @@ a.active::before, a.active::after{
 }
 .project_img{
     transition: filter 0.3s ease;
-
 }
 
 .project_img_card{
@@ -473,7 +471,7 @@ a.active::before, a.active::after{
     background-color: var(--_card_bg);
     margin-bottom: 1rem;
     overflow: hidden;
-    border-radius: 7px;
+    cursor: pointer;
 }
 
 .project_img_card .hover-text {
@@ -510,6 +508,9 @@ a.active::before, a.active::after{
     justify-content: flex-end;
     width: 20%;
 }
+.proj_links{
+    cursor: pointer;
+}
 .tags .tools{
     width: 80%;
 }
@@ -539,6 +540,7 @@ a.active::before, a.active::after{
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 9000;
 }
 
 .dialog-box {
@@ -547,9 +549,9 @@ a.active::before, a.active::after{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #DC4712;
+    background-color: var(--_card_bg);
     border-radius: 1.5rem;
-    box-shadow: 0 4px 8px var(--_card_shadow);
+    border: 3px solid #0d0d0d;
     width: clamp(320px, 100vw, 800px);
     height: fit-content;
     z-index: 8000;
@@ -565,7 +567,6 @@ a.active::before, a.active::after{
 }
 .dialog_video{
     width: 100%;
-    border-radius: 1rem;
 }
 .mt{
     width: 100%;
