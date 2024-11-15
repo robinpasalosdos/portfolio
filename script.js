@@ -137,6 +137,7 @@ const bodyElement = document.body;
 
 const dialogVideos = document.querySelectorAll('.dialog_video');
 const overlay = document.getElementById('overlay');
+const dialogContainer = document.getElementById('dialog_container');
 
 dialogVideos.forEach(video => {
   video.pause();
@@ -149,18 +150,20 @@ function getIndexFromDialogBox(dialogBox) {
 
 function playDialogVideo(dialogBox) {
     const index = getIndexFromDialogBox(dialogBox);
-    dialogVideos[index].currentTime = 0;
-    dialogVideos[index].play();
+      dialogVideos[index].currentTime = 0;
+      dialogVideos[index].play();
 }
 
 function pauseDialogVideo(dialogBox) {
     const index = getIndexFromDialogBox(dialogBox);
-    dialogVideos[index].pause();
-    dialogVideos[index].currentTime = 0;
+      dialogVideos[index].pause();
+      dialogVideos[index].currentTime = 0;
+    
 }
 
 function showDialog(dialogBox) {
     overlay.style.display = "block";
+    dialogContainer.style.display = "block";
     document.getElementById(dialogBox).style.display = "block";
     document.documentElement.style.overflowY = "hidden";
     document.body.style.overflowY = "hidden";
@@ -169,6 +172,7 @@ function showDialog(dialogBox) {
 
 function hideDialog(dialogBox) {
     overlay.style.display = "none";
+    dialogContainer.style.display = "none";
     document.getElementById(dialogBox).style.display = "none";
     document.documentElement.style.overflowY = "auto";
     document.body.style.overflowY = "auto";
@@ -176,11 +180,11 @@ function hideDialog(dialogBox) {
 
 document.addEventListener('click', function (event) {
     if (event.target === overlay) {
-        hideDialogJanken("dialog-box-1");
-        hideDialogJanken("dialog-box-2");
-        hideDialogJanken("dialog-box-3");
-        hideDialogJanken("dialog-box-4");
-        hideDialog("dialog-box-5");
+      hideDialogJanken("dialog-box-1");
+      hideDialogJanken("dialog-box-2");
+      hideDialogJanken("dialog-box-3");
+      hideDialogJanken("dialog-box-4");
+      hideDialog("dialog-box-5");
     }
 });
 

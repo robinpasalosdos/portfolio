@@ -32,6 +32,9 @@
         width: calc(30vw * .75);
         min-width: 12rem;
     }
+    .about_text p{
+        text-align: justify;
+    }
     #home {
         flex-direction: column;
         gap: 2rem;
@@ -99,12 +102,7 @@
 
 }
 @media screen and (max-width: 380px) {
-    .card{
-        min-width: 21rem;
-        min-height: 21rem;
-        height: 90vw;
-        margin: .5rem 1rem .5rem 1rem;   
-    }
+
 }
 @media screen and (max-width: 320px) {
 

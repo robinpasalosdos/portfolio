@@ -683,7 +683,7 @@
       </article>
       <article class="card mobile">
         <div class="project_img_card">
-          <img class="project_img" src="./assets/module_tracker_pic.jpg" onclick="showDialogJanken('dialog-box-5')" >
+          <img class="project_img" src="./assets/module_tracker_pic.jpg" onclick="showDialog('dialog-box-5')" >
           <img class="hover-text" src="./assets/eye_dark.png" onclick='showDialog("dialog-box-5")'>
         </div>
         <header class="card-header">
@@ -767,109 +767,112 @@
       </article>
     </div>
   </section>
-  <div class="dialog-box" id="dialog-box-1">
-    <div>
-      <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-1")'>
-      <video loop autoplay class="dialog_video" >
-        <source src="./assets/pupclinic.mp4">
+  <div class="overlay" id="overlay"></div>
+  <div id="dialog_container">
+    <div class="dialog-box" id="dialog-box-1">
+      <div>
+        <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-1")'>
+        <video loop autoplay class="dialog_video" >
+          <source src="./assets/pupclinic.mp4">
+        </video>
+        <header class="card-header">
+          <h2>PUP Clinic</h2>
+        </header>
+        <p>A thesis project that integrates electronic health records to streamline recording and assessing vital signs, improving the efficiency of measuring blood pressure, heart rate, temperature, oxygen, height, and weight.
+        </p>
+        <div class="tags">
+          <div class="tools">
+            <a>PHP</a>
+            <a>Python</a>
+            <a>Raspi</a>
+          </div>
+          <div class="proj_links">
+            <img class="visit_link" src="./assets/visit_link_dark.png" alt="" onclick="window.open('https://robinpasalosdos.vercel.app/projects/pupqs/', '_blank')">
+            <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/pupclinic', '_blank')">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dialog-box" id="dialog-box-2">
+      <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-2")'>
+      <video loop autoplay class="dialog_video" controls>
+        <source src="assets\janken.mp4" >
       </video>
       <header class="card-header">
-        <h2>PUP Clinic</h2>
+        <h2>Janken Wars</h2>
       </header>
-      <p>A thesis project that integrates electronic health records to streamline recording and assessing vital signs, improving the efficiency of measuring blood pressure, heart rate, temperature, oxygen, height, and weight.
+      <p>This Unity-based 3D game is inspired by the classic rock, paper, and scissors game. 
+        In this 2 player game, each player engages in battles in janken battlefields, adding a strategic twist to this classic showdown.
       </p>
       <div class="tags">
         <div class="tools">
-          <a>PHP</a>
-          <a>Python</a>
-          <a>Raspi</a>
+          <a>Unity</a>
+          <a>Unity3d</a>
         </div>
         <div class="proj_links">
-          <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/pupclinic', '_blank')">
+          <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars', '_blank')">
         </div>
       </div>
     </div>
-  </div>
-  <div class="overlay" id="overlay"></div>
-  <div class="dialog-box" id="dialog-box-2">
-    <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-2")'>
-    <video loop autoplay class="dialog_video" controls>
-      <source src="assets\janken.mp4" >
-    </video>
-    <header class="card-header">
-      <h2>Janken Wars</h2>
-    </header>
-    <p>This Unity-based 3D game is inspired by the classic rock, paper, and scissors game. 
-      In this 2 player game, each player engages in battles in janken battlefields, adding a strategic twist to this classic showdown.
-    </p>
-    <div class="tags">
-      <div class="tools">
-        <a>Unity</a>
-        <a>Unity3d</a>
+    <div class="dialog-box dialog_videos" id="dialog-box-3">
+      <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-3")'>
+      <video loop autoplay class="dialog_video" controls muted>
+        <source src="assets\user_management.mp4">
+      </video>
+      <header class="card-header">
+        <h2>Login and User Management</h2>
+      </header>
+      <p>Develop a web-based task management application with an interface designed for both user-friendliness 
+        and administrative ease, allowing users to effortlessly organize and track their todos.</p>
+      <div class="tags">
+        <div class="tools">
+          <a>Quasar</a>
+          <a>VueJS</a>
+        </div>
+        <div class="proj_links">
+          <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Login', '_blank')">
+        </div>
       </div>
-      <div class="proj_links">
-        <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars', '_blank')">
+      
+    </div>
+    <div class="dialog-box dialog_videos" id="dialog-box-4">
+      <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-4")'>
+      <video loop autoplay class="dialog_video" controls muted>
+        <source src="assets\Eflood.mp4">
+      </video>
+      <header class="card-header">
+        <h2>Eflood</h2>
+      </header>
+      <p>Develop a website for a selected barangay with the primary goal of issuing 
+        timely flood warnings to residents, enhancing community preparedness and safety.</p>
+      <div class="tags">
+        <div class="tools">
+          <a>PHP</a>
+          <a>JQuery</a>
+          <a>Bootstrap</a>
+        </div>
+        <div class="proj_links">
+          <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Eflood', '_blank')">
+        </div>
       </div>
     </div>
-  </div>
-  <div class="dialog-box dialog_videos" id="dialog-box-3">
-    <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-3")'>
-    <video loop autoplay class="dialog_video" controls muted>
-      <source src="assets\user_management.mp4">
-    </video>
-    <header class="card-header">
-      <h2>Login and User Management</h2>
-    </header>
-    <p>Develop a web-based task management application with an interface designed for both user-friendliness 
-      and administrative ease, allowing users to effortlessly organize and track their todos.</p>
-    <div class="tags">
-      <div class="tools">
-        <a>Quasar</a>
-        <a>VueJS</a>
-      </div>
-      <div class="proj_links">
-        <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Login', '_blank')">
-      </div>
-    </div>
-    
-  </div>
-  <div class="dialog-box dialog_videos" id="dialog-box-4">
-    <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-4")'>
-    <video loop autoplay class="dialog_video" controls muted>
-      <source src="assets\Eflood.mp4">
-    </video>
-    <header class="card-header">
-      <h2>Eflood</h2>
-    </header>
-    <p>Develop a website for a selected barangay with the primary goal of issuing 
-      timely flood warnings to residents, enhancing community preparedness and safety.</p>
-    <div class="tags">
-      <div class="tools">
-        <a>PHP</a>
-        <a>JQuery</a>
-        <a>Bootstrap</a>
-      </div>
-      <div class="proj_links">
-        <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Eflood', '_blank')">
-      </div>
-    </div>
-  </div>
-  <div class="dialog-box" id="dialog-box-5">
-    <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-5")'>
-    <img src="assets/mt.png" alt="" class="mt">
-    <header class="card-header">
-      <h2>Module Tracker</h2>
-    </header>
-    <p>This app streamlines the module distribution process, making it easier for educators to ensure that students receive the 
-      materials they need for their studies.
-    </p>
-    <div class="tags">
-      <div class="tools">
-        <a>Android Stu.</a>
-        <a>Firebase</a>
-      </div>
-      <div class="proj_links">
-        <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Module%20Tracker', '_blank')">
+    <div class="dialog-box" id="dialog-box-5">
+      <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-5")'>
+      <img src="assets/mt.png" alt="" class="mt">
+      <header class="card-header">
+        <h2>Module Tracker</h2>
+      </header>
+      <p>This app streamlines the module distribution process, making it easier for educators to ensure that students receive the 
+        materials they need for their studies.
+      </p>
+      <div class="tags">
+        <div class="tools">
+          <a>Android Stu.</a>
+          <a>Firebase</a>
+        </div>
+        <div class="proj_links">
+          <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Module%20Tracker', '_blank')">
+        </div>
       </div>
     </div>
   </div>
