@@ -1,4 +1,4 @@
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
     .hamburger_menu{
         display: grid;
     }
@@ -33,7 +33,7 @@
         min-width: 12rem;
     }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
     #home {
         flex-direction: column;
         gap: 2rem;
@@ -75,7 +75,7 @@
 @media screen and (max-width: 750px) {
 
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
     .nav_footer_links{
         flex-direction: column;
         align-items: center;
@@ -89,6 +89,10 @@
     }
     .dialog_x{
         top: -17%;
+    }
+
+    .project_sections{
+        display: none;
     }
 
 }

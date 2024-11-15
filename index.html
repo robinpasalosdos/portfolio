@@ -17,7 +17,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-EDST3SNFG4');
     </script>
 </head>
@@ -612,6 +611,21 @@
       </div>
     </div>
   </section>
+  <div class="project_hamburger_menu" data-aos="flip-up" data-aos-delay="1250" data-aos-duration="800">
+    <div class="hamburger_icon" onclick="projectToggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+  </div>
+  <div class="mobile_project_sections">
+    <ul>
+      <li><a onclick="filterSelection('all');projectToggleMenu();">Show All</a></li>
+      <li><a onclick="filterSelection('web');projectToggleMenu();">Web</a></li>
+      <li><a onclick="filterSelection('games');projectToggleMenu();">Games</a></li>
+      <li><a onclick="filterSelection('mobile');projectToggleMenu();">Mobile</a></li>
+    </ul>
+  </div>
   <section id="projects" class="section">
     <p class="section_text_p1" data-aos="fade-up">Browse my</p>
     <h1 class="section_title" data-aos="fade-up">Projects</h1>
@@ -623,6 +637,7 @@
         <li class="project_link" data-aos="fade-down-left" data-aos-delay="900"><a onclick="filterSelection('mobile')">Mobile</a></li>
       </ul>
     </div>
+    
     <div class="card_list">
       <article class="card web" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
         <div class="project_img_card">

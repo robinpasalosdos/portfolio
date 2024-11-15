@@ -2,10 +2,16 @@
 
 const menu = document.querySelector(".mobile_nav_sections");
 const icon = document.querySelector(".hamburger_icon");
+const projectMenu = document.querySelector(".mobile_project_sections");
+const projectIcon = document.querySelector(".project_hamburger_icon");
 
 function toggleMenu() {
     menu.classList.toggle("open");
     icon.classList.toggle("open");
+}
+function projectToggleMenu() {
+  projectMenu.classList.toggle("open");
+  projectIcon.classList.toggle("open");
 }
 
 
@@ -392,6 +398,46 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
   
+// Select the elements
+const projectDiv = document.querySelector('#projects');
+const fixedDiv = document.querySelector('.project_hamburger_menu');
+
+// Set up the intersection observer
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Show the fixed div when the project div is on screen
+        fixedDiv.style.display = 'block';
+      } else {
+        // Hide the fixed div when the project div is out of view
+        fixedDiv.style.display = 'none';
+      }
+    });
+  },
+  { threshold: [0.1, 1] }
+);
+
+// Function to apply observer based on media query
+function applyObserver() {
+  // Check if screen width is at most 640px
+  const mediaQuery = window.matchMedia('(max-width: 640px)');
+  
+  if (mediaQuery.matches) {
+    // If screen width is <= 640px, observe the project div
+    observer.observe(projectDiv);
+  } else {
+    // If screen width is > 640px, unobserve the project div and hide fixed div
+    observer.unobserve(projectDiv);
+    fixedDiv.style.display = 'none';
+  }
+}
+
+// Add a listener to apply observer on resize
+window.addEventListener('resize', applyObserver);
+
+// Initial call to set observer based on current screen size
+applyObserver();
 
 
 
