@@ -32,8 +32,6 @@
         width: calc(30vw * .75);
         min-width: 12rem;
     }
-}
-@media screen and (max-width: 1024px) {
     #home {
         flex-direction: column;
         gap: 2rem;
@@ -70,8 +68,8 @@
         align-items: center;
         gap: 6rem;
     }
-
 }
+
 @media screen and (max-width: 750px) {
 
 }
@@ -87,8 +85,8 @@
     #contact_strip{
         gap: 1.2rem;
     }
-    .dialog_x{
-        top: -17%;
+    .dialog-box{
+        padding: 2rem;
     }
 
     .project_sections{

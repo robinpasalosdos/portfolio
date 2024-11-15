@@ -450,11 +450,14 @@ a.active::before, a.active::after{
     margin: .5rem 0 2rem;
 }
 .card p, .dialog-box p{
-    font-size: clamp(9px,3vw,11px);
-    margin: 0 1rem 0 1rem;
+    font-size: clamp(14px, 2vw + 3px, 16px);
     align-self: flex-start;
     text-indent: 2em;
     color: var(--_p_color);
+    text-align: justify;
+}
+.dialog-box p{
+    margin-bottom: 2rem;
 }
 .project_img{
     transition: filter 0.3s ease;
@@ -544,15 +547,15 @@ a.active::before, a.active::after{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--_card_bg);
+    background-color: #DC4712;
     border-radius: 1.5rem;
     box-shadow: 0 4px 8px var(--_card_shadow);
     width: clamp(320px, 100vw, 800px);
     height: fit-content;
-    z-index: 3000;
+    z-index: 8000;
     padding: 4rem;
-    
 }
+
 .dialog_x{
     position: absolute;
     right: 1%;

@@ -415,7 +415,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: [0.1, 1] }
+  { threshold: [0.2, 1] }
 );
 
 // Function to apply observer based on media query
