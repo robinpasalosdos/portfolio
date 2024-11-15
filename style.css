@@ -410,9 +410,10 @@ a.active::before, a.active::after{
     overflow: hidden;
     width: 100%;
     align-items: center;
-    padding-bottom: 1rem;
+    padding: 0 25px 1rem;
     max-width: 100rem;
     gap: 2rem;
+    
 }
 
 .card {
@@ -429,7 +430,6 @@ a.active::before, a.active::after{
     background-color: var(--_card_bg);
     padding: 1.5rem;
     display: none;
-    margin-inline: 25px;
 }
 
 .show_card{
