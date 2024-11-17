@@ -185,6 +185,7 @@ document.addEventListener('click', function (event) {
       hideDialogJanken("dialog-box-3");
       hideDialogJanken("dialog-box-4");
       hideDialog("dialog-box-5");
+      hideDialog("dialog-box-6");
     }
 });
 
