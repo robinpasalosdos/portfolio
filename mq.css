@@ -101,8 +101,24 @@
     }
 
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 420px) {
+    .skill{
+        gap: 1rem;  
+    }
+    .skill article {
+        width: 10rem;
+        gap: .7rem;
+        padding: .65rem;
+        border-radius: 6px;
+    }
+    .skill article h3, .skill article h5, .skill article p{
+        font-size: 14px;
+    }
 
+    .icon, .contact_icon{
+        width: 2rem;
+        height: 2rem;
+    }
 }
 @media screen and (max-width: 320px) {
 
