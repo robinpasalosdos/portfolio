@@ -16,7 +16,7 @@
     --title_font_size: clamp(26px,3vw,34px);
     --l: clamp(21px,3vw,23px);
     --m: clamp(18px,3vw,20px);
-    --s: clamp(15px,3vw,17px);
+    --s: clamp(16px,3vw,18px);
     --ss: 16px;
 
 }
@@ -133,7 +133,12 @@ a{
     text-decoration: none;
     position: relative;
 }
-
+a:hover {
+    color: var(--_p_color);
+}
+a.active{
+    color: var(--_title_color);
+}
 a::before, a::after{
     content: "";
     display: block;
@@ -142,11 +147,12 @@ a::before, a::after{
     background-color: var(--_tag_color);
     position: absolute;
     bottom: -15%;
-    left: 50%;
+    left: 49%;
     transition: width 0.2s ease, left 0.2s ease;
 }
 a::before{
     transform: translateX(-100%);
+    left: 51%;
 }
 
 a:hover::before, a:hover::after, a.active::before, a.active::after{
@@ -278,7 +284,7 @@ a.active::before, a.active::after{
     color: var(--_p_color);
     font-weight: 600;
     padding-top: clamp(1rem,2vw,2rem);
-    font-size: clamp(13px,3vw,16px);
+    font-size: clamp(14px,3vw,16px);
 }
 .section_title, .section_title_me{
     font-size: var(--title_font_size);
@@ -335,7 +341,7 @@ a.active::before, a.active::after{
 .home_text_p1 {
     text-align: center;
     color: var(--_p_color);
-    font-size: clamp(13px,1.25vw,18px);
+    font-size: clamp(14px,1.25vw,18px);
 }
 #home_text_p2 {
     margin-bottom: 1.5rem;
@@ -425,11 +431,12 @@ a.active::before, a.active::after{
     margin: .5rem 0 2rem;
 }
 .card p, .dialog-box p{
-    font-size: clamp(9px,3vw,11px);
+    font-size: clamp(14px,3vw,16px);
     margin: 0 1rem 0 1rem;
     align-self: flex-start;
     text-indent: 2em;
     color: var(--_p_color);
+    line-height: 1.5;
 }
 .project_img{
     transition: filter 0.3s ease;
