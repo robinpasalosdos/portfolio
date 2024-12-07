@@ -461,6 +461,13 @@ a.active::before, a.active::after{
     color: var(--_p_color);
     line-height: 1.5;
 }
+.dialog-box p{
+    margin-bottom: 3rem;
+}
+.dialog-box img{
+    max-height: 26rem;
+}
+
 .project_img{
     transition: filter 0.3s ease;
 }
@@ -562,7 +569,7 @@ a.active::before, a.active::after{
     width: 100%;
     height: fit-content;
     display: none;
-    padding: 4rem;
+    padding: 4rem 4rem 2rem 4rem;
     
 }
 

@@ -641,8 +641,8 @@
     <div class="card_list">
       <article class="card web" data-aos="flip-down" data-aos-offset="10" data-aos-easing="ease-in-sine">
         <div class="project_img_card">
-          <img class="project_img" src="./assets/sustek.png" onclick="showDialogJanken('dialog-box-1')" >
-          <img class="hover-text" src="./assets/eye_dark.png" onclick="showDialogJanken('dialog-box-1')">
+          <img class="project_img" src="./assets/sustek.png" onclick="showDialog('dialog-box-7')" >
+          <img class="hover-text" src="./assets/eye_dark.png" onclick="showDialog('dialog-box-7')">
         </div>
         <header class="card-header">
           <h2>Sustek</h2>
@@ -655,11 +655,11 @@
             <a>Elementor</a>
           </div>
           <div class="proj_links">
-            <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/pupclinic', '_blank')">
+            <img class="github_icon" src="./assets/link.svg" alt="" onclick="window.open('https://beta.sustek.ai', '_blank')">
           </div>
         </div>
       </article>
-      <article class="card web" data-aos="flip-down" data-aos-offset="180" data-aos-easing="ease-in-sine">
+      <article class="card web">
         <div class="project_img_card">
           <img class="project_img" src="./assets/pupclinic.jpg" onclick="showDialogJanken('dialog-box-1')" >
           <img class="hover-text" src="./assets/eye_dark.png" onclick="showDialogJanken('dialog-box-1')">
@@ -676,7 +676,31 @@
             <a>Raspi</a>
           </div>
           <div class="proj_links">
+            <img class="visit_link" src="./assets/link.svg" alt="" onclick="window.open('http://pupclinic.rf.gd', '_blank')">
             <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/pupclinic', '_blank')">
+          </div>
+        </div>
+      </article>
+      <article class="card web">
+        <div class="project_img_card">
+            <img class="project_img" src="./assets/pupqs.png" onclick="showDialogJanken('dialog-box-6')" >
+            <img class="hover-text" src="./assets/eye_dark.png" onclick="showDialogJanken('dialog-box-6')">
+        </div>
+        <header class="card-header">
+          <h2>PUP QS</h2>
+        </header>
+        <!-- <p>PUP QS is a website for the Polytechnic University of the Philippines, 
+          streamlining queues for various services, including enrollment and cashier 
+          service, to save time and enhance efficiency for students and staff.
+        </p> -->
+        <div class="tags">
+          <div class="tools">
+            <a>PHP</a>
+            <a>JQuery</a>
+          </div>
+          <div class="proj_links">
+            <img class="visit_link" src="./assets/link.svg" alt="" onclick="window.open('https://robinpasalosdos.vercel.app/projects/pupqs/', '_blank')">
+            <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Queueing%20System', '_blank')">
           </div>
         </div>
       </article>
@@ -719,29 +743,6 @@
           </div>
           <div class="proj_links">
             <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Module%20Tracker', '_blank')">
-          </div>
-        </div>
-      </article>
-      <article class="card web">
-        <div class="project_img_card">
-            <img class="project_img" src="./assets/pupqs.png" onclick="showDialogJanken('dialog-box-6')" >
-            <img class="hover-text" src="./assets/eye_dark.png" onclick="window.open('https://robinpasalosdos.github.io/portfolio/projects/pupqs', '_blank')">
-        </div>
-        <header class="card-header">
-          <h2>PUP QS</h2>
-        </header>
-        <!-- <p>PUP QS is a website for the Polytechnic University of the Philippines, 
-          streamlining queues for various services, including enrollment and cashier 
-          service, to save time and enhance efficiency for students and staff.
-        </p> -->
-        <div class="tags">
-          <div class="tools">
-            <a>PHP</a>
-            <a>JQuery</a>
-          </div>
-          <div class="proj_links">
-            <img class="visit_link" src="./assets/link.svg" alt="" onclick="window.open('https://robinpasalosdos.vercel.app/projects/pupqs/', '_blank')">
-            <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Queueing%20System', '_blank')">
           </div>
         </div>
       </article>
@@ -808,6 +809,7 @@
             <a>Raspi</a>
           </div>
           <div class="proj_links">
+            <img class="visit_link" src="./assets/link.svg" alt="" onclick="window.open('http://pupclinic.rf.gd', '_blank')">
             <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/pupclinic', '_blank')">
           </div>
         </div>
@@ -913,6 +915,26 @@
         <div class="proj_links">
           <img class="visit_link" src="./assets/link.svg" alt="" onclick="window.open('https://robinpasalosdos.vercel.app/projects/pupqs/', '_blank')">
           <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Queueing%20System', '_blank')">
+        </div>
+      </div>
+    </div>
+    <div class="dialog-box" id="dialog-box-7">
+      <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-7")'>
+      <img class="mt" src="./assets/sustek_detailed.png">
+      <header class="card-header">
+        <h2>Sustek</h2>
+      </header>
+      <p>PUP QS is a website for the Polytechnic University of the Philippines, 
+        streamlining queues for various services, including enrollment and cashier 
+        service, to save time and enhance efficiency for students and staff.
+      </p>
+      <div class="tags">
+        <div class="tools">
+          <a>WordPress</a>
+          <a>Elementor</a>
+        </div>
+        <div class="proj_links">
+          <img class="visit_link" src="./assets/link.svg" alt="" onclick="window.open('https://beta.sustek.ai', '_blank')">
         </div>
       </div>
     </div>
