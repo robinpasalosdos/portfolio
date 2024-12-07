@@ -2,10 +2,16 @@
 
 const menu = document.querySelector(".mobile_nav_sections");
 const icon = document.querySelector(".hamburger_icon");
+const projectMenu = document.querySelector(".mobile_project_sections");
+const projectIcon = document.querySelector(".project_hamburger_menu");
 
 function toggleMenu() {
     menu.classList.toggle("open");
     icon.classList.toggle("open");
+}
+function projectToggleMenu() {
+  projectMenu.classList.toggle("open");
+  projectIcon.classList.toggle("open");
 }
 
 
@@ -40,7 +46,7 @@ const elements = {
 
 AOS.init({
   disable: false,
-  startEvent: 'load',
+  startEvent: 'scroll',
   delay: 0,
   duration: 250,
   once: true,
@@ -131,6 +137,7 @@ const bodyElement = document.body;
 
 const dialogVideos = document.querySelectorAll('.dialog_video');
 const overlay = document.getElementById('overlay');
+const dialogContainer = document.getElementById('dialog_container');
 
 dialogVideos.forEach(video => {
   video.pause();
@@ -143,18 +150,20 @@ function getIndexFromDialogBox(dialogBox) {
 
 function playDialogVideo(dialogBox) {
     const index = getIndexFromDialogBox(dialogBox);
-    dialogVideos[index].currentTime = 0;
-    dialogVideos[index].play();
+      dialogVideos[index].currentTime = 0;
+      dialogVideos[index].play();
 }
 
 function pauseDialogVideo(dialogBox) {
     const index = getIndexFromDialogBox(dialogBox);
-    dialogVideos[index].pause();
-    dialogVideos[index].currentTime = 0;
+      dialogVideos[index].pause();
+      dialogVideos[index].currentTime = 0;
+    
 }
 
 function showDialog(dialogBox) {
     overlay.style.display = "block";
+    dialogContainer.style.display = "block";
     document.getElementById(dialogBox).style.display = "block";
     document.documentElement.style.overflowY = "hidden";
     document.body.style.overflowY = "hidden";
@@ -163,6 +172,7 @@ function showDialog(dialogBox) {
 
 function hideDialog(dialogBox) {
     overlay.style.display = "none";
+    dialogContainer.style.display = "none";
     document.getElementById(dialogBox).style.display = "none";
     document.documentElement.style.overflowY = "auto";
     document.body.style.overflowY = "auto";
@@ -170,11 +180,12 @@ function hideDialog(dialogBox) {
 
 document.addEventListener('click', function (event) {
     if (event.target === overlay) {
-        hideDialogJanken("dialog-box-1");
-        hideDialogJanken("dialog-box-2");
-        hideDialogJanken("dialog-box-3");
-        hideDialogJanken("dialog-box-4");
-        hideDialog("dialog-box-5");
+      hideDialogJanken("dialog-box-1");
+      hideDialogJanken("dialog-box-2");
+      hideDialogJanken("dialog-box-3");
+      hideDialogJanken("dialog-box-4");
+      hideDialog("dialog-box-5");
+      hideDialog("dialog-box-6");
     }
 });
 
@@ -293,7 +304,7 @@ function handleScroll() {
   });
 }
 document.addEventListener('DOMContentLoaded', function() {
-  const elementsToHandle = ['.head_nav_sections', '.mobile_nav_sections', '.nav_footer_links'];
+  const elementsToHandle = ['.head_nav_sections', '.mobile_nav_sections', '.nav_footer_links', '.mobile_project_sections'];
 
   // Common function to attach the event listener with a delay for slideUp
   const attachEventListener = (element) => {
@@ -337,7 +348,10 @@ document.addEventListener("DOMContentLoaded", function(){
   
   function toggleNavigation() {
     next.style.opacity = currentIndex < certificates.length - 1 ? '1' : '.3';
-    prev.style.opacity = currentIndex > 0 ? '1' : '.3';
+  next.style.cursor = currentIndex < certificates.length - 1 ? 'pointer' : 'default';
+
+  prev.style.opacity = currentIndex > 0 ? '1' : '.3';
+  prev.style.cursor = currentIndex > 0 ? 'pointer' : 'default';
     certNav.textContent = `${currentIndex + 1} / ${certificates.length}`;
   }
   
@@ -392,6 +406,46 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
   
+// Select the elements
+const projectDiv = document.querySelector('#projects');
+const fixedDiv = document.querySelector('.project_hamburger_menu');
+
+// Set up the intersection observer
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Show the fixed div when the project div is on screen
+        fixedDiv.style.display = 'block';
+      } else {
+        // Hide the fixed div when the project div is out of view
+        fixedDiv.style.display = 'none';
+      }
+    });
+  },
+  { threshold: [0.2, 1] }
+);
+
+// Function to apply observer based on media query
+function applyObserver() {
+  // Check if screen width is at most 640px
+  const mediaQuery = window.matchMedia('(max-width: 640px)');
+  
+  if (mediaQuery.matches) {
+    // If screen width is <= 640px, observe the project div
+    observer.observe(projectDiv);
+  } else {
+    // If screen width is > 640px, unobserve the project div and hide fixed div
+    observer.unobserve(projectDiv);
+    fixedDiv.style.display = 'none';
+  }
+}
+
+// Add a listener to apply observer on resize
+window.addEventListener('resize', applyObserver);
+
+// Initial call to set observer based on current screen size
+applyObserver();
 
 
 
