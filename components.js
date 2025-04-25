@@ -1,47 +1,187 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const skillsData = {
-        Languages: [
-            { src: "./assets/js.png", skill: "JavaScript", level: "Experienced" },
-            { src: "./assets/php.png", skill: "PHP", level: "Experienced" },
-            { src: "./assets/python.png", skill: "Python", level: "Experienced" },
-            { src: "./assets/csharp.png", skill: "C#", level: "Experienced" },
-            { src: "./assets/cplusplus.png", skill: "C++", level: "Experienced" },
-            { src: "./assets/kotlin.png", skill: "Kotlin", level: "Experienced" }
-        ],
-        Frameworks: [
-            { src: "./assets/react.png", skill: "VueJs", level: "Intermediate" },
-            { src: "./assets/quasar.svg", skill: "Quasar", level: "Intermediate" },
-            { src: "./assets/bootstrap.png", skill: "Bootstrap", level: "Intermediate" },
-            { src: "./assets/tailwind.png", skill: "Tailwind", level: "Intermediate" },
-            { src: "./assets/laravel.png", skill: "Laravel", level: "Intermediate" },
-            { src: "./assets/d0tnet.png", skill: "ASP.NET", level: "Intermediate" },
-            { src: "./assets/react.png", skill: "React", level: "Intermediate" }
-        ],
-        WebTools: [
-            { src: "./assets/wp.png", skill: "WordPress", level: "Intermediate" },
-            { src: "./assets/mysql.png", skill: "MySQL", level: "Intermediate" },
-            { src: "./assets/html.png", skill: "HTML", level: "Experienced" },
-            { src: "./assets/css.png", skill: "CSS", level: "Experienced" },
-            { src: "./assets/jquery.png", skill: "JQuery", level: "Intermediate" }
-        ],
-        DataAnalytics: [
-            { src: "./assets/sql.png", skill: "SQL", level: "Intermediate" },
-            { src: "./assets/mysql.png", skill: "MySQL", level: "Intermediate" },
-            { src: "./assets/excel.png", skill: "Excel", level: "Experienced" },
-            { src: "./assets/tableau.svg", skill: "Tableau", level: "Intermediate" }
-        ],
-        OtherTools: [
-            { src: "./assets/ms.png", skill: "MS Office", level: "Experienced" },
-            { src: "./assets/pygame.png", skill: "Github", level: "Experienced" },
-            { src: "./assets/autocad.png", skill: "AutoCad", level: "Experienced" },
-            { src: "./assets/unity.png", skill: "Unity", level: "Intermediate" },
-            { src: "./assets/as.png", skill: "Android Stu.", level: "Intermediate" },
-            { src: "./assets/firebase.png", skill: "Firebase", level: "Intermediate" },
-            { src: "./assets/visualStudio.png", skill: "Visual Studio", level: "Intermediate" },
-            { src: "./assets/sketchup.webp", skill: "Sketchup", level: "Intermediate" },
-            { src: "./assets/pygame.png", skill: "Pygame", level: "Intermediate" }
-        ]
+	const skillsData = {
+		Languages: [
+			{ src: "./assets/js.png", skill: "JavaScript", level: "Experienced" },
+			{ src: "./assets/php.png", skill: "PHP", level: "Experienced" },
+			{ src: "./assets/python.png", skill: "Python", level: "Experienced" },
+			{ src: "./assets/csharp.png", skill: "C#", level: "Experienced" },
+			{ src: "./assets/cplusplus.png", skill: "C++", level: "Experienced" },
+			{ src: "./assets/kotlin.png", skill: "Kotlin", level: "Experienced" }
+		],
+		Frameworks: [
+			{ src: "./assets/react.png", skill: "VueJs", level: "Intermediate" },
+			{ src: "./assets/quasar.svg", skill: "Quasar", level: "Intermediate" },
+			{ src: "./assets/bootstrap.png", skill: "Bootstrap", level: "Intermediate" },
+			{ src: "./assets/tailwind.png", skill: "Tailwind", level: "Intermediate" },
+			{ src: "./assets/laravel.png", skill: "Laravel", level: "Intermediate" },
+			{ src: "./assets/d0tnet.png", skill: "ASP.NET", level: "Intermediate" },
+			{ src: "./assets/react.png", skill: "React", level: "Intermediate" }
+		],
+		WebTools: [
+			{ src: "./assets/wp.png", skill: "WordPress", level: "Intermediate" },
+			{ src: "./assets/mysql.png", skill: "MySQL", level: "Intermediate" },
+			{ src: "./assets/html.png", skill: "HTML", level: "Experienced" },
+			{ src: "./assets/css.png", skill: "CSS", level: "Experienced" },
+			{ src: "./assets/jquery.png", skill: "JQuery", level: "Intermediate" }
+		],
+		DataAnalytics: [
+			{ src: "./assets/sql.png", skill: "SQL", level: "Intermediate" },
+			{ src: "./assets/mysql.png", skill: "MySQL", level: "Intermediate" },
+			{ src: "./assets/excel.png", skill: "Excel", level: "Experienced" },
+			{ src: "./assets/tableau.svg", skill: "Tableau", level: "Intermediate" }
+		],
+		OtherTools: [
+			{ src: "./assets/ms.png", skill: "MS Office", level: "Experienced" },
+			{ src: "./assets/pygame.png", skill: "Github", level: "Experienced" },
+			{ src: "./assets/autocad.png", skill: "AutoCad", level: "Experienced" },
+			{ src: "./assets/unity.png", skill: "Unity", level: "Intermediate" },
+			{ src: "./assets/as.png", skill: "Android Stu.", level: "Intermediate" },
+			{ src: "./assets/firebase.png", skill: "Firebase", level: "Intermediate" },
+			{ src: "./assets/visualStudio.png", skill: "Visual Studio", level: "Intermediate" },
+			{ src: "./assets/sketchup.webp", skill: "Sketchup", level: "Intermediate" },
+			{ src: "./assets/pygame.png", skill: "Pygame", level: "Intermediate" }
+		]
     };
+
+    const projects = {
+		web: [
+			{
+				title: "Sustek",
+				image: "./assets/sustek.png",
+				hoverImage: "./assets/eye_dark.png",
+				dialog: "dialog-box-7",
+				tools: ["WordPress", "Elementor"],
+        links: [
+					{ type: "visit", url: "https://beta.sustek.ai" },
+				],
+			},
+			{
+				title: "PUP Clinic",
+				image: "./assets/pupclinic.jpg",
+				hoverImage: "./assets/eye_dark.png",
+				dialog: "dialog-box-1",
+				tools: ["PHP", "Python", "Raspi"],
+				links: [
+					{ type: "visit", url: "http://pupclinic.rf.gd" },
+					{ type: "github", url: "https://github.com/robinpasalosdos/pupclinic" },
+				],
+			},
+			{
+				title: "PUP QS",
+				image: "./assets/pupqs.png",
+				hoverImage: "./assets/eye_dark.png",
+				dialog: "dialog-box-6",
+				tools: ["PHP", "JQuery"],
+				links: [
+					{ type: "visit", url: "https://robinpasalosdos.vercel.app/projects/pupqs/" },
+					{ type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Queueing%20System" },
+				],
+			},
+			{
+				title: "Login and User Management",
+				image: "./assets/login.png",
+				hoverImage: "./assets/eye_dark.png",
+				dialog: "dialog-box-3",
+				tools: ["Quasar", "VueJS"],
+				links: [
+					{ type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Login" }
+				]
+				},
+				{
+				title: "Eflood",
+				image: "./assets/eflood.png",
+				hoverImage: "./assets/eye_dark.png",
+				dialog: "dialog-box-4",
+				tools: ["PHP", "JQuery", "Bootstrap"],
+				links: [
+					{ type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Eflood" }
+				]
+				}
+		],
+		games: [
+			{
+				title: "Janken Wars",
+				image: "./assets/janken.png",
+				hoverImage: "./assets/eye_dark.png",
+				dialog: "dialog-box-2",
+				tools: ["Unity", "Unity3d"],
+				links: [
+					{ type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars" },
+				],
+			},
+		],
+		mobile: [
+			{
+				title: "Module Tracker",
+				image: "./assets/module_tracker_pic.jpg",
+				hoverImage: "./assets/eye_dark.png",
+				dialog: "dialog-box-5",
+				tools: ["Android Stu.", "Firebase"],
+				links: [
+					{ type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Module%20Tracker" },
+				],
+			},
+		]
+  	};
+
+	const experiences = [
+	{
+		year: "2024",
+		position: "Software Engineer Intern",
+		company: "Elinnov Technologies",
+		tasks: [
+		"Contributed to a company project, developing a website using WordPress with Elementor plugin.",
+		"Assisted in creating a privacy policy page for the Ploom Heat project using ASP.NET."
+		],
+		tools: ["WordPress", "ASP.NET"]
+	},
+	{
+		year: "2022",
+		position: "Full Stack Developer Intern",
+		company: "Melham Construction Corporation",
+		tasks: [
+		"Designed and developed an event booking website with fullstack functionalities.",
+		"Ensured mobile responsiveness and cross-browser compatibility."
+		],
+		tools: ["PHP", "MySQL"]
+	},
+	{
+		year: "2021",
+		position: "Full Stack Developer Intern",
+		company: "Pixel8 Web Solutions Inc.",
+		tasks: [
+		"Developed a secure login and user management system using Vue.js and Quasar Framework.",
+		"Completed my first full website project, delivering a major task during the internship.",
+		"Demonstrated strong problem-solving skills and web development potential."
+		],
+		tools: ["PHP", "VueJS", "Quasar", "MySQL"]
+	},
+	{
+		year: "2019",
+		position: "AutoCAD Operator",
+		company: "Betonbau Phil. Inc.",
+		tasks: [
+		"Drafted structural designs for prefabricated buildings.",
+		"Managed project files and hardcopy documents for the team."
+		],
+		tools: ["AutoCAD"]
+	}
+	];
+	
+	const education = [
+	{
+		year: "2024",
+		degree: "Bachelor of Science in Computer Engineering",
+		school: "Polytechnic University of the Philippines",
+		achievements: ["President lister"]
+	},
+	{
+		year: "2019",
+		degree: "Senior High School",
+		school: "Victorious Christian Montessori College",
+		achievements: ["Salutatorian"]
+	}
+	];
     
     const container = document.querySelector('.skill_all');
     container.innerHTML = '';
@@ -201,85 +341,6 @@ document.addEventListener("DOMContentLoaded", function () {
         </svg>
         `;
     }
-
-    const projects = {
-        web: [
-            {
-                title: "Sustek",
-                image: "./assets/sustek.png",
-                hoverImage: "./assets/eye_dark.png",
-                dialog: "dialog-box-7",
-                tools: ["WordPress", "Elementor"],
-                link: "https://beta.sustek.ai",
-            },
-            {
-                title: "PUP Clinic",
-                image: "./assets/pupclinic.jpg",
-                hoverImage: "./assets/eye_dark.png",
-                dialog: "dialog-box-1",
-                tools: ["PHP", "Python", "Raspi"],
-                links: [
-                    { type: "visit", url: "http://pupclinic.rf.gd" },
-                    { type: "github", url: "https://github.com/robinpasalosdos/pupclinic" },
-                ],
-            },
-            {
-                title: "PUP QS",
-                image: "./assets/pupqs.png",
-                hoverImage: "./assets/eye_dark.png",
-                dialog: "dialog-box-6",
-                tools: ["PHP", "JQuery"],
-                links: [
-                    { type: "visit", url: "https://robinpasalosdos.vercel.app/projects/pupqs/" },
-                    { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Queueing%20System" },
-                ],
-            },
-            {
-                title: "Login and User Management",
-                image: "./assets/login.png",
-                hoverImage: "./assets/eye_dark.png",
-                dialog: "dialog-box-3",
-                tools: ["Quasar", "VueJS"],
-                links: [
-                  { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Login" }
-                ]
-              },
-              {
-                title: "Eflood",
-                image: "./assets/eflood.png",
-                hoverImage: "./assets/eye_dark.png",
-                dialog: "dialog-box-4",
-                tools: ["PHP", "JQuery", "Bootstrap"],
-                links: [
-                  { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Eflood" }
-                ]
-              }
-        ],
-        games: [
-            {
-                title: "Janken Wars",
-                image: "./assets/janken.png",
-                hoverImage: "./assets/eye_dark.png",
-                dialog: "dialog-box-2",
-                tools: ["Unity", "Unity3d"],
-                links: [
-                    { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars" },
-                ],
-            },
-        ],
-        mobile: [
-            {
-                title: "Module Tracker",
-                image: "./assets/module_tracker_pic.jpg",
-                hoverImage: "./assets/eye_dark.png",
-                dialog: "dialog-box-5",
-                tools: ["Android Stu.", "Firebase"],
-                links: [
-                    { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Module%20Tracker" },
-                ],
-            },
-        ]
-    };
     
     function renderProjects() {
         const container = document.getElementById("card_list");
@@ -313,65 +374,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     renderProjects();
-    
-    const experiences = [
-        {
-          year: "2024",
-          position: "Software Engineer Intern",
-          company: "Elinnov Technologies",
-          tasks: [
-            "Contributed to a company project, developing a website using WordPress with Elementor plugin.",
-            "Assisted in creating a privacy policy page for the Ploom Heat project using ASP.NET."
-          ],
-          tools: ["WordPress", "ASP.NET"]
-        },
-        {
-          year: "2022",
-          position: "Full Stack Developer Intern",
-          company: "Melham Construction Corporation",
-          tasks: [
-            "Designed and developed an event booking website with fullstack functionalities.",
-            "Ensured mobile responsiveness and cross-browser compatibility."
-          ],
-          tools: ["PHP", "MySQL"]
-        },
-        {
-          year: "2021",
-          position: "Full Stack Developer Intern",
-          company: "Pixel8 Web Solutions Inc.",
-          tasks: [
-            "Developed a secure login and user management system using Vue.js and Quasar Framework.",
-            "Completed my first full website project, delivering a major task during the internship.",
-            "Demonstrated strong problem-solving skills and web development potential."
-          ],
-          tools: ["PHP", "VueJS", "Quasar", "MySQL"]
-        },
-        {
-          year: "2019",
-          position: "AutoCAD Operator",
-          company: "Betonbau Phil. Inc.",
-          tasks: [
-            "Drafted structural designs for prefabricated buildings.",
-            "Managed project files and hardcopy documents for the team."
-          ],
-          tools: ["AutoCAD"]
-        }
-      ];
-      
-      const education = [
-        {
-          year: "2024",
-          degree: "Bachelor of Science in Computer Engineering",
-          school: "Polytechnic University of the Philippines",
-          achievements: ["President lister"]
-        },
-        {
-          year: "2019",
-          degree: "Senior High School",
-          school: "Victorious Christian Montessori College",
-          achievements: ["Salutatorian"]
-        }
-      ];
       
       function renderQualifications() {
         const qualificationDiv = document.getElementById("qualification");

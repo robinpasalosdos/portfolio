@@ -1,5 +1,3 @@
-
-
 const menu = document.querySelector(".mobile_nav_sections");
 const icon = document.querySelector(".hamburger_icon");
 const projectMenu = document.querySelector(".mobile_project_sections");
@@ -325,39 +323,67 @@ document.addEventListener("DOMContentLoaded", function(){
   const next = document.getElementById('next');
   const prev = document.getElementById('prev');
   const certNav = document.getElementById('cert_frac');
-  certNav.textContent = `1 / ${certificates.length}`;
   let currentIndex = 0;
 
- 
-
+  function scrollToCertificate(index) {
+    const cert = certificates[index];
+    if (cert) {
+      // Calculate the left offset of the image relative to the container
+      const left = cert.offsetLeft - certCon.offsetLeft;
+      certCon.scrollTo({
+        left: left,
+        behavior: 'smooth'
+      });
+    }
+  }
 
   function showNextCertificate() {
-    if (currentIndex < certificates.length - 1 ){
+    if (currentIndex < certificates.length - 1) {
       currentIndex++;
-      certCon.style.transform = `translateX(-${certCon.offsetWidth * currentIndex}px)`;
+      scrollToCertificate(currentIndex);
       toggleNavigation();
     }
   }
-  
+
   function showPrevCertificate() {
-    if (currentIndex > 0){
+    if (currentIndex > 0) {
       currentIndex--;
-      certCon.style.transform = `translateX(-${certCon.offsetWidth * currentIndex}px)`;
+      scrollToCertificate(currentIndex);
       toggleNavigation();
     }
   }
-  
+
   function toggleNavigation() {
     next.style.opacity = currentIndex < certificates.length - 1 ? '1' : '.3';
-  next.style.cursor = currentIndex < certificates.length - 1 ? 'pointer' : 'default';
-
-  prev.style.opacity = currentIndex > 0 ? '1' : '.3';
-  prev.style.cursor = currentIndex > 0 ? 'pointer' : 'default';
+    next.style.cursor = currentIndex < certificates.length - 1 ? 'pointer' : 'default';
+    prev.style.opacity = currentIndex > 0 ? '1' : '.3';
+    prev.style.cursor = currentIndex > 0 ? 'pointer' : 'default';
     certNav.textContent = `${currentIndex + 1} / ${certificates.length}`;
   }
-  
+
+  // Update currentIndex when user scrolls manually
+  certCon.addEventListener('scroll', function() {
+    let minDiff = Infinity;
+    let newIndex = currentIndex;
+    certificates.forEach((img, idx) => {
+      // Calculate the distance from the left edge of the container
+      const diff = Math.abs(img.getBoundingClientRect().left - certCon.getBoundingClientRect().left);
+      if (diff < minDiff) {
+        minDiff = diff;
+        newIndex = idx;
+      }
+    });
+    if (newIndex !== currentIndex) {
+      currentIndex = newIndex;
+      toggleNavigation();
+    }
+  });
+
   next.addEventListener('click', showNextCertificate);
   prev.addEventListener('click', showPrevCertificate);
+
+  // Initial state
+  toggleNavigation();
 });
 
 filterSelection("all")
