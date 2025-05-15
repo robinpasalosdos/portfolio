@@ -436,7 +436,7 @@ a.active::before, a.active::after{
     background-color: var(--_card_bg);
     padding: 1.5rem;
     display: none;
-    border: 2px solid black;
+    
 }
 
 .show_card{
@@ -483,7 +483,7 @@ a.active::before, a.active::after{
     margin-bottom: 1rem;
     overflow: hidden;
     cursor: pointer;
-    border: 2px solid black;
+    
 }
 
 .project_img_card .hover-text {
@@ -887,7 +887,7 @@ a.active::before, a.active::after{
     padding: .75rem;
     border-radius: 7px;
     background-color: var(--_card_bg);
-    border: 2px solid black;
+    
 }
 .skill article h3{
     color: var(--_title_color);

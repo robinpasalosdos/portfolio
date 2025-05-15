@@ -125,8 +125,6 @@ if (savedTheme == 'light') {
 const textElement = document.getElementById("home_text_p2");
 const careers = [
   "Web Developer        ",
-  "Game Developer        ",
-  "Mobile App Developer        ",
   "Data Analyst        "
 ];
 

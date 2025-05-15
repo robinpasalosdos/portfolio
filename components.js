@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
 			{ src: "./assets/tailwind.png", skill: "Tailwind", level: "Intermediate" },
 			{ src: "./assets/laravel.png", skill: "Laravel", level: "Intermediate" },
 			{ src: "./assets/d0tnet.png", skill: "ASP.NET", level: "Intermediate" },
-			{ src: "./assets/react.png", skill: "React", level: "Intermediate" }
+			{ src: "./assets/react.png", skill: "React", level: "Intermediate" },
+			{ src: "./assets/electron.svg", skill: "Electron", level: "Intermediate" },
+			{ src: "./assets/nodejs.png", skill: "NodeJS", level: "Intermediate" },
 		],
 		WebTools: [
 			{ src: "./assets/wp.png", skill: "WordPress", level: "Intermediate" },
@@ -45,6 +47,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const projects = {
 		web: [
+      {
+				title: "Barangay System",
+				image: "./assets/brgy.png",
+				hoverImage: "./assets/eye_dark.png",
+				dialog: "dialog-box-7",
+				tools: ["React", "Electron"],
+        links: [
+					{ type: "github", url: "https://github.com/robinpasalosdos/pupclinic" },
+				],
+			},
 			{
 				title: "Sustek",
 				image: "./assets/sustek.png",
@@ -101,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		games: [
 			{
 				title: "Janken Wars",
-				image: "./assets/janken.png",
+				image: "./assets/janken2.png",
 				hoverImage: "./assets/eye_dark.png",
 				dialog: "dialog-box-2",
 				tools: ["Unity", "Unity3d"],
@@ -125,6 +137,15 @@ document.addEventListener("DOMContentLoaded", function () {
   	};
 
 	const experiences = [
+  {
+		year: "2025",
+		position: "Freelance Software Developer",
+		company: "Self-employed",
+		tasks: [
+		"Developed a comprehensive barangay information management system designed to streamline resident records, document issuance, and administrative processes for local government units.",
+		],
+		tools: ["React", "Electron", "NodeJS"]
+	},
 	{
 		year: "2024",
 		position: "Software Engineer Intern",
