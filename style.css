@@ -960,11 +960,13 @@ footer p {
     background-color: var(--_card_bg);
     padding: 40px;
     border-radius: 15px;
-    margin-top: 30px;
+    margin: 30px 1rem 0 1rem;
 }
 
 .contact-form {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-form .form-group {
@@ -972,7 +974,7 @@ footer p {
     flex-direction: column;
     margin-bottom: 10px;
     gap: 4px;
-    min-width: 340px;
+    min-width: 230px;
 }
 
 .form-group label {
@@ -1014,9 +1016,5 @@ footer p {
 
 .g-recaptcha{
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 400px;
 }
 
