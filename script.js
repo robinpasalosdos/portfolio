@@ -362,7 +362,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      emailjs.sendForm('service_00ez7cq', 'template_rxklhg1', contactForm)
+      emailjs.sendForm('service_00ez7cq', 'template_2k9zb4i', contactForm)
         .then(function() {
           formStatus.textContent = 'Message sent successfully!';
           formStatus.style.color = 'green';

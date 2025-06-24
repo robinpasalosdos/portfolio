@@ -1012,3 +1012,11 @@ footer p {
     font-size: var(--s);
 }
 
+.g-recaptcha{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+}
+
