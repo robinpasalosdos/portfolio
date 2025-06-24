@@ -356,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Replace these with your EmailJS Service ID and Template ID
       const serviceID = 'service_00ez7cq';
-      const templateID = 'template_rxklhg1';
+      const templateID = 'template_2k9zb4i';
 
       emailjs.sendForm(serviceID, templateID, contactForm)
         .then(function() {

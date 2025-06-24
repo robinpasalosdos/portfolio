@@ -954,3 +954,61 @@ footer p {
 .nav_footer_links li{
     font-size: var(--m);
 }
+
+.contact_con {
+    height: fit-content;
+    background-color: var(--_card_bg);
+    padding: 40px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.contact-form {
+    
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 4px;
+    min-width: 340px;
+}
+
+.form-group label {
+    color: var(--_title_color);
+    font-size: var(--s);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--_tag_color);
+    border-radius: 5px;
+    background-color: var(--_bg_color);
+    color: var(--_title_color);
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: var(--_secondary_color);
+    color: var(--_primary_color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--s);
+    margin: 10px 0;
+    width: 100%;
+}
+
+.form-status {
+    margin-top: 10px;
+    color: var(--_p_color);
+    font-size: var(--s);
+}
+
