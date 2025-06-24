@@ -354,15 +354,20 @@ document.addEventListener('DOMContentLoaded', function() {
       formStatus.textContent = 'Sending...';
       formStatus.style.color = '#333';
 
-      // Replace these with your EmailJS Service ID and Template ID
-      const serviceID = 'service_00ez7cq';
-      const templateID = 'template_2k9zb4i';
+      // Check reCAPTCHA
+      var recaptchaResponse = grecaptcha.getResponse();
+      if (!recaptchaResponse) {
+        formStatus.textContent = 'Please complete the CAPTCHA.';
+        formStatus.style.color = 'red';
+        return;
+      }
 
-      emailjs.sendForm(serviceID, templateID, contactForm)
+      emailjs.sendForm('service_00ez7cq', 'template_rxklhg1', contactForm)
         .then(function() {
           formStatus.textContent = 'Message sent successfully!';
           formStatus.style.color = 'green';
           contactForm.reset();
+          grecaptcha.reset(); // Reset the CAPTCHA
         }, function(error) {
           formStatus.textContent = 'Failed to send message. Please try again later.';
           formStatus.style.color = 'red';
