@@ -35,8 +35,8 @@ const elements = {
   profile: document.getElementById('about_profile'),
   ghIcons: document.getElementsByClassName('github_icon'),
   eyeIcons: document.getElementsByClassName('eye_icon'),
-  profileIcons: document.getElementById('socmed_card').getElementsByTagName('img'),
-  contactIcons: document.getElementById('contact_strip').getElementsByTagName('img'),
+  profileIcons: document.getElementById('socmed_card') ? document.getElementById('socmed_card').getElementsByTagName('img') : [],
+  contactIcons: document.getElementById('contact_strip') ? document.getElementById('contact_strip').getElementsByTagName('img') : [],
   next: document.getElementById('next'),
   prev: document.getElementById('prev')
 };
@@ -157,43 +157,51 @@ function pauseDialogVideo(dialogBox) {
     
 }
 
+function hideAllDialogs() {
+  const dialogs = document.querySelectorAll('.dialog-box');
+  dialogs.forEach(dialog => {
+    dialog.style.display = 'none';
+    // Pause and reset ALL videos inside the dialog
+    const videos = dialog.querySelectorAll('video');
+    videos.forEach(video => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+}
+
 function showDialog(dialogBox) {
-    overlay.style.display = "block";
-    dialogContainer.style.display = "block";
-    document.getElementById(dialogBox).style.display = "block";
-    document.documentElement.style.overflowY = "hidden";
-    document.body.style.overflowY = "hidden";
-    slideUp();
+  hideAllDialogs();
+  overlay.style.display = "block";
+  dialogContainer.style.display = "block";
+  document.getElementById(dialogBox).style.display = "block";
+  document.documentElement.style.overflowY = "hidden";
+  document.body.style.overflowY = "hidden";
+  slideUp();
 }
 
 function hideDialog(dialogBox) {
-    overlay.style.display = "none";
-    dialogContainer.style.display = "none";
-    document.getElementById(dialogBox).style.display = "none";
-    document.documentElement.style.overflowY = "auto";
-    document.body.style.overflowY = "auto";
+  hideAllDialogs();
+  overlay.style.display = "none";
+  dialogContainer.style.display = "none";
+  document.documentElement.style.overflowY = "auto";
+  document.body.style.overflowY = "auto";
 }
-
-document.addEventListener('click', function (event) {
-    if (event.target === overlay) {
-      hideDialogJanken("dialog-box-1");
-      hideDialogJanken("dialog-box-2");
-      hideDialogJanken("dialog-box-3");
-      hideDialogJanken("dialog-box-4");
-      hideDialog("dialog-box-5");
-      hideDialog("dialog-box-6");
-      hideDialog("dialog-box-7");
-    }
-});
-
-function showDialogJanken(dialogBox) {
-    showDialog(dialogBox);
-    playDialogVideo(dialogBox);
-}
+window.hideDialog = hideDialog;
 
 function hideDialogJanken(dialogBox) {
-    hideDialog(dialogBox);
-    pauseDialogVideo(dialogBox);
+  hideAllDialogs();
+  overlay.style.display = "none";
+  dialogContainer.style.display = "none";
+  document.documentElement.style.overflowY = "auto";
+  document.body.style.overflowY = "auto";
+}
+window.hideDialogJanken = hideDialogJanken;
+
+function showDialogJanken(dialogBox) {
+  hideAllDialogs();
+  showDialog(dialogBox);
+  playDialogVideo(dialogBox);
 }
 
 
@@ -313,6 +321,54 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Attach event listeners to all specified elements
   elementsToHandle.forEach(attachEventListener);
+
+  // Event delegation for dialog close (X button)
+  document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('dialog_x')) {
+      hideAllDialogs();
+      overlay.style.display = "none";
+      dialogContainer.style.display = "none";
+      document.documentElement.style.overflowY = "auto";
+      document.body.style.overflowY = "auto";
+    }
+  });
+
+  // Overlay click closes all dialogs
+  overlay.addEventListener('click', function() {
+    hideAllDialogs();
+    overlay.style.display = "none";
+    dialogContainer.style.display = "none";
+    document.documentElement.style.overflowY = "auto";
+    document.body.style.overflowY = "auto";
+  });
+
+  // EmailJS contact form integration
+  emailjs.init('KcJuMsu0FCOPULM-a'); // <-- Replace with your EmailJS public key
+
+  const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      formStatus.textContent = 'Sending...';
+      formStatus.style.color = '#333';
+
+      // Replace these with your EmailJS Service ID and Template ID
+      const serviceID = 'service_00ez7cq';
+      const templateID = 'template_rxklhg1';
+
+      emailjs.sendForm(serviceID, templateID, contactForm)
+        .then(function() {
+          formStatus.textContent = 'Message sent successfully!';
+          formStatus.style.color = 'green';
+          contactForm.reset();
+        }, function(error) {
+          formStatus.textContent = 'Failed to send message. Please try again later.';
+          formStatus.style.color = 'red';
+        });
+    });
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function(){

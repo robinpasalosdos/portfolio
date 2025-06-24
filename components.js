@@ -442,96 +442,119 @@ document.addEventListener("DOMContentLoaded", function () {
       // Render qualifications on page load
       renderQualifications();
 
-   /*    const dialogProjects = [
-        {
-          id: "dialog-box-1",
-          title: "PUP Clinic",
-          description: "A thesis project that integrates electronic health records...",
-          videoSrc: "./assets/pupclinic.mp4",
-          tools: ["PHP", "Python", "Raspi"],
-          links: [
-            { type: "visit", url: "http://pupclinic.rf.gd" },
-            { type: "github", url: "https://github.com/robinpasalosdos/pupclinic" }
-          ]
-        },
-        {
-          id: "dialog-box-2",
-          title: "Janken Wars",
-          description: "A Unity-based 3D game inspired by rock-paper-scissors...",
-          videoSrc: "assets/janken.mp4",
-          tools: ["Unity", "Unity3D"],
-          links: [
-            { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars" }
-          ]
-        },
-        {
-          id: "dialog-box-3",
-          title: "Janken Wars",
-          description: "A Unity-based 3D game inspired by rock-paper-scissors...",
-          videoSrc: "assets/janken.mp4",
-          tools: ["Unity", "Unity3D"],
-          links: [
-            { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars" }
-          ]
-        },
-        {
-          id: "dialog-box-4",
-          title: "Janken Wars",
-          description: "A Unity-based 3D game inspired by rock-paper-scissors...",
-          videoSrc: "assets/janken.mp4",
-          tools: ["Unity", "Unity3D"],
-          links: [
-            { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars" }
-          ]
-        },
-        {
-          id: "dialog-box-5",
-          title: "Module Tracker",
-          description: "This app streamlines the module distribution process...",
-          imageSrc: "assets/mt.png",
-          tools: ["Android Stu.", "Firebase"],
-          links: [
-            { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Module%20Tracker" }
-          ]
-        }
-      ];
-      
-      function generateDialogs() {
-        const container = document.getElementById("dialog_container");
-        container.innerHTML = "";
-      
-        dialogProjects.forEach(project => {
-          let content = project.videoSrc
-            ? `<video loop autoplay class="dialog_video" controls><source src="${project.videoSrc}"></video>`
-            : `<img src="${project.imageSrc}" alt="${project.title}" class="dialog_img">`;
-      
-          let tools = project.tools.map(tool => `<a>${tool}</a>`).join("");
-          
-          let links = project.links
-            .map(link => {
-              let icon = link.type === "github" ? "github_dark.png" : "link.svg";
-              return `<img class="${link.type}_icon" src="./assets/${icon}" onclick="window.open('${link.url}', '_blank')">`;
-            })
-            .join("");
-      
-          container.innerHTML += `
-            <div class="dialog-box" id="${project.id}">
-              <img src="assets/x.png" class="dialog_x" onclick='hideDialog("${project.id}")'>
-              ${content}
-              <header class="card-header"><h2>${project.title}</h2></header>
-              <p>${project.description}</p>
-              <div class="tags">
-                <div class="tools">${tools}</div>
-                <div class="proj_links">${links}</div>
-              </div>
-            </div>`;
-        });
-      }
-      
-      generateDialogs(); */
-      
-      
-
-      
-      
+   // Dialog data for all projects
+   const dialogProjects = [
+     {
+       id: "dialog-box-1",
+       type: "video",
+       mediaSrc: "./assets/pupclinic.mp4",
+       title: "PUP Clinic",
+       description: "A thesis project that integrates electronic health records to streamline recording and assessing vital signs, improving the efficiency of measuring blood pressure, heart rate, temperature, oxygen, height, and weight.",
+       tools: ["PHP", "Python", "Raspi"],
+       links: [
+         { type: "visit", url: "http://pupclinic.rf.gd" },
+         { type: "github", url: "https://github.com/robinpasalosdos/pupclinic" }
+       ]
+     },
+     {
+       id: "dialog-box-2",
+       type: "video",
+       mediaSrc: "./assets/janken.mp4",
+       title: "Janken Wars",
+       description: "This Unity-based 3D game is inspired by the classic rock, paper, and scissors game. In this 2 player game, each player engages in battles in janken battlefields, adding a strategic twist to this classic showdown.",
+       tools: ["Unity", "Unity3d"],
+       links: [
+         { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars" }
+       ]
+     },
+     {
+       id: "dialog-box-3",
+       type: "video",
+       mediaSrc: "./assets/user_management.mp4",
+       title: "Login and User Management",
+       description: "Develop a web-based task management application with an interface designed for both user-friendliness and administrative ease, allowing users to effortlessly organize and track their todos.",
+       tools: ["Quasar", "VueJS"],
+       links: [
+         { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Login" }
+       ]
+     },
+     {
+       id: "dialog-box-4",
+       type: "video",
+       mediaSrc: "./assets/Eflood.mp4",
+       title: "Eflood",
+       description: "Develop a website for a selected barangay with the primary goal of issuing timely flood warnings to residents, enhancing community preparedness and safety.",
+       tools: ["PHP", "JQuery", "Bootstrap"],
+       links: [
+         { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Eflood" }
+       ]
+     },
+     {
+       id: "dialog-box-5",
+       type: "image",
+       mediaSrc: "./assets/mt.png",
+       title: "Module Tracker",
+       description: "This app streamlines the module distribution process, making it easier for educators to ensure that students receive the materials they need for their studies.",
+       tools: ["Android Stu.", "Firebase"],
+       links: [
+         { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Module%20Tracker" }
+       ]
+     },
+     {
+       id: "dialog-box-6",
+       type: "image",
+       mediaSrc: "./assets/pupqs.png",
+       title: "PUP QS",
+       description: "PUP QS is a website for the Polytechnic University of the Philippines, streamlining queues for various services, including enrollment and cashier service, to save time and enhance efficiency for students and staff.",
+       tools: ["PHP", "JQuery"],
+       links: [
+         { type: "visit", url: "https://robinpasalosdos.vercel.app/projects/pupqs/" },
+         { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Queueing%20System" }
+       ]
+     },
+     {
+       id: "dialog-box-7",
+       type: "image",
+       mediaSrc: "./assets/sustek_detailed.png",
+       title: "Sustek",
+       description: "Developed additional pages for the Sustek company website using WordPress and Elementor, ensuring alignment with branding guidelines. Resolved QA issues to improve the site's functionality, user experience, and visual appeal.",
+       tools: ["WordPress", "Elementor"],
+       links: [
+         { type: "visit", url: "https://beta.sustek.ai" }
+       ]
+     }
+   ];
+   
+   function generateDialogs() {
+     const container = document.getElementById("dialog_container");
+     if (!container) return;
+     container.innerHTML = "";
+     dialogProjects.forEach(project => {
+       let mediaContent = "";
+       if (project.type === "video") {
+         mediaContent = `<video loop autoplay controls class="dialog_video"${project.id === 'dialog-box-3' || project.id === 'dialog-box-4' ? ' muted' : ''}><source src="${project.mediaSrc}"></video>`;
+       } else {
+         mediaContent = `<img src="${project.mediaSrc}" alt="" class="mt">`;
+       }
+       let links = project.links.map(link => {
+         let icon = link.type === "github" ? "github_dark.png" : "link.svg";
+         let className = link.type === "github" ? "github_icon" : "visit_link";
+         return `<img class="${className}" src="./assets/${icon}" alt="" onclick="window.open('${link.url}', '_blank')">`;
+       }).join("");
+       container.innerHTML += `
+         <div class="dialog-box${project.type === 'video' ? ' dialog_videos' : ''}" id="${project.id}">
+           <img src="assets/x.png" class="dialog_x" data-dialog="${project.id}">
+           ${mediaContent}
+           <header class="card-header"><h2>${project.title}</h2></header>
+           <p>${project.description}</p>
+           <div class="tags">
+             <div class="tools">${project.tools.map(tool => `<a>${tool}</a>`).join("")}</div>
+             <div class="proj_links">${links}</div>
+           </div>
+         </div>
+       `;
+     });
+   }
+   
+   generateDialogs();
 });

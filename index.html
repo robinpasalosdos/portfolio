@@ -20,6 +20,7 @@
       gtag('js', new Date());
       gtag('config', 'G-EDST3SNFG4');
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
   <div id="loading_screen">
@@ -151,155 +152,7 @@
     <div class="card_list" id="card_list"></div>
   </section>
   <div class="overlay" id="overlay"></div>
-  <div id="dialog_container">
-    <div class="dialog-box" id="dialog-box-1">
-      <div>
-        <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-1")'>
-        <video loop autoplay class="dialog_video" >
-          <source src="./assets/pupclinic.mp4">
-        </video>
-        <header class="card-header">
-          <h2>PUP Clinic</h2>
-        </header>
-        <p>A thesis project that integrates electronic health records to streamline recording and assessing vital signs, improving the efficiency of measuring blood pressure, heart rate, temperature, oxygen, height, and weight.
-        </p>
-        <div class="tags">
-          <div class="tools">
-            <a>PHP</a>
-            <a>Python</a>
-            <a>Raspi</a>
-          </div>
-          <div class="proj_links">
-            <img class="visit_link" src="./assets/link.svg" alt="" onclick="window.open('http://pupclinic.rf.gd', '_blank')">
-            <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/pupclinic', '_blank')">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="dialog-box" id="dialog-box-2">
-      <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-2")'>
-      <video loop autoplay class="dialog_video" controls>
-        <source src="assets\janken.mp4" >
-      </video>
-      <header class="card-header">
-        <h2>Janken Wars</h2>
-      </header>
-      <p>This Unity-based 3D game is inspired by the classic rock, paper, and scissors game. 
-        In this 2 player game, each player engages in battles in janken battlefields, adding a strategic twist to this classic showdown.
-      </p>
-      <div class="tags">
-        <div class="tools">
-          <a>Unity</a>
-          <a>Unity3d</a>
-        </div>
-        <div class="proj_links">
-          <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars', '_blank')">
-        </div>
-      </div>
-    </div>
-    <div class="dialog-box dialog_videos" id="dialog-box-3">
-      <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-3")'>
-      <video loop autoplay class="dialog_video" controls muted>
-        <source src="assets\user_management.mp4">
-      </video>
-      <header class="card-header">
-        <h2>Login and User Management</h2>
-      </header>
-      <p>Develop a web-based task management application with an interface designed for both user-friendliness 
-        and administrative ease, allowing users to effortlessly organize and track their todos.</p>
-      <div class="tags">
-        <div class="tools">
-          <a>Quasar</a>
-          <a>VueJS</a>
-        </div>
-        <div class="proj_links">
-          <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Login', '_blank')">
-        </div>
-      </div>
-      
-    </div>
-    <div class="dialog-box dialog_videos" id="dialog-box-4">
-      <img src="assets/x.png" class="dialog_x" onclick='hideDialogJanken("dialog-box-4")'>
-      <video loop autoplay class="dialog_video" controls muted>
-        <source src="assets\Eflood.mp4">
-      </video>
-      <header class="card-header">
-        <h2>Eflood</h2>
-      </header>
-      <p>Develop a website for a selected barangay with the primary goal of issuing 
-        timely flood warnings to residents, enhancing community preparedness and safety.</p>
-      <div class="tags">
-        <div class="tools">
-          <a>PHP</a>
-          <a>JQuery</a>
-          <a>Bootstrap</a>
-        </div>
-        <div class="proj_links">
-          <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Eflood', '_blank')">
-        </div>
-      </div>
-    </div>
-    <div class="dialog-box" id="dialog-box-5">
-      <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-5")'>
-      <img src="assets/mt.png" alt="" class="mt">
-      <header class="card-header">
-        <h2>Module Tracker</h2>
-      </header>
-      <p>This app streamlines the module distribution process, making it easier for educators to ensure that students receive the 
-        materials they need for their studies.
-      </p>
-      <div class="tags">
-        <div class="tools">
-          <a>Android Stu.</a>
-          <a>Firebase</a>
-        </div>
-        <div class="proj_links">
-          <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Module%20Tracker', '_blank')">
-        </div>
-      </div>
-    </div>
-    <div class="dialog-box" id="dialog-box-6">
-      <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-6")'>
-      <img class="mt" src="./assets/pupqs.png">
-      <header class="card-header">
-        <h2>PUP QS</h2>
-      </header>
-      <p>PUP QS is a website for the Polytechnic University of the Philippines, 
-        streamlining queues for various services, including enrollment and cashier 
-        service, to save time and enhance efficiency for students and staff.
-      </p>
-      <div class="tags">
-        <div class="tools">
-          <a>PHP</a>
-          <a>JQuery</a>
-        </div>
-        <div class="proj_links">
-          <img class="visit_link" src="./assets/link.svg" alt="" onclick="window.open('https://robinpasalosdos.vercel.app/projects/pupqs/', '_blank')">
-          <img class="github_icon" src="./assets/github_dark.png" alt="" onclick="window.open('https://github.com/robinpasalosdos/projects/tree/main/Queueing%20System', '_blank')">
-        </div>
-      </div>
-    </div>
-    <div class="dialog-box" id="dialog-box-7">
-      <img src="assets/x.png" class="dialog_x" onclick='hideDialog("dialog-box-7")'>
-      <img class="mt" src="./assets/sustek_detailed.png">
-      <header class="card-header">
-        <h2>Sustek</h2>
-      </header>
-      <p>Developed additional pages for the Sustek company 
-        website using WordPress and Elementor, ensuring alignment with branding guidelines. 
-        Resolved QA issues to improve the site's functionality, user experience, and visual appeal.
-      </p>
-      <div class="tags">
-        <div class="tools">
-          <a>WordPress</a>
-          <a>Elementor</a>
-        </div>
-        <div class="proj_links">
-          <img class="visit_link" src="./assets/link.svg" alt="" onclick="window.open('https://beta.sustek.ai', '_blank')">
-        </div>
-      </div>
-    </div>
-  </div>
+  <div id="dialog_container"></div>
   <section id="experience" class="section">
     <div class="qualification" id="qualification"></div>
     <div class="cert">
@@ -328,26 +181,22 @@
       <h1 class="section_title_me" data-aos="fade-up">me</h1>
     </div>
     <div class="contact_con">
-      <div id="contact_strip">
-        <div class="contact_details_con"  data-aos="fade-down-left">
-          <img src="./assets/gmail_dark.png" alt="gmail-icon" class="contact_icon"
-          onclick="window.open('https://mail.google.com/mail/u/3/#inbox?compose=GTvVlcSBmzptDjLxjwdwXMrqgKcHSCZsvmKhWvwpMMMbbRPNXtlFNhHXPNDfbDSXmPBMVLWSTfqSM', '_blank')"
-          >
-          <p class="contact_details">Gmail</p>
+      <form id="contact-form" class="contact-form" data-aos="fade-up">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your Name">
         </div>
-        <div class="contact_details_con" data-aos="fade-down-left" data-aos-delay="50">
-          <img src="./assets/linkedin_dark.png" alt="linkedin" class="contact_icon"
-          onclick="window.open('https://www.linkedin.com/in/robin-pasalosdos-9a87b6286/', '_blank')"
-          >
-          <p class="contact_details">LinkedIn</p>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="Your Email">
         </div>
-        <div class="contact_details_con" data-aos="fade-down-left" data-aos-delay="100">
-          <img src="./assets/facebook_dark.png" alt="facebook" class="contact_icon"
-          onclick="window.open('https://www.facebook.com/pasalosdos', '_blank')"
-          >
-          <p class="contact_details">Facebook</p>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
         </div>
-      </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+        <div id="form-status" class="form-status"></div>
+      </form>
     </div>
   </section>
   <footer>
