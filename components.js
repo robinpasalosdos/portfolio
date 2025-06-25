@@ -331,7 +331,7 @@ document.addEventListener("DOMContentLoaded", function () {
        type: "video",
        mediaSrc: "./assets/janken.mp4",
        title: "Janken Wars",
-       description: "A 3D two-player Unity game inspired by rock-paper-scissors, featuring animated battles in stylized arenas and strategic gameplay elements.",
+       description: "A 3D two-player strategy game inspired by rock-paper-scissors, featuring animated arenas and turn-based combat logic.",
        tools: ["Unity", "Unity3d"],
        links: [
          { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars" }
@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function () {
        type: "video",
        mediaSrc: "./assets/user_management.mp4",
        title: "Task Manager App",
-       description: "A simple, responsive to-do tracker designed for easy task creation, editing, and progress tracking, with a clean interface for both personal and admin-level use.",
+       description: "A responsive to-do app with clean UI for adding, editing, and tracking tasks — built for both personal users and admins.",
        tools: ["Quasar", "VueJS"],
        links: [
          { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Login" }
@@ -353,7 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
        type: "video",
        mediaSrc: "./assets/Eflood.mp4",
        title: "Eflood Warning System",
-       description: "Built a website for a local barangay to broadcast early flood alerts to residents, helping improve safety and disaster response readiness.",
+       description: "A community website for issuing local flood alerts in high-risk barangays. Designed to improve safety through early warnings.",
        tools: ["PHP", "JQuery", "Bootstrap"],
        links: [
          { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Eflood" }
@@ -375,7 +375,7 @@ document.addEventListener("DOMContentLoaded", function () {
        type: "image",
        mediaSrc: "./assets/pupqs.png",
        title: "PUP QS",
-       description: "A web-based queue management system designed for the Polytechnic University of the Philippines to organize student services like enrollment and cashiering, reducing wait times and improving service flow.",
+       description: "A student service queueing system built for the Polytechnic University of the Philippines. Helps organize enrollment, cashier, and registrar processes with real-time updates.",
        tools: ["PHP", "JQuery"],
        links: [
          { type: "visit", url: "https://robinpasalosdos.vercel.app/projects/pupqs/" },
@@ -387,7 +387,7 @@ document.addEventListener("DOMContentLoaded", function () {
        type: "image",
        mediaSrc: "./assets/sustek_detailed.png",
        title: "Sustek",
-       description: "Created additional WordPress pages using Elementor, ensuring visual alignment with the brand. Resolved QA issues to improve responsiveness and enhance user experience.",
+       description: "Created additional pages using WordPress + Elementor. Fixed QA issues and aligned layout with company branding.",
        tools: ["WordPress", "Elementor"],
        links: [
          { type: "visit", url: "https://beta.sustek.ai" }
@@ -398,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function () {
        type: "image",
        mediaSrc: "./assets/brgy.png",
        title: "Brgy Hub",
-       description: "A web and desktop system built for barangay operations, including resident records, document clearances, certificate generation, and staff authentication. Designed with multi-barangay support and real-use deployment in mind.",
+       description: "A full-featured desktop and web app for managing residents, certificates, and document requests across multiple barangays. Built with authentication and a scalable structure for local LGU deployment.",
        tools: ["React", "Electron"],
        links: [
          { type: "visit", url: "https://barangay-system-website.vercel.app" }

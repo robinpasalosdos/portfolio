@@ -125,8 +125,9 @@ if (savedTheme == 'light') {
 
 const textElement = document.getElementById("home_text_p2");
 const careers = [
-  "Web Developer        ",
-  "Data Analyst        "
+  "Frontend Developer        ",
+  "Full-Stack Developer        ",
+  "Backend Developer        ",
 ];
 
 const htmlElement = document.documentElement;

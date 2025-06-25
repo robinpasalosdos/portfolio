@@ -30,6 +30,8 @@ body.open{
     --title_color: #0d0d0d;
     --p_color: #2a2a2a;
     --tag_color: #EE712B;
+    --light: #fffffe;
+    --light2: #fffffe;
 }
 
 p{
@@ -46,6 +48,8 @@ body{
     --_title_color: var(--title_color, #fffffe);
     --_p_color: var(--p_color, #a7a9be);
     --_tag_color: var(--tag_color,#AF0404);
+    --_light: var(--light, #fffbe6);
+    --_light2: var(--light2, #ffe0a3);
     background: var(--_bg_color);
     overflow: hidden;
 }
@@ -351,6 +355,25 @@ a.active::before, a.active::after{
     width: 400px;
     transition: all .6s ease-out;
     fill: var(--_secondary_color);
+}
+
+.home_pic::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 320px;
+    height: 320px;
+    transform: translate(-125%, -62%);
+    background: radial-gradient(circle, var(--_light) 0%, var(--_light2) 15%, transparent 90%);
+    filter: blur(32px);
+    z-index: 0;
+    opacity: 0.7;
+    pointer-events: none;
+}
+.home_pic img {
+    position: relative;
+    z-index: 1;
 }
 
 .home_buttons {
