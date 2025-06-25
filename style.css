@@ -338,14 +338,14 @@ a.active::before, a.active::after{
 
 }
 .home_pic{
-    overflow: hidden;
-    height: 450px;
-    width: 340px;
+    height: 400px;
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--_bg_color);
 }
-.home_pic svg{
+.home_pic img{
     height: 400px;
     width: 400px;
     transition: all .6s ease-out;
@@ -375,7 +375,7 @@ a.active::before, a.active::after{
 }
 
 .home_buttons button:last-child {
-    border: solid 1px var(--_tag_color);
+    border: solid 2px var(--_tag_color);
     color: var(--_tag_color);
 }
 

@@ -39,7 +39,7 @@
         flex-direction: column;
         gap: 2rem;
     }
-    .home_pic svg{
+    .home_pic img{
         height: clamp(200px,60vw,240px);
         width: clamp(200px,60vw,240px);
     }
