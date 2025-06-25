@@ -178,6 +178,12 @@ function showDialog(dialogBox) {
   document.documentElement.style.overflowY = "hidden";
   document.body.style.overflowY = "hidden";
   slideUp();
+  // Play video if present
+  const video = document.getElementById(dialogBox).querySelector('video');
+  if (video) {
+    video.currentTime = 0;
+    video.play();
+  }
 }
 
 function hideDialog(dialogBox) {
@@ -201,7 +207,7 @@ window.hideDialogJanken = hideDialogJanken;
 function showDialogJanken(dialogBox) {
   hideAllDialogs();
   showDialog(dialogBox);
-  playDialogVideo(dialogBox);
+  // playDialogVideo is now redundant, handled in showDialog
 }
 
 

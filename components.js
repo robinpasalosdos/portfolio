@@ -543,7 +543,7 @@ document.addEventListener("DOMContentLoaded", function () {
      dialogProjects.forEach(project => {
        let mediaContent = "";
        if (project.type === "video") {
-         mediaContent = `<video loop autoplay controls class="dialog_video"${project.id === 'dialog-box-3' || project.id === 'dialog-box-4' ? ' muted' : ''}><source src="${project.mediaSrc}"></video>`;
+         mediaContent = `<video loop controls class=\"dialog_video\"${project.id === 'dialog-box-3' || project.id === 'dialog-box-4' ? ' muted' : ''}><source src=\"${project.mediaSrc}\"></video>`;
        } else {
          mediaContent = `<img src="${project.mediaSrc}" alt="" class="mt">`;
        }
