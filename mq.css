@@ -73,11 +73,8 @@
     }
 
     .home_pic::before {
-        top: 35%;
-        left: 50%;
         width: 320px;
         height: 320px;
-        transform: translate(-50%, -62%);
         background: radial-gradient(circle, var(--_light) 0%, var(--_light2) 15%, transparent 37%);
         filter: blur(32px);
     }

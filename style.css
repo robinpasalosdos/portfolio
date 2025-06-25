@@ -317,6 +317,7 @@ a.active::before, a.active::after{
     font-size: var(--title_font_size);
     color: var(--_title_color);
     padding-bottom: clamp(1rem,2vw,2rem);
+    position: relative;
 }
 .section_title_me{
     color: var(--_secondary_color);
@@ -324,6 +325,7 @@ a.active::before, a.active::after{
 .section_title_2{
     display: flex;
 }
+
 .section{
     display: flex;
     justify-content: center;
@@ -360,11 +362,8 @@ a.active::before, a.active::after{
 .home_pic::before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
     width: 320px;
     height: 320px;
-    transform: translate(-125%, -62%);
     background: radial-gradient(circle, var(--_light) 0%, var(--_light2) 15%, transparent 90%);
     filter: blur(32px);
     z-index: 0;
@@ -888,7 +887,7 @@ a.active::before, a.active::after{
 .about_text p{
     text-indent: 3em;
     color: var(--_p_color);
-    font-size: var(--s);
+    font-size: var(--ss);
     line-height: 1.5;
 }
 /*                      SKILLS                        */
@@ -1015,6 +1014,7 @@ footer p {
     margin: 30px 1rem 0 1rem;
     width: 30vw;
     min-width: 380px;
+    max-width: 450px;
 }
 
 .contact-form {
