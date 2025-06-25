@@ -264,8 +264,7 @@ a.active::before, a.active::after{
     grid-column: span 4;
     grid-row: span 1; 
 }
-.hamburger_icon.open span{
-}
+
 .hamburger_icon.open{
     transform: scale(.5);
     -webkit-transition: all 0.15s ease-in-out;
@@ -351,6 +350,33 @@ a.active::before, a.active::after{
     width: 400px;
     transition: all .6s ease-out;
     fill: var(--_secondary_color);
+}
+
+.home_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.home_buttons button {
+    all: unset;
+    padding: 8px 15px;
+    border-radius: 12px;
+}
+
+.home_buttons button:first-child, .home_buttons button:last-child:hover {
+    background-color: var(--_tag_color);
+    color: white;
+}
+
+.home_buttons button:first-child:hover {
+    background-color: var(--_secondary_color);
+    color: white;
+}
+
+.home_buttons button:last-child {
+    border: solid 1px var(--_tag_color);
+    color: var(--_tag_color);
 }
 
 .home_details_card {
@@ -452,7 +478,7 @@ a.active::before, a.active::after{
     text-decoration: none;
     cursor: pointer;
     color: var(--_title_color);
-    margin: .5rem 0 2rem;
+    margin: 1rem 0 1rem;
 }
 .card p, .dialog-box p{
     font-size: clamp(14px,3vw,16px);
@@ -621,7 +647,7 @@ a.active::before, a.active::after{
 }
 .exp_details{
     position: relative;
-    padding-left: 3rem;
+    padding-left: 4.5rem;
     
 }
 .exp_details::before, .exp_details h1::before {
@@ -852,7 +878,7 @@ a.active::before, a.active::after{
     gap: 2rem;
     flex-wrap: wrap;
     flex-direction: column;
-    max-width: 80rem;
+    max-width: 60rem;
     align-items: center;
     
 }
@@ -961,6 +987,8 @@ footer p {
     padding: 40px;
     border-radius: 15px;
     margin: 30px 1rem 0 1rem;
+    width: 30vw;
+    min-width: 380px;
 }
 
 .contact-form {
@@ -974,7 +1002,6 @@ footer p {
     flex-direction: column;
     margin-bottom: 10px;
     gap: 4px;
-    min-width: 230px;
 }
 
 .form-group label {
@@ -1015,6 +1042,6 @@ footer p {
 }
 
 .g-recaptcha{
-    margin: 0 auto;
+    margin: 5px auto;
 }
 

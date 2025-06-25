@@ -119,7 +119,48 @@
         width: 2rem;
         height: 2rem;
     }
-}
-@media screen and (max-width: 320px) {
 
+    .contact_con {
+        min-width: 300px;
+    }
+
+    .g-recaptcha {
+        transform: scale(0.72);
+        -webkit-transform: scale(0.72);
+        transform-origin: 0 0;
+        margin: 10px auto 0;
+    }
+
+    .contact-form button {
+        margin: 0;
+    }
+
+    .dialog_x{
+        right: 7%;
+        top: 5%;
+        width: 1.5rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    .skill {
+        gap: .7rem;
+    }
+
+    .skill article {
+        width: 7rem;
+        gap: .3rem;
+        padding: .5rem;
+    }
+    .skill article p {
+        font-size: 10px;
+    }
+
+    .skill article h3, .skill article h5 {
+        font-size: 11px;
+    }
+
+    .icon{
+        width: 1.7rem;
+        height: 1.7rem;
+    }
 }

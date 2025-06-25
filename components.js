@@ -51,10 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
 				title: "Barangay System",
 				image: "./assets/brgy.png",
 				hoverImage: "./assets/eye_dark.png",
-				dialog: "dialog-box-7",
+				dialog: "dialog-box-8",
 				tools: ["React", "Electron"],
         links: [
-					{ type: "github", url: "https://github.com/robinpasalosdos/pupclinic" },
+					{ type: "github", url: "https://barangay-system-website.vercel.app" },
 				],
 			},
 			{
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		tasks: [
 		"Developed a comprehensive barangay information management system designed to streamline resident records, document issuance, and administrative processes for local government units.",
 		],
-		tools: ["React", "Electron", "NodeJS"]
+		tools: ["React", "Electron"]
 	},
 	{
 		year: "2024",
@@ -522,7 +522,18 @@ document.addEventListener("DOMContentLoaded", function () {
        links: [
          { type: "visit", url: "https://beta.sustek.ai" }
        ]
-     }
+     },
+     {
+       id: "dialog-box-8",
+       type: "image",
+       mediaSrc: "./assets/brgy.png",
+       title: "Brgy Hub",
+       description: "A desktop and web-based system designed for barangay staff and residents. It handles resident registration, barangay clearances, certificates, document printing, and appointment scheduling. The system includes authentication, fingerprint capture, and admin tools. Built for scalability, supporting multiple barangays with secure data separation.",
+       tools: ["React", "Electron"],
+       links: [
+         { type: "visit", url: "https://barangay-system-website.vercel.app" }
+       ]
+     },
    ];
    
    function generateDialogs() {
