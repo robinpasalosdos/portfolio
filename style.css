@@ -338,12 +338,13 @@ a.active::before, a.active::after{
 
 }
 .home_pic{
-    height: 400px;
+    height: 350px;
     width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--_bg_color);
+    overflow: hidden;
 }
 .home_pic img{
     height: 400px;
@@ -478,7 +479,7 @@ a.active::before, a.active::after{
     text-decoration: none;
     cursor: pointer;
     color: var(--_title_color);
-    margin: 1rem 0 1rem;
+    margin: 1rem 0 1.5rem;
 }
 .card p, .dialog-box p{
     font-size: clamp(14px,3vw,16px);
@@ -645,11 +646,12 @@ a.active::before, a.active::after{
     height: 100%;
     margin-block: 2rem;
 }
+
 .exp_details{
     position: relative;
-    padding-left: 4.5rem;
-    
+    padding-left: 4.5rem;   
 }
+
 .exp_details::before, .exp_details h1::before {
     content: '';
     position: absolute;
