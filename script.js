@@ -126,8 +126,10 @@ if (savedTheme == 'light') {
 const textElement = document.getElementById("home_text_p2");
 const careers = [
   "Frontend Developer        ",
+  "Software Engineer        ",
   "Full-Stack Developer        ",
   "Backend Developer        ",
+  "Software Developer        ",
 ];
 
 const htmlElement = document.documentElement;
