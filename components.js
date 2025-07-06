@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				dialog: "dialog-box-8",
 				tools: ["React", "Electron"],
         links: [
-					{ type: "github", url: "https://barangay-system-website.vercel.app" },
+					{ type: "visit", url: "https://barangay-system-website.vercel.app" },
 				],
 			},
 			{
