@@ -88,27 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					{ type: "visit", url: "https://robinpasalosdos.vercel.app/projects/pupqs/" },
 					{ type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Queueing%20System" },
 				],
-			},
-			{
-				title: "Task Manager App",
-				image: "./assets/login.png",
-				hoverImage: "./assets/eye_dark.png",
-				dialog: "dialog-box-3",
-				tools: ["Quasar", "VueJS"],
-				links: [
-					{ type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Login" }
-				]
-				},
-				{
-				title: "Eflood Warning System",
-				image: "./assets/eflood.png",
-				hoverImage: "./assets/eye_dark.png",
-				dialog: "dialog-box-4",
-				tools: ["PHP", "JQuery", "Bootstrap"],
-				links: [
-					{ type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Eflood" }
-				]
-				}
+			}
 		],
 		games: [
 			{
@@ -335,28 +315,6 @@ document.addEventListener("DOMContentLoaded", function () {
        tools: ["Unity", "Unity3d"],
        links: [
          { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars" }
-       ]
-     },
-     {
-       id: "dialog-box-3",
-       type: "video",
-       mediaSrc: "./assets/user_management.mp4",
-       title: "Task Manager App",
-       description: "A responsive to-do app with clean UI for adding, editing, and tracking tasks — built for both personal users and admins.",
-       tools: ["Quasar", "VueJS"],
-       links: [
-         { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Login" }
-       ]
-     },
-     {
-       id: "dialog-box-4",
-       type: "video",
-       mediaSrc: "./assets/Eflood.mp4",
-       title: "Eflood Warning System",
-       description: "A community website for issuing local flood alerts in high-risk barangays. Designed to improve safety through early warnings.",
-       tools: ["PHP", "JQuery", "Bootstrap"],
-       links: [
-         { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Eflood" }
        ]
      },
      {
