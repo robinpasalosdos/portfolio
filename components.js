@@ -311,7 +311,7 @@ document.addEventListener("DOMContentLoaded", function () {
        type: "video",
        mediaSrc: "./assets/janken.mp4",
        title: "Janken Wars",
-       description: "A 3D two-player strategy game inspired by rock-paper-scissors, featuring animated arenas and turn-based combat logic.",
+       description: "A 3D two-player Unity game inspired by rock-paper-scissors, featuring animated battles in stylized arenas and strategic gameplay elements.",
        tools: ["Unity", "Unity3d"],
        links: [
          { type: "github", url: "https://github.com/robinpasalosdos/projects/tree/main/Janken%20Wars" }
