@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", function () {
        id: "dialog-box-8",
        type: "image",
        mediaSrc: "./assets/brgy.png",
-       title: "Brgy Hub",
+       title: "Barangay System",
        description: "A full-featured desktop and web app for managing residents, certificates, and document requests across multiple barangays. Built with authentication and a scalable structure for local LGU deployment.",
        tools: ["React", "Electron"],
        links: [
