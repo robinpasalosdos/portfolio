@@ -1044,10 +1044,15 @@ footer p {
     color: var(--_title_color);
 }
 
+.form-group input:hover, .form-group textarea:hover {
+    border-color: var(--tag_color);
+}
+
 .form-group textarea {
     height: 100px;
     resize: vertical;
 }
+
 
 .contact-form button {
     background-color: var(--_secondary_color);
