@@ -30,6 +30,8 @@ body.open{
     --title_color: #0d0d0d;
     --p_color: #2a2a2a;
     --tag_color: #EE712B;
+    --light: #fffffe;
+    --light2: #fffffe;
 }
 
 p{
@@ -46,6 +48,8 @@ body{
     --_title_color: var(--title_color, #fffffe);
     --_p_color: var(--p_color, #a7a9be);
     --_tag_color: var(--tag_color,#AF0404);
+    --_light: var(--light, #fffbe6);
+    --_light2: var(--light2, #ffe0a3);
     background: var(--_bg_color);
     overflow: hidden;
 }
@@ -313,6 +317,7 @@ a.active::before, a.active::after{
     font-size: var(--title_font_size);
     color: var(--_title_color);
     padding-bottom: clamp(1rem,2vw,2rem);
+    position: relative;
 }
 .section_title_me{
     color: var(--_secondary_color);
@@ -320,6 +325,7 @@ a.active::before, a.active::after{
 .section_title_2{
     display: flex;
 }
+
 .section{
     display: flex;
     justify-content: center;
@@ -338,18 +344,36 @@ a.active::before, a.active::after{
 
 }
 .home_pic{
-    height: 400px;
+    height: 350px;
     width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--_bg_color);
+    overflow: hidden;
 }
 .home_pic img{
     height: 400px;
     width: 400px;
     transition: all .6s ease-out;
     fill: var(--_secondary_color);
+}
+
+.home_pic::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, var(--_light) 0%, var(--_light2) 15%, transparent 90%);
+    filter: blur(32px);
+    z-index: 0;
+    opacity: .8;
+    pointer-events: none;
+}
+
+.home_pic img {
+    position: relative;
+    z-index: 1;
 }
 
 .home_buttons {
@@ -478,7 +502,7 @@ a.active::before, a.active::after{
     text-decoration: none;
     cursor: pointer;
     color: var(--_title_color);
-    margin: 1rem 0 1rem;
+    margin: 1rem 0 1.5rem;
 }
 .card p, .dialog-box p{
     font-size: clamp(14px,3vw,16px);
@@ -645,11 +669,12 @@ a.active::before, a.active::after{
     height: 100%;
     margin-block: 2rem;
 }
+
 .exp_details{
     position: relative;
-    padding-left: 4.5rem;
-    
+    padding-left: 4.5rem;   
 }
+
 .exp_details::before, .exp_details h1::before {
     content: '';
     position: absolute;
@@ -862,7 +887,7 @@ a.active::before, a.active::after{
 .about_text p{
     text-indent: 3em;
     color: var(--_p_color);
-    font-size: var(--s);
+    font-size: var(--ss);
     line-height: 1.5;
 }
 /*                      SKILLS                        */
@@ -989,6 +1014,7 @@ footer p {
     margin: 30px 1rem 0 1rem;
     width: 30vw;
     min-width: 380px;
+    max-width: 450px;
 }
 
 .contact-form {
@@ -1018,10 +1044,15 @@ footer p {
     color: var(--_title_color);
 }
 
+.form-group input:hover, .form-group textarea:hover {
+    border-color: var(--tag_color);
+}
+
 .form-group textarea {
     height: 100px;
     resize: vertical;
 }
+
 
 .contact-form button {
     background-color: var(--_secondary_color);

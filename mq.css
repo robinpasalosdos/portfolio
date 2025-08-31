@@ -71,6 +71,13 @@
         align-items: center;
         gap: 6rem;
     }
+
+    .home_pic::before {
+        width: 320px;
+        height: 320px;
+        background: radial-gradient(circle, var(--_light) 0%, var(--_light2) 15%, transparent 37%);
+        filter: blur(32px);
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -98,6 +105,10 @@
 
     .dialog_video{
         border-radius: 1rem;
+    }
+
+    .exp_details{
+        padding-left: 3.75rem;   
     }
 
 }
@@ -139,6 +150,10 @@
         right: 7%;
         top: 5%;
         width: 1.5rem;
+    }
+
+    .exp_details{
+        padding-left: 3rem;   
     }
 }
 @media screen and (max-width: 400px) {
