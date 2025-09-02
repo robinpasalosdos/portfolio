@@ -48,8 +48,8 @@ body{
     --_title_color: var(--title_color, #fffffe);
     --_p_color: var(--p_color, #a7a9be);
     --_tag_color: var(--tag_color,#AF0404);
-    --_light: var(--light, #fffbe6);
-    --_light2: var(--light2, #ffe0a3);
+    --_light: var(--light, #F5F5F5);
+    --_light2: var(--light2, #F5F5F5);
     background: var(--_bg_color);
     overflow: hidden;
 }

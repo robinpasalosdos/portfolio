@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				tools: ["React", "Electron"],
         links: [
 					{ type: "visit", url: "https://barangay-system-website.vercel.app" },
+					{ type: "github", url: "https://github.com/robinpasalosdos/barangay-system" },
 				],
 			},
 			{
@@ -359,7 +360,8 @@ document.addEventListener("DOMContentLoaded", function () {
        description: "A full-featured desktop and web app for managing residents, certificates, and document requests across multiple barangays. Built with authentication and a scalable structure for local LGU deployment.",
        tools: ["React", "Electron"],
        links: [
-         { type: "visit", url: "https://barangay-system-website.vercel.app" }
+         { type: "visit", url: "https://barangay-system-website.vercel.app" },
+         { type: "github", url: "https://github.com/robinpasalosdos/barangay-system" }
        ]
      },
    ];
